@@ -1,114 +1,118 @@
 # Thumbnail Specification
 
-Prompt Effect thumbnails are local WebP files used by `✨ Krea2 BBOX Prompt Effect`.
+This repository uses local WebP thumbnails for the `✨ Krea2 BBOX Prompt Effect` preset gallery.
 
-## Folder
+## Scope of this package
 
-```text
-web/thumbnails/
-```
+This ZIP only organizes the thumbnail file structure and documentation. It does not change the node UI sizing or Python/JavaScript behavior.
 
-## File format
+## Folder layout
 
 ```text
-.webp
+Krea2-BBOX-Prompter-Suite/
+├─ web/
+│  ├─ krea2_element_framing_v1.js
+│  └─ thumbnails/
+│     ├─ manifest.json
+│     ├─ realistic_photo.webp
+│     ├─ 35mm_film.webp
+│     ├─ cinematic_photo.webp
+│     └─ ...
+└─ docs/
+   └─ thumbnail_preview_contact_sheet.jpg
 ```
 
-## Size
+## Runtime path
 
-Recommended source size:
+The browser should load thumbnails from the local ComfyUI extension path:
 
 ```text
-192 x 128 px
+/extensions/Krea2-BBOX-Prompter-Suite/web/thumbnails/<file>.webp
 ```
 
-UI display size:
+Do not fetch thumbnail images from GitHub raw URLs or external CDNs at runtime.
+
+## Image format
 
 ```text
-80-92 px wide
+Format: WebP
+Generated source size: larger than final display, cropped/downscaled to 192 x 128 px
+Final thumbnail size: 192 x 128 px
+Aspect ratio: 3:2
+Recommended file size: 5-40 KB per image
+Total target size: keep under ~1-2 MB when practical
 ```
 
-Recommended card width:
+## Display target
+
+The intended visual direction is a compact Easy-Use-like gallery, but with original thumbnails.
 
 ```text
-100-112 px
+Card width: about 92-100 px
+Thumbnail display width: about 80-92 px
+Thumbnail display height: about 54-64 px
+Label: one line, two lines maximum
+Prompt text: do not show inside the card; show in a selected-preset preview area
 ```
 
-## Naming
+## Naming rule
 
-Use snake_case based on the preset name.
+Use snake_case filenames derived from preset names.
 
 Examples:
 
 ```text
-realistic_photo.webp
-35mm_film.webp
-cinematic_photo.webp
-bw_soft.webp
-bw_strong.webp
-flash_photo.webp
-direct_flash.webp
-disposable_flash.webp
-paparazzi_flash.webp
-product_photo.webp
-food_photo.webp
-anime_clean.webp
-dark_fantasy.webp
+Realistic Photo     -> realistic_photo.webp
+35mm Film           -> 35mm_film.webp
+Cinematic Photo     -> cinematic_photo.webp
+B&W Soft            -> bandw_soft.webp
+B&W Strong          -> bandw_strong.webp
+Flash Photo         -> flash_photo.webp
+Disposable Flash    -> disposable_flash.webp
+Paparazzi Flash     -> paparazzi_flash.webp
+Product Photo       -> product_photo.webp
+Interior Design     -> interior_design.webp
+Dark Fantasy        -> dark_fantasy.webp
 ```
-
-The current implementation uses `bandw_soft.webp` and `bandw_strong.webp` for compatibility with the existing manifest.
 
 ## Manifest
 
-File:
+`web/thumbnails/manifest.json` maps preset names to local thumbnail files. Codex should keep this synchronized when adding or replacing thumbnails.
 
-```text
-web/thumbnails/manifest.json
-```
-
-Example entry:
+Example:
 
 ```json
 {
-  "name": "35mm Film",
-  "file": "35mm_film.webp",
-  "category": "Photo",
-  "chip": "Film",
-  "tone": "film"
+  "Realistic Photo": "realistic_photo.webp",
+  "35mm Film": "35mm_film.webp"
 }
 ```
 
 ## Visual direction
 
-Use category-specific thumbnails rather than copying Easy Use's cat-based motif.
+Use category-specific images, not a repeated cat mascot or copied Easy Use imagery.
 
-Recommended subject direction:
+Recommended subjects:
 
 ```text
-Photo: portraits, street scenes, film-like scenes
-Flash: direct-flash portraits and party snapshots
-Commercial: products, food, architecture, interiors
-Art: original anime-like character, watercolor landscape, painterly scene
-Light: lighting-focused portrait or environment
-Mood: silhouette, dark fantasy, dreamy, vintage
+Photo: realistic portrait, film street, cinematic night, black-and-white portrait
+Flash: flash portrait, disposable camera snapshot, paparazzi night flash
+Commercial: product bottle, food plate, architecture, interior room
+Art: anime-style original character, watercolor landscape, dark fantasy castle, neon/cyberpunk street
+Mood: silhouette sunset, vintage portrait, dreamy light, dark scene
 ```
 
-## Avoid
+Avoid:
 
 ```text
-- No cats as the universal motif
-- No copied Easy Use style assets
-- No text inside the image
-- No logos
-- No watermarks
-- No brand marks
-- No external URL dependency
+- Text inside thumbnail images
+- Logos
+- Watermarks
+- Brand marks
+- Real identifiable people
+- Copying Easy Use cat thumbnails
 ```
 
 ## Fallback behavior
 
-If a thumbnail file is missing, the UI should fall back to the old gradient/text card.
-
-## Replacement policy
-
-The included thumbnails are test-stage placeholders. They can be replaced before public release as long as filenames and manifest entries stay consistent.
+If a thumbnail file is missing, the node should fall back to the existing text/gradient card instead of failing.
