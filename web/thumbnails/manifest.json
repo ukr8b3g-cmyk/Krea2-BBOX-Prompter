@@ -1,0 +1,380 @@
+[
+  {
+    "name": "Realistic Photo",
+    "file": "realistic_photo.webp",
+    "category": "Photo",
+    "chip": "Real",
+    "tone": "photo-look"
+  },
+  {
+    "name": "35mm Film",
+    "file": "35mm_film.webp",
+    "category": "Photo",
+    "chip": "Film",
+    "tone": "film"
+  },
+  {
+    "name": "Cinematic Photo",
+    "file": "cinematic_photo.webp",
+    "category": "Photo",
+    "chip": "Cine",
+    "tone": "cine"
+  },
+  {
+    "name": "Soft Portrait",
+    "file": "soft_portrait.webp",
+    "category": "Photo",
+    "chip": "Port",
+    "tone": "portrait"
+  },
+  {
+    "name": "B&W Soft",
+    "file": "bandw_soft.webp",
+    "category": "Photo",
+    "chip": "B&W Soft",
+    "tone": "bw"
+  },
+  {
+    "name": "B&W Strong",
+    "file": "bandw_strong.webp",
+    "category": "Photo",
+    "chip": "B&W Strong",
+    "tone": "bw"
+  },
+  {
+    "name": "Film Noir",
+    "file": "film_noir.webp",
+    "category": "Photo",
+    "chip": "Film Noir",
+    "tone": "bw"
+  },
+  {
+    "name": "Noir Photo",
+    "file": "noir_photo.webp",
+    "category": "Photo",
+    "chip": "Noir",
+    "tone": "bw"
+  },
+  {
+    "name": "Flash Photo",
+    "file": "flash_photo.webp",
+    "category": "Photo",
+    "chip": "Flash",
+    "tone": "flash"
+  },
+  {
+    "name": "Direct Flash",
+    "file": "direct_flash.webp",
+    "category": "Photo",
+    "chip": "Direct",
+    "tone": "flash"
+  },
+  {
+    "name": "Disposable Flash",
+    "file": "disposable_flash.webp",
+    "category": "Photo",
+    "chip": "Disposable",
+    "tone": "flash"
+  },
+  {
+    "name": "Paparazzi Flash",
+    "file": "paparazzi_flash.webp",
+    "category": "Photo",
+    "chip": "Paparazzi",
+    "tone": "flash"
+  },
+  {
+    "name": "Polaroid",
+    "file": "polaroid.webp",
+    "category": "Photo",
+    "chip": "Pola",
+    "tone": "film"
+  },
+  {
+    "name": "Vintage Photo",
+    "file": "vintage_photo.webp",
+    "category": "Photo",
+    "chip": "Vintage",
+    "tone": "film"
+  },
+  {
+    "name": "Long Exposure",
+    "file": "long_exposure.webp",
+    "category": "Photo",
+    "chip": "Long",
+    "tone": "photo-look"
+  },
+  {
+    "name": "HDR Photo",
+    "file": "hdr_photo.webp",
+    "category": "Photo",
+    "chip": "HDR",
+    "tone": "photo-look"
+  },
+  {
+    "name": "iPhone Photo",
+    "file": "iphone_photo.webp",
+    "category": "Photo",
+    "chip": "Phone",
+    "tone": "photo-look"
+  },
+  {
+    "name": "Tilt-Shift",
+    "file": "tilt_shift.webp",
+    "category": "Photo",
+    "chip": "Tilt",
+    "tone": "photo-look"
+  },
+  {
+    "name": "Silhouette Photo",
+    "file": "silhouette_photo.webp",
+    "category": "Photo",
+    "chip": "Sil",
+    "tone": "photo-look"
+  },
+  {
+    "name": "Glamour Photo",
+    "file": "glamour_photo.webp",
+    "category": "Photo",
+    "chip": "Glam",
+    "tone": "portrait"
+  },
+  {
+    "name": "Landscape Photo",
+    "file": "landscape_photo.webp",
+    "category": "Photo",
+    "chip": "Land",
+    "tone": "photo-look"
+  },
+  {
+    "name": "Street Photo",
+    "file": "street_photo.webp",
+    "category": "Photo",
+    "chip": "Street",
+    "tone": "photo-look"
+  },
+  {
+    "name": "Beauty Photo",
+    "file": "beauty_photo.webp",
+    "category": "Photo",
+    "chip": "Beauty",
+    "tone": "portrait"
+  },
+  {
+    "name": "Editorial Portrait",
+    "file": "editorial_portrait.webp",
+    "category": "Photo",
+    "chip": "Edit",
+    "tone": "portrait"
+  },
+  {
+    "name": "Candid Portrait",
+    "file": "candid_portrait.webp",
+    "category": "Photo",
+    "chip": "Candid",
+    "tone": "portrait"
+  },
+  {
+    "name": "Movie Still",
+    "file": "movie_still.webp",
+    "category": "Photo",
+    "chip": "Movie",
+    "tone": "cine"
+  },
+  {
+    "name": "Neon Noir",
+    "file": "neon_noir.webp",
+    "category": "Photo",
+    "chip": "Neon",
+    "tone": "cine"
+  },
+  {
+    "name": "Action Still",
+    "file": "action_still.webp",
+    "category": "Photo",
+    "chip": "Action",
+    "tone": "cinematic"
+  },
+  {
+    "name": "Natural Light",
+    "file": "natural_light.webp",
+    "category": "Light",
+    "chip": "Light",
+    "tone": "lighting"
+  },
+  {
+    "name": "Studio Light",
+    "file": "studio_light.webp",
+    "category": "Light",
+    "chip": "Studio",
+    "tone": "lighting"
+  },
+  {
+    "name": "Golden Hour",
+    "file": "golden_hour.webp",
+    "category": "Light",
+    "chip": "Gold",
+    "tone": "lighting"
+  },
+  {
+    "name": "Low Key",
+    "file": "low_key.webp",
+    "category": "Light",
+    "chip": "Low",
+    "tone": "lighting"
+  },
+  {
+    "name": "High Key",
+    "file": "high_key.webp",
+    "category": "Light",
+    "chip": "High",
+    "tone": "lighting"
+  },
+  {
+    "name": "Neon Night",
+    "file": "neon_night.webp",
+    "category": "Light",
+    "chip": "Neon",
+    "tone": "lighting"
+  },
+  {
+    "name": "Cyberpunk",
+    "file": "cyberpunk.webp",
+    "category": "Light",
+    "chip": "Cyber",
+    "tone": "lighting"
+  },
+  {
+    "name": "Product Photo",
+    "file": "product_photo.webp",
+    "category": "Photo",
+    "chip": "Product",
+    "tone": "commercial"
+  },
+  {
+    "name": "Food Photo",
+    "file": "food_photo.webp",
+    "category": "Photo",
+    "chip": "Food",
+    "tone": "commercial"
+  },
+  {
+    "name": "Fashion Editorial",
+    "file": "fashion_editorial.webp",
+    "category": "Photo",
+    "chip": "Fashion",
+    "tone": "commercial"
+  },
+  {
+    "name": "Architecture",
+    "file": "architecture.webp",
+    "category": "Photo",
+    "chip": "Arch",
+    "tone": "commercial"
+  },
+  {
+    "name": "Interior Design",
+    "file": "interior_design.webp",
+    "category": "Photo",
+    "chip": "Interior",
+    "tone": "commercial"
+  },
+  {
+    "name": "Anime Clean",
+    "file": "anime_clean.webp",
+    "category": "Art",
+    "chip": "Anime",
+    "tone": "illustration"
+  },
+  {
+    "name": "Anime Soft",
+    "file": "anime_soft.webp",
+    "category": "Art",
+    "chip": "Anime",
+    "tone": "illustration"
+  },
+  {
+    "name": "Manga B&W",
+    "file": "manga_bandw.webp",
+    "category": "Art",
+    "chip": "Manga",
+    "tone": "illustration"
+  },
+  {
+    "name": "Illustration",
+    "file": "illustration.webp",
+    "category": "Art",
+    "chip": "Illust",
+    "tone": "illustration"
+  },
+  {
+    "name": "Painterly",
+    "file": "painterly.webp",
+    "category": "Art",
+    "chip": "Paint",
+    "tone": "illustration"
+  },
+  {
+    "name": "Watercolor",
+    "file": "watercolor.webp",
+    "category": "Art",
+    "chip": "Water",
+    "tone": "illustration"
+  },
+  {
+    "name": "Oil Painting",
+    "file": "oil_painting.webp",
+    "category": "Art",
+    "chip": "Oil",
+    "tone": "illustration"
+  },
+  {
+    "name": "Comic",
+    "file": "comic.webp",
+    "category": "Art",
+    "chip": "Comic",
+    "tone": "illustration"
+  },
+  {
+    "name": "Concept Art",
+    "file": "concept_art.webp",
+    "category": "Art",
+    "chip": "Concept",
+    "tone": "illustration"
+  },
+  {
+    "name": "Dreamy",
+    "file": "dreamy.webp",
+    "category": "Mood",
+    "chip": "Dream",
+    "tone": "mood"
+  },
+  {
+    "name": "Dark Fantasy",
+    "file": "dark_fantasy.webp",
+    "category": "Mood",
+    "chip": "Dark",
+    "tone": "mood"
+  },
+  {
+    "name": "High Detail",
+    "file": "high_detail.webp",
+    "category": "Mood",
+    "chip": "Detail",
+    "tone": "mood"
+  },
+  {
+    "name": "Minimal Clean",
+    "file": "minimal_clean.webp",
+    "category": "Mood",
+    "chip": "Minimal",
+    "tone": "mood"
+  },
+  {
+    "name": "Retro Pop",
+    "file": "retro_pop.webp",
+    "category": "Mood",
+    "chip": "Retro",
+    "tone": "mood"
+  }
+]
