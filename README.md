@@ -77,21 +77,25 @@ Prompter does not need `framing_data`; Export combines the two data streams.
 
 ## Installation
 
-1. Stop ComfyUI.
-2. Extract this folder into:
+From your ComfyUI `custom_nodes` folder:
 
-```text
-ComfyUI/custom_nodes/Krea2-BBOX-Prompter-Suite
+```powershell
+cd D:\Codex\ComfyUI\custom_nodes
+git clone https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter.git Krea2-BBOX-Prompter-Suite
 ```
 
-3. Start ComfyUI.
-4. Hard refresh the browser if the old UI is still cached:
+If the folder already exists, update it instead:
+
+```powershell
+cd D:\Codex\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
+git pull
+```
+
+Then restart ComfyUI and hard refresh the browser if the old UI is still cached:
 
 ```text
 Ctrl + F5
 ```
-
-If an older folder with the same name exists, delete it first instead of overwriting.
 
 ---
 
