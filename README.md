@@ -709,6 +709,80 @@ Minimal Clean
 Retro Pop
 ```
 
+## Color Theme
+
+```text
+Red Theme
+Blue Theme
+Pink Theme
+Purple Theme
+Green Theme
+Yellow Theme
+Orange Theme
+Cyan Theme
+Teal Theme
+Magenta Theme
+Warm Theme
+Cool Theme
+Pastel Theme
+Neon Theme
+Muted Theme
+Monochrome Theme
+Sepia Theme
+Gold Theme
+Silver Theme
+Dark Theme
+Bright Theme
+Soft Theme
+Vivid Theme
+Earth Theme
+Cream Theme
+Lavender Theme
+Mint Theme
+Peach Theme
+Rose Theme
+Aqua Theme
+Pastel Pink
+Pastel Blue
+Pastel Purple
+Pastel Green
+Pastel Yellow
+Pastel Orange
+Pastel Mint
+Pastel Lavender
+Pastel Peach
+Pastel Rose
+Pastel Aqua
+Pastel Cream
+Black & White
+Red & Blue
+Pink & Blue
+Purple & Cyan
+Orange & Teal
+Yellow & Purple
+Green & Magenta
+Black & Red
+Black & Gold
+White & Blue
+Pastel Pink & Blue
+Pastel Mint & Lavender
+Pastel Peach & Cream
+Pastel Yellow & Green
+Pastel Aqua & Pink
+Crazy Color
+Candy Color
+Pop Color
+Dreamy Color
+Acid Color
+Cyber Color
+Rainbow Color
+Holographic Color
+Vaporwave Color
+Fantasy Color
+```
+
+Color Theme presets apply broad palette direction such as single-color themes, two-color themes, pastel palettes, monochrome, neon, vaporwave, and playful stylized color schemes. Thumbnails are local WebP color swatches.
+
 ---
 
 # Thumbnail Specification

@@ -66,28 +66,28 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Camera FX",
     "chip": "Flash",
     "tone": "camera-fx",
-    "text": "on-camera flash photography, bright direct flash, sharp subject edges, crisp shadows, candid snapshot realism, natural skin texture"
+    "text": "flash photography, camera flash, crisp lighting, illuminated subject, clear details, sharp focus, vibrant colors, pop of light, soft shadows but still present, natural skin tone enhanced by flash"
   },
   {
     "name": "Direct Flash",
     "category": "Camera FX",
     "chip": "Direct",
     "tone": "camera-fx",
-    "text": "direct flash photo, hard frontal light, crisp shadows, strong highlights, candid party snapshot look, realistic skin texture"
+    "text": "direct flash photography, harsh flash, strong frontal lighting, high contrast, strong shadows, specular highlights, sharp focus, illuminated foreground, dark background, dynamic edgy look"
   },
   {
     "name": "Disposable Flash",
     "category": "Camera FX",
     "chip": "Disposable",
     "tone": "camera-fx",
-    "text": "disposable camera flash photo, harsh frontal flash, casual snapshot framing, film grain, imperfect exposure, nostalgic realism"
+    "text": "disposable camera flash, nighttime photography, dark environment, camera flash, grainy texture, high ISO, deep blacks, unexpected light source, candid snapshot, imperfect focus, atmospheric"
   },
   {
     "name": "Paparazzi Flash",
     "category": "Camera FX",
     "chip": "Paparazzi",
     "tone": "camera-fx",
-    "text": "paparazzi flash photography, strong camera flash, dark background, sharp highlights, candid celebrity street photo atmosphere"
+    "text": "paparazzi flash photography, harsh camera flash, sudden bright light, dramatic shadows, illuminated foreground, deep blacks, high contrast, candid celebrity-style snapshot, chaotic atmosphere, edgy realism"
   },
   {
     "name": "Polaroid",
@@ -438,6 +438,475 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Retro",
     "tone": "mood",
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
+  },
+  {
+    "name": "Red Theme",
+    "category": "Color Theme",
+    "chip": "Red",
+    "tone": "color-theme",
+    "text": "red color theme, cohesive red palette, warm red color grading, strong visual unity"
+  },
+  {
+    "name": "Blue Theme",
+    "category": "Color Theme",
+    "chip": "Blue",
+    "tone": "color-theme",
+    "text": "blue color theme, cohesive blue palette, cool calm color grading, unified blue atmosphere"
+  },
+  {
+    "name": "Pink Theme",
+    "category": "Color Theme",
+    "chip": "Pink",
+    "tone": "color-theme",
+    "text": "pink color theme, cohesive pink palette, soft rosy color grading, harmonious pink atmosphere"
+  },
+  {
+    "name": "Purple Theme",
+    "category": "Color Theme",
+    "chip": "Purple",
+    "tone": "color-theme",
+    "text": "purple color theme, cohesive violet palette, rich purple color grading, elegant moody atmosphere"
+  },
+  {
+    "name": "Green Theme",
+    "category": "Color Theme",
+    "chip": "Green",
+    "tone": "color-theme",
+    "text": "green color theme, cohesive green palette, fresh natural color grading, balanced green atmosphere"
+  },
+  {
+    "name": "Yellow Theme",
+    "category": "Color Theme",
+    "chip": "Yellow",
+    "tone": "color-theme",
+    "text": "yellow color theme, cohesive yellow palette, bright sunny color grading, warm cheerful atmosphere"
+  },
+  {
+    "name": "Orange Theme",
+    "category": "Color Theme",
+    "chip": "Orange",
+    "tone": "color-theme",
+    "text": "orange color theme, cohesive orange palette, warm energetic color grading, vivid orange atmosphere"
+  },
+  {
+    "name": "Cyan Theme",
+    "category": "Color Theme",
+    "chip": "Cyan",
+    "tone": "color-theme",
+    "text": "cyan color theme, cohesive cyan palette, clear cool color grading, bright aquatic atmosphere"
+  },
+  {
+    "name": "Teal Theme",
+    "category": "Color Theme",
+    "chip": "Teal",
+    "tone": "color-theme",
+    "text": "teal color theme, cohesive teal palette, cinematic blue-green color grading, polished atmosphere"
+  },
+  {
+    "name": "Magenta Theme",
+    "category": "Color Theme",
+    "chip": "Magenta",
+    "tone": "color-theme",
+    "text": "magenta color theme, cohesive magenta palette, bold pink-purple color grading, vibrant atmosphere"
+  },
+  {
+    "name": "Warm Theme",
+    "category": "Color Theme",
+    "chip": "Warm",
+    "tone": "color-theme",
+    "text": "warm color theme, amber highlights, warm color grading, inviting golden atmosphere"
+  },
+  {
+    "name": "Cool Theme",
+    "category": "Color Theme",
+    "chip": "Cool",
+    "tone": "color-theme",
+    "text": "cool color theme, blue cool palette, clean cool color grading, calm atmospheric mood"
+  },
+  {
+    "name": "Pastel Theme",
+    "category": "Color Theme",
+    "chip": "Pastel",
+    "tone": "color-theme",
+    "text": "pastel color theme, soft low-saturation palette, gentle airy atmosphere, delicate color grading"
+  },
+  {
+    "name": "Neon Theme",
+    "category": "Color Theme",
+    "chip": "Neon",
+    "tone": "color-theme",
+    "text": "neon color theme, electric saturated palette, glowing highlights, energetic futuristic color grading"
+  },
+  {
+    "name": "Muted Theme",
+    "category": "Color Theme",
+    "chip": "Muted",
+    "tone": "color-theme",
+    "text": "muted color theme, desaturated palette, subdued color grading, calm understated atmosphere"
+  },
+  {
+    "name": "Monochrome Theme",
+    "category": "Color Theme",
+    "chip": "Monochro",
+    "tone": "color-theme",
+    "text": "monochrome color theme, black and white palette, clean grayscale color grading, strong tonal contrast"
+  },
+  {
+    "name": "Sepia Theme",
+    "category": "Color Theme",
+    "chip": "Sepia",
+    "tone": "color-theme",
+    "text": "sepia color theme, warm brown palette, vintage sepia color grading, nostalgic atmosphere"
+  },
+  {
+    "name": "Gold Theme",
+    "category": "Color Theme",
+    "chip": "Gold",
+    "tone": "color-theme",
+    "text": "gold color theme, golden palette, warm metallic highlights, premium luminous color grading"
+  },
+  {
+    "name": "Silver Theme",
+    "category": "Color Theme",
+    "chip": "Silver",
+    "tone": "color-theme",
+    "text": "silver color theme, cool metallic palette, clean silver-gray color grading, polished atmosphere"
+  },
+  {
+    "name": "Dark Theme",
+    "category": "Color Theme",
+    "chip": "Dark",
+    "tone": "color-theme",
+    "text": "dark color theme, deep shadow palette, low brightness color grading, moody dramatic atmosphere"
+  },
+  {
+    "name": "Bright Theme",
+    "category": "Color Theme",
+    "chip": "Bright",
+    "tone": "color-theme",
+    "text": "bright color theme, high-key luminous palette, clean bright color grading, airy atmosphere"
+  },
+  {
+    "name": "Soft Theme",
+    "category": "Color Theme",
+    "chip": "Soft",
+    "tone": "color-theme",
+    "text": "soft color theme, gentle low-contrast palette, smooth soft color grading, calm delicate atmosphere"
+  },
+  {
+    "name": "Vivid Theme",
+    "category": "Color Theme",
+    "chip": "Vivid",
+    "tone": "color-theme",
+    "text": "vivid color theme, highly saturated palette, bold color grading, energetic visual impact"
+  },
+  {
+    "name": "Earth Theme",
+    "category": "Color Theme",
+    "chip": "Earth",
+    "tone": "color-theme",
+    "text": "earth color theme, natural brown and green palette, organic grounded color grading, warm natural atmosphere"
+  },
+  {
+    "name": "Cream Theme",
+    "category": "Color Theme",
+    "chip": "Cream",
+    "tone": "color-theme",
+    "text": "cream color theme, soft cream palette, warm gentle color grading, light elegant atmosphere"
+  },
+  {
+    "name": "Lavender Theme",
+    "category": "Color Theme",
+    "chip": "Lavender",
+    "tone": "color-theme",
+    "text": "lavender color theme, soft lavender palette, gentle violet color grading, dreamy calm atmosphere"
+  },
+  {
+    "name": "Mint Theme",
+    "category": "Color Theme",
+    "chip": "Mint",
+    "tone": "color-theme",
+    "text": "mint color theme, fresh mint palette, light green-blue color grading, clean airy atmosphere"
+  },
+  {
+    "name": "Peach Theme",
+    "category": "Color Theme",
+    "chip": "Peach",
+    "tone": "color-theme",
+    "text": "peach color theme, soft peach palette, warm delicate color grading, friendly gentle atmosphere"
+  },
+  {
+    "name": "Rose Theme",
+    "category": "Color Theme",
+    "chip": "Rose",
+    "tone": "color-theme",
+    "text": "rose color theme, romantic rose palette, soft red-pink color grading, elegant warm atmosphere"
+  },
+  {
+    "name": "Aqua Theme",
+    "category": "Color Theme",
+    "chip": "Aqua",
+    "tone": "color-theme",
+    "text": "aqua color theme, clear aqua palette, fresh watery color grading, bright clean atmosphere"
+  },
+  {
+    "name": "Pastel Pink",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme",
+    "text": "pastel pink color theme, very soft pink palette, gentle rosy color grading, airy delicate mood"
+  },
+  {
+    "name": "Pastel Blue",
+    "category": "Color Theme",
+    "chip": "PB",
+    "tone": "color-theme",
+    "text": "pastel blue color theme, very soft blue palette, gentle cool color grading, calm airy mood"
+  },
+  {
+    "name": "Pastel Purple",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme",
+    "text": "pastel purple color theme, very soft violet palette, delicate dreamy color grading, gentle atmosphere"
+  },
+  {
+    "name": "Pastel Green",
+    "category": "Color Theme",
+    "chip": "PG",
+    "tone": "color-theme",
+    "text": "pastel green color theme, very soft green palette, fresh gentle color grading, light natural mood"
+  },
+  {
+    "name": "Pastel Yellow",
+    "category": "Color Theme",
+    "chip": "PY",
+    "tone": "color-theme",
+    "text": "pastel yellow color theme, very soft yellow palette, light sunny color grading, cheerful gentle mood"
+  },
+  {
+    "name": "Pastel Orange",
+    "category": "Color Theme",
+    "chip": "PO",
+    "tone": "color-theme",
+    "text": "pastel orange color theme, very soft orange palette, warm gentle color grading, cozy light mood"
+  },
+  {
+    "name": "Pastel Mint",
+    "category": "Color Theme",
+    "chip": "PM",
+    "tone": "color-theme",
+    "text": "pastel mint color theme, soft mint palette, clean fresh color grading, light airy atmosphere"
+  },
+  {
+    "name": "Pastel Lavender",
+    "category": "Color Theme",
+    "chip": "PL",
+    "tone": "color-theme",
+    "text": "pastel lavender color theme, soft lavender palette, delicate violet color grading, dreamy airy mood"
+  },
+  {
+    "name": "Pastel Peach",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme",
+    "text": "pastel peach color theme, soft peach palette, warm gentle color grading, delicate friendly mood"
+  },
+  {
+    "name": "Pastel Rose",
+    "category": "Color Theme",
+    "chip": "PR",
+    "tone": "color-theme",
+    "text": "pastel rose color theme, soft rose palette, gentle romantic color grading, airy elegant mood"
+  },
+  {
+    "name": "Pastel Aqua",
+    "category": "Color Theme",
+    "chip": "PA",
+    "tone": "color-theme",
+    "text": "pastel aqua color theme, soft aqua palette, clean watery color grading, light refreshing mood"
+  },
+  {
+    "name": "Pastel Cream",
+    "category": "Color Theme",
+    "chip": "PC",
+    "tone": "color-theme",
+    "text": "pastel cream color theme, soft cream palette, warm light color grading, gentle elegant mood"
+  },
+  {
+    "name": "Black & White",
+    "category": "Color Theme",
+    "chip": "B&W",
+    "tone": "color-theme",
+    "text": "black and white color theme, pure monochrome palette, strong tonal contrast, clean graphic color grading"
+  },
+  {
+    "name": "Red & Blue",
+    "category": "Color Theme",
+    "chip": "R&B",
+    "tone": "color-theme",
+    "text": "red and blue color theme, bold dual-color palette, strong warm-cool contrast, dynamic color grading"
+  },
+  {
+    "name": "Pink & Blue",
+    "category": "Color Theme",
+    "chip": "P&B",
+    "tone": "color-theme",
+    "text": "pink and blue color theme, playful dual-color palette, soft warm-cool contrast, vibrant color harmony"
+  },
+  {
+    "name": "Purple & Cyan",
+    "category": "Color Theme",
+    "chip": "P&C",
+    "tone": "color-theme",
+    "text": "purple and cyan color theme, vivid dual-color palette, electric cool contrast, futuristic color grading"
+  },
+  {
+    "name": "Orange & Teal",
+    "category": "Color Theme",
+    "chip": "O&T",
+    "tone": "color-theme",
+    "text": "orange and teal color theme, cinematic complementary palette, warm-cool contrast, polished color grading"
+  },
+  {
+    "name": "Yellow & Purple",
+    "category": "Color Theme",
+    "chip": "Y&P",
+    "tone": "color-theme",
+    "text": "yellow and purple color theme, bold complementary palette, playful contrast, vivid graphic atmosphere"
+  },
+  {
+    "name": "Green & Magenta",
+    "category": "Color Theme",
+    "chip": "G&M",
+    "tone": "color-theme",
+    "text": "green and magenta color theme, high-contrast complementary palette, energetic stylized color grading"
+  },
+  {
+    "name": "Black & Red",
+    "category": "Color Theme",
+    "chip": "B&R",
+    "tone": "color-theme",
+    "text": "black and red color theme, dark dramatic palette, intense red accents, bold high-contrast atmosphere"
+  },
+  {
+    "name": "Black & Gold",
+    "category": "Color Theme",
+    "chip": "B&G",
+    "tone": "color-theme",
+    "text": "black and gold color theme, luxury dark palette, golden highlights, premium dramatic color grading"
+  },
+  {
+    "name": "White & Blue",
+    "category": "Color Theme",
+    "chip": "W&B",
+    "tone": "color-theme",
+    "text": "white and blue color theme, clean bright palette, crisp blue accents, fresh minimal color grading"
+  },
+  {
+    "name": "Pastel Pink & Blue",
+    "category": "Color Theme",
+    "chip": "P&B",
+    "tone": "color-theme",
+    "text": "pastel pink and blue color theme, soft dual pastel palette, gentle warm-cool balance, airy atmosphere"
+  },
+  {
+    "name": "Pastel Mint & Lavender",
+    "category": "Color Theme",
+    "chip": "P&L",
+    "tone": "color-theme",
+    "text": "pastel mint and lavender color theme, soft dreamy dual palette, fresh delicate color harmony"
+  },
+  {
+    "name": "Pastel Peach & Cream",
+    "category": "Color Theme",
+    "chip": "P&C",
+    "tone": "color-theme",
+    "text": "pastel peach and cream color theme, warm soft dual palette, cozy gentle color grading"
+  },
+  {
+    "name": "Pastel Yellow & Green",
+    "category": "Color Theme",
+    "chip": "P&G",
+    "tone": "color-theme",
+    "text": "pastel yellow and green color theme, soft sunny natural palette, fresh cheerful color grading"
+  },
+  {
+    "name": "Pastel Aqua & Pink",
+    "category": "Color Theme",
+    "chip": "P&P",
+    "tone": "color-theme",
+    "text": "pastel aqua and pink color theme, soft playful dual palette, fresh rosy color harmony"
+  },
+  {
+    "name": "Crazy Color",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme",
+    "text": "crazy color theme, playful clashing palette, unexpected color combinations, energetic stylized color grading"
+  },
+  {
+    "name": "Candy Color",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme",
+    "text": "candy color theme, sweet bright palette, playful pastel-neon colors, cheerful glossy atmosphere"
+  },
+  {
+    "name": "Pop Color",
+    "category": "Color Theme",
+    "chip": "PC",
+    "tone": "color-theme",
+    "text": "pop color theme, bold graphic palette, bright saturated colors, fun energetic visual style"
+  },
+  {
+    "name": "Dreamy Color",
+    "category": "Color Theme",
+    "chip": "DC",
+    "tone": "color-theme",
+    "text": "dreamy color theme, soft luminous palette, gentle haze, ethereal pastel color grading"
+  },
+  {
+    "name": "Acid Color",
+    "category": "Color Theme",
+    "chip": "AC",
+    "tone": "color-theme",
+    "text": "acid color theme, intense fluorescent palette, surreal high-energy color grading, experimental atmosphere"
+  },
+  {
+    "name": "Cyber Color",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme",
+    "text": "cyber color theme, neon cyan and magenta palette, dark futuristic contrast, digital glow atmosphere"
+  },
+  {
+    "name": "Rainbow Color",
+    "category": "Color Theme",
+    "chip": "RC",
+    "tone": "color-theme",
+    "text": "rainbow color theme, full-spectrum colorful palette, joyful multicolor grading, vibrant playful atmosphere"
+  },
+  {
+    "name": "Holographic Color",
+    "category": "Color Theme",
+    "chip": "HC",
+    "tone": "color-theme",
+    "text": "holographic color theme, iridescent pastel palette, shifting rainbow highlights, glossy futuristic color grading"
+  },
+  {
+    "name": "Vaporwave Color",
+    "category": "Color Theme",
+    "chip": "VC",
+    "tone": "color-theme",
+    "text": "vaporwave color theme, pink cyan purple palette, retro digital color grading, nostalgic surreal atmosphere"
+  },
+  {
+    "name": "Fantasy Color",
+    "category": "Color Theme",
+    "chip": "FC",
+    "tone": "color-theme",
+    "text": "fantasy color theme, magical saturated palette, glowing imaginative color grading, whimsical atmosphere"
   }
 ];
 
@@ -475,15 +944,27 @@ const FRAMING_OPTIONS = [
 const ANGLE_OPTIONS = [
   "Auto",
   "Front view",
+  "3/4 right",
+  "3/4 left",
+  "Eye level",
   "POV",
   "Side view",
+  "Profile right",
+  "Profile left",
+  "Slight low",
   "Low angle",
+  "Slight high",
   "High angle",
   "Top-down view",
   "Three-quarter view",
   "Dutch angle",
   "Over-the-shoulder",
   "Rear view",
+  "Wide angle",
+  "Telephoto",
+  "Worm view",
+  "Bird view",
+  "Foreground frame",
 ];
 
 const EFFECT_WIDGETS = ["prompt_in", "enable_effect", "category", "preset", "mode", "custom_preset"];
@@ -549,28 +1030,28 @@ const EFFECT_PRESETS = [
     "category": "Camera FX",
     "chip": "Flash",
     "tone": "camera-fx",
-    "text": "on-camera flash photography, bright direct flash, sharp subject edges, crisp shadows, candid snapshot realism, natural skin texture"
+    "text": "flash photography, camera flash, crisp lighting, illuminated subject, clear details, sharp focus, vibrant colors, pop of light, soft shadows but still present, natural skin tone enhanced by flash"
   },
   {
     "name": "Direct Flash",
     "category": "Camera FX",
     "chip": "Direct",
     "tone": "camera-fx",
-    "text": "direct flash photo, hard frontal light, crisp shadows, strong highlights, candid party snapshot look, realistic skin texture"
+    "text": "direct flash photography, harsh flash, strong frontal lighting, high contrast, strong shadows, specular highlights, sharp focus, illuminated foreground, dark background, dynamic edgy look"
   },
   {
     "name": "Disposable Flash",
     "category": "Camera FX",
     "chip": "Disposable",
     "tone": "camera-fx",
-    "text": "disposable camera flash photo, harsh frontal flash, casual snapshot framing, film grain, imperfect exposure, nostalgic realism"
+    "text": "disposable camera flash, nighttime photography, dark environment, camera flash, grainy texture, high ISO, deep blacks, unexpected light source, candid snapshot, imperfect focus, atmospheric"
   },
   {
     "name": "Paparazzi Flash",
     "category": "Camera FX",
     "chip": "Paparazzi",
     "tone": "camera-fx",
-    "text": "paparazzi flash photography, strong camera flash, dark background, sharp highlights, candid celebrity street photo atmosphere"
+    "text": "paparazzi flash photography, harsh camera flash, sudden bright light, dramatic shadows, illuminated foreground, deep blacks, high contrast, candid celebrity-style snapshot, chaotic atmosphere, edgy realism"
   },
   {
     "name": "Polaroid",
@@ -921,9 +1402,478 @@ const EFFECT_PRESETS = [
     "chip": "Retro",
     "tone": "mood",
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
+  },
+  {
+    "name": "Red Theme",
+    "category": "Color Theme",
+    "chip": "Red",
+    "tone": "color-theme",
+    "text": "red color theme, cohesive red palette, warm red color grading, strong visual unity"
+  },
+  {
+    "name": "Blue Theme",
+    "category": "Color Theme",
+    "chip": "Blue",
+    "tone": "color-theme",
+    "text": "blue color theme, cohesive blue palette, cool calm color grading, unified blue atmosphere"
+  },
+  {
+    "name": "Pink Theme",
+    "category": "Color Theme",
+    "chip": "Pink",
+    "tone": "color-theme",
+    "text": "pink color theme, cohesive pink palette, soft rosy color grading, harmonious pink atmosphere"
+  },
+  {
+    "name": "Purple Theme",
+    "category": "Color Theme",
+    "chip": "Purple",
+    "tone": "color-theme",
+    "text": "purple color theme, cohesive violet palette, rich purple color grading, elegant moody atmosphere"
+  },
+  {
+    "name": "Green Theme",
+    "category": "Color Theme",
+    "chip": "Green",
+    "tone": "color-theme",
+    "text": "green color theme, cohesive green palette, fresh natural color grading, balanced green atmosphere"
+  },
+  {
+    "name": "Yellow Theme",
+    "category": "Color Theme",
+    "chip": "Yellow",
+    "tone": "color-theme",
+    "text": "yellow color theme, cohesive yellow palette, bright sunny color grading, warm cheerful atmosphere"
+  },
+  {
+    "name": "Orange Theme",
+    "category": "Color Theme",
+    "chip": "Orange",
+    "tone": "color-theme",
+    "text": "orange color theme, cohesive orange palette, warm energetic color grading, vivid orange atmosphere"
+  },
+  {
+    "name": "Cyan Theme",
+    "category": "Color Theme",
+    "chip": "Cyan",
+    "tone": "color-theme",
+    "text": "cyan color theme, cohesive cyan palette, clear cool color grading, bright aquatic atmosphere"
+  },
+  {
+    "name": "Teal Theme",
+    "category": "Color Theme",
+    "chip": "Teal",
+    "tone": "color-theme",
+    "text": "teal color theme, cohesive teal palette, cinematic blue-green color grading, polished atmosphere"
+  },
+  {
+    "name": "Magenta Theme",
+    "category": "Color Theme",
+    "chip": "Magenta",
+    "tone": "color-theme",
+    "text": "magenta color theme, cohesive magenta palette, bold pink-purple color grading, vibrant atmosphere"
+  },
+  {
+    "name": "Warm Theme",
+    "category": "Color Theme",
+    "chip": "Warm",
+    "tone": "color-theme",
+    "text": "warm color theme, amber highlights, warm color grading, inviting golden atmosphere"
+  },
+  {
+    "name": "Cool Theme",
+    "category": "Color Theme",
+    "chip": "Cool",
+    "tone": "color-theme",
+    "text": "cool color theme, blue cool palette, clean cool color grading, calm atmospheric mood"
+  },
+  {
+    "name": "Pastel Theme",
+    "category": "Color Theme",
+    "chip": "Pastel",
+    "tone": "color-theme",
+    "text": "pastel color theme, soft low-saturation palette, gentle airy atmosphere, delicate color grading"
+  },
+  {
+    "name": "Neon Theme",
+    "category": "Color Theme",
+    "chip": "Neon",
+    "tone": "color-theme",
+    "text": "neon color theme, electric saturated palette, glowing highlights, energetic futuristic color grading"
+  },
+  {
+    "name": "Muted Theme",
+    "category": "Color Theme",
+    "chip": "Muted",
+    "tone": "color-theme",
+    "text": "muted color theme, desaturated palette, subdued color grading, calm understated atmosphere"
+  },
+  {
+    "name": "Monochrome Theme",
+    "category": "Color Theme",
+    "chip": "Monochro",
+    "tone": "color-theme",
+    "text": "monochrome color theme, black and white palette, clean grayscale color grading, strong tonal contrast"
+  },
+  {
+    "name": "Sepia Theme",
+    "category": "Color Theme",
+    "chip": "Sepia",
+    "tone": "color-theme",
+    "text": "sepia color theme, warm brown palette, vintage sepia color grading, nostalgic atmosphere"
+  },
+  {
+    "name": "Gold Theme",
+    "category": "Color Theme",
+    "chip": "Gold",
+    "tone": "color-theme",
+    "text": "gold color theme, golden palette, warm metallic highlights, premium luminous color grading"
+  },
+  {
+    "name": "Silver Theme",
+    "category": "Color Theme",
+    "chip": "Silver",
+    "tone": "color-theme",
+    "text": "silver color theme, cool metallic palette, clean silver-gray color grading, polished atmosphere"
+  },
+  {
+    "name": "Dark Theme",
+    "category": "Color Theme",
+    "chip": "Dark",
+    "tone": "color-theme",
+    "text": "dark color theme, deep shadow palette, low brightness color grading, moody dramatic atmosphere"
+  },
+  {
+    "name": "Bright Theme",
+    "category": "Color Theme",
+    "chip": "Bright",
+    "tone": "color-theme",
+    "text": "bright color theme, high-key luminous palette, clean bright color grading, airy atmosphere"
+  },
+  {
+    "name": "Soft Theme",
+    "category": "Color Theme",
+    "chip": "Soft",
+    "tone": "color-theme",
+    "text": "soft color theme, gentle low-contrast palette, smooth soft color grading, calm delicate atmosphere"
+  },
+  {
+    "name": "Vivid Theme",
+    "category": "Color Theme",
+    "chip": "Vivid",
+    "tone": "color-theme",
+    "text": "vivid color theme, highly saturated palette, bold color grading, energetic visual impact"
+  },
+  {
+    "name": "Earth Theme",
+    "category": "Color Theme",
+    "chip": "Earth",
+    "tone": "color-theme",
+    "text": "earth color theme, natural brown and green palette, organic grounded color grading, warm natural atmosphere"
+  },
+  {
+    "name": "Cream Theme",
+    "category": "Color Theme",
+    "chip": "Cream",
+    "tone": "color-theme",
+    "text": "cream color theme, soft cream palette, warm gentle color grading, light elegant atmosphere"
+  },
+  {
+    "name": "Lavender Theme",
+    "category": "Color Theme",
+    "chip": "Lavender",
+    "tone": "color-theme",
+    "text": "lavender color theme, soft lavender palette, gentle violet color grading, dreamy calm atmosphere"
+  },
+  {
+    "name": "Mint Theme",
+    "category": "Color Theme",
+    "chip": "Mint",
+    "tone": "color-theme",
+    "text": "mint color theme, fresh mint palette, light green-blue color grading, clean airy atmosphere"
+  },
+  {
+    "name": "Peach Theme",
+    "category": "Color Theme",
+    "chip": "Peach",
+    "tone": "color-theme",
+    "text": "peach color theme, soft peach palette, warm delicate color grading, friendly gentle atmosphere"
+  },
+  {
+    "name": "Rose Theme",
+    "category": "Color Theme",
+    "chip": "Rose",
+    "tone": "color-theme",
+    "text": "rose color theme, romantic rose palette, soft red-pink color grading, elegant warm atmosphere"
+  },
+  {
+    "name": "Aqua Theme",
+    "category": "Color Theme",
+    "chip": "Aqua",
+    "tone": "color-theme",
+    "text": "aqua color theme, clear aqua palette, fresh watery color grading, bright clean atmosphere"
+  },
+  {
+    "name": "Pastel Pink",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme",
+    "text": "pastel pink color theme, very soft pink palette, gentle rosy color grading, airy delicate mood"
+  },
+  {
+    "name": "Pastel Blue",
+    "category": "Color Theme",
+    "chip": "PB",
+    "tone": "color-theme",
+    "text": "pastel blue color theme, very soft blue palette, gentle cool color grading, calm airy mood"
+  },
+  {
+    "name": "Pastel Purple",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme",
+    "text": "pastel purple color theme, very soft violet palette, delicate dreamy color grading, gentle atmosphere"
+  },
+  {
+    "name": "Pastel Green",
+    "category": "Color Theme",
+    "chip": "PG",
+    "tone": "color-theme",
+    "text": "pastel green color theme, very soft green palette, fresh gentle color grading, light natural mood"
+  },
+  {
+    "name": "Pastel Yellow",
+    "category": "Color Theme",
+    "chip": "PY",
+    "tone": "color-theme",
+    "text": "pastel yellow color theme, very soft yellow palette, light sunny color grading, cheerful gentle mood"
+  },
+  {
+    "name": "Pastel Orange",
+    "category": "Color Theme",
+    "chip": "PO",
+    "tone": "color-theme",
+    "text": "pastel orange color theme, very soft orange palette, warm gentle color grading, cozy light mood"
+  },
+  {
+    "name": "Pastel Mint",
+    "category": "Color Theme",
+    "chip": "PM",
+    "tone": "color-theme",
+    "text": "pastel mint color theme, soft mint palette, clean fresh color grading, light airy atmosphere"
+  },
+  {
+    "name": "Pastel Lavender",
+    "category": "Color Theme",
+    "chip": "PL",
+    "tone": "color-theme",
+    "text": "pastel lavender color theme, soft lavender palette, delicate violet color grading, dreamy airy mood"
+  },
+  {
+    "name": "Pastel Peach",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme",
+    "text": "pastel peach color theme, soft peach palette, warm gentle color grading, delicate friendly mood"
+  },
+  {
+    "name": "Pastel Rose",
+    "category": "Color Theme",
+    "chip": "PR",
+    "tone": "color-theme",
+    "text": "pastel rose color theme, soft rose palette, gentle romantic color grading, airy elegant mood"
+  },
+  {
+    "name": "Pastel Aqua",
+    "category": "Color Theme",
+    "chip": "PA",
+    "tone": "color-theme",
+    "text": "pastel aqua color theme, soft aqua palette, clean watery color grading, light refreshing mood"
+  },
+  {
+    "name": "Pastel Cream",
+    "category": "Color Theme",
+    "chip": "PC",
+    "tone": "color-theme",
+    "text": "pastel cream color theme, soft cream palette, warm light color grading, gentle elegant mood"
+  },
+  {
+    "name": "Black & White",
+    "category": "Color Theme",
+    "chip": "B&W",
+    "tone": "color-theme",
+    "text": "black and white color theme, pure monochrome palette, strong tonal contrast, clean graphic color grading"
+  },
+  {
+    "name": "Red & Blue",
+    "category": "Color Theme",
+    "chip": "R&B",
+    "tone": "color-theme",
+    "text": "red and blue color theme, bold dual-color palette, strong warm-cool contrast, dynamic color grading"
+  },
+  {
+    "name": "Pink & Blue",
+    "category": "Color Theme",
+    "chip": "P&B",
+    "tone": "color-theme",
+    "text": "pink and blue color theme, playful dual-color palette, soft warm-cool contrast, vibrant color harmony"
+  },
+  {
+    "name": "Purple & Cyan",
+    "category": "Color Theme",
+    "chip": "P&C",
+    "tone": "color-theme",
+    "text": "purple and cyan color theme, vivid dual-color palette, electric cool contrast, futuristic color grading"
+  },
+  {
+    "name": "Orange & Teal",
+    "category": "Color Theme",
+    "chip": "O&T",
+    "tone": "color-theme",
+    "text": "orange and teal color theme, cinematic complementary palette, warm-cool contrast, polished color grading"
+  },
+  {
+    "name": "Yellow & Purple",
+    "category": "Color Theme",
+    "chip": "Y&P",
+    "tone": "color-theme",
+    "text": "yellow and purple color theme, bold complementary palette, playful contrast, vivid graphic atmosphere"
+  },
+  {
+    "name": "Green & Magenta",
+    "category": "Color Theme",
+    "chip": "G&M",
+    "tone": "color-theme",
+    "text": "green and magenta color theme, high-contrast complementary palette, energetic stylized color grading"
+  },
+  {
+    "name": "Black & Red",
+    "category": "Color Theme",
+    "chip": "B&R",
+    "tone": "color-theme",
+    "text": "black and red color theme, dark dramatic palette, intense red accents, bold high-contrast atmosphere"
+  },
+  {
+    "name": "Black & Gold",
+    "category": "Color Theme",
+    "chip": "B&G",
+    "tone": "color-theme",
+    "text": "black and gold color theme, luxury dark palette, golden highlights, premium dramatic color grading"
+  },
+  {
+    "name": "White & Blue",
+    "category": "Color Theme",
+    "chip": "W&B",
+    "tone": "color-theme",
+    "text": "white and blue color theme, clean bright palette, crisp blue accents, fresh minimal color grading"
+  },
+  {
+    "name": "Pastel Pink & Blue",
+    "category": "Color Theme",
+    "chip": "P&B",
+    "tone": "color-theme",
+    "text": "pastel pink and blue color theme, soft dual pastel palette, gentle warm-cool balance, airy atmosphere"
+  },
+  {
+    "name": "Pastel Mint & Lavender",
+    "category": "Color Theme",
+    "chip": "P&L",
+    "tone": "color-theme",
+    "text": "pastel mint and lavender color theme, soft dreamy dual palette, fresh delicate color harmony"
+  },
+  {
+    "name": "Pastel Peach & Cream",
+    "category": "Color Theme",
+    "chip": "P&C",
+    "tone": "color-theme",
+    "text": "pastel peach and cream color theme, warm soft dual palette, cozy gentle color grading"
+  },
+  {
+    "name": "Pastel Yellow & Green",
+    "category": "Color Theme",
+    "chip": "P&G",
+    "tone": "color-theme",
+    "text": "pastel yellow and green color theme, soft sunny natural palette, fresh cheerful color grading"
+  },
+  {
+    "name": "Pastel Aqua & Pink",
+    "category": "Color Theme",
+    "chip": "P&P",
+    "tone": "color-theme",
+    "text": "pastel aqua and pink color theme, soft playful dual palette, fresh rosy color harmony"
+  },
+  {
+    "name": "Crazy Color",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme",
+    "text": "crazy color theme, playful clashing palette, unexpected color combinations, energetic stylized color grading"
+  },
+  {
+    "name": "Candy Color",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme",
+    "text": "candy color theme, sweet bright palette, playful pastel-neon colors, cheerful glossy atmosphere"
+  },
+  {
+    "name": "Pop Color",
+    "category": "Color Theme",
+    "chip": "PC",
+    "tone": "color-theme",
+    "text": "pop color theme, bold graphic palette, bright saturated colors, fun energetic visual style"
+  },
+  {
+    "name": "Dreamy Color",
+    "category": "Color Theme",
+    "chip": "DC",
+    "tone": "color-theme",
+    "text": "dreamy color theme, soft luminous palette, gentle haze, ethereal pastel color grading"
+  },
+  {
+    "name": "Acid Color",
+    "category": "Color Theme",
+    "chip": "AC",
+    "tone": "color-theme",
+    "text": "acid color theme, intense fluorescent palette, surreal high-energy color grading, experimental atmosphere"
+  },
+  {
+    "name": "Cyber Color",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme",
+    "text": "cyber color theme, neon cyan and magenta palette, dark futuristic contrast, digital glow atmosphere"
+  },
+  {
+    "name": "Rainbow Color",
+    "category": "Color Theme",
+    "chip": "RC",
+    "tone": "color-theme",
+    "text": "rainbow color theme, full-spectrum colorful palette, joyful multicolor grading, vibrant playful atmosphere"
+  },
+  {
+    "name": "Holographic Color",
+    "category": "Color Theme",
+    "chip": "HC",
+    "tone": "color-theme",
+    "text": "holographic color theme, iridescent pastel palette, shifting rainbow highlights, glossy futuristic color grading"
+  },
+  {
+    "name": "Vaporwave Color",
+    "category": "Color Theme",
+    "chip": "VC",
+    "tone": "color-theme",
+    "text": "vaporwave color theme, pink cyan purple palette, retro digital color grading, nostalgic surreal atmosphere"
+  },
+  {
+    "name": "Fantasy Color",
+    "category": "Color Theme",
+    "chip": "FC",
+    "tone": "color-theme",
+    "text": "fantasy color theme, magical saturated palette, glowing imaginative color grading, whimsical atmosphere"
   }
 ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 const EFFECT_THUMBNAIL_BASE = "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/";
 function k2fxPresetSlug(name) {
@@ -1154,7 +2104,7 @@ function k2cfReadLocalState(node, kind) {
   // Prompt/canvas widget values must come only from workflow node/widget state.
   // Browser local/session fallback can resurrect stale prompt text or stale latent sizes
   // (for example 1024 x 1536) when ComfyUI rebuilds a tab.
-  if (kind === "prompt" || kind === "canvas") return null;
+  if (kind === "prompt" || kind === "canvas" || kind === "effect") return null;
   const states = [];
   for (const key of k2cfLocalStateKeys(node, kind)) {
     states.push(k2cfReadSessionJson(key));
@@ -1630,11 +2580,35 @@ function k2cfMergeWithPrevious(widgetNames, values, previousValues) {
   });
 }
 
+function k2cfIsEffectDefaultValue(name, value) {
+  const s = String(value ?? "").trim();
+  if (!s) return true;
+  if (name === "enable_effect") return s === "true";
+  if (name === "category") return s === "Photo";
+  if (name === "preset") return s === "Realistic Photo";
+  if (name === "mode") return s === "Preset";
+  if (name === "custom_preset") return !s;
+  return !s;
+}
+
+function k2cfMergeEffectWithPrevious(widgetNames, values, previousValues) {
+  if (!Array.isArray(values) || !Array.isArray(previousValues)) return values;
+  return values.map((value, i) => {
+    const name = widgetNames[i];
+    const previous = previousValues[i];
+    if (previous === undefined || previous === null) return value;
+    if (k2cfIsEffectDefaultValue(name, value) && !k2cfIsEffectDefaultValue(name, previous)) return previous;
+    return value;
+  });
+}
+
 function k2cfPersistWidgetSnapshot(node, kind, widgetNames, version = "v15") {
   const previous = k2cfBestSavedState(node, kind);
   const currentWidgetValues = k2cfWidgetValues(node, widgetNames);
   const values = kind === "prompt"
     ? k2cfSanitizePromptValues(currentWidgetValues)
+    : kind === "effect"
+      ? k2cfMergeEffectWithPrevious(widgetNames, currentWidgetValues, previous?.widgets_values)
     : k2cfMergeWithPrevious(widgetNames, currentWidgetValues, previous?.widgets_values);
   if (!k2cfHasMeaningfulState(values)) return;
   node.properties = node.properties || {};
@@ -1675,6 +2649,10 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
       ? (node.__k2cfAllowDefaultOverwrite
         ? k2cfSanitizePromptValues(currentValues)
         : k2cfSanitizePromptValues(k2cfMergeWithPrevious(widgetNames, currentValues, previous?.widgets_values)))
+      : kind === "effect"
+        ? (node.__k2cfAllowDefaultOverwrite
+          ? currentValues
+          : k2cfMergeEffectWithPrevious(widgetNames, currentValues, previous?.widgets_values))
       : (node.__k2cfAllowDefaultOverwrite
         ? currentValues
         : k2cfMergeWithPrevious(widgetNames, currentValues, previous?.widgets_values));
@@ -2055,6 +3033,7 @@ app.registerExtension({
       this.__k2cfConfiguredWidgetValues = Array.isArray(info?.widgets_values) ? info.widgets_values.slice() : null;
       this.__k2cfConfiguredSize = k2cfNormalizeNodeSize(info?.size);
       this.__k2cfConfiguredCanvasState = info?.properties?.k2cfCanvasState || null;
+      this.__k2cfConfiguredEffectState = info?.properties?.k2cfEffectState || null;
       this.__k2cfConfiguredPromptState = info?.properties?.k2cfPromptState || null;
       this.__k2cfConfiguredPromptUiState = info?.properties?.k2cfPromptUiState || null;
       this.__k2cfConfiguredCanvasNodeSize = info?.properties?.k2cfCanvasNodeSize || null;
@@ -2096,6 +3075,21 @@ function setupEffectNode(node) {
   const widgets = {};
   for (const name of EFFECT_WIDGETS) widgets[name] = widget(node, name);
   Object.values(widgets).forEach(hideWidget);
+  const configuredWidgetValues = Array.isArray(node.__k2cfConfiguredWidgetValues)
+    ? node.__k2cfConfiguredWidgetValues.slice()
+    : null;
+  const configuredStateValues = Array.isArray(node.__k2cfConfiguredEffectState?.widgets_values)
+    ? node.__k2cfConfiguredEffectState.widgets_values.slice()
+    : null;
+  const configuredValues = k2cfHasMeaningfulState(configuredWidgetValues)
+    ? configuredWidgetValues
+    : configuredStateValues;
+  let hydrateEffectUiFromWidgets = null;
+  node.__k2cfApplyConfiguredValues = (values) => {
+    applyConfiguredValuesToWidgets(node, EFFECT_WIDGETS, values);
+    hydrateEffectUiFromWidgets?.();
+  };
+  applyConfiguredValuesToWidgets(node, EFFECT_WIDGETS, configuredValues);
   const savedEffectState = k2cfBestSavedState(node, "effect");
   if (savedEffectState) applyConfiguredValuesToWidgets(node, EFFECT_WIDGETS, savedEffectState.widgets_values);
 
@@ -2175,10 +3169,24 @@ function setupEffectNode(node) {
   preview.className = "k2fx-preview";
 
   const DEFAULT_EFFECT_PRESET = "Realistic Photo";
-  const selectedPreset = () => {
-    const raw = widgets.preset?.value || DEFAULT_EFFECT_PRESET;
+  const normalizeEffectPreset = (name) => {
+    const raw = name || DEFAULT_EFFECT_PRESET;
     const v = EFFECT_PRESET_ALIASES[raw] || raw;
     return EFFECT_PRESETS.some((p)=>p.name===v) ? v : DEFAULT_EFFECT_PRESET;
+  };
+  let currentPreset = normalizeEffectPreset(widgets.preset?.value);
+  const selectedPreset = () => {
+    currentPreset = normalizeEffectPreset(currentPreset || widgets.preset?.value);
+    return currentPreset;
+  };
+  hydrateEffectUiFromWidgets = () => {
+    currentPreset = normalizeEffectPreset(widgets.preset?.value);
+    activeCategory = EFFECT_PRESET_ALIASES[widgets.category?.value] || widgets.category?.value || "Photo";
+    if (!EFFECT_CATEGORIES.includes(activeCategory)) activeCategory = "Photo";
+    custom.value = widgets.custom_preset?.value || "";
+    enabled.checked = widgets.enable_effect?.value !== false;
+    render();
+    preview.textContent = currentEffectText() || "Effect disabled or custom text is blank.";
   };
   function setWidgetValue(name, value) {
     if (!widgets[name]) return;
@@ -2212,7 +3220,8 @@ function setupEffectNode(node) {
     try { app.graph?.setDirtyCanvas?.(true, true); } catch (_) {}
   }
   function selectPreset(name) {
-    setWidgetValue("preset", name);
+    currentPreset = normalizeEffectPreset(name);
+    setWidgetValue("preset", currentPreset);
     setWidgetValue("mode", "Preset");
     render();
     sync();
@@ -2293,10 +3302,10 @@ function setupEffectNode(node) {
     getMinHeight:()=>260,
   });
 
-  if (!widgets.preset?.value || widgets.preset.value === "None") setWidgetValue("preset", DEFAULT_EFFECT_PRESET);
+  if (!widgets.preset?.value || widgets.preset.value === "None") setWidgetValue("preset", currentPreset);
   if (!widgets.mode?.value) setWidgetValue("mode", "Preset");
   render();
-  sync();
+  preview.textContent = currentEffectText() || "Effect disabled or custom text is blank.";
   k2cfPersistWidgetSnapshot(node, "effect", EFFECT_WIDGETS, "v15");
   installNodePersistenceHooks(node, sync, EFFECT_WIDGETS, "k2cfEffect");
 }

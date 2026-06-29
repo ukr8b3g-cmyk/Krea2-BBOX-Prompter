@@ -432,5 +432,474 @@
     "category": "Art",
     "chip": "Pixel",
     "tone": "illustration"
+  },
+  {
+    "name": "Red Theme",
+    "file": "red_theme.webp",
+    "category": "Color Theme",
+    "chip": "Red",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Blue Theme",
+    "file": "blue_theme.webp",
+    "category": "Color Theme",
+    "chip": "Blue",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pink Theme",
+    "file": "pink_theme.webp",
+    "category": "Color Theme",
+    "chip": "Pink",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Purple Theme",
+    "file": "purple_theme.webp",
+    "category": "Color Theme",
+    "chip": "Purple",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Green Theme",
+    "file": "green_theme.webp",
+    "category": "Color Theme",
+    "chip": "Green",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Yellow Theme",
+    "file": "yellow_theme.webp",
+    "category": "Color Theme",
+    "chip": "Yellow",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Orange Theme",
+    "file": "orange_theme.webp",
+    "category": "Color Theme",
+    "chip": "Orange",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Cyan Theme",
+    "file": "cyan_theme.webp",
+    "category": "Color Theme",
+    "chip": "Cyan",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Teal Theme",
+    "file": "teal_theme.webp",
+    "category": "Color Theme",
+    "chip": "Teal",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Magenta Theme",
+    "file": "magenta_theme.webp",
+    "category": "Color Theme",
+    "chip": "Magenta",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Warm Theme",
+    "file": "warm_theme.webp",
+    "category": "Color Theme",
+    "chip": "Warm",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Cool Theme",
+    "file": "cool_theme.webp",
+    "category": "Color Theme",
+    "chip": "Cool",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Theme",
+    "file": "pastel_theme.webp",
+    "category": "Color Theme",
+    "chip": "Pastel",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Neon Theme",
+    "file": "neon_theme.webp",
+    "category": "Color Theme",
+    "chip": "Neon",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Muted Theme",
+    "file": "muted_theme.webp",
+    "category": "Color Theme",
+    "chip": "Muted",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Monochrome Theme",
+    "file": "monochrome_theme.webp",
+    "category": "Color Theme",
+    "chip": "Monochro",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Sepia Theme",
+    "file": "sepia_theme.webp",
+    "category": "Color Theme",
+    "chip": "Sepia",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Gold Theme",
+    "file": "gold_theme.webp",
+    "category": "Color Theme",
+    "chip": "Gold",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Silver Theme",
+    "file": "silver_theme.webp",
+    "category": "Color Theme",
+    "chip": "Silver",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Dark Theme",
+    "file": "dark_theme.webp",
+    "category": "Color Theme",
+    "chip": "Dark",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Bright Theme",
+    "file": "bright_theme.webp",
+    "category": "Color Theme",
+    "chip": "Bright",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Soft Theme",
+    "file": "soft_theme.webp",
+    "category": "Color Theme",
+    "chip": "Soft",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Vivid Theme",
+    "file": "vivid_theme.webp",
+    "category": "Color Theme",
+    "chip": "Vivid",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Earth Theme",
+    "file": "earth_theme.webp",
+    "category": "Color Theme",
+    "chip": "Earth",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Cream Theme",
+    "file": "cream_theme.webp",
+    "category": "Color Theme",
+    "chip": "Cream",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Lavender Theme",
+    "file": "lavender_theme.webp",
+    "category": "Color Theme",
+    "chip": "Lavender",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Mint Theme",
+    "file": "mint_theme.webp",
+    "category": "Color Theme",
+    "chip": "Mint",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Peach Theme",
+    "file": "peach_theme.webp",
+    "category": "Color Theme",
+    "chip": "Peach",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Rose Theme",
+    "file": "rose_theme.webp",
+    "category": "Color Theme",
+    "chip": "Rose",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Aqua Theme",
+    "file": "aqua_theme.webp",
+    "category": "Color Theme",
+    "chip": "Aqua",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Pink",
+    "file": "pastel_pink.webp",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Blue",
+    "file": "pastel_blue.webp",
+    "category": "Color Theme",
+    "chip": "PB",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Purple",
+    "file": "pastel_purple.webp",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Green",
+    "file": "pastel_green.webp",
+    "category": "Color Theme",
+    "chip": "PG",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Yellow",
+    "file": "pastel_yellow.webp",
+    "category": "Color Theme",
+    "chip": "PY",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Orange",
+    "file": "pastel_orange.webp",
+    "category": "Color Theme",
+    "chip": "PO",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Mint",
+    "file": "pastel_mint.webp",
+    "category": "Color Theme",
+    "chip": "PM",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Lavender",
+    "file": "pastel_lavender.webp",
+    "category": "Color Theme",
+    "chip": "PL",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Peach",
+    "file": "pastel_peach.webp",
+    "category": "Color Theme",
+    "chip": "PP",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Rose",
+    "file": "pastel_rose.webp",
+    "category": "Color Theme",
+    "chip": "PR",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Aqua",
+    "file": "pastel_aqua.webp",
+    "category": "Color Theme",
+    "chip": "PA",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Cream",
+    "file": "pastel_cream.webp",
+    "category": "Color Theme",
+    "chip": "PC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Black & White",
+    "file": "black_white.webp",
+    "category": "Color Theme",
+    "chip": "B&W",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Red & Blue",
+    "file": "red_blue.webp",
+    "category": "Color Theme",
+    "chip": "R&B",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pink & Blue",
+    "file": "pink_blue.webp",
+    "category": "Color Theme",
+    "chip": "P&B",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Purple & Cyan",
+    "file": "purple_cyan.webp",
+    "category": "Color Theme",
+    "chip": "P&C",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Orange & Teal",
+    "file": "orange_teal.webp",
+    "category": "Color Theme",
+    "chip": "O&T",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Yellow & Purple",
+    "file": "yellow_purple.webp",
+    "category": "Color Theme",
+    "chip": "Y&P",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Green & Magenta",
+    "file": "green_magenta.webp",
+    "category": "Color Theme",
+    "chip": "G&M",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Black & Red",
+    "file": "black_red.webp",
+    "category": "Color Theme",
+    "chip": "B&R",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Black & Gold",
+    "file": "black_gold.webp",
+    "category": "Color Theme",
+    "chip": "B&G",
+    "tone": "color-theme"
+  },
+  {
+    "name": "White & Blue",
+    "file": "white_blue.webp",
+    "category": "Color Theme",
+    "chip": "W&B",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Pink & Blue",
+    "file": "pastel_pink_blue.webp",
+    "category": "Color Theme",
+    "chip": "P&B",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Mint & Lavender",
+    "file": "pastel_mint_lavender.webp",
+    "category": "Color Theme",
+    "chip": "P&L",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Peach & Cream",
+    "file": "pastel_peach_cream.webp",
+    "category": "Color Theme",
+    "chip": "P&C",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Yellow & Green",
+    "file": "pastel_yellow_green.webp",
+    "category": "Color Theme",
+    "chip": "P&G",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Aqua & Pink",
+    "file": "pastel_aqua_pink.webp",
+    "category": "Color Theme",
+    "chip": "P&P",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Crazy Color",
+    "file": "crazy_color.webp",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Candy Color",
+    "file": "candy_color.webp",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pop Color",
+    "file": "pop_color.webp",
+    "category": "Color Theme",
+    "chip": "PC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Dreamy Color",
+    "file": "dreamy_color.webp",
+    "category": "Color Theme",
+    "chip": "DC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Acid Color",
+    "file": "acid_color.webp",
+    "category": "Color Theme",
+    "chip": "AC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Cyber Color",
+    "file": "cyber_color.webp",
+    "category": "Color Theme",
+    "chip": "CC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Rainbow Color",
+    "file": "rainbow_color.webp",
+    "category": "Color Theme",
+    "chip": "RC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Holographic Color",
+    "file": "holographic_color.webp",
+    "category": "Color Theme",
+    "chip": "HC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Vaporwave Color",
+    "file": "vaporwave_color.webp",
+    "category": "Color Theme",
+    "chip": "VC",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Fantasy Color",
+    "file": "fantasy_color.webp",
+    "category": "Color Theme",
+    "chip": "FC",
+    "tone": "color-theme"
   }
 ]
