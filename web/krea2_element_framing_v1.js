@@ -1,5 +1,5 @@
 const { app } = window.comfyAPI.app;
-window.__k2efFramingV1Build = "v1_element_framing_framing_dropdown";
+window.__k2efFramingV1Build = "v1_element_framing_angle_card_20260629";
 
 const CANVAS_NODE = "Krea2ElementFramingV1Canvas";
 const PROMPT_NODE = "Krea2ElementFramingV1Prompt";
@@ -395,15 +395,16 @@ const K2CF_PROMPT_LEGACY_BUG_SIZES = [[400, 572]];
 const K2CF_PROMPT_HEIGHT_CAPTURE_MODE = "resize_grip_v29";
 
 const SLOTS = [
-  ["red", "RED", "#ff3b30", "red_prompt", "red_type", "red_framing"],
-  ["blue", "BLUE", "#2f80ff", "blue_prompt", "blue_type", "blue_framing"],
-  ["yellow", "YELLOW", "#ffd91a", "yellow_prompt", "yellow_type", "yellow_framing"],
-  ["green", "GREEN", "#35b84b", "green_prompt", "green_type", "green_framing"],
-  ["magenta", "MAGENTA", "#d943c8", "magenta_prompt", "magenta_type", "magenta_framing"],
+  ["red", "RED", "#ff3b30", "red_prompt", "red_type", "red_framing", "red_angle"],
+  ["blue", "BLUE", "#2f80ff", "blue_prompt", "blue_type", "blue_framing", "blue_angle"],
+  ["yellow", "YELLOW", "#ffd91a", "yellow_prompt", "yellow_type", "yellow_framing", "yellow_angle"],
+  ["green", "GREEN", "#35b84b", "green_prompt", "green_type", "green_framing", "green_angle"],
+  ["magenta", "MAGENTA", "#d943c8", "magenta_prompt", "magenta_type", "magenta_framing", "magenta_angle"],
 ];
 
 const FRAMING_OPTIONS = [
   "Auto",
+  "Cowboy shot",
   "Full body",
   "Upper body",
   "Bust-up",
@@ -413,6 +414,20 @@ const FRAMING_OPTIONS = [
   "Full object",
   "Detail shot",
   "Macro detail",
+];
+
+const ANGLE_OPTIONS = [
+  "Auto",
+  "Front view",
+  "POV",
+  "Side view",
+  "Low angle",
+  "High angle",
+  "Top-down view",
+  "Three-quarter view",
+  "Dutch angle",
+  "Over-the-shoulder",
+  "Rear view",
 ];
 
 const EFFECT_WIDGETS = ["prompt_in", "enable_effect", "category", "preset", "mode", "custom_preset"];
@@ -829,6 +844,7 @@ const PROMPT_SLOT_PRESET_KEY = "krea2_element_framing_v1_prompt_slot_presets";
 const PROMPT_LANGUAGE_KEY = "krea2_element_framing_v1_prompt_ui_language";
 const CANVAS_LANGUAGE_KEY = "krea2_element_framing_v1_canvas_ui_language";
 const CANVAS_GRID_KEY = "krea2_element_framing_v1_canvas_grid";
+const EFFECT_THUMB_SIZE_KEY = "krea2_element_framing_v1_effect_thumb_size";
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 1024;
 const DEFAULT_PRESET = "1024 x 1024";
@@ -878,6 +894,7 @@ const I18N = {
     clearPrompt: "Clear this prompt",
     elementType: "Type",
     framing: "Framing",
+    angle: "Angle",
     enterPrompt: "Enter prompt for {label} box..."
   },
   ja: {
@@ -924,6 +941,7 @@ const I18N = {
     clearPrompt: "このプロンプトを消去",
     elementType: "タイプ",
     framing: "フレーミング",
+    angle: "アングル",
     enterPrompt: "{label} ボックスのプロンプトを入力..."
   }
 };
@@ -1675,6 +1693,7 @@ const PROMPT_WIDGETS = [
   "red_type", "blue_type", "yellow_type", "green_type", "magenta_type",
   "prompt_ui_data",
   "red_framing", "blue_framing", "yellow_framing", "green_framing", "magenta_framing",
+  "red_angle", "blue_angle", "yellow_angle", "green_angle", "magenta_angle",
 ];
 
 function k2cfIsLegacyRedTestResidue(values) {
@@ -1715,8 +1734,14 @@ function hideWidget(w) {
   w.serialize = true;
   w.options = w.options || {};
   w.options.serialize = true;
+  w.options.hidden = true;
   w.hidden = true;
+  w.type = "hidden";
   w.computeSize = () => [0, -4];
+}
+
+function hideWidgetsByName(node, names) {
+  for (const name of names) hideWidget(widget(node, name));
 }
 
 function stop(ev) {
@@ -1733,7 +1758,15 @@ function button(text, title) {
 }
 
 function ensureStyle() {
-  if (document.getElementById("krea2-bbox-prompter-suite-style-v1")) return;
+  const existingStyle = document.getElementById("krea2-bbox-prompter-suite-style-v1");
+  const effectSizeCss = `.k2fx-sizebar{display:flex;justify-content:flex-end;align-items:center;gap:6px;margin-top:-4px;color:#aaa;font-size:10.5px}.k2fx-sizebar input{width:110px;accent-color:#35d0c8}.k2fx-sizebar output{width:36px;text-align:right;color:#ddd}`;
+  if (existingStyle) {
+    if (!existingStyle.textContent.includes("k2fx-sizebar")) existingStyle.textContent += effectSizeCss;
+    if (!existingStyle.textContent.includes("--k2fx-thumb-w")) {
+      existingStyle.textContent += `.k2fx-grid{grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr))}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);max-width:100%}`;
+    }
+    return;
+  }
   const style = document.createElement("style");
   style.id = "krea2-bbox-prompter-suite-style-v1";
   style.textContent = `
@@ -1792,9 +1825,10 @@ function ensureStyle() {
     .k2cf-iconbtn{background:#242424;color:#ddd;border:1px solid #555;border-radius:5px;width:26px;height:24px;cursor:pointer}.k2cf-iconbtn:hover{border-color:#aaa}
     .k2fx-wrap{display:flex;flex-direction:column;gap:9px;color:#ddd;font:12px sans-serif;height:100%;min-height:0;overflow:auto;background:#111;border:1px solid #333;border-radius:8px;padding:9px;box-sizing:border-box}.k2fx-io{display:flex;align-items:center;gap:7px;background:#161616;border:1px solid #333;border-radius:6px;padding:4px 7px;color:#bfeeea;font-size:11px;font-weight:700}.k2fx-io .dot{width:9px;height:9px;border-radius:50%;background:#4cff68;box-shadow:0 0 0 1px #193 inset}.k2fx-io .name{color:#ddd;font-weight:600}
     .k2fx-top{display:grid;grid-template-columns:auto 1fr auto;gap:7px;align-items:center}.k2fx-title{font-weight:700;color:#35d0c8;white-space:nowrap}.k2fx-search{min-width:0;background:#202020;color:#eee;border:1px solid #555;border-radius:6px;padding:5px 7px;box-sizing:border-box}.k2fx-switch-label{gap:6px}.k2fx-switch-label input{display:none}.k2fx-switch{width:34px;height:18px;border-radius:99px;background:#444;border:1px solid #666;position:relative;display:inline-block;vertical-align:middle;box-sizing:border-box}.k2fx-switch::after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;left:1px;top:1px;background:#bbb;transition:left .12s ease,background .12s ease}.k2fx-switch-label input:checked + .k2fx-switch{background:#138f8b;border-color:#35d0c8}.k2fx-switch-label input:checked + .k2fx-switch::after{left:17px;background:#fff}.k2fx-toggle{display:flex;align-items:center;gap:5px;color:#bbb;font-size:11px;white-space:nowrap}
+    ${effectSizeCss}
     .k2fx-tabs{display:flex;gap:5px;flex-wrap:wrap}.k2fx-tab{background:#242424;color:#ddd;border:1px solid #444;border-radius:999px;padding:4px 9px;cursor:pointer;font-size:11px}.k2fx-tab.active{border-color:#35d0c8;color:#fff;background:#12606a}
-    .k2fx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:7px}.k2fx-card{background:#1b1b1b;border:1px solid #3a3a3a;border-radius:8px;padding:6px;cursor:pointer;min-width:0}.k2fx-card:hover{border-color:#888}.k2fx-card.active{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.45) inset}.k2fx-custom-notice{grid-column:1/-1;border:1px dashed #3a3a3a;border-radius:8px;padding:12px;color:#aaa;background:#181818;font-size:12px}.k2fx-thumb{height:58px;border-radius:7px;border:1px solid #333;background:linear-gradient(135deg,#1e1e1e,#4b4b4b);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800;letter-spacing:.03em;margin:0 auto 6px;max-width:92px}.k2fx-thumb.has-img{color:transparent;text-shadow:none}.k2fx-thumb.has-img::after{content:""}.k2fx-card[data-tone="Strong"] .k2fx-thumb{background:linear-gradient(135deg,#050505,#dcdcdc)}.k2fx-card[data-tone="Soft"] .k2fx-thumb{background:linear-gradient(135deg,#777,#eee)}.k2fx-card[data-tone="Analog"] .k2fx-thumb{background:linear-gradient(135deg,#3a2f24,#c0a777)}.k2fx-card[data-tone="Dramatic"] .k2fx-thumb{background:linear-gradient(135deg,#0b0c10,#8d6d42)}
-    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:5px}.k2fx-custom{display:none;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-custom.show{display:block}.k2fx-preview{background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;max-height:72px;overflow:auto;white-space:pre-wrap}
+    .k2fx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr));gap:7px}.k2fx-card{background:#1b1b1b;border:1px solid #3a3a3a;border-radius:8px;padding:6px;cursor:pointer;min-width:0}.k2fx-card:hover{border-color:#888}.k2fx-card.active{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.45) inset}.k2fx-custom-notice{grid-column:1/-1;border:1px dashed #3a3a3a;border-radius:8px;padding:12px;color:#aaa;background:#181818;font-size:12px}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);border-radius:7px;border:1px solid #333;background:linear-gradient(135deg,#1e1e1e,#4b4b4b);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800;letter-spacing:.03em;margin:0 auto 6px;max-width:100%}.k2fx-thumb.has-img{color:transparent;text-shadow:none}.k2fx-thumb.has-img::after{content:""}.k2fx-card[data-tone="Strong"] .k2fx-thumb{background:linear-gradient(135deg,#050505,#dcdcdc)}.k2fx-card[data-tone="Soft"] .k2fx-thumb{background:linear-gradient(135deg,#777,#eee)}.k2fx-card[data-tone="Analog"] .k2fx-thumb{background:linear-gradient(135deg,#3a2f24,#c0a777)}.k2fx-card[data-tone="Dramatic"] .k2fx-thumb{background:linear-gradient(135deg,#0b0c10,#8d6d42)}
+    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:5px}.k2fx-custom{display:block;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;max-height:72px;overflow:auto;white-space:pre-wrap}
   `;
   document.head.appendChild(style);
 }
@@ -1973,6 +2007,29 @@ function setupEffectNode(node) {
   switchText.textContent = "Enable";
   toggleLabel.append(enabled, switchUi, switchText);
   top.append(title, search, toggleLabel);
+  const thumbSizeMin = 80;
+  const thumbSizeMax = 180;
+  const readThumbSize = () => Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(localStorage.getItem(EFFECT_THUMB_SIZE_KEY)) || 110));
+  const sizeBar = document.createElement("label");
+  sizeBar.className = "k2fx-sizebar";
+  const sizeText = document.createElement("span");
+  sizeText.textContent = "Size";
+  const sizeSlider = document.createElement("input");
+  sizeSlider.type = "range";
+  sizeSlider.min = String(thumbSizeMin);
+  sizeSlider.max = String(thumbSizeMax);
+  sizeSlider.step = "5";
+  sizeSlider.value = String(readThumbSize());
+  const sizeValue = document.createElement("output");
+  function applyThumbSize(value) {
+    const size = Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(value) || 110));
+    wrap.style.setProperty("--k2fx-thumb-w", `${size}px`);
+    sizeSlider.value = String(size);
+    sizeValue.textContent = `${size}`;
+    localStorage.setItem(EFFECT_THUMB_SIZE_KEY, String(size));
+  }
+  sizeBar.append(sizeText, sizeSlider, sizeValue);
+  applyThumbSize(sizeSlider.value);
 
   const tabs = document.createElement("div");
   tabs.className = "k2fx-tabs";
@@ -2085,10 +2142,11 @@ function setupEffectNode(node) {
 
   search.addEventListener("input", () => { renderCards(); });
   enabled.addEventListener("change", sync);
+  sizeSlider.addEventListener("input", () => applyThumbSize(sizeSlider.value));
   custom.addEventListener("input", sync);
   custom.addEventListener("change", sync);
 
-  wrap.append(ioRow, top, tabs, grid);
+  wrap.append(ioRow, top, sizeBar, tabs, grid);
   const footer = document.createElement("div");
   footer.className = "k2fx-footer";
   footer.append(custom, preview);
@@ -2884,6 +2942,9 @@ function setupPromptNode(node) {
   const widgets = {};
   for (const name of PROMPT_WIDGETS) widgets[name] = widget(node, name);
   Object.values(widgets).forEach(hideWidget);
+  requestAnimationFrame(() => hideWidgetsByName(node, PROMPT_WIDGETS));
+  setTimeout(() => hideWidgetsByName(node, PROMPT_WIDGETS), 0);
+  setTimeout(() => hideWidgetsByName(node, PROMPT_WIDGETS), 200);
   const configuredWidgetValues = Array.isArray(node.__k2cfConfiguredWidgetValues)
     ? k2cfSanitizePromptValues(node.__k2cfConfiguredWidgetValues.slice())
     : null;
@@ -3241,8 +3302,10 @@ function setupPromptNode(node) {
       if (item.typeLabel) item.typeLabel.textContent = tr(lang, "elementType");
       if (item.framingSelect) item.framingSelect.title = tr(lang, "framing");
       if (item.framingLabel) item.framingLabel.textContent = tr(lang, "framing");
+      if (item.angleSelect) item.angleSelect.title = tr(lang, "angle");
+      if (item.angleLabel) item.angleLabel.textContent = tr(lang, "angle");
       item.ta.placeholder = tr(lang, "enterPrompt").replace("{label}", item.label);
-      item.del.title = tr(lang, "clearPrompt");
+      if (item.del) item.del.title = tr(lang, "clearPrompt");
       if (item.presetLabel) item.presetLabel.textContent = tr(lang, "promptPreset");
       if (item.save) item.save.textContent = tr(lang, "save");
       if (item.load) item.load.textContent = tr(lang, "loadPreset");
@@ -3319,7 +3382,7 @@ function setupPromptNode(node) {
     }
   }
 
-  for (const [slot, label, color, promptName, typeName, framingName] of SLOTS) {
+  for (const [slot, label, color, promptName, typeName, framingName, angleName] of SLOTS) {
     const card = document.createElement("div");
     card.className = "k2cf-slot-card";
     const head = document.createElement("div");
@@ -3330,11 +3393,7 @@ function setupPromptNode(node) {
     const foldMark = document.createElement("span");
     foldMark.className = "k2cf-foldmark";
     left.appendChild(foldMark);
-    const del = document.createElement("button");
-    del.className = "k2cf-iconbtn";
-    del.textContent = "×";
-    del.title = tr(resolveLang(promptLangSelect.value), "clearPrompt");
-    head.append(left, del);
+    head.append(left);
 
     const body = document.createElement("div");
     body.className = "k2cf-slot-body";
@@ -3355,6 +3414,12 @@ function setupPromptNode(node) {
     for (const value of FRAMING_OPTIONS) framingSelect.appendChild(option(value, value));
     framingSelect.value = widgets[framingName]?.value || "Auto";
     controls[framingName] = framingSelect;
+    const angleSelect = document.createElement("select");
+    angleSelect.className = "k2cf-framing";
+    angleSelect.title = tr(resolveLang(promptLangSelect.value), "angle");
+    for (const value of ANGLE_OPTIONS) angleSelect.appendChild(option(value, value));
+    angleSelect.value = widgets[angleName]?.value || "Auto";
+    controls[angleName] = angleSelect;
     ta.addEventListener("input", sync);
     ta.addEventListener("change", sync);
     ta.addEventListener("blur", sync);
@@ -3362,7 +3427,7 @@ function setupPromptNode(node) {
     bindTextHeight(promptName, ta);
     typeSelect.addEventListener("change", sync);
     framingSelect.addEventListener("change", sync);
-    del.addEventListener("click", (ev) => { ev.stopPropagation(); ta.value = ""; sync(); });
+    angleSelect.addEventListener("change", sync);
     const presetRow = document.createElement("div");
     presetRow.className = "k2cf-presetbar";
     const promptPresetSelect = document.createElement("select");
@@ -3393,11 +3458,17 @@ function setupPromptNode(node) {
     framingLabel.textContent = "Framing";
     framingLabel.style.minWidth = "56px";
     framingLabel.style.color = "#ddd";
+    const angleRow = document.createElement("div");
+    angleRow.className = "k2cf-presetbar";
+    const angleLabel = document.createElement("label");
+    angleLabel.textContent = "Angle";
+    angleLabel.style.minWidth = "56px";
+    angleLabel.style.color = "#ddd";
     typeRow.append(typeLabel, typeSelect);
     framingRow.append(framingLabel, framingSelect);
-    side.append(typeRow, framingRow, presetRow, presetButtons);
+    angleRow.append(angleLabel, angleSelect);
+    side.append(typeRow, framingRow, angleRow);
     body.append(ta, side);
-    promptPresetSelects.push(promptPresetSelect);
 
     function applyOpen() {
       const open = promptUiState.slotOpen[slot] !== false;
@@ -3405,7 +3476,6 @@ function setupPromptNode(node) {
       foldMark.textContent = open ? "▼" : "▶";
     }
     head.addEventListener("click", (ev) => {
-      if (ev.target === del) return;
       promptUiState.slotOpen[slot] = !(promptUiState.slotOpen[slot] !== false);
       applyOpen();
       savePromptUiState();
@@ -3456,16 +3526,13 @@ function setupPromptNode(node) {
     promptCards.push({
       label,
       ta,
-      del,
       typeSelect,
       framingSelect,
+      angleSelect,
       typeLabel,
       framingLabel,
+      angleLabel,
       promptLabel: promptLabelHidden,
-      presetLabel: promptPresetLabel,
-      save: promptSave,
-      load: promptLoad,
-      deletePreset: promptDelete,
       applyOpen,
     });
     card.append(head, body);
@@ -3491,10 +3558,11 @@ function setupPromptNode(node) {
     if (savedState) applyConfiguredValuesToWidgets(node, PROMPT_WIDGETS, savedState.widgets_values);
     try {
       sceneText.value = widgets.scene?.value || "";
-      for (const [slot, label, color, promptName, typeName, framingName] of SLOTS) {
+      for (const [slot, label, color, promptName, typeName, framingName, angleName] of SLOTS) {
         if (controls[promptName]) controls[promptName].value = widgets[promptName]?.value || "";
         if (controls[typeName]) controls[typeName].value = widgets[typeName]?.value || "obj";
         if (controls[framingName]) controls[framingName].value = widgets[framingName]?.value || "Auto";
+        if (controls[angleName]) controls[angleName].value = widgets[angleName]?.value || "Auto";
       }
       applyPromptLabels();
       scheduleApplyAllSavedTextHeights();

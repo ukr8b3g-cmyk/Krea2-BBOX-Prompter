@@ -7,6 +7,7 @@ REGIONS = ("red", "blue", "yellow", "green", "magenta")
 ELEMENT_TYPES = ("obj", "text")
 FRAMING_OPTIONS = (
     "Auto",
+    "Cowboy shot",
     "Full body",
     "Upper body",
     "Bust-up",
@@ -19,6 +20,7 @@ FRAMING_OPTIONS = (
 )
 FRAMING_DESC_MAP = {
     "Auto": "",
+    "Cowboy shot": "cowboy shot, framed from head to mid-thigh, full upper body visible, thighs partially visible",
     "Full body": "shown as a full-body view",
     "Upper body": "shown as an upper-body view",
     "Bust-up": "shown as a bust-up portrait",
@@ -28,6 +30,32 @@ FRAMING_DESC_MAP = {
     "Full object": "showing the full object",
     "Detail shot": "shown as a detail shot",
     "Macro detail": "shown as a macro detail view",
+}
+ANGLE_OPTIONS = (
+    "Auto",
+    "Front view",
+    "POV",
+    "Side view",
+    "Low angle",
+    "High angle",
+    "Top-down view",
+    "Three-quarter view",
+    "Dutch angle",
+    "Over-the-shoulder",
+    "Rear view",
+)
+ANGLE_DESC_MAP = {
+    "Auto": "",
+    "Front view": "front view, facing the camera, subject clearly visible",
+    "POV": "point-of-view angle, immersive perspective, subject seen from viewer perspective",
+    "Side view": "side view, profile angle, subject viewed from the side",
+    "Low angle": "low angle shot, camera below the subject, looking up at the subject",
+    "High angle": "high angle shot, viewed from above, camera above the subject, looking down",
+    "Top-down view": "top-down view, overhead shot, camera directly above the subject",
+    "Three-quarter view": "three-quarter view, subject turned slightly, partial front and side visible",
+    "Dutch angle": "dutch angle, tilted camera, diagonal composition",
+    "Over-the-shoulder": "over-the-shoulder view, camera behind one subject, foreground shoulder visible",
+    "Rear view": "from behind, rear view, back of the subject visible",
 }
 EMPTY_LAYOUT_DATA = '{"boxes":[]}'
 EMPTY_CAMERA_DATA = '{"iso":"","shutter":"","aperture":"","focal_length":""}'
@@ -185,10 +213,26 @@ def _normalize_framing(value):
     return value if value in FRAMING_OPTIONS else "Auto"
 
 
+def _normalize_angle(value):
+    value = _clean(value)
+    return value if value in ANGLE_OPTIONS else "Auto"
+
+
 def _append_framing_hint(desc, framing):
     desc = _clean(desc)
     framing = _normalize_framing(framing)
     hint = _clean(FRAMING_DESC_MAP.get(framing, ""))
+    if not hint:
+        return desc
+    if desc:
+        return f"{desc}, {hint}"
+    return hint
+
+
+def _append_angle_hint(desc, angle):
+    desc = _clean(desc)
+    angle = _normalize_angle(angle)
+    hint = _clean(ANGLE_DESC_MAP.get(angle, ""))
     if not hint:
         return desc
     if desc:
@@ -221,6 +265,7 @@ def _slot_values_from_inputs(values):
             "type": typ,
             "prompt": _clean(values.get(f"{slot}_prompt")),
             "framing": _normalize_framing(values.get(f"{slot}_framing") or "Auto"),
+            "angle": _normalize_angle(values.get(f"{slot}_angle") or "Auto"),
         }
     return slot_values
 
@@ -345,6 +390,11 @@ class Krea2ElementFramingV1Prompt:
                 "yellow_framing": (FRAMING_OPTIONS, {"default": "Auto"}),
                 "green_framing": (FRAMING_OPTIONS, {"default": "Auto"}),
                 "magenta_framing": (FRAMING_OPTIONS, {"default": "Auto"}),
+                "red_angle": (ANGLE_OPTIONS, {"default": "Auto"}),
+                "blue_angle": (ANGLE_OPTIONS, {"default": "Auto"}),
+                "yellow_angle": (ANGLE_OPTIONS, {"default": "Auto"}),
+                "green_angle": (ANGLE_OPTIONS, {"default": "Auto"}),
+                "magenta_angle": (ANGLE_OPTIONS, {"default": "Auto"}),
             }
         }
 
@@ -356,7 +406,8 @@ class Krea2ElementFramingV1Prompt:
     def execute(self, scene, background, red_prompt, blue_prompt, yellow_prompt, green_prompt, magenta_prompt,
                 red_type="obj", blue_type="obj", yellow_type="obj", green_type="obj", magenta_type="obj",
                 prompt_ui_data="", red_framing="Auto", blue_framing="Auto", yellow_framing="Auto",
-                green_framing="Auto", magenta_framing="Auto"):
+                green_framing="Auto", magenta_framing="Auto", red_angle="Auto", blue_angle="Auto",
+                yellow_angle="Auto", green_angle="Auto", magenta_angle="Auto"):
         slot_values = _slot_values_from_inputs(locals())
         data = _prompt_ui_data(scene, background, slot_values)
         return (json.dumps(data, ensure_ascii=False, separators=(",", ":")),)
@@ -407,6 +458,7 @@ class Krea2ElementJSONExportV1:
             typ = _clean(meta.get("type") or "obj").lower()
             content = _clean(meta.get("prompt"))
             framing = _normalize_framing(meta.get("framing") or "Auto")
+            angle = _normalize_angle(meta.get("angle") or "Auto")
             typ, content = _effective_type_and_content(typ, content)
             bbox = _out_bbox(box, width, height, bbox_mode)
             if not bbox:
@@ -425,6 +477,7 @@ class Krea2ElementJSONExportV1:
                 })
             else:
                 object_desc = _append_framing_hint(content, framing)
+                object_desc = _append_angle_hint(object_desc, angle)
                 elements.append({
                     "type": "obj",
                     "bbox": bbox,
