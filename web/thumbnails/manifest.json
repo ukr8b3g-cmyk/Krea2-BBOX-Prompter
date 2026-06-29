@@ -901,5 +901,194 @@
     "category": "Color Theme",
     "chip": "FC",
     "tone": "color-theme"
+  },
+  {
+    "name": "Paper Print",
+    "file": "paper_print.webp",
+    "category": "Finish",
+    "chip": "Paper",
+    "tone": "finish"
+  },
+  {
+    "name": "Matte Print",
+    "file": "matte_print.webp",
+    "category": "Finish",
+    "chip": "Matte",
+    "tone": "finish"
+  },
+  {
+    "name": "Glossy Print",
+    "file": "glossy_print.webp",
+    "category": "Finish",
+    "chip": "Glossy",
+    "tone": "finish"
+  },
+  {
+    "name": "Canvas Texture",
+    "file": "canvas_texture.webp",
+    "category": "Finish",
+    "chip": "Canvas",
+    "tone": "finish"
+  },
+  {
+    "name": "Fabric Print",
+    "file": "fabric_print.webp",
+    "category": "Finish",
+    "chip": "Fabric",
+    "tone": "finish"
+  },
+  {
+    "name": "Metal Print",
+    "file": "metal_print.webp",
+    "category": "Finish",
+    "chip": "Metal",
+    "tone": "finish"
+  },
+  {
+    "name": "Glass Print",
+    "file": "glass_print.webp",
+    "category": "Finish",
+    "chip": "Glass",
+    "tone": "finish"
+  },
+  {
+    "name": "Wet Surface",
+    "file": "wet_surface.webp",
+    "category": "Finish",
+    "chip": "Wet",
+    "tone": "finish"
+  },
+  {
+    "name": "Water Droplets",
+    "file": "water_droplets.webp",
+    "category": "Finish",
+    "chip": "Drops",
+    "tone": "finish"
+  },
+  {
+    "name": "Dusty Surface",
+    "file": "dusty_surface.webp",
+    "category": "Finish",
+    "chip": "Dust",
+    "tone": "finish"
+  },
+  {
+    "name": "Scratched Print",
+    "file": "scratched_print.webp",
+    "category": "Finish",
+    "chip": "Scratch",
+    "tone": "finish"
+  },
+  {
+    "name": "Vintage Paper",
+    "file": "vintage_paper.webp",
+    "category": "Finish",
+    "chip": "Vintage",
+    "tone": "finish"
+  },
+  {
+    "name": "Stone Surface",
+    "file": "stone_surface.webp",
+    "category": "Finish",
+    "chip": "Stone",
+    "tone": "finish"
+  },
+  {
+    "name": "Marble Finish",
+    "file": "marble_finish.webp",
+    "category": "Finish",
+    "chip": "Marble",
+    "tone": "finish"
+  },
+  {
+    "name": "Concrete Finish",
+    "file": "concrete_finish.webp",
+    "category": "Finish",
+    "chip": "Concrete",
+    "tone": "finish"
+  },
+  {
+    "name": "Rusty Metal",
+    "file": "rusty_metal.webp",
+    "category": "Finish",
+    "chip": "Rust",
+    "tone": "finish"
+  },
+  {
+    "name": "Aged Metal",
+    "file": "aged_metal.webp",
+    "category": "Finish",
+    "chip": "Aged",
+    "tone": "finish"
+  },
+  {
+    "name": "Patina Finish",
+    "file": "patina_finish.webp",
+    "category": "Finish",
+    "chip": "Patina",
+    "tone": "finish"
+  },
+  {
+    "name": "Wood Grain",
+    "file": "wood_grain.webp",
+    "category": "Finish",
+    "chip": "Wood",
+    "tone": "finish"
+  },
+  {
+    "name": "Leather Finish",
+    "file": "leather_finish.webp",
+    "category": "Finish",
+    "chip": "Leather",
+    "tone": "finish"
+  },
+  {
+    "name": "Ceramic Glaze",
+    "file": "ceramic_glaze.webp",
+    "category": "Finish",
+    "chip": "Ceramic",
+    "tone": "finish"
+  },
+  {
+    "name": "Plastic Finish",
+    "file": "plastic_finish.webp",
+    "category": "Finish",
+    "chip": "Plastic",
+    "tone": "finish"
+  },
+  {
+    "name": "Slime Finish",
+    "file": "slime_finish.webp",
+    "category": "Finish",
+    "chip": "Slime",
+    "tone": "finish"
+  },
+  {
+    "name": "Gel Finish",
+    "file": "gel_finish.webp",
+    "category": "Finish",
+    "chip": "Gel",
+    "tone": "finish"
+  },
+  {
+    "name": "Liquid Gloss",
+    "file": "liquid_gloss.webp",
+    "category": "Finish",
+    "chip": "Liquid",
+    "tone": "finish"
+  },
+  {
+    "name": "Gummy Finish",
+    "file": "gummy_finish.webp",
+    "category": "Finish",
+    "chip": "Gummy",
+    "tone": "finish"
+  },
+  {
+    "name": "Wax Finish",
+    "file": "wax_finish.webp",
+    "category": "Finish",
+    "chip": "Wax",
+    "tone": "finish"
   }
 ]

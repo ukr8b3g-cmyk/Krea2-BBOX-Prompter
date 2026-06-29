@@ -440,6 +440,222 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
   },
   {
+    "name": "Paper Print",
+    "category": "Finish",
+    "chip": "Paper",
+    "tone": "finish",
+    "thumbnail": "paper_print.webp",
+    "text": "printed on paper, subtle paper grain, matte texture, soft ink absorption, tactile print finish"
+  },
+  {
+    "name": "Matte Print",
+    "category": "Finish",
+    "chip": "Matte",
+    "tone": "finish",
+    "thumbnail": "matte_print.webp",
+    "text": "matte print finish, non-reflective surface, soft contrast, smooth paper texture"
+  },
+  {
+    "name": "Glossy Print",
+    "category": "Finish",
+    "chip": "Glossy",
+    "tone": "finish",
+    "thumbnail": "glossy_print.webp",
+    "text": "glossy print finish, reflective coating, crisp contrast, polished photo paper surface"
+  },
+  {
+    "name": "Canvas Texture",
+    "category": "Finish",
+    "chip": "Canvas",
+    "tone": "finish",
+    "thumbnail": "canvas_texture.webp",
+    "text": "canvas texture, woven fabric surface, subtle textile grain, painterly material finish"
+  },
+  {
+    "name": "Fabric Print",
+    "category": "Finish",
+    "chip": "Fabric",
+    "tone": "finish",
+    "thumbnail": "fabric_print.webp",
+    "text": "printed on fabric, soft cloth texture, woven fibers, gentle ink diffusion, textile surface finish"
+  },
+  {
+    "name": "Metal Print",
+    "category": "Finish",
+    "chip": "Metal",
+    "tone": "finish",
+    "thumbnail": "metal_print.webp",
+    "text": "printed on metal, glossy metallic surface, reflective highlights, sleek hard material finish"
+  },
+  {
+    "name": "Glass Print",
+    "category": "Finish",
+    "chip": "Glass",
+    "tone": "finish",
+    "thumbnail": "glass_print.webp",
+    "text": "behind glass, glossy glass surface, subtle reflections, polished transparent finish"
+  },
+  {
+    "name": "Wet Surface",
+    "category": "Finish",
+    "chip": "Wet",
+    "tone": "finish",
+    "thumbnail": "wet_surface.webp",
+    "text": "wet surface effect, water droplets, glossy highlights, damp reflective texture, fresh moisture finish"
+  },
+  {
+    "name": "Water Droplets",
+    "category": "Finish",
+    "chip": "Drops",
+    "tone": "finish",
+    "thumbnail": "water_droplets.webp",
+    "text": "water droplets on surface, clear beads of moisture, glossy highlights, fresh wet finish"
+  },
+  {
+    "name": "Dusty Surface",
+    "category": "Finish",
+    "chip": "Dust",
+    "tone": "finish",
+    "thumbnail": "dusty_surface.webp",
+    "text": "dusty surface effect, fine dust particles, muted texture, aged dry finish, subtle grime"
+  },
+  {
+    "name": "Scratched Print",
+    "category": "Finish",
+    "chip": "Scratch",
+    "tone": "finish",
+    "thumbnail": "scratched_print.webp",
+    "text": "scratched print surface, fine scratches, worn texture, distressed physical finish"
+  },
+  {
+    "name": "Vintage Paper",
+    "category": "Finish",
+    "chip": "Vintage",
+    "tone": "finish",
+    "thumbnail": "vintage_paper.webp",
+    "text": "vintage paper texture, aged paper grain, faded ink, warm yellowed surface, old printed finish"
+  },
+  {
+    "name": "Stone Surface",
+    "category": "Finish",
+    "chip": "Stone",
+    "tone": "finish",
+    "thumbnail": "stone_surface.webp",
+    "text": "stone surface texture, rough mineral grain, cool hard material finish, natural stone detail"
+  },
+  {
+    "name": "Marble Finish",
+    "category": "Finish",
+    "chip": "Marble",
+    "tone": "finish",
+    "thumbnail": "marble_finish.webp",
+    "text": "marble surface finish, subtle veining, polished stone texture, elegant mineral material"
+  },
+  {
+    "name": "Concrete Finish",
+    "category": "Finish",
+    "chip": "Concrete",
+    "tone": "finish",
+    "thumbnail": "concrete_finish.webp",
+    "text": "concrete surface texture, rough gray material, fine grain, industrial matte finish"
+  },
+  {
+    "name": "Rusty Metal",
+    "category": "Finish",
+    "chip": "Rust",
+    "tone": "finish",
+    "thumbnail": "rusty_metal.webp",
+    "text": "rusty metal surface, oxidized texture, reddish brown corrosion, worn industrial finish"
+  },
+  {
+    "name": "Aged Metal",
+    "category": "Finish",
+    "chip": "Aged",
+    "tone": "finish",
+    "thumbnail": "aged_metal.webp",
+    "text": "aged metal finish, tarnished surface, subtle scratches, oxidized patina, weathered material"
+  },
+  {
+    "name": "Patina Finish",
+    "category": "Finish",
+    "chip": "Patina",
+    "tone": "finish",
+    "thumbnail": "patina_finish.webp",
+    "text": "patina surface finish, green-blue oxidized metal, aged copper look, weathered decorative texture"
+  },
+  {
+    "name": "Wood Grain",
+    "category": "Finish",
+    "chip": "Wood",
+    "tone": "finish",
+    "thumbnail": "wood_grain.webp",
+    "text": "wood grain texture, natural wooden surface, warm organic material finish, visible grain lines"
+  },
+  {
+    "name": "Leather Finish",
+    "category": "Finish",
+    "chip": "Leather",
+    "tone": "finish",
+    "thumbnail": "leather_finish.webp",
+    "text": "leather surface texture, subtle grain, soft worn material, tactile premium finish"
+  },
+  {
+    "name": "Ceramic Glaze",
+    "category": "Finish",
+    "chip": "Ceramic",
+    "tone": "finish",
+    "thumbnail": "ceramic_glaze.webp",
+    "text": "ceramic glazed surface, smooth glossy coating, subtle reflections, crafted material finish"
+  },
+  {
+    "name": "Plastic Finish",
+    "category": "Finish",
+    "chip": "Plastic",
+    "tone": "finish",
+    "thumbnail": "plastic_finish.webp",
+    "text": "plastic surface finish, smooth synthetic texture, clean highlights, modern manufactured material"
+  },
+  {
+    "name": "Slime Finish",
+    "category": "Finish",
+    "chip": "Slime",
+    "tone": "finish",
+    "thumbnail": "slime_finish.webp",
+    "text": "slime surface finish, glossy translucent gel texture, sticky wet highlights, soft gooey material look"
+  },
+  {
+    "name": "Gel Finish",
+    "category": "Finish",
+    "chip": "Gel",
+    "tone": "finish",
+    "thumbnail": "gel_finish.webp",
+    "text": "gel surface finish, translucent glossy material, smooth jelly-like highlights, soft elastic texture"
+  },
+  {
+    "name": "Liquid Gloss",
+    "category": "Finish",
+    "chip": "Liquid",
+    "tone": "finish",
+    "thumbnail": "liquid_gloss.webp",
+    "text": "liquid glossy finish, wet reflective coating, smooth flowing highlights, polished fluid surface"
+  },
+  {
+    "name": "Gummy Finish",
+    "category": "Finish",
+    "chip": "Gummy",
+    "tone": "finish",
+    "thumbnail": "gummy_finish.webp",
+    "text": "gummy material finish, soft translucent candy texture, rounded glossy surface, playful elastic look"
+  },
+  {
+    "name": "Wax Finish",
+    "category": "Finish",
+    "chip": "Wax",
+    "tone": "finish",
+    "thumbnail": "wax_finish.webp",
+    "text": "wax surface finish, soft semi-gloss texture, smooth melted material, subtle warm highlights"
+  },
+  {
     "name": "Red Theme",
     "category": "Color Theme",
     "chip": "Red",
@@ -1471,6 +1687,222 @@ const EFFECT_PRESETS = [
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
   },
   {
+    "name": "Paper Print",
+    "category": "Finish",
+    "chip": "Paper",
+    "tone": "finish",
+    "thumbnail": "paper_print.webp",
+    "text": "printed on paper, subtle paper grain, matte texture, soft ink absorption, tactile print finish"
+  },
+  {
+    "name": "Matte Print",
+    "category": "Finish",
+    "chip": "Matte",
+    "tone": "finish",
+    "thumbnail": "matte_print.webp",
+    "text": "matte print finish, non-reflective surface, soft contrast, smooth paper texture"
+  },
+  {
+    "name": "Glossy Print",
+    "category": "Finish",
+    "chip": "Glossy",
+    "tone": "finish",
+    "thumbnail": "glossy_print.webp",
+    "text": "glossy print finish, reflective coating, crisp contrast, polished photo paper surface"
+  },
+  {
+    "name": "Canvas Texture",
+    "category": "Finish",
+    "chip": "Canvas",
+    "tone": "finish",
+    "thumbnail": "canvas_texture.webp",
+    "text": "canvas texture, woven fabric surface, subtle textile grain, painterly material finish"
+  },
+  {
+    "name": "Fabric Print",
+    "category": "Finish",
+    "chip": "Fabric",
+    "tone": "finish",
+    "thumbnail": "fabric_print.webp",
+    "text": "printed on fabric, soft cloth texture, woven fibers, gentle ink diffusion, textile surface finish"
+  },
+  {
+    "name": "Metal Print",
+    "category": "Finish",
+    "chip": "Metal",
+    "tone": "finish",
+    "thumbnail": "metal_print.webp",
+    "text": "printed on metal, glossy metallic surface, reflective highlights, sleek hard material finish"
+  },
+  {
+    "name": "Glass Print",
+    "category": "Finish",
+    "chip": "Glass",
+    "tone": "finish",
+    "thumbnail": "glass_print.webp",
+    "text": "behind glass, glossy glass surface, subtle reflections, polished transparent finish"
+  },
+  {
+    "name": "Wet Surface",
+    "category": "Finish",
+    "chip": "Wet",
+    "tone": "finish",
+    "thumbnail": "wet_surface.webp",
+    "text": "wet surface effect, water droplets, glossy highlights, damp reflective texture, fresh moisture finish"
+  },
+  {
+    "name": "Water Droplets",
+    "category": "Finish",
+    "chip": "Drops",
+    "tone": "finish",
+    "thumbnail": "water_droplets.webp",
+    "text": "water droplets on surface, clear beads of moisture, glossy highlights, fresh wet finish"
+  },
+  {
+    "name": "Dusty Surface",
+    "category": "Finish",
+    "chip": "Dust",
+    "tone": "finish",
+    "thumbnail": "dusty_surface.webp",
+    "text": "dusty surface effect, fine dust particles, muted texture, aged dry finish, subtle grime"
+  },
+  {
+    "name": "Scratched Print",
+    "category": "Finish",
+    "chip": "Scratch",
+    "tone": "finish",
+    "thumbnail": "scratched_print.webp",
+    "text": "scratched print surface, fine scratches, worn texture, distressed physical finish"
+  },
+  {
+    "name": "Vintage Paper",
+    "category": "Finish",
+    "chip": "Vintage",
+    "tone": "finish",
+    "thumbnail": "vintage_paper.webp",
+    "text": "vintage paper texture, aged paper grain, faded ink, warm yellowed surface, old printed finish"
+  },
+  {
+    "name": "Stone Surface",
+    "category": "Finish",
+    "chip": "Stone",
+    "tone": "finish",
+    "thumbnail": "stone_surface.webp",
+    "text": "stone surface texture, rough mineral grain, cool hard material finish, natural stone detail"
+  },
+  {
+    "name": "Marble Finish",
+    "category": "Finish",
+    "chip": "Marble",
+    "tone": "finish",
+    "thumbnail": "marble_finish.webp",
+    "text": "marble surface finish, subtle veining, polished stone texture, elegant mineral material"
+  },
+  {
+    "name": "Concrete Finish",
+    "category": "Finish",
+    "chip": "Concrete",
+    "tone": "finish",
+    "thumbnail": "concrete_finish.webp",
+    "text": "concrete surface texture, rough gray material, fine grain, industrial matte finish"
+  },
+  {
+    "name": "Rusty Metal",
+    "category": "Finish",
+    "chip": "Rust",
+    "tone": "finish",
+    "thumbnail": "rusty_metal.webp",
+    "text": "rusty metal surface, oxidized texture, reddish brown corrosion, worn industrial finish"
+  },
+  {
+    "name": "Aged Metal",
+    "category": "Finish",
+    "chip": "Aged",
+    "tone": "finish",
+    "thumbnail": "aged_metal.webp",
+    "text": "aged metal finish, tarnished surface, subtle scratches, oxidized patina, weathered material"
+  },
+  {
+    "name": "Patina Finish",
+    "category": "Finish",
+    "chip": "Patina",
+    "tone": "finish",
+    "thumbnail": "patina_finish.webp",
+    "text": "patina surface finish, green-blue oxidized metal, aged copper look, weathered decorative texture"
+  },
+  {
+    "name": "Wood Grain",
+    "category": "Finish",
+    "chip": "Wood",
+    "tone": "finish",
+    "thumbnail": "wood_grain.webp",
+    "text": "wood grain texture, natural wooden surface, warm organic material finish, visible grain lines"
+  },
+  {
+    "name": "Leather Finish",
+    "category": "Finish",
+    "chip": "Leather",
+    "tone": "finish",
+    "thumbnail": "leather_finish.webp",
+    "text": "leather surface texture, subtle grain, soft worn material, tactile premium finish"
+  },
+  {
+    "name": "Ceramic Glaze",
+    "category": "Finish",
+    "chip": "Ceramic",
+    "tone": "finish",
+    "thumbnail": "ceramic_glaze.webp",
+    "text": "ceramic glazed surface, smooth glossy coating, subtle reflections, crafted material finish"
+  },
+  {
+    "name": "Plastic Finish",
+    "category": "Finish",
+    "chip": "Plastic",
+    "tone": "finish",
+    "thumbnail": "plastic_finish.webp",
+    "text": "plastic surface finish, smooth synthetic texture, clean highlights, modern manufactured material"
+  },
+  {
+    "name": "Slime Finish",
+    "category": "Finish",
+    "chip": "Slime",
+    "tone": "finish",
+    "thumbnail": "slime_finish.webp",
+    "text": "slime surface finish, glossy translucent gel texture, sticky wet highlights, soft gooey material look"
+  },
+  {
+    "name": "Gel Finish",
+    "category": "Finish",
+    "chip": "Gel",
+    "tone": "finish",
+    "thumbnail": "gel_finish.webp",
+    "text": "gel surface finish, translucent glossy material, smooth jelly-like highlights, soft elastic texture"
+  },
+  {
+    "name": "Liquid Gloss",
+    "category": "Finish",
+    "chip": "Liquid",
+    "tone": "finish",
+    "thumbnail": "liquid_gloss.webp",
+    "text": "liquid glossy finish, wet reflective coating, smooth flowing highlights, polished fluid surface"
+  },
+  {
+    "name": "Gummy Finish",
+    "category": "Finish",
+    "chip": "Gummy",
+    "tone": "finish",
+    "thumbnail": "gummy_finish.webp",
+    "text": "gummy material finish, soft translucent candy texture, rounded glossy surface, playful elastic look"
+  },
+  {
+    "name": "Wax Finish",
+    "category": "Finish",
+    "chip": "Wax",
+    "tone": "finish",
+    "thumbnail": "wax_finish.webp",
+    "text": "wax surface finish, soft semi-gloss texture, smooth melted material, subtle warm highlights"
+  },
+  {
     "name": "Red Theme",
     "category": "Color Theme",
     "chip": "Red",
@@ -2007,7 +2439,7 @@ const EFFECT_PRESETS = [
     "text": "fantasy color theme, magical saturated palette, glowing imaginative color grading, whimsical atmosphere"
   }
 ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 const EFFECT_THUMBNAIL_BASE = "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/";
 function k2fxPresetSlug(name) {

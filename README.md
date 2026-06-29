@@ -715,6 +715,41 @@ Minimal Clean
 Retro Pop
 ```
 
+
+## Finish
+
+```text
+Paper Print
+Matte Print
+Glossy Print
+Canvas Texture
+Fabric Print
+Metal Print
+Glass Print
+Wet Surface
+Water Droplets
+Dusty Surface
+Scratched Print
+Vintage Paper
+Stone Surface
+Marble Finish
+Concrete Finish
+Rusty Metal
+Aged Metal
+Patina Finish
+Wood Grain
+Leather Finish
+Ceramic Glaze
+Plastic Finish
+Slime Finish
+Gel Finish
+Liquid Gloss
+Gummy Finish
+Wax Finish
+```
+
+Finish presets add final surface and material-like effects such as paper, canvas, fabric, metal, glass, wet surfaces, dust, scratches, stone, rust, wood, leather, ceramic, plastic, slime, gel, gummy, and wax. Thumbnails are local WebP material swatches under `web/thumbnails/`.
+
 ## Color Theme
 
 ```text
