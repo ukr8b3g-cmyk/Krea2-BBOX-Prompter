@@ -440,6 +440,142 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
   },
   {
+    "name": "Kawaii Deco",
+    "category": "Deco",
+    "chip": "Kawaii",
+    "tone": "deco",
+    "thumbnail": "kawaii_deco.webp",
+    "text": "kawaii decoration style, cute pastel accents, hearts, stars, sparkles, soft playful atmosphere"
+  },
+  {
+    "name": "Sweet Deco",
+    "category": "Deco",
+    "chip": "Sweet",
+    "tone": "deco",
+    "thumbnail": "sweet_deco.webp",
+    "text": "sweet cute decoration, soft pink hearts, candy-like colors, gentle sparkles, romantic playful atmosphere"
+  },
+  {
+    "name": "Pop Cute Deco",
+    "category": "Deco",
+    "chip": "Pop",
+    "tone": "deco",
+    "thumbnail": "pop_cute_deco.webp",
+    "text": "pop cute decoration, bright colorful stickers, playful doodles, stars, sparkles, cheerful energetic atmosphere"
+  },
+  {
+    "name": "Heart Deco",
+    "category": "Deco",
+    "chip": "Heart",
+    "tone": "deco",
+    "thumbnail": "heart_deco.webp",
+    "text": "cute heart decorations, scattered hearts, playful romantic accents, soft pop atmosphere"
+  },
+  {
+    "name": "Sparkle Deco",
+    "category": "Deco",
+    "chip": "Sparkle",
+    "tone": "deco",
+    "thumbnail": "sparkle_deco.webp",
+    "text": "sparkle decorations, glittering stars, shiny highlights, magical twinkle accents"
+  },
+  {
+    "name": "Doodle Deco",
+    "category": "Deco",
+    "chip": "Doodle",
+    "tone": "deco",
+    "thumbnail": "doodle_deco.webp",
+    "text": "playful doodle decorations, hand-drawn lines, cute scribbles, casual marker accents"
+  },
+  {
+    "name": "Sticker Deco",
+    "category": "Deco",
+    "chip": "Sticker",
+    "tone": "deco",
+    "thumbnail": "sticker_deco.webp",
+    "text": "sticker-like decorations, cute sticker accents, playful pop graphics, layered decorative elements"
+  },
+  {
+    "name": "Pop Deco",
+    "category": "Deco",
+    "chip": "Pop",
+    "tone": "deco",
+    "thumbnail": "pop_deco.webp",
+    "text": "pop decoration style, bright playful accents, colorful graphic motifs, fun energetic atmosphere"
+  },
+  {
+    "name": "Frame Deco",
+    "category": "Deco",
+    "chip": "Frame",
+    "tone": "deco",
+    "thumbnail": "frame_deco.webp",
+    "text": "decorative frame accents, playful border decoration, cute graphic frame around the image"
+  },
+  {
+    "name": "Glitter Deco",
+    "category": "Deco",
+    "chip": "Glitter",
+    "tone": "deco",
+    "thumbnail": "glitter_deco.webp",
+    "text": "glitter decoration, sparkling particles, shiny festive accents, glossy decorative highlights"
+  },
+  {
+    "name": "Star Deco",
+    "category": "Deco",
+    "chip": "Star",
+    "tone": "deco",
+    "thumbnail": "star_deco.webp",
+    "text": "star decorations, scattered stars, bright twinkle accents, cute dreamy atmosphere"
+  },
+  {
+    "name": "Ribbon Deco",
+    "category": "Deco",
+    "chip": "Ribbon",
+    "tone": "deco",
+    "thumbnail": "ribbon_deco.webp",
+    "text": "ribbon decorations, cute ribbon accents, soft decorative details, playful feminine style"
+  },
+  {
+    "name": "Bubble Deco",
+    "category": "Deco",
+    "chip": "Bubble",
+    "tone": "deco",
+    "thumbnail": "bubble_deco.webp",
+    "text": "bubble decorations, floating bubbles, glossy round accents, playful light atmosphere"
+  },
+  {
+    "name": "Stamp Deco",
+    "category": "Deco",
+    "chip": "Stamp",
+    "tone": "deco",
+    "thumbnail": "stamp_deco.webp",
+    "text": "stamp-like decorations, playful graphic stamps, cute printed accents, casual photo booth style"
+  },
+  {
+    "name": "Graffiti Deco",
+    "category": "Deco",
+    "chip": "Graffiti",
+    "tone": "deco",
+    "thumbnail": "graffiti_deco.webp",
+    "text": "graffiti-style decorations, bold marker lines, playful scribbles, energetic street-style accents"
+  },
+  {
+    "name": "Neon Deco",
+    "category": "Deco",
+    "chip": "Neon",
+    "tone": "deco",
+    "thumbnail": "neon_deco.webp",
+    "text": "neon decorations, glowing outlines, bright neon accents, playful night-pop atmosphere"
+  },
+  {
+    "name": "Dreamy Deco",
+    "category": "Deco",
+    "chip": "Dreamy",
+    "tone": "deco",
+    "thumbnail": "dreamy_deco.webp",
+    "text": "dreamy decorations, soft sparkles, floating hearts, gentle glow, cute fantasy atmosphere"
+  },
+  {
     "name": "Paper Print",
     "category": "Finish",
     "chip": "Paper",
@@ -1687,6 +1823,142 @@ const EFFECT_PRESETS = [
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
   },
   {
+    "name": "Kawaii Deco",
+    "category": "Deco",
+    "chip": "Kawaii",
+    "tone": "deco",
+    "thumbnail": "kawaii_deco.webp",
+    "text": "kawaii decoration style, cute pastel accents, hearts, stars, sparkles, soft playful atmosphere"
+  },
+  {
+    "name": "Sweet Deco",
+    "category": "Deco",
+    "chip": "Sweet",
+    "tone": "deco",
+    "thumbnail": "sweet_deco.webp",
+    "text": "sweet cute decoration, soft pink hearts, candy-like colors, gentle sparkles, romantic playful atmosphere"
+  },
+  {
+    "name": "Pop Cute Deco",
+    "category": "Deco",
+    "chip": "Pop",
+    "tone": "deco",
+    "thumbnail": "pop_cute_deco.webp",
+    "text": "pop cute decoration, bright colorful stickers, playful doodles, stars, sparkles, cheerful energetic atmosphere"
+  },
+  {
+    "name": "Heart Deco",
+    "category": "Deco",
+    "chip": "Heart",
+    "tone": "deco",
+    "thumbnail": "heart_deco.webp",
+    "text": "cute heart decorations, scattered hearts, playful romantic accents, soft pop atmosphere"
+  },
+  {
+    "name": "Sparkle Deco",
+    "category": "Deco",
+    "chip": "Sparkle",
+    "tone": "deco",
+    "thumbnail": "sparkle_deco.webp",
+    "text": "sparkle decorations, glittering stars, shiny highlights, magical twinkle accents"
+  },
+  {
+    "name": "Doodle Deco",
+    "category": "Deco",
+    "chip": "Doodle",
+    "tone": "deco",
+    "thumbnail": "doodle_deco.webp",
+    "text": "playful doodle decorations, hand-drawn lines, cute scribbles, casual marker accents"
+  },
+  {
+    "name": "Sticker Deco",
+    "category": "Deco",
+    "chip": "Sticker",
+    "tone": "deco",
+    "thumbnail": "sticker_deco.webp",
+    "text": "sticker-like decorations, cute sticker accents, playful pop graphics, layered decorative elements"
+  },
+  {
+    "name": "Pop Deco",
+    "category": "Deco",
+    "chip": "Pop",
+    "tone": "deco",
+    "thumbnail": "pop_deco.webp",
+    "text": "pop decoration style, bright playful accents, colorful graphic motifs, fun energetic atmosphere"
+  },
+  {
+    "name": "Frame Deco",
+    "category": "Deco",
+    "chip": "Frame",
+    "tone": "deco",
+    "thumbnail": "frame_deco.webp",
+    "text": "decorative frame accents, playful border decoration, cute graphic frame around the image"
+  },
+  {
+    "name": "Glitter Deco",
+    "category": "Deco",
+    "chip": "Glitter",
+    "tone": "deco",
+    "thumbnail": "glitter_deco.webp",
+    "text": "glitter decoration, sparkling particles, shiny festive accents, glossy decorative highlights"
+  },
+  {
+    "name": "Star Deco",
+    "category": "Deco",
+    "chip": "Star",
+    "tone": "deco",
+    "thumbnail": "star_deco.webp",
+    "text": "star decorations, scattered stars, bright twinkle accents, cute dreamy atmosphere"
+  },
+  {
+    "name": "Ribbon Deco",
+    "category": "Deco",
+    "chip": "Ribbon",
+    "tone": "deco",
+    "thumbnail": "ribbon_deco.webp",
+    "text": "ribbon decorations, cute ribbon accents, soft decorative details, playful feminine style"
+  },
+  {
+    "name": "Bubble Deco",
+    "category": "Deco",
+    "chip": "Bubble",
+    "tone": "deco",
+    "thumbnail": "bubble_deco.webp",
+    "text": "bubble decorations, floating bubbles, glossy round accents, playful light atmosphere"
+  },
+  {
+    "name": "Stamp Deco",
+    "category": "Deco",
+    "chip": "Stamp",
+    "tone": "deco",
+    "thumbnail": "stamp_deco.webp",
+    "text": "stamp-like decorations, playful graphic stamps, cute printed accents, casual photo booth style"
+  },
+  {
+    "name": "Graffiti Deco",
+    "category": "Deco",
+    "chip": "Graffiti",
+    "tone": "deco",
+    "thumbnail": "graffiti_deco.webp",
+    "text": "graffiti-style decorations, bold marker lines, playful scribbles, energetic street-style accents"
+  },
+  {
+    "name": "Neon Deco",
+    "category": "Deco",
+    "chip": "Neon",
+    "tone": "deco",
+    "thumbnail": "neon_deco.webp",
+    "text": "neon decorations, glowing outlines, bright neon accents, playful night-pop atmosphere"
+  },
+  {
+    "name": "Dreamy Deco",
+    "category": "Deco",
+    "chip": "Dreamy",
+    "tone": "deco",
+    "thumbnail": "dreamy_deco.webp",
+    "text": "dreamy decorations, soft sparkles, floating hearts, gentle glow, cute fantasy atmosphere"
+  },
+  {
     "name": "Paper Print",
     "category": "Finish",
     "chip": "Paper",
@@ -2439,7 +2711,7 @@ const EFFECT_PRESETS = [
     "text": "fantasy color theme, magical saturated palette, glowing imaginative color grading, whimsical atmosphere"
   }
 ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Deco", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 const EFFECT_THUMBNAIL_BASE = "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/";
 function k2fxPresetSlug(name) {

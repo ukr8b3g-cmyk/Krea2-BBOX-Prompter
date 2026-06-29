@@ -716,6 +716,31 @@ Retro Pop
 ```
 
 
+
+## Deco
+
+```text
+Kawaii Deco
+Sweet Deco
+Pop Cute Deco
+Heart Deco
+Sparkle Deco
+Doodle Deco
+Sticker Deco
+Pop Deco
+Frame Deco
+Glitter Deco
+Star Deco
+Ribbon Deco
+Bubble Deco
+Stamp Deco
+Graffiti Deco
+Neon Deco
+Dreamy Deco
+```
+
+Deco presets add playful decorative overlays such as hearts, sparkles, doodles, stickers, frames, glitter, stars, ribbons, bubbles, stamps, graffiti, neon accents, and dreamy cute effects. These are intentionally lightweight and use local WebP decoration swatches.
+
 ## Finish
 
 ```text

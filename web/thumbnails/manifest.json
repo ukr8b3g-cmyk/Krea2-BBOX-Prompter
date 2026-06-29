@@ -1090,5 +1090,124 @@
     "category": "Finish",
     "chip": "Wax",
     "tone": "finish"
+  },
+  {
+    "name": "Kawaii Deco",
+    "file": "kawaii_deco.webp",
+    "category": "Deco",
+    "chip": "Kawaii",
+    "tone": "deco"
+  },
+  {
+    "name": "Sweet Deco",
+    "file": "sweet_deco.webp",
+    "category": "Deco",
+    "chip": "Sweet",
+    "tone": "deco"
+  },
+  {
+    "name": "Pop Cute Deco",
+    "file": "pop_cute_deco.webp",
+    "category": "Deco",
+    "chip": "Pop",
+    "tone": "deco"
+  },
+  {
+    "name": "Heart Deco",
+    "file": "heart_deco.webp",
+    "category": "Deco",
+    "chip": "Heart",
+    "tone": "deco"
+  },
+  {
+    "name": "Sparkle Deco",
+    "file": "sparkle_deco.webp",
+    "category": "Deco",
+    "chip": "Sparkle",
+    "tone": "deco"
+  },
+  {
+    "name": "Doodle Deco",
+    "file": "doodle_deco.webp",
+    "category": "Deco",
+    "chip": "Doodle",
+    "tone": "deco"
+  },
+  {
+    "name": "Sticker Deco",
+    "file": "sticker_deco.webp",
+    "category": "Deco",
+    "chip": "Sticker",
+    "tone": "deco"
+  },
+  {
+    "name": "Pop Deco",
+    "file": "pop_deco.webp",
+    "category": "Deco",
+    "chip": "Pop",
+    "tone": "deco"
+  },
+  {
+    "name": "Frame Deco",
+    "file": "frame_deco.webp",
+    "category": "Deco",
+    "chip": "Frame",
+    "tone": "deco"
+  },
+  {
+    "name": "Glitter Deco",
+    "file": "glitter_deco.webp",
+    "category": "Deco",
+    "chip": "Glitter",
+    "tone": "deco"
+  },
+  {
+    "name": "Star Deco",
+    "file": "star_deco.webp",
+    "category": "Deco",
+    "chip": "Star",
+    "tone": "deco"
+  },
+  {
+    "name": "Ribbon Deco",
+    "file": "ribbon_deco.webp",
+    "category": "Deco",
+    "chip": "Ribbon",
+    "tone": "deco"
+  },
+  {
+    "name": "Bubble Deco",
+    "file": "bubble_deco.webp",
+    "category": "Deco",
+    "chip": "Bubble",
+    "tone": "deco"
+  },
+  {
+    "name": "Stamp Deco",
+    "file": "stamp_deco.webp",
+    "category": "Deco",
+    "chip": "Stamp",
+    "tone": "deco"
+  },
+  {
+    "name": "Graffiti Deco",
+    "file": "graffiti_deco.webp",
+    "category": "Deco",
+    "chip": "Graffiti",
+    "tone": "deco"
+  },
+  {
+    "name": "Neon Deco",
+    "file": "neon_deco.webp",
+    "category": "Deco",
+    "chip": "Neon",
+    "tone": "deco"
+  },
+  {
+    "name": "Dreamy Deco",
+    "file": "dreamy_deco.webp",
+    "category": "Deco",
+    "chip": "Dreamy",
+    "tone": "deco"
   }
 ]
