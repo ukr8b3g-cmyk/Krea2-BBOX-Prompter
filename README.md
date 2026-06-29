@@ -829,10 +829,23 @@ Heart Magic Color
 Harajuku Decora Mood
 Pastel Kawaii Mood
 Pop Kawaii Color
+Japanese Mood
+Sakura Japan Color
+Samurai Drama Color
+Western Desert Color
+Indian Festival Color
+Arabian Night Color
+Egyptian Gold Color
+Chinese Lantern Color
+Korean Pastel Color
+Nordic Winter Color
+Tropical Island Color
+Virtual Diva Teal
+Heterochromia Eyes
 Fantasy Color
 ```
 
-Color Theme presets apply broad palette direction such as single-color themes, two-color themes, pastel palettes, monochrome, neon, vaporwave, and world-building color moods such as stardust, galaxy, aurora, dreamland, heart magic, and Harajuku-inspired kawaii color. Thumbnails are included as local WebP color swatches under `web/thumbnails/`, including presets with `&` in the display name.
+Color Theme presets apply broad palette direction such as single-color themes, two-color themes, pastel palettes, monochrome, neon, vaporwave, world-building color moods, and cultural or regional color moods such as Japanese, Western desert, Indian festival, Arabian night, Egyptian gold, Chinese lantern, Nordic winter, tropical island, and virtual diva teal. These mood presets often show up most clearly when the scene has a simple or open background, where Krea2 has room to reflect the palette and atmosphere. Thumbnails are included as local WebP color swatches under `web/thumbnails/`, including presets with `&` in the display name.
 
 ---
 
@@ -1904,6 +1917,19 @@ Heart Magic Color
 Harajuku Decora Mood
 Pastel Kawaii Mood
 Pop Kawaii Color
+Japanese Mood
+Sakura Japan Color
+Samurai Drama Color
+Western Desert Color
+Indian Festival Color
+Arabian Night Color
+Egyptian Gold Color
+Chinese Lantern Color
+Korean Pastel Color
+Nordic Winter Color
+Tropical Island Color
+Virtual Diva Teal
+Heterochromia Eyes
 Fantasy Color
 ```
 

@@ -1256,6 +1256,110 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "pop kawaii color atmosphere, bright pink cyan yellow and lavender palette, cheerful colorful accents, photographic color grading, playful real-world background mood"
   },
   {
+    "name": "Japanese Mood",
+    "category": "Color Theme",
+    "chip": "JP",
+    "tone": "color-theme",
+    "thumbnail": "japanese_mood.webp",
+    "text": "japanese mood color atmosphere, vermilion indigo warm gold and soft paper tones, quiet traditional ambience, photographic color grading, calm real-world background mood"
+  },
+  {
+    "name": "Sakura Japan Color",
+    "category": "Color Theme",
+    "chip": "SA",
+    "tone": "color-theme",
+    "thumbnail": "sakura_japan_color.webp",
+    "text": "sakura japan color atmosphere, pale cherry blossom pink, soft white, warm spring light, gentle Japanese mood, photographic color grading, airy real-world background mood"
+  },
+  {
+    "name": "Samurai Drama Color",
+    "category": "Color Theme",
+    "chip": "SD",
+    "tone": "color-theme",
+    "thumbnail": "samurai_drama_color.webp",
+    "text": "samurai drama color atmosphere, deep black, dark red, muted gold and smoky neutral tones, period drama tension, cinematic photographic color grading"
+  },
+  {
+    "name": "Western Desert Color",
+    "category": "Color Theme",
+    "chip": "WD",
+    "tone": "color-theme",
+    "thumbnail": "western_desert_color.webp",
+    "text": "western desert color atmosphere, dusty sand, burnt orange, leather brown and sunset gold palette, dry frontier mood, photographic color grading, real-world background atmosphere"
+  },
+  {
+    "name": "Indian Festival Color",
+    "category": "Color Theme",
+    "chip": "IF",
+    "tone": "color-theme",
+    "thumbnail": "indian_festival_color.webp",
+    "text": "indian festival color atmosphere, saffron magenta turquoise and gold palette, festive color richness, photographic color grading, vibrant real-world background mood"
+  },
+  {
+    "name": "Arabian Night Color",
+    "category": "Color Theme",
+    "chip": "AN",
+    "tone": "color-theme",
+    "thumbnail": "arabian_night_color.webp",
+    "text": "arabian night color atmosphere, deep blue violet gold and warm lantern glow, night-market fantasy mood, photographic color grading, mysterious real-world background atmosphere"
+  },
+  {
+    "name": "Egyptian Gold Color",
+    "category": "Color Theme",
+    "chip": "EG",
+    "tone": "color-theme",
+    "thumbnail": "egyptian_gold_color.webp",
+    "text": "egyptian gold color atmosphere, desert sand, turquoise, black accents and aged gold palette, ancient monument mood, photographic color grading, warm real-world background atmosphere"
+  },
+  {
+    "name": "Chinese Lantern Color",
+    "category": "Color Theme",
+    "chip": "CL",
+    "tone": "color-theme",
+    "thumbnail": "chinese_lantern_color.webp",
+    "text": "chinese lantern color atmosphere, rich red, warm gold, deep night tones and lantern glow, festive street mood, photographic color grading, real-world background atmosphere"
+  },
+  {
+    "name": "Korean Pastel Color",
+    "category": "Color Theme",
+    "chip": "KP",
+    "tone": "color-theme",
+    "thumbnail": "korean_pastel_color.webp",
+    "text": "korean pastel color atmosphere, soft pink mint sky blue and cream palette, clean modern gentle mood, photographic color grading, airy real-world background atmosphere"
+  },
+  {
+    "name": "Nordic Winter Color",
+    "category": "Color Theme",
+    "chip": "NW",
+    "tone": "color-theme",
+    "thumbnail": "nordic_winter_color.webp",
+    "text": "nordic winter color atmosphere, white blue silver and pale gray palette, cold quiet snow mood, photographic color grading, clean real-world background atmosphere"
+  },
+  {
+    "name": "Tropical Island Color",
+    "category": "Color Theme",
+    "chip": "TI",
+    "tone": "color-theme",
+    "thumbnail": "tropical_island_color.webp",
+    "text": "tropical island color atmosphere, turquoise ocean, lush green, sunlit yellow and coral accents, bright vacation mood, photographic color grading, real-world background atmosphere"
+  },
+  {
+    "name": "Virtual Diva Teal",
+    "category": "Color Theme",
+    "chip": "VD",
+    "tone": "color-theme",
+    "thumbnail": "virtual_diva_teal.webp",
+    "text": "virtual diva teal color atmosphere, teal cyan black and soft neon accents, digital stage-like color mood, clean photographic color grading, vivid real-world background atmosphere"
+  },
+  {
+    "name": "Heterochromia Eyes",
+    "category": "Color Theme",
+    "chip": "HE",
+    "tone": "color-theme",
+    "thumbnail": "heterochromia_eyes.webp",
+    "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
+  },
+  {
     "name": "Fantasy Color",
     "category": "Color Theme",
     "chip": "FC",
@@ -2575,6 +2679,110 @@ const EFFECT_PRESETS = [
     "text": "pop kawaii color atmosphere, bright pink cyan yellow and lavender palette, cheerful colorful accents, photographic color grading, playful real-world background mood"
   },
   {
+    "name": "Japanese Mood",
+    "category": "Color Theme",
+    "chip": "JP",
+    "tone": "color-theme",
+    "thumbnail": "japanese_mood.webp",
+    "text": "japanese mood color atmosphere, vermilion indigo warm gold and soft paper tones, quiet traditional ambience, photographic color grading, calm real-world background mood"
+  },
+  {
+    "name": "Sakura Japan Color",
+    "category": "Color Theme",
+    "chip": "SA",
+    "tone": "color-theme",
+    "thumbnail": "sakura_japan_color.webp",
+    "text": "sakura japan color atmosphere, pale cherry blossom pink, soft white, warm spring light, gentle Japanese mood, photographic color grading, airy real-world background mood"
+  },
+  {
+    "name": "Samurai Drama Color",
+    "category": "Color Theme",
+    "chip": "SD",
+    "tone": "color-theme",
+    "thumbnail": "samurai_drama_color.webp",
+    "text": "samurai drama color atmosphere, deep black, dark red, muted gold and smoky neutral tones, period drama tension, cinematic photographic color grading"
+  },
+  {
+    "name": "Western Desert Color",
+    "category": "Color Theme",
+    "chip": "WD",
+    "tone": "color-theme",
+    "thumbnail": "western_desert_color.webp",
+    "text": "western desert color atmosphere, dusty sand, burnt orange, leather brown and sunset gold palette, dry frontier mood, photographic color grading, real-world background atmosphere"
+  },
+  {
+    "name": "Indian Festival Color",
+    "category": "Color Theme",
+    "chip": "IF",
+    "tone": "color-theme",
+    "thumbnail": "indian_festival_color.webp",
+    "text": "indian festival color atmosphere, saffron magenta turquoise and gold palette, festive color richness, photographic color grading, vibrant real-world background mood"
+  },
+  {
+    "name": "Arabian Night Color",
+    "category": "Color Theme",
+    "chip": "AN",
+    "tone": "color-theme",
+    "thumbnail": "arabian_night_color.webp",
+    "text": "arabian night color atmosphere, deep blue violet gold and warm lantern glow, night-market fantasy mood, photographic color grading, mysterious real-world background atmosphere"
+  },
+  {
+    "name": "Egyptian Gold Color",
+    "category": "Color Theme",
+    "chip": "EG",
+    "tone": "color-theme",
+    "thumbnail": "egyptian_gold_color.webp",
+    "text": "egyptian gold color atmosphere, desert sand, turquoise, black accents and aged gold palette, ancient monument mood, photographic color grading, warm real-world background atmosphere"
+  },
+  {
+    "name": "Chinese Lantern Color",
+    "category": "Color Theme",
+    "chip": "CL",
+    "tone": "color-theme",
+    "thumbnail": "chinese_lantern_color.webp",
+    "text": "chinese lantern color atmosphere, rich red, warm gold, deep night tones and lantern glow, festive street mood, photographic color grading, real-world background atmosphere"
+  },
+  {
+    "name": "Korean Pastel Color",
+    "category": "Color Theme",
+    "chip": "KP",
+    "tone": "color-theme",
+    "thumbnail": "korean_pastel_color.webp",
+    "text": "korean pastel color atmosphere, soft pink mint sky blue and cream palette, clean modern gentle mood, photographic color grading, airy real-world background atmosphere"
+  },
+  {
+    "name": "Nordic Winter Color",
+    "category": "Color Theme",
+    "chip": "NW",
+    "tone": "color-theme",
+    "thumbnail": "nordic_winter_color.webp",
+    "text": "nordic winter color atmosphere, white blue silver and pale gray palette, cold quiet snow mood, photographic color grading, clean real-world background atmosphere"
+  },
+  {
+    "name": "Tropical Island Color",
+    "category": "Color Theme",
+    "chip": "TI",
+    "tone": "color-theme",
+    "thumbnail": "tropical_island_color.webp",
+    "text": "tropical island color atmosphere, turquoise ocean, lush green, sunlit yellow and coral accents, bright vacation mood, photographic color grading, real-world background atmosphere"
+  },
+  {
+    "name": "Virtual Diva Teal",
+    "category": "Color Theme",
+    "chip": "VD",
+    "tone": "color-theme",
+    "thumbnail": "virtual_diva_teal.webp",
+    "text": "virtual diva teal color atmosphere, teal cyan black and soft neon accents, digital stage-like color mood, clean photographic color grading, vivid real-world background atmosphere"
+  },
+  {
+    "name": "Heterochromia Eyes",
+    "category": "Color Theme",
+    "chip": "HE",
+    "tone": "color-theme",
+    "thumbnail": "heterochromia_eyes.webp",
+    "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
+  },
+  {
     "name": "Fantasy Color",
     "category": "Color Theme",
     "chip": "FC",
@@ -3840,7 +4048,7 @@ function setupEffectNode(node) {
   top.append(title, search, toggleLabel);
   const thumbSizeMin = 80;
   const thumbSizeMax = 180;
-  const readThumbSize = () => Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(localStorage.getItem(EFFECT_THUMB_SIZE_KEY)) || 110));
+  const readThumbSize = () => Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(localStorage.getItem(EFFECT_THUMB_SIZE_KEY)) || 135));
   const sizeBar = document.createElement("label");
   sizeBar.className = "k2fx-sizebar";
   const sizeText = document.createElement("span");
@@ -3853,7 +4061,7 @@ function setupEffectNode(node) {
   sizeSlider.value = String(readThumbSize());
   const sizeValue = document.createElement("output");
   function applyThumbSize(value) {
-    const size = Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(value) || 110));
+    const size = Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(value) || 135));
     wrap.style.setProperty("--k2fx-thumb-w", `${size}px`);
     sizeSlider.value = String(size);
     sizeValue.textContent = `${size}`;

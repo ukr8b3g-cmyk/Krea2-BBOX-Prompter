@@ -959,6 +959,97 @@
     "tone": "color-theme"
   },
   {
+    "name": "Japanese Mood",
+    "file": "japanese_mood.webp",
+    "category": "Color Theme",
+    "chip": "JP",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Sakura Japan Color",
+    "file": "sakura_japan_color.webp",
+    "category": "Color Theme",
+    "chip": "SA",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Samurai Drama Color",
+    "file": "samurai_drama_color.webp",
+    "category": "Color Theme",
+    "chip": "SD",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Western Desert Color",
+    "file": "western_desert_color.webp",
+    "category": "Color Theme",
+    "chip": "WD",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Indian Festival Color",
+    "file": "indian_festival_color.webp",
+    "category": "Color Theme",
+    "chip": "IF",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Arabian Night Color",
+    "file": "arabian_night_color.webp",
+    "category": "Color Theme",
+    "chip": "AN",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Egyptian Gold Color",
+    "file": "egyptian_gold_color.webp",
+    "category": "Color Theme",
+    "chip": "EG",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Chinese Lantern Color",
+    "file": "chinese_lantern_color.webp",
+    "category": "Color Theme",
+    "chip": "CL",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Korean Pastel Color",
+    "file": "korean_pastel_color.webp",
+    "category": "Color Theme",
+    "chip": "KP",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Nordic Winter Color",
+    "file": "nordic_winter_color.webp",
+    "category": "Color Theme",
+    "chip": "NW",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Tropical Island Color",
+    "file": "tropical_island_color.webp",
+    "category": "Color Theme",
+    "chip": "TI",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Virtual Diva Teal",
+    "file": "virtual_diva_teal.webp",
+    "category": "Color Theme",
+    "chip": "VD",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Heterochromia Eyes",
+    "file": "heterochromia_eyes.webp",
+    "category": "Color Theme",
+    "chip": "HE",
+    "tone": "color-theme"
+  },
+  {
     "name": "Fantasy Color",
     "file": "fantasy_color.webp",
     "category": "Color Theme",
