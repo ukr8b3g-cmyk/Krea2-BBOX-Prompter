@@ -444,6 +444,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Red",
     "tone": "color-theme",
+    "thumbnail": "red_theme.webp",
     "text": "red color theme, cohesive red palette, warm red color grading, strong visual unity"
   },
   {
@@ -451,6 +452,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Blue",
     "tone": "color-theme",
+    "thumbnail": "blue_theme.webp",
     "text": "blue color theme, cohesive blue palette, cool calm color grading, unified blue atmosphere"
   },
   {
@@ -458,6 +460,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Pink",
     "tone": "color-theme",
+    "thumbnail": "pink_theme.webp",
     "text": "pink color theme, cohesive pink palette, soft rosy color grading, harmonious pink atmosphere"
   },
   {
@@ -465,6 +468,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Purple",
     "tone": "color-theme",
+    "thumbnail": "purple_theme.webp",
     "text": "purple color theme, cohesive violet palette, rich purple color grading, elegant moody atmosphere"
   },
   {
@@ -472,6 +476,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Green",
     "tone": "color-theme",
+    "thumbnail": "green_theme.webp",
     "text": "green color theme, cohesive green palette, fresh natural color grading, balanced green atmosphere"
   },
   {
@@ -479,6 +484,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Yellow",
     "tone": "color-theme",
+    "thumbnail": "yellow_theme.webp",
     "text": "yellow color theme, cohesive yellow palette, bright sunny color grading, warm cheerful atmosphere"
   },
   {
@@ -486,6 +492,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Orange",
     "tone": "color-theme",
+    "thumbnail": "orange_theme.webp",
     "text": "orange color theme, cohesive orange palette, warm energetic color grading, vivid orange atmosphere"
   },
   {
@@ -493,6 +500,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Cyan",
     "tone": "color-theme",
+    "thumbnail": "cyan_theme.webp",
     "text": "cyan color theme, cohesive cyan palette, clear cool color grading, bright aquatic atmosphere"
   },
   {
@@ -500,6 +508,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Teal",
     "tone": "color-theme",
+    "thumbnail": "teal_theme.webp",
     "text": "teal color theme, cohesive teal palette, cinematic blue-green color grading, polished atmosphere"
   },
   {
@@ -507,6 +516,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Magenta",
     "tone": "color-theme",
+    "thumbnail": "magenta_theme.webp",
     "text": "magenta color theme, cohesive magenta palette, bold pink-purple color grading, vibrant atmosphere"
   },
   {
@@ -514,6 +524,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Warm",
     "tone": "color-theme",
+    "thumbnail": "warm_theme.webp",
     "text": "warm color theme, amber highlights, warm color grading, inviting golden atmosphere"
   },
   {
@@ -521,6 +532,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Cool",
     "tone": "color-theme",
+    "thumbnail": "cool_theme.webp",
     "text": "cool color theme, blue cool palette, clean cool color grading, calm atmospheric mood"
   },
   {
@@ -528,6 +540,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Pastel",
     "tone": "color-theme",
+    "thumbnail": "pastel_theme.webp",
     "text": "pastel color theme, soft low-saturation palette, gentle airy atmosphere, delicate color grading"
   },
   {
@@ -535,6 +548,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Neon",
     "tone": "color-theme",
+    "thumbnail": "neon_theme.webp",
     "text": "neon color theme, electric saturated palette, glowing highlights, energetic futuristic color grading"
   },
   {
@@ -542,6 +556,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Muted",
     "tone": "color-theme",
+    "thumbnail": "muted_theme.webp",
     "text": "muted color theme, desaturated palette, subdued color grading, calm understated atmosphere"
   },
   {
@@ -549,6 +564,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Monochro",
     "tone": "color-theme",
+    "thumbnail": "monochrome_theme.webp",
     "text": "monochrome color theme, black and white palette, clean grayscale color grading, strong tonal contrast"
   },
   {
@@ -556,6 +572,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Sepia",
     "tone": "color-theme",
+    "thumbnail": "sepia_theme.webp",
     "text": "sepia color theme, warm brown palette, vintage sepia color grading, nostalgic atmosphere"
   },
   {
@@ -563,6 +580,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Gold",
     "tone": "color-theme",
+    "thumbnail": "gold_theme.webp",
     "text": "gold color theme, golden palette, warm metallic highlights, premium luminous color grading"
   },
   {
@@ -570,6 +588,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Silver",
     "tone": "color-theme",
+    "thumbnail": "silver_theme.webp",
     "text": "silver color theme, cool metallic palette, clean silver-gray color grading, polished atmosphere"
   },
   {
@@ -577,6 +596,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Dark",
     "tone": "color-theme",
+    "thumbnail": "dark_theme.webp",
     "text": "dark color theme, deep shadow palette, low brightness color grading, moody dramatic atmosphere"
   },
   {
@@ -584,6 +604,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Bright",
     "tone": "color-theme",
+    "thumbnail": "bright_theme.webp",
     "text": "bright color theme, high-key luminous palette, clean bright color grading, airy atmosphere"
   },
   {
@@ -591,6 +612,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Soft",
     "tone": "color-theme",
+    "thumbnail": "soft_theme.webp",
     "text": "soft color theme, gentle low-contrast palette, smooth soft color grading, calm delicate atmosphere"
   },
   {
@@ -598,6 +620,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Vivid",
     "tone": "color-theme",
+    "thumbnail": "vivid_theme.webp",
     "text": "vivid color theme, highly saturated palette, bold color grading, energetic visual impact"
   },
   {
@@ -605,6 +628,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Earth",
     "tone": "color-theme",
+    "thumbnail": "earth_theme.webp",
     "text": "earth color theme, natural brown and green palette, organic grounded color grading, warm natural atmosphere"
   },
   {
@@ -612,6 +636,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Cream",
     "tone": "color-theme",
+    "thumbnail": "cream_theme.webp",
     "text": "cream color theme, soft cream palette, warm gentle color grading, light elegant atmosphere"
   },
   {
@@ -619,6 +644,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Lavender",
     "tone": "color-theme",
+    "thumbnail": "lavender_theme.webp",
     "text": "lavender color theme, soft lavender palette, gentle violet color grading, dreamy calm atmosphere"
   },
   {
@@ -626,6 +652,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Mint",
     "tone": "color-theme",
+    "thumbnail": "mint_theme.webp",
     "text": "mint color theme, fresh mint palette, light green-blue color grading, clean airy atmosphere"
   },
   {
@@ -633,6 +660,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Peach",
     "tone": "color-theme",
+    "thumbnail": "peach_theme.webp",
     "text": "peach color theme, soft peach palette, warm delicate color grading, friendly gentle atmosphere"
   },
   {
@@ -640,6 +668,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Rose",
     "tone": "color-theme",
+    "thumbnail": "rose_theme.webp",
     "text": "rose color theme, romantic rose palette, soft red-pink color grading, elegant warm atmosphere"
   },
   {
@@ -647,6 +676,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Aqua",
     "tone": "color-theme",
+    "thumbnail": "aqua_theme.webp",
     "text": "aqua color theme, clear aqua palette, fresh watery color grading, bright clean atmosphere"
   },
   {
@@ -654,6 +684,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PP",
     "tone": "color-theme",
+    "thumbnail": "pastel_pink.webp",
     "text": "pastel pink color theme, very soft pink palette, gentle rosy color grading, airy delicate mood"
   },
   {
@@ -661,6 +692,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PB",
     "tone": "color-theme",
+    "thumbnail": "pastel_blue.webp",
     "text": "pastel blue color theme, very soft blue palette, gentle cool color grading, calm airy mood"
   },
   {
@@ -668,6 +700,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PP",
     "tone": "color-theme",
+    "thumbnail": "pastel_purple.webp",
     "text": "pastel purple color theme, very soft violet palette, delicate dreamy color grading, gentle atmosphere"
   },
   {
@@ -675,6 +708,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PG",
     "tone": "color-theme",
+    "thumbnail": "pastel_green.webp",
     "text": "pastel green color theme, very soft green palette, fresh gentle color grading, light natural mood"
   },
   {
@@ -682,6 +716,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PY",
     "tone": "color-theme",
+    "thumbnail": "pastel_yellow.webp",
     "text": "pastel yellow color theme, very soft yellow palette, light sunny color grading, cheerful gentle mood"
   },
   {
@@ -689,6 +724,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PO",
     "tone": "color-theme",
+    "thumbnail": "pastel_orange.webp",
     "text": "pastel orange color theme, very soft orange palette, warm gentle color grading, cozy light mood"
   },
   {
@@ -696,6 +732,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PM",
     "tone": "color-theme",
+    "thumbnail": "pastel_mint.webp",
     "text": "pastel mint color theme, soft mint palette, clean fresh color grading, light airy atmosphere"
   },
   {
@@ -703,6 +740,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PL",
     "tone": "color-theme",
+    "thumbnail": "pastel_lavender.webp",
     "text": "pastel lavender color theme, soft lavender palette, delicate violet color grading, dreamy airy mood"
   },
   {
@@ -710,6 +748,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PP",
     "tone": "color-theme",
+    "thumbnail": "pastel_peach.webp",
     "text": "pastel peach color theme, soft peach palette, warm gentle color grading, delicate friendly mood"
   },
   {
@@ -717,6 +756,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PR",
     "tone": "color-theme",
+    "thumbnail": "pastel_rose.webp",
     "text": "pastel rose color theme, soft rose palette, gentle romantic color grading, airy elegant mood"
   },
   {
@@ -724,6 +764,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PA",
     "tone": "color-theme",
+    "thumbnail": "pastel_aqua.webp",
     "text": "pastel aqua color theme, soft aqua palette, clean watery color grading, light refreshing mood"
   },
   {
@@ -731,6 +772,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PC",
     "tone": "color-theme",
+    "thumbnail": "pastel_cream.webp",
     "text": "pastel cream color theme, soft cream palette, warm light color grading, gentle elegant mood"
   },
   {
@@ -738,6 +780,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "B&W",
     "tone": "color-theme",
+    "thumbnail": "black_white.webp",
     "text": "black and white color theme, pure monochrome palette, strong tonal contrast, clean graphic color grading"
   },
   {
@@ -745,6 +788,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "R&B",
     "tone": "color-theme",
+    "thumbnail": "red_blue.webp",
     "text": "red and blue color theme, bold dual-color palette, strong warm-cool contrast, dynamic color grading"
   },
   {
@@ -752,6 +796,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "P&B",
     "tone": "color-theme",
+    "thumbnail": "pink_blue.webp",
     "text": "pink and blue color theme, playful dual-color palette, soft warm-cool contrast, vibrant color harmony"
   },
   {
@@ -759,6 +804,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "P&C",
     "tone": "color-theme",
+    "thumbnail": "purple_cyan.webp",
     "text": "purple and cyan color theme, vivid dual-color palette, electric cool contrast, futuristic color grading"
   },
   {
@@ -766,6 +812,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "O&T",
     "tone": "color-theme",
+    "thumbnail": "orange_teal.webp",
     "text": "orange and teal color theme, cinematic complementary palette, warm-cool contrast, polished color grading"
   },
   {
@@ -773,6 +820,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "Y&P",
     "tone": "color-theme",
+    "thumbnail": "yellow_purple.webp",
     "text": "yellow and purple color theme, bold complementary palette, playful contrast, vivid graphic atmosphere"
   },
   {
@@ -780,6 +828,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "G&M",
     "tone": "color-theme",
+    "thumbnail": "green_magenta.webp",
     "text": "green and magenta color theme, high-contrast complementary palette, energetic stylized color grading"
   },
   {
@@ -787,6 +836,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "B&R",
     "tone": "color-theme",
+    "thumbnail": "black_red.webp",
     "text": "black and red color theme, dark dramatic palette, intense red accents, bold high-contrast atmosphere"
   },
   {
@@ -794,6 +844,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "B&G",
     "tone": "color-theme",
+    "thumbnail": "black_gold.webp",
     "text": "black and gold color theme, luxury dark palette, golden highlights, premium dramatic color grading"
   },
   {
@@ -801,6 +852,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "W&B",
     "tone": "color-theme",
+    "thumbnail": "white_blue.webp",
     "text": "white and blue color theme, clean bright palette, crisp blue accents, fresh minimal color grading"
   },
   {
@@ -808,6 +860,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "P&B",
     "tone": "color-theme",
+    "thumbnail": "pastel_pink_blue.webp",
     "text": "pastel pink and blue color theme, soft dual pastel palette, gentle warm-cool balance, airy atmosphere"
   },
   {
@@ -815,6 +868,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "P&L",
     "tone": "color-theme",
+    "thumbnail": "pastel_mint_lavender.webp",
     "text": "pastel mint and lavender color theme, soft dreamy dual palette, fresh delicate color harmony"
   },
   {
@@ -822,6 +876,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "P&C",
     "tone": "color-theme",
+    "thumbnail": "pastel_peach_cream.webp",
     "text": "pastel peach and cream color theme, warm soft dual palette, cozy gentle color grading"
   },
   {
@@ -829,6 +884,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "P&G",
     "tone": "color-theme",
+    "thumbnail": "pastel_yellow_green.webp",
     "text": "pastel yellow and green color theme, soft sunny natural palette, fresh cheerful color grading"
   },
   {
@@ -836,6 +892,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "P&P",
     "tone": "color-theme",
+    "thumbnail": "pastel_aqua_pink.webp",
     "text": "pastel aqua and pink color theme, soft playful dual palette, fresh rosy color harmony"
   },
   {
@@ -843,6 +900,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "CC",
     "tone": "color-theme",
+    "thumbnail": "crazy_color.webp",
     "text": "crazy color theme, playful clashing palette, unexpected color combinations, energetic stylized color grading"
   },
   {
@@ -850,6 +908,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "CC",
     "tone": "color-theme",
+    "thumbnail": "candy_color.webp",
     "text": "candy color theme, sweet bright palette, playful pastel-neon colors, cheerful glossy atmosphere"
   },
   {
@@ -857,6 +916,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "PC",
     "tone": "color-theme",
+    "thumbnail": "pop_color.webp",
     "text": "pop color theme, bold graphic palette, bright saturated colors, fun energetic visual style"
   },
   {
@@ -864,6 +924,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "DC",
     "tone": "color-theme",
+    "thumbnail": "dreamy_color.webp",
     "text": "dreamy color theme, soft luminous palette, gentle haze, ethereal pastel color grading"
   },
   {
@@ -871,6 +932,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "AC",
     "tone": "color-theme",
+    "thumbnail": "acid_color.webp",
     "text": "acid color theme, intense fluorescent palette, surreal high-energy color grading, experimental atmosphere"
   },
   {
@@ -878,6 +940,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "CC",
     "tone": "color-theme",
+    "thumbnail": "cyber_color.webp",
     "text": "cyber color theme, neon cyan and magenta palette, dark futuristic contrast, digital glow atmosphere"
   },
   {
@@ -885,6 +948,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "RC",
     "tone": "color-theme",
+    "thumbnail": "rainbow_color.webp",
     "text": "rainbow color theme, full-spectrum colorful palette, joyful multicolor grading, vibrant playful atmosphere"
   },
   {
@@ -892,6 +956,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "HC",
     "tone": "color-theme",
+    "thumbnail": "holographic_color.webp",
     "text": "holographic color theme, iridescent pastel palette, shifting rainbow highlights, glossy futuristic color grading"
   },
   {
@@ -899,6 +964,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "VC",
     "tone": "color-theme",
+    "thumbnail": "vaporwave_color.webp",
     "text": "vaporwave color theme, pink cyan purple palette, retro digital color grading, nostalgic surreal atmosphere"
   },
   {
@@ -906,6 +972,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Color Theme",
     "chip": "FC",
     "tone": "color-theme",
+    "thumbnail": "fantasy_color.webp",
     "text": "fantasy color theme, magical saturated palette, glowing imaginative color grading, whimsical atmosphere"
   }
 ];
@@ -1408,6 +1475,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Red",
     "tone": "color-theme",
+    "thumbnail": "red_theme.webp",
     "text": "red color theme, cohesive red palette, warm red color grading, strong visual unity"
   },
   {
@@ -1415,6 +1483,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Blue",
     "tone": "color-theme",
+    "thumbnail": "blue_theme.webp",
     "text": "blue color theme, cohesive blue palette, cool calm color grading, unified blue atmosphere"
   },
   {
@@ -1422,6 +1491,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Pink",
     "tone": "color-theme",
+    "thumbnail": "pink_theme.webp",
     "text": "pink color theme, cohesive pink palette, soft rosy color grading, harmonious pink atmosphere"
   },
   {
@@ -1429,6 +1499,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Purple",
     "tone": "color-theme",
+    "thumbnail": "purple_theme.webp",
     "text": "purple color theme, cohesive violet palette, rich purple color grading, elegant moody atmosphere"
   },
   {
@@ -1436,6 +1507,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Green",
     "tone": "color-theme",
+    "thumbnail": "green_theme.webp",
     "text": "green color theme, cohesive green palette, fresh natural color grading, balanced green atmosphere"
   },
   {
@@ -1443,6 +1515,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Yellow",
     "tone": "color-theme",
+    "thumbnail": "yellow_theme.webp",
     "text": "yellow color theme, cohesive yellow palette, bright sunny color grading, warm cheerful atmosphere"
   },
   {
@@ -1450,6 +1523,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Orange",
     "tone": "color-theme",
+    "thumbnail": "orange_theme.webp",
     "text": "orange color theme, cohesive orange palette, warm energetic color grading, vivid orange atmosphere"
   },
   {
@@ -1457,6 +1531,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Cyan",
     "tone": "color-theme",
+    "thumbnail": "cyan_theme.webp",
     "text": "cyan color theme, cohesive cyan palette, clear cool color grading, bright aquatic atmosphere"
   },
   {
@@ -1464,6 +1539,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Teal",
     "tone": "color-theme",
+    "thumbnail": "teal_theme.webp",
     "text": "teal color theme, cohesive teal palette, cinematic blue-green color grading, polished atmosphere"
   },
   {
@@ -1471,6 +1547,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Magenta",
     "tone": "color-theme",
+    "thumbnail": "magenta_theme.webp",
     "text": "magenta color theme, cohesive magenta palette, bold pink-purple color grading, vibrant atmosphere"
   },
   {
@@ -1478,6 +1555,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Warm",
     "tone": "color-theme",
+    "thumbnail": "warm_theme.webp",
     "text": "warm color theme, amber highlights, warm color grading, inviting golden atmosphere"
   },
   {
@@ -1485,6 +1563,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Cool",
     "tone": "color-theme",
+    "thumbnail": "cool_theme.webp",
     "text": "cool color theme, blue cool palette, clean cool color grading, calm atmospheric mood"
   },
   {
@@ -1492,6 +1571,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Pastel",
     "tone": "color-theme",
+    "thumbnail": "pastel_theme.webp",
     "text": "pastel color theme, soft low-saturation palette, gentle airy atmosphere, delicate color grading"
   },
   {
@@ -1499,6 +1579,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Neon",
     "tone": "color-theme",
+    "thumbnail": "neon_theme.webp",
     "text": "neon color theme, electric saturated palette, glowing highlights, energetic futuristic color grading"
   },
   {
@@ -1506,6 +1587,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Muted",
     "tone": "color-theme",
+    "thumbnail": "muted_theme.webp",
     "text": "muted color theme, desaturated palette, subdued color grading, calm understated atmosphere"
   },
   {
@@ -1513,6 +1595,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Monochro",
     "tone": "color-theme",
+    "thumbnail": "monochrome_theme.webp",
     "text": "monochrome color theme, black and white palette, clean grayscale color grading, strong tonal contrast"
   },
   {
@@ -1520,6 +1603,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Sepia",
     "tone": "color-theme",
+    "thumbnail": "sepia_theme.webp",
     "text": "sepia color theme, warm brown palette, vintage sepia color grading, nostalgic atmosphere"
   },
   {
@@ -1527,6 +1611,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Gold",
     "tone": "color-theme",
+    "thumbnail": "gold_theme.webp",
     "text": "gold color theme, golden palette, warm metallic highlights, premium luminous color grading"
   },
   {
@@ -1534,6 +1619,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Silver",
     "tone": "color-theme",
+    "thumbnail": "silver_theme.webp",
     "text": "silver color theme, cool metallic palette, clean silver-gray color grading, polished atmosphere"
   },
   {
@@ -1541,6 +1627,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Dark",
     "tone": "color-theme",
+    "thumbnail": "dark_theme.webp",
     "text": "dark color theme, deep shadow palette, low brightness color grading, moody dramatic atmosphere"
   },
   {
@@ -1548,6 +1635,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Bright",
     "tone": "color-theme",
+    "thumbnail": "bright_theme.webp",
     "text": "bright color theme, high-key luminous palette, clean bright color grading, airy atmosphere"
   },
   {
@@ -1555,6 +1643,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Soft",
     "tone": "color-theme",
+    "thumbnail": "soft_theme.webp",
     "text": "soft color theme, gentle low-contrast palette, smooth soft color grading, calm delicate atmosphere"
   },
   {
@@ -1562,6 +1651,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Vivid",
     "tone": "color-theme",
+    "thumbnail": "vivid_theme.webp",
     "text": "vivid color theme, highly saturated palette, bold color grading, energetic visual impact"
   },
   {
@@ -1569,6 +1659,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Earth",
     "tone": "color-theme",
+    "thumbnail": "earth_theme.webp",
     "text": "earth color theme, natural brown and green palette, organic grounded color grading, warm natural atmosphere"
   },
   {
@@ -1576,6 +1667,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Cream",
     "tone": "color-theme",
+    "thumbnail": "cream_theme.webp",
     "text": "cream color theme, soft cream palette, warm gentle color grading, light elegant atmosphere"
   },
   {
@@ -1583,6 +1675,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Lavender",
     "tone": "color-theme",
+    "thumbnail": "lavender_theme.webp",
     "text": "lavender color theme, soft lavender palette, gentle violet color grading, dreamy calm atmosphere"
   },
   {
@@ -1590,6 +1683,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Mint",
     "tone": "color-theme",
+    "thumbnail": "mint_theme.webp",
     "text": "mint color theme, fresh mint palette, light green-blue color grading, clean airy atmosphere"
   },
   {
@@ -1597,6 +1691,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Peach",
     "tone": "color-theme",
+    "thumbnail": "peach_theme.webp",
     "text": "peach color theme, soft peach palette, warm delicate color grading, friendly gentle atmosphere"
   },
   {
@@ -1604,6 +1699,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Rose",
     "tone": "color-theme",
+    "thumbnail": "rose_theme.webp",
     "text": "rose color theme, romantic rose palette, soft red-pink color grading, elegant warm atmosphere"
   },
   {
@@ -1611,6 +1707,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Aqua",
     "tone": "color-theme",
+    "thumbnail": "aqua_theme.webp",
     "text": "aqua color theme, clear aqua palette, fresh watery color grading, bright clean atmosphere"
   },
   {
@@ -1618,6 +1715,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PP",
     "tone": "color-theme",
+    "thumbnail": "pastel_pink.webp",
     "text": "pastel pink color theme, very soft pink palette, gentle rosy color grading, airy delicate mood"
   },
   {
@@ -1625,6 +1723,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PB",
     "tone": "color-theme",
+    "thumbnail": "pastel_blue.webp",
     "text": "pastel blue color theme, very soft blue palette, gentle cool color grading, calm airy mood"
   },
   {
@@ -1632,6 +1731,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PP",
     "tone": "color-theme",
+    "thumbnail": "pastel_purple.webp",
     "text": "pastel purple color theme, very soft violet palette, delicate dreamy color grading, gentle atmosphere"
   },
   {
@@ -1639,6 +1739,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PG",
     "tone": "color-theme",
+    "thumbnail": "pastel_green.webp",
     "text": "pastel green color theme, very soft green palette, fresh gentle color grading, light natural mood"
   },
   {
@@ -1646,6 +1747,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PY",
     "tone": "color-theme",
+    "thumbnail": "pastel_yellow.webp",
     "text": "pastel yellow color theme, very soft yellow palette, light sunny color grading, cheerful gentle mood"
   },
   {
@@ -1653,6 +1755,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PO",
     "tone": "color-theme",
+    "thumbnail": "pastel_orange.webp",
     "text": "pastel orange color theme, very soft orange palette, warm gentle color grading, cozy light mood"
   },
   {
@@ -1660,6 +1763,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PM",
     "tone": "color-theme",
+    "thumbnail": "pastel_mint.webp",
     "text": "pastel mint color theme, soft mint palette, clean fresh color grading, light airy atmosphere"
   },
   {
@@ -1667,6 +1771,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PL",
     "tone": "color-theme",
+    "thumbnail": "pastel_lavender.webp",
     "text": "pastel lavender color theme, soft lavender palette, delicate violet color grading, dreamy airy mood"
   },
   {
@@ -1674,6 +1779,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PP",
     "tone": "color-theme",
+    "thumbnail": "pastel_peach.webp",
     "text": "pastel peach color theme, soft peach palette, warm gentle color grading, delicate friendly mood"
   },
   {
@@ -1681,6 +1787,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PR",
     "tone": "color-theme",
+    "thumbnail": "pastel_rose.webp",
     "text": "pastel rose color theme, soft rose palette, gentle romantic color grading, airy elegant mood"
   },
   {
@@ -1688,6 +1795,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PA",
     "tone": "color-theme",
+    "thumbnail": "pastel_aqua.webp",
     "text": "pastel aqua color theme, soft aqua palette, clean watery color grading, light refreshing mood"
   },
   {
@@ -1695,6 +1803,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PC",
     "tone": "color-theme",
+    "thumbnail": "pastel_cream.webp",
     "text": "pastel cream color theme, soft cream palette, warm light color grading, gentle elegant mood"
   },
   {
@@ -1702,6 +1811,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "B&W",
     "tone": "color-theme",
+    "thumbnail": "black_white.webp",
     "text": "black and white color theme, pure monochrome palette, strong tonal contrast, clean graphic color grading"
   },
   {
@@ -1709,6 +1819,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "R&B",
     "tone": "color-theme",
+    "thumbnail": "red_blue.webp",
     "text": "red and blue color theme, bold dual-color palette, strong warm-cool contrast, dynamic color grading"
   },
   {
@@ -1716,6 +1827,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "P&B",
     "tone": "color-theme",
+    "thumbnail": "pink_blue.webp",
     "text": "pink and blue color theme, playful dual-color palette, soft warm-cool contrast, vibrant color harmony"
   },
   {
@@ -1723,6 +1835,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "P&C",
     "tone": "color-theme",
+    "thumbnail": "purple_cyan.webp",
     "text": "purple and cyan color theme, vivid dual-color palette, electric cool contrast, futuristic color grading"
   },
   {
@@ -1730,6 +1843,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "O&T",
     "tone": "color-theme",
+    "thumbnail": "orange_teal.webp",
     "text": "orange and teal color theme, cinematic complementary palette, warm-cool contrast, polished color grading"
   },
   {
@@ -1737,6 +1851,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "Y&P",
     "tone": "color-theme",
+    "thumbnail": "yellow_purple.webp",
     "text": "yellow and purple color theme, bold complementary palette, playful contrast, vivid graphic atmosphere"
   },
   {
@@ -1744,6 +1859,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "G&M",
     "tone": "color-theme",
+    "thumbnail": "green_magenta.webp",
     "text": "green and magenta color theme, high-contrast complementary palette, energetic stylized color grading"
   },
   {
@@ -1751,6 +1867,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "B&R",
     "tone": "color-theme",
+    "thumbnail": "black_red.webp",
     "text": "black and red color theme, dark dramatic palette, intense red accents, bold high-contrast atmosphere"
   },
   {
@@ -1758,6 +1875,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "B&G",
     "tone": "color-theme",
+    "thumbnail": "black_gold.webp",
     "text": "black and gold color theme, luxury dark palette, golden highlights, premium dramatic color grading"
   },
   {
@@ -1765,6 +1883,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "W&B",
     "tone": "color-theme",
+    "thumbnail": "white_blue.webp",
     "text": "white and blue color theme, clean bright palette, crisp blue accents, fresh minimal color grading"
   },
   {
@@ -1772,6 +1891,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "P&B",
     "tone": "color-theme",
+    "thumbnail": "pastel_pink_blue.webp",
     "text": "pastel pink and blue color theme, soft dual pastel palette, gentle warm-cool balance, airy atmosphere"
   },
   {
@@ -1779,6 +1899,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "P&L",
     "tone": "color-theme",
+    "thumbnail": "pastel_mint_lavender.webp",
     "text": "pastel mint and lavender color theme, soft dreamy dual palette, fresh delicate color harmony"
   },
   {
@@ -1786,6 +1907,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "P&C",
     "tone": "color-theme",
+    "thumbnail": "pastel_peach_cream.webp",
     "text": "pastel peach and cream color theme, warm soft dual palette, cozy gentle color grading"
   },
   {
@@ -1793,6 +1915,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "P&G",
     "tone": "color-theme",
+    "thumbnail": "pastel_yellow_green.webp",
     "text": "pastel yellow and green color theme, soft sunny natural palette, fresh cheerful color grading"
   },
   {
@@ -1800,6 +1923,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "P&P",
     "tone": "color-theme",
+    "thumbnail": "pastel_aqua_pink.webp",
     "text": "pastel aqua and pink color theme, soft playful dual palette, fresh rosy color harmony"
   },
   {
@@ -1807,6 +1931,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "CC",
     "tone": "color-theme",
+    "thumbnail": "crazy_color.webp",
     "text": "crazy color theme, playful clashing palette, unexpected color combinations, energetic stylized color grading"
   },
   {
@@ -1814,6 +1939,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "CC",
     "tone": "color-theme",
+    "thumbnail": "candy_color.webp",
     "text": "candy color theme, sweet bright palette, playful pastel-neon colors, cheerful glossy atmosphere"
   },
   {
@@ -1821,6 +1947,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "PC",
     "tone": "color-theme",
+    "thumbnail": "pop_color.webp",
     "text": "pop color theme, bold graphic palette, bright saturated colors, fun energetic visual style"
   },
   {
@@ -1828,6 +1955,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "DC",
     "tone": "color-theme",
+    "thumbnail": "dreamy_color.webp",
     "text": "dreamy color theme, soft luminous palette, gentle haze, ethereal pastel color grading"
   },
   {
@@ -1835,6 +1963,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "AC",
     "tone": "color-theme",
+    "thumbnail": "acid_color.webp",
     "text": "acid color theme, intense fluorescent palette, surreal high-energy color grading, experimental atmosphere"
   },
   {
@@ -1842,6 +1971,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "CC",
     "tone": "color-theme",
+    "thumbnail": "cyber_color.webp",
     "text": "cyber color theme, neon cyan and magenta palette, dark futuristic contrast, digital glow atmosphere"
   },
   {
@@ -1849,6 +1979,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "RC",
     "tone": "color-theme",
+    "thumbnail": "rainbow_color.webp",
     "text": "rainbow color theme, full-spectrum colorful palette, joyful multicolor grading, vibrant playful atmosphere"
   },
   {
@@ -1856,6 +1987,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "HC",
     "tone": "color-theme",
+    "thumbnail": "holographic_color.webp",
     "text": "holographic color theme, iridescent pastel palette, shifting rainbow highlights, glossy futuristic color grading"
   },
   {
@@ -1863,6 +1995,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "VC",
     "tone": "color-theme",
+    "thumbnail": "vaporwave_color.webp",
     "text": "vaporwave color theme, pink cyan purple palette, retro digital color grading, nostalgic surreal atmosphere"
   },
   {
@@ -1870,6 +2003,7 @@ const EFFECT_PRESETS = [
     "category": "Color Theme",
     "chip": "FC",
     "tone": "color-theme",
+    "thumbnail": "fantasy_color.webp",
     "text": "fantasy color theme, magical saturated palette, glowing imaginative color grading, whimsical atmosphere"
   }
 ];
