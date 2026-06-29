@@ -14,9 +14,9 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
   },
   {
     "name": "35mm Film",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Film",
-    "tone": "film",
+    "tone": "camera-fx",
     "text": "analog 35mm film photo, visible film grain, subtle halation, natural color, soft contrast, realistic skin texture"
   },
   {
@@ -63,37 +63,37 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
   },
   {
     "name": "Flash Photo",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Flash",
-    "tone": "flash",
+    "tone": "camera-fx",
     "text": "on-camera flash photography, bright direct flash, sharp subject edges, crisp shadows, candid snapshot realism, natural skin texture"
   },
   {
     "name": "Direct Flash",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Direct",
-    "tone": "flash",
+    "tone": "camera-fx",
     "text": "direct flash photo, hard frontal light, crisp shadows, strong highlights, candid party snapshot look, realistic skin texture"
   },
   {
     "name": "Disposable Flash",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Disposable",
-    "tone": "flash",
+    "tone": "camera-fx",
     "text": "disposable camera flash photo, harsh frontal flash, casual snapshot framing, film grain, imperfect exposure, nostalgic realism"
   },
   {
     "name": "Paparazzi Flash",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Paparazzi",
-    "tone": "flash",
+    "tone": "camera-fx",
     "text": "paparazzi flash photography, strong camera flash, dark background, sharp highlights, candid celebrity street photo atmosphere"
   },
   {
     "name": "Polaroid",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Pola",
-    "tone": "film",
+    "tone": "camera-fx",
     "text": "instant polaroid photo look, soft focus, muted colors, slight overexposure, nostalgic film texture, casual snapshot framing"
   },
   {
@@ -105,10 +105,59 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
   },
   {
     "name": "Long Exposure",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Long",
-    "tone": "photo-look",
+    "tone": "camera-fx",
     "text": "long exposure photography, motion blur trails, smooth light streaks, stable subject focus, atmospheric night photo look"
+  },
+  {
+    "name": "Toy Camera",
+    "category": "Camera FX",
+    "chip": "Toy",
+    "tone": "camera-fx",
+    "text": "toy camera photo, plastic lens softness, strong vignette, imperfect focus, saturated colors, playful lo-fi snapshot look"
+  },
+  {
+    "name": "Lomography",
+    "category": "Camera FX",
+    "chip": "Lomo",
+    "tone": "camera-fx",
+    "text": "lomography photo, vivid saturated colors, heavy vignette, cross-processed film tones, high contrast, spontaneous analog snapshot style"
+  },
+  {
+    "name": "Night Vision",
+    "category": "Camera FX",
+    "chip": "Night",
+    "tone": "camera-fx",
+    "text": "night vision camera footage, green monochrome image, infrared glow, high noise, low-light surveillance look, harsh electronic contrast"
+  },
+  {
+    "name": "Security Camera",
+    "category": "Camera FX",
+    "chip": "CCTV",
+    "tone": "camera-fx",
+    "text": "security camera footage, fixed wide-angle view, low-resolution video look, surveillance camera feel, flat lighting, documentary realism"
+  },
+  {
+    "name": "Thermal Camera",
+    "category": "Camera FX",
+    "chip": "Thermal",
+    "tone": "camera-fx",
+    "text": "thermal camera image, false-color heatmap palette, glowing warm subjects, cool dark background, infrared temperature-vision look"
+  },
+  {
+    "name": "Film Negative",
+    "category": "Camera FX",
+    "chip": "Neg",
+    "tone": "camera-fx",
+    "text": "film negative look, inverted colors, cyan and orange reversed tones, high contrast negative film scan, surreal photographic inversion"
+  },
+  {
+    "name": "VHS",
+    "category": "Camera FX",
+    "chip": "VHS",
+    "tone": "camera-fx",
+    "text": "VHS camcorder footage, analog video noise, scan lines, color bleed, soft low-resolution image, dated home-video recording look"
   },
   {
     "name": "HDR Photo",
@@ -119,16 +168,16 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
   },
   {
     "name": "iPhone Photo",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Phone",
-    "tone": "photo-look",
+    "tone": "camera-fx",
     "text": "iPhone-style photo, natural phone camera look, realistic exposure, casual framing, sharp details, authentic everyday snapshot"
   },
   {
     "name": "Tilt-Shift",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Tilt",
-    "tone": "photo-look",
+    "tone": "camera-fx",
     "text": "tilt-shift photography, selective focus, miniature-like depth, soft blurred edges, crisp central subject, stylized photo realism"
   },
   {
@@ -340,6 +389,13 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Comic",
     "tone": "illustration",
     "text": "western comic book style, bold outlines, dynamic shading, vivid colors, high-contrast graphic look"
+  },
+  {
+    "name": "Pixelate",
+    "category": "Art",
+    "chip": "Pixel",
+    "tone": "illustration",
+    "text": "pixelated mosaic effect, chunky visible pixel blocks, low-resolution digital look, simplified colors, crisp square pixels, stylized retro image texture"
   },
   {
     "name": "Concept Art",
@@ -441,9 +497,9 @@ const EFFECT_PRESETS = [
   },
   {
     "name": "35mm Film",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Film",
-    "tone": "film",
+    "tone": "camera-fx",
     "text": "analog 35mm film photo, visible film grain, subtle halation, natural color, soft contrast, realistic skin texture"
   },
   {
@@ -490,37 +546,37 @@ const EFFECT_PRESETS = [
   },
   {
     "name": "Flash Photo",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Flash",
-    "tone": "flash",
+    "tone": "camera-fx",
     "text": "on-camera flash photography, bright direct flash, sharp subject edges, crisp shadows, candid snapshot realism, natural skin texture"
   },
   {
     "name": "Direct Flash",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Direct",
-    "tone": "flash",
+    "tone": "camera-fx",
     "text": "direct flash photo, hard frontal light, crisp shadows, strong highlights, candid party snapshot look, realistic skin texture"
   },
   {
     "name": "Disposable Flash",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Disposable",
-    "tone": "flash",
+    "tone": "camera-fx",
     "text": "disposable camera flash photo, harsh frontal flash, casual snapshot framing, film grain, imperfect exposure, nostalgic realism"
   },
   {
     "name": "Paparazzi Flash",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Paparazzi",
-    "tone": "flash",
+    "tone": "camera-fx",
     "text": "paparazzi flash photography, strong camera flash, dark background, sharp highlights, candid celebrity street photo atmosphere"
   },
   {
     "name": "Polaroid",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Pola",
-    "tone": "film",
+    "tone": "camera-fx",
     "text": "instant polaroid photo look, soft focus, muted colors, slight overexposure, nostalgic film texture, casual snapshot framing"
   },
   {
@@ -532,10 +588,59 @@ const EFFECT_PRESETS = [
   },
   {
     "name": "Long Exposure",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Long",
-    "tone": "photo-look",
+    "tone": "camera-fx",
     "text": "long exposure photography, motion blur trails, smooth light streaks, stable subject focus, atmospheric night photo look"
+  },
+  {
+    "name": "Toy Camera",
+    "category": "Camera FX",
+    "chip": "Toy",
+    "tone": "camera-fx",
+    "text": "toy camera photo, plastic lens softness, strong vignette, imperfect focus, saturated colors, playful lo-fi snapshot look"
+  },
+  {
+    "name": "Lomography",
+    "category": "Camera FX",
+    "chip": "Lomo",
+    "tone": "camera-fx",
+    "text": "lomography photo, vivid saturated colors, heavy vignette, cross-processed film tones, high contrast, spontaneous analog snapshot style"
+  },
+  {
+    "name": "Night Vision",
+    "category": "Camera FX",
+    "chip": "Night",
+    "tone": "camera-fx",
+    "text": "night vision camera footage, green monochrome image, infrared glow, high noise, low-light surveillance look, harsh electronic contrast"
+  },
+  {
+    "name": "Security Camera",
+    "category": "Camera FX",
+    "chip": "CCTV",
+    "tone": "camera-fx",
+    "text": "security camera footage, fixed wide-angle view, low-resolution video look, surveillance camera feel, flat lighting, documentary realism"
+  },
+  {
+    "name": "Thermal Camera",
+    "category": "Camera FX",
+    "chip": "Thermal",
+    "tone": "camera-fx",
+    "text": "thermal camera image, false-color heatmap palette, glowing warm subjects, cool dark background, infrared temperature-vision look"
+  },
+  {
+    "name": "Film Negative",
+    "category": "Camera FX",
+    "chip": "Neg",
+    "tone": "camera-fx",
+    "text": "film negative look, inverted colors, cyan and orange reversed tones, high contrast negative film scan, surreal photographic inversion"
+  },
+  {
+    "name": "VHS",
+    "category": "Camera FX",
+    "chip": "VHS",
+    "tone": "camera-fx",
+    "text": "VHS camcorder footage, analog video noise, scan lines, color bleed, soft low-resolution image, dated home-video recording look"
   },
   {
     "name": "HDR Photo",
@@ -546,16 +651,16 @@ const EFFECT_PRESETS = [
   },
   {
     "name": "iPhone Photo",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Phone",
-    "tone": "photo-look",
+    "tone": "camera-fx",
     "text": "iPhone-style photo, natural phone camera look, realistic exposure, casual framing, sharp details, authentic everyday snapshot"
   },
   {
     "name": "Tilt-Shift",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Tilt",
-    "tone": "photo-look",
+    "tone": "camera-fx",
     "text": "tilt-shift photography, selective focus, miniature-like depth, soft blurred edges, crisp central subject, stylized photo realism"
   },
   {
@@ -769,6 +874,13 @@ const EFFECT_PRESETS = [
     "text": "western comic book style, bold outlines, dynamic shading, vivid colors, high-contrast graphic look"
   },
   {
+    "name": "Pixelate",
+    "category": "Art",
+    "chip": "Pixel",
+    "tone": "illustration",
+    "text": "pixelated mosaic effect, chunky visible pixel blocks, low-resolution digital look, simplified colors, crisp square pixels, stylized retro image texture"
+  },
+  {
     "name": "Concept Art",
     "category": "Art",
     "chip": "Concept",
@@ -811,7 +923,7 @@ const EFFECT_PRESETS = [
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
   }
 ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Art", "Light", "Mood", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 const EFFECT_THUMBNAIL_BASE = "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/";
 function k2fxPresetSlug(name) {
@@ -1065,10 +1177,10 @@ function k2cfWriteLocalState(node, kind, data) {
 }
 
 function k2cfBestSavedState(node, kind) {
-  const propName = kind === "prompt" ? "k2cfPromptState" : "k2cfCanvasState";
+  const propName = kind === "prompt" ? "k2cfPromptState" : (kind === "effect" ? "k2cfEffectState" : "k2cfCanvasState");
   const workflowCandidates = [
     node?.properties?.[propName],
-    kind === "prompt" ? node?.__k2cfConfiguredPromptState : node?.__k2cfConfiguredCanvasState,
+    kind === "prompt" ? node?.__k2cfConfiguredPromptState : (kind === "effect" ? node?.__k2cfConfiguredEffectState : node?.__k2cfConfiguredCanvasState),
   ].filter((state) => Array.isArray(state?.widgets_values) && k2cfHasMeaningfulState(state.widgets_values));
   if (workflowCandidates.length) {
     workflowCandidates.sort((a, b) => Number(b.saved_at || 0) - Number(a.saved_at || 0));
@@ -1153,6 +1265,7 @@ function k2cfLooksLikePromptUiState(value) {
     data.textHeights !== undefined ||
     data.slotOpen !== undefined ||
     data.slotPreset !== undefined ||
+    data.slotValues !== undefined ||
     data.scenePreset !== undefined ||
     data.nodeSize !== undefined ||
     data.wrapSize !== undefined;
@@ -1204,6 +1317,13 @@ function k2cfPromptUiHasMeaningfulState(value) {
   if (String(data.scenePreset || "").trim()) return true;
   const slotPreset = data.slotPreset && typeof data.slotPreset === "object" ? data.slotPreset : {};
   if (Object.values(slotPreset).some((v) => String(v || "").trim())) return true;
+  const slotValues = data.slotValues && typeof data.slotValues === "object" ? data.slotValues : {};
+  for (const value of Object.values(slotValues)) {
+    if (!value || typeof value !== "object") continue;
+    if (String(value.type || "obj") !== "obj") return true;
+    if (String(value.framing || "Auto") !== "Auto") return true;
+    if (String(value.angle || "Auto") !== "Auto") return true;
+  }
   if (k2cfNormalizeNodeSize(data.nodeSize)) return true;
   if (data.wrapSize && (Number(data.wrapSize.h || 0) >= 45 || Number(data.wrapSize.w || 0) >= 80)) return true;
   const defaults = { red: true, blue: true, yellow: true, green: false, magenta: false };
@@ -1520,6 +1640,7 @@ function k2cfPersistWidgetSnapshot(node, kind, widgetNames, version = "v15") {
   node.properties = node.properties || {};
   const state = { version, widgets_values: values.slice(), saved_at: Date.now() };
   if (kind === "prompt") node.properties.k2cfPromptState = state;
+  if (kind === "effect") node.properties.k2cfEffectState = state;
   if (kind === "canvas") node.properties.k2cfCanvasState = state;
   k2cfWriteLocalState(node, kind, state);
 }
@@ -1542,7 +1663,7 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
   node[`__${tag}PersistenceInstalled`] = true;
   node[`__${tag}Sync`] = syncFn;
 
-  const kind = tag.startsWith("k2cfPrompt") ? "prompt" : "canvas";
+  const kind = tag.startsWith("k2cfPrompt") ? "prompt" : (tag.startsWith("k2cfEffect") ? "effect" : "canvas");
 
   const snapshot = () => {
     try { node.__k2cfPromptUiSnapshot?.(); } catch (_) {}
@@ -1561,6 +1682,7 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
       applyConfiguredValuesToWidgets(node, widgetNames, previous.widgets_values);
       node.properties = node.properties || {};
       if (kind === "prompt") node.properties.k2cfPromptState = previous;
+      if (kind === "effect") node.properties.k2cfEffectState = previous;
       if (kind === "canvas") node.properties.k2cfCanvasState = previous;
       k2cfWriteLocalState(node, kind, previous);
       return previous.widgets_values.slice();
@@ -1568,6 +1690,7 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
     node.properties = node.properties || {};
     const state = { version: "v15", widgets_values: values.slice(), saved_at: Date.now() };
     if (kind === "prompt") node.properties.k2cfPromptState = state;
+    if (kind === "effect") node.properties.k2cfEffectState = state;
     if (kind === "canvas") node.properties.k2cfCanvasState = state;
     k2cfWriteLocalState(node, kind, state);
     return values;
@@ -1642,6 +1765,7 @@ function k2cfSnapshotAllPromptUi(markDirty = false, allowShrink = false) {
     try { n.__k2cfNodeSizeSnapshot?.(markDirty); } catch (_) {}
     try { n.__k2cfCanvasSync?.(false); } catch (_) {}
     try { n.__k2cfPromptSync?.(false); } catch (_) {}
+    try { n.__k2cfEffectSync?.(false); } catch (_) {}
   }
 }
 
@@ -1968,9 +2092,12 @@ app.registerExtension({
 
 function setupEffectNode(node) {
   node.resizable = true;
+  node.serialize_widgets = true;
   const widgets = {};
   for (const name of EFFECT_WIDGETS) widgets[name] = widget(node, name);
   Object.values(widgets).forEach(hideWidget);
+  const savedEffectState = k2cfBestSavedState(node, "effect");
+  if (savedEffectState) applyConfiguredValuesToWidgets(node, EFFECT_WIDGETS, savedEffectState.widgets_values);
 
   const wrap = document.createElement("div");
   wrap.className = "k2fx-wrap";
@@ -2056,6 +2183,9 @@ function setupEffectNode(node) {
   function setWidgetValue(name, value) {
     if (!widgets[name]) return;
     widgets[name].value = value;
+    widgets[name].serialize = true;
+    widgets[name].options = widgets[name].options || {};
+    widgets[name].options.serialize = true;
   }
   const isCustomMode = () => ["Custom", "Custom Preset"].includes(widgets.mode?.value || "Preset");
   function currentEffectText() {
@@ -2066,9 +2196,17 @@ function setupEffectNode(node) {
   }
   function sync() {
     setWidgetValue("enable_effect", Boolean(enabled.checked));
-    setWidgetValue("category", activeCategory === "All" ? "Photo" : activeCategory);
+    setWidgetValue("category", activeCategory || "Photo");
     if (!isCustomMode()) setWidgetValue("preset", selectedPreset());
     setWidgetValue("custom_preset", custom.value || "");
+    node.widgets_values = EFFECT_WIDGETS.map((n) => widgets[n]?.value ?? "");
+    node.properties = node.properties || {};
+    node.properties.k2cfEffectState = {
+      version: "v15",
+      widgets_values: node.widgets_values.slice(),
+      saved_at: Date.now(),
+    };
+    k2cfWriteLocalState(node, "effect", node.properties.k2cfEffectState);
     custom.classList.toggle("show", isCustomMode());
     preview.textContent = currentEffectText() || "Effect disabled or custom text is blank.";
     try { app.graph?.setDirtyCanvas?.(true, true); } catch (_) {}
@@ -2076,8 +2214,6 @@ function setupEffectNode(node) {
   function selectPreset(name) {
     setWidgetValue("preset", name);
     setWidgetValue("mode", "Preset");
-    const preset = EFFECT_PRESETS.find((p) => p.name === name);
-    if (preset) activeCategory = (Array.isArray(preset.categories) ? (preset.categories.find((c)=>c!=="All") || preset.category) : preset.category);
     render();
     sync();
   }
@@ -2131,7 +2267,6 @@ function setupEffectNode(node) {
       grid.appendChild(card);
     }
     if (activeCategory === "Custom") {
-      selectCustom();
       const notice = document.createElement("div");
       notice.className = "k2fx-custom-notice";
       notice.textContent = "Custom tab is blank. Type your own effect text in Custom Preset.";
@@ -2162,6 +2297,8 @@ function setupEffectNode(node) {
   if (!widgets.mode?.value) setWidgetValue("mode", "Preset");
   render();
   sync();
+  k2cfPersistWidgetSnapshot(node, "effect", EFFECT_WIDGETS, "v15");
+  installNodePersistenceHooks(node, sync, EFFECT_WIDGETS, "k2cfEffect");
 }
 
 function setupCanvasNode(node) {
@@ -2299,7 +2436,7 @@ function setupCanvasNode(node) {
   tools.className = "k2cf-tools";
   const showBtn = button("◉ Show Boxes", "Show or hide all D-boxes");
   const drawBtn = button("▭ Draw Box", "Draw D-box");
-  drawBtn.addEventListener("click", () => { state.drawMode = true; drawBtn.classList.add("primary"); });
+  drawBtn.addEventListener("click", () => { state.drawMode = true; drawBtn.classList.add("primary"); sync(); });
   const resetCanvasBtn = button("Reset Canvas", "Reset D-boxes, latent size, guide, and camera settings. Prompts are not changed.");
   function applyCanvasLabels() {
     const lang = resolveLang(controls.ui_language?.value || "Auto");
@@ -2321,6 +2458,7 @@ function setupCanvasNode(node) {
     sw.addEventListener("click", () => {
       state.activeSlot = key;
       tools.querySelectorAll(".k2cf-sw").forEach((x) => x.classList.toggle("active", x.dataset.slot === key));
+      sync();
     });
     tools.appendChild(sw);
   }
@@ -2328,6 +2466,7 @@ function setupCanvasNode(node) {
     state.hideBoxes = !state.hideBoxes;
     showBtn.textContent = state.hideBoxes ? tr(resolveLang(controls.ui_language?.value || "Auto"), "hideBoxes") : tr(resolveLang(controls.ui_language?.value || "Auto"), "showBoxes");
     drawOverlay();
+    sync();
   });
   resetCanvasBtn.addEventListener("click", () => {
     state.boxes = [];
@@ -2998,6 +3137,7 @@ function setupPromptNode(node) {
     slotOpen: { red: true, blue: true, yellow: true, green: false, magenta: false },
     scenePreset: "",
     slotPreset: {},
+    slotValues: {},
     saved_at: Date.now(),
   });
   const promptUiWidgetState = k2cfReadJsonObject(widgets.prompt_ui_data?.value);
@@ -3016,7 +3156,24 @@ function setupPromptNode(node) {
   promptUiState.textHeightManual = Object.assign({}, canRestoreStoredTextHeights ? (storedPromptUiState.textHeightManual || {}) : {});
   promptUiState.slotOpen = Object.assign({}, defaultPromptUiState().slotOpen, storedPromptUiState.slotOpen || {});
   promptUiState.slotPreset = Object.assign({}, storedPromptUiState.slotPreset || {});
+  promptUiState.slotValues = Object.assign({}, storedPromptUiState.slotValues || {});
+  function capturePromptSlotValues() {
+    promptUiState.slotValues = promptUiState.slotValues || {};
+    for (const [slot, label, color, promptName, typeName, framingName, angleName] of SLOTS) {
+      promptUiState.slotValues[slot] = {
+        type: controls[typeName]?.value || widgets[typeName]?.value || "obj",
+        framing: controls[framingName]?.value || widgets[framingName]?.value || "Auto",
+        angle: controls[angleName]?.value || widgets[angleName]?.value || "Auto",
+      };
+    }
+  }
+  function selectValueWithStored(widgetValue, storedValue, fallback) {
+    const w = String(widgetValue || fallback);
+    const s = String(storedValue || fallback);
+    return w !== fallback ? w : s;
+  }
   function savePromptUiState(markDirty = true) {
+    capturePromptSlotValues();
     promptUiState.saved_at = Date.now();
     node.properties = node.properties || {};
     node.properties.k2cfPromptUiState = {
@@ -3027,6 +3184,7 @@ function setupPromptNode(node) {
       slotOpen: Object.assign({}, promptUiState.slotOpen),
       scenePreset: promptUiState.scenePreset || "",
       slotPreset: Object.assign({}, promptUiState.slotPreset),
+      slotValues: Object.assign({}, promptUiState.slotValues || {}),
       saved_at: promptUiState.saved_at,
     };
     const serializedPromptUiState = JSON.stringify(node.properties.k2cfPromptUiState);
@@ -3042,6 +3200,7 @@ function setupPromptNode(node) {
     const defaults = defaultPromptUiState();
     const previousSlotOpen = promptUiState.slotOpen || {};
     const previousSlotPreset = promptUiState.slotPreset || {};
+    const previousSlotValues = promptUiState.slotValues || {};
     const previousHeights = promptUiState.textHeights || {};
     const previousManual = promptUiState.textHeightManual || {};
     Object.assign(promptUiState, state);
@@ -3062,6 +3221,7 @@ function setupPromptNode(node) {
     promptUiState.textHeightManual = restoredManual;
     promptUiState.slotOpen = Object.assign({}, defaults.slotOpen, previousSlotOpen, state.slotOpen || {});
     promptUiState.slotPreset = Object.assign({}, previousSlotPreset, state.slotPreset || {});
+    promptUiState.slotValues = Object.assign({}, previousSlotValues, state.slotValues || {});
   }
   function refreshPromptUiState() {
     const states = [
@@ -3425,9 +3585,9 @@ function setupPromptNode(node) {
     ta.addEventListener("blur", sync);
     ta.addEventListener("compositionend", sync);
     bindTextHeight(promptName, ta);
-    typeSelect.addEventListener("change", sync);
-    framingSelect.addEventListener("change", sync);
-    angleSelect.addEventListener("change", sync);
+    typeSelect.addEventListener("change", () => { sync(); savePromptUiState(); });
+    framingSelect.addEventListener("change", () => { sync(); savePromptUiState(); });
+    angleSelect.addEventListener("change", () => { sync(); savePromptUiState(); });
     const presetRow = document.createElement("div");
     presetRow.className = "k2cf-presetbar";
     const promptPresetSelect = document.createElement("select");
@@ -3559,10 +3719,17 @@ function setupPromptNode(node) {
     try {
       sceneText.value = widgets.scene?.value || "";
       for (const [slot, label, color, promptName, typeName, framingName, angleName] of SLOTS) {
+        const stored = promptUiState.slotValues?.[slot] || {};
         if (controls[promptName]) controls[promptName].value = widgets[promptName]?.value || "";
-        if (controls[typeName]) controls[typeName].value = widgets[typeName]?.value || "obj";
-        if (controls[framingName]) controls[framingName].value = widgets[framingName]?.value || "Auto";
-        if (controls[angleName]) controls[angleName].value = widgets[angleName]?.value || "Auto";
+        const nextType = selectValueWithStored(widgets[typeName]?.value, stored.type, "obj");
+        const nextFraming = selectValueWithStored(widgets[framingName]?.value, stored.framing, "Auto");
+        const nextAngle = selectValueWithStored(widgets[angleName]?.value, stored.angle, "Auto");
+        if (controls[typeName]) controls[typeName].value = nextType;
+        if (controls[framingName]) controls[framingName].value = nextFraming;
+        if (controls[angleName]) controls[angleName].value = nextAngle;
+        setWidget(typeName, nextType);
+        setWidget(framingName, nextFraming);
+        setWidget(angleName, nextAngle);
       }
       applyPromptLabels();
       scheduleApplyAllSavedTextHeights();

@@ -9,9 +9,9 @@
   {
     "name": "35mm Film",
     "file": "35mm_film.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Film",
-    "tone": "film"
+    "tone": "camera-fx"
   },
   {
     "name": "Cinematic Photo",
@@ -58,37 +58,37 @@
   {
     "name": "Flash Photo",
     "file": "flash_photo.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Flash",
-    "tone": "flash"
+    "tone": "camera-fx"
   },
   {
     "name": "Direct Flash",
     "file": "direct_flash.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Direct",
-    "tone": "flash"
+    "tone": "camera-fx"
   },
   {
     "name": "Disposable Flash",
     "file": "disposable_flash.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Disposable",
-    "tone": "flash"
+    "tone": "camera-fx"
   },
   {
     "name": "Paparazzi Flash",
     "file": "paparazzi_flash.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Paparazzi",
-    "tone": "flash"
+    "tone": "camera-fx"
   },
   {
     "name": "Polaroid",
     "file": "polaroid.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Pola",
-    "tone": "film"
+    "tone": "camera-fx"
   },
   {
     "name": "Vintage Photo",
@@ -100,9 +100,9 @@
   {
     "name": "Long Exposure",
     "file": "long_exposure.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Long",
-    "tone": "photo-look"
+    "tone": "camera-fx"
   },
   {
     "name": "HDR Photo",
@@ -114,16 +114,16 @@
   {
     "name": "iPhone Photo",
     "file": "iphone_photo.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Phone",
-    "tone": "photo-look"
+    "tone": "camera-fx"
   },
   {
     "name": "Tilt-Shift",
     "file": "tilt_shift.webp",
-    "category": "Photo",
+    "category": "Camera FX",
     "chip": "Tilt",
-    "tone": "photo-look"
+    "tone": "camera-fx"
   },
   {
     "name": "Silhouette Photo",
@@ -376,5 +376,61 @@
     "category": "Mood",
     "chip": "Retro",
     "tone": "mood"
+  },
+  {
+    "name": "Toy Camera",
+    "file": "toy_camera.webp",
+    "category": "Camera FX",
+    "chip": "Toy",
+    "tone": "camera-fx"
+  },
+  {
+    "name": "Lomography",
+    "file": "lomography.webp",
+    "category": "Camera FX",
+    "chip": "Lomo",
+    "tone": "camera-fx"
+  },
+  {
+    "name": "Night Vision",
+    "file": "night_vision.webp",
+    "category": "Camera FX",
+    "chip": "Night",
+    "tone": "camera-fx"
+  },
+  {
+    "name": "Security Camera",
+    "file": "security_camera.webp",
+    "category": "Camera FX",
+    "chip": "CCTV",
+    "tone": "camera-fx"
+  },
+  {
+    "name": "Thermal Camera",
+    "file": "thermal_camera.webp",
+    "category": "Camera FX",
+    "chip": "Thermal",
+    "tone": "camera-fx"
+  },
+  {
+    "name": "Film Negative",
+    "file": "film_negative.webp",
+    "category": "Camera FX",
+    "chip": "Neg",
+    "tone": "camera-fx"
+  },
+  {
+    "name": "VHS",
+    "file": "vhs.webp",
+    "category": "Camera FX",
+    "chip": "VHS",
+    "tone": "camera-fx"
+  },
+  {
+    "name": "Pixelate",
+    "file": "pixelate.webp",
+    "category": "Art",
+    "chip": "Pixel",
+    "tone": "illustration"
   }
 ]

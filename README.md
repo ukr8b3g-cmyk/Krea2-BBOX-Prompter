@@ -605,27 +605,39 @@ Prompt Effect = photo/style correction
 
 ```text
 Realistic Photo
-35mm Film
 Cinematic Photo
 Soft Portrait
 B&W Soft
 B&W Strong
 Film Noir
 Noir Photo
+Vintage Photo
+HDR Photo
+Silhouette Photo
+Glamour Photo
+Landscape Photo
+Street Photo
+```
+
+## Camera FX
+
+```text
+35mm Film
 Flash Photo
 Direct Flash
 Disposable Flash
 Paparazzi Flash
 Polaroid
-Vintage Photo
-Long Exposure
-HDR Photo
 iPhone Photo
 Tilt-Shift
-Silhouette Photo
-Glamour Photo
-Landscape Photo
-Street Photo
+Long Exposure
+Toy Camera
+Lomography
+Night Vision
+Security Camera
+Thermal Camera
+Film Negative
+VHS
 ```
 
 ## Recommended for People
@@ -649,6 +661,8 @@ Disposable Flash
 Paparazzi Flash
 ```
 
+These flash presets are grouped under `Camera FX` in the UI.
+
 ## B&W / Noir
 
 ```text
@@ -669,6 +683,7 @@ Painterly
 Watercolor
 Oil Painting
 Comic
+Pixelate
 Concept Art
 ```
 
@@ -1564,27 +1579,39 @@ Prompt Effect = 写真・画風の補正
 
 ```text
 Realistic Photo
-35mm Film
 Cinematic Photo
 Soft Portrait
 B&W Soft
 B&W Strong
 Film Noir
 Noir Photo
+Vintage Photo
+HDR Photo
+Silhouette Photo
+Glamour Photo
+Landscape Photo
+Street Photo
+```
+
+## Camera FX系
+
+```text
+35mm Film
 Flash Photo
 Direct Flash
 Disposable Flash
 Paparazzi Flash
 Polaroid
-Vintage Photo
-Long Exposure
-HDR Photo
 iPhone Photo
 Tilt-Shift
-Silhouette Photo
-Glamour Photo
-Landscape Photo
-Street Photo
+Long Exposure
+Toy Camera
+Lomography
+Night Vision
+Security Camera
+Thermal Camera
+Film Negative
+VHS
 ```
 
 ## 人物向けおすすめ
@@ -1612,6 +1639,8 @@ Paparazzi Flash
 
 写ルンです、古いコンパクトカメラ、パーティースナップ、夜の路上スナップのような面白い効果を出したい時に使えます。
 
+UI上ではこれらのフラッシュ系プリセットは `Camera FX` に分類されます。
+
 ## B&W / Noir系
 
 ```text
@@ -1634,6 +1663,7 @@ Painterly
 Watercolor
 Oil Painting
 Comic
+Pixelate
 Concept Art
 ```
 
