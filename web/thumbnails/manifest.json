@@ -441,6 +441,13 @@
     "tone": "illustration"
   },
   {
+    "name": "Fantasy Color",
+    "file": "fantasy_color.webp",
+    "category": "Color Theme",
+    "chip": "FC",
+    "tone": "color-theme"
+  },
+  {
     "name": "Red Theme",
     "file": "red_theme.webp",
     "category": "Color Theme",
@@ -1054,13 +1061,6 @@
     "file": "heterochromia_eyes.webp",
     "category": "Color Theme",
     "chip": "HE",
-    "tone": "color-theme"
-  },
-  {
-    "name": "Fantasy Color",
-    "file": "fantasy_color.webp",
-    "category": "Color Theme",
-    "chip": "FC",
     "tone": "color-theme"
   },
   {

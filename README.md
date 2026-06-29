@@ -757,6 +757,7 @@ Finish presets add final surface and material-like effects such as paper, canvas
 ## Color Theme
 
 ```text
+Fantasy Color
 Red Theme
 Blue Theme
 Pink Theme
@@ -845,7 +846,6 @@ Nordic Winter Color
 Tropical Island Color
 Virtual Diva Teal
 Heterochromia Eyes
-Fantasy Color
 ```
 
 Color Theme presets apply broad palette direction such as single-color themes, two-color themes, pastel palettes, monochrome, neon, vaporwave, world-building color moods, and cultural or regional color moods such as Japanese, Western desert, Indian festival, Arabian night, Egyptian gold, Chinese lantern, Nordic winter, tropical island, and virtual diva teal. These mood presets often show up most clearly when the scene has a simple or open background, where Krea2 has room to reflect the palette and atmosphere. Thumbnails are included as local WebP color swatches under `web/thumbnails/`, including presets with `&` in the display name.
@@ -1846,6 +1846,7 @@ Retro Pop
 ## Color Theme系
 
 ```text
+Fantasy Color
 Red Theme
 Blue Theme
 Pink Theme
@@ -1934,7 +1935,6 @@ Nordic Winter Color
 Tropical Island Color
 Virtual Diva Teal
 Heterochromia Eyes
-Fantasy Color
 ```
 
 単色テーマ、二色テーマ、パステル、白黒、ネオン、Vaporwave、お遊び系など、画面全体の配色傾向を変えるためのプリセットです。サムネイルは `web/thumbnails/` に同梱されたローカルWebPカラースウォッチを使用します。

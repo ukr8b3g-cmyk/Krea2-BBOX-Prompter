@@ -664,6 +664,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "wax surface finish, realistic soft semi-gloss texture, smooth melted material, subtle warm highlights"
   },
   {
+    "name": "Fantasy Color",
+    "category": "Color Theme",
+    "chip": "FC",
+    "tone": "color-theme",
+    "thumbnail": "fantasy_color.webp",
+    "text": "fantasy color theme, magical saturated palette, glowing photographic color grading, whimsical real-world atmosphere"
+  },
+{
     "name": "Red Theme",
     "category": "Color Theme",
     "chip": "Red",
@@ -1367,15 +1375,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "thumbnail": "heterochromia_eyes.webp",
     "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
   },
-  {
-    "name": "Fantasy Color",
-    "category": "Color Theme",
-    "chip": "FC",
-    "tone": "color-theme",
-    "thumbnail": "fantasy_color.webp",
-    "text": "fantasy color theme, magical saturated palette, glowing photographic color grading, whimsical real-world atmosphere"
-  }
-];
+  ];
 
 const EFFECT_NODE = "Krea2PromptEffect";
 const EFFECT_NODE_BBOX = "Krea2BBOXPromptEffect";
@@ -2095,6 +2095,14 @@ const EFFECT_PRESETS = [
     "text": "wax surface finish, realistic soft semi-gloss texture, smooth melted material, subtle warm highlights"
   },
   {
+    "name": "Fantasy Color",
+    "category": "Color Theme",
+    "chip": "FC",
+    "tone": "color-theme",
+    "thumbnail": "fantasy_color.webp",
+    "text": "fantasy color theme, magical saturated palette, glowing photographic color grading, whimsical real-world atmosphere"
+  },
+{
     "name": "Red Theme",
     "category": "Color Theme",
     "chip": "Red",
@@ -2798,15 +2806,7 @@ const EFFECT_PRESETS = [
     "thumbnail": "heterochromia_eyes.webp",
     "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
   },
-  {
-    "name": "Fantasy Color",
-    "category": "Color Theme",
-    "chip": "FC",
-    "tone": "color-theme",
-    "thumbnail": "fantasy_color.webp",
-    "text": "fantasy color theme, magical saturated palette, glowing photographic color grading, whimsical real-world atmosphere"
-  }
-];
+  ];
 const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 const EFFECT_THUMBNAIL_BASE = "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/";
