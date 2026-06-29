@@ -2409,14 +2409,29 @@ function setupCanvasNode(node) {
       if (m) setSize(Number(m[1]), Number(m[2]), v);
     } else sync();
   });
+  function commitCustomSize() {
+    setSize(width.value, height.value, "Custom");
+  }
   for (const el of [width, height]) {
-    el.addEventListener("input", () => setSize(width.value, height.value, "Custom"));
+    el.addEventListener("input", () => {
+      preset.value = "Custom";
+      updatePresetStyle();
+    });
+    el.addEventListener("change", commitCustomSize);
+    el.addEventListener("blur", commitCustomSize);
+    el.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") {
+        commitCustomSize();
+        el.blur();
+      }
+    });
     el.addEventListener("pointerdown", stop);
   }
   const saveCustom = button("Save Custom", "Save current custom latent size");
   saveCustom.classList.add("primary");
   const deleteCustom = button("Delete Custom", "Delete selected user preset");
   saveCustom.addEventListener("click", () => {
+    commitCustomSize();
     const w = Math.max(1, Number(width.value) || 1), h = Math.max(1, Number(height.value) || 1);
     const users = getUserPresets().filter((p) => !(Number(p.width) === w && Number(p.height) === h));
     users.push({ label: `${w} x ${h}`, width: w, height: h });
