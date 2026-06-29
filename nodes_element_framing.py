@@ -690,7 +690,6 @@ NODE_CLASS_MAPPINGS = {
     "Krea2ElementFramingV1Canvas": Krea2ElementFramingV1Canvas,
     "Krea2ElementFramingV1Prompt": Krea2ElementFramingV1Prompt,
     "Krea2ElementJSONExportV1": Krea2ElementJSONExportV1,
-    "Krea2PromptEffect": Krea2PromptEffect,
     "Krea2BBOXPromptEffect": Krea2BBOXPromptEffect,
 }
 
@@ -698,6 +697,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Krea2ElementFramingV1Canvas": "📐 Krea2 BBOX Canvas",
     "Krea2ElementFramingV1Prompt": "📝 Krea2 BBOX Prompter",
     "Krea2ElementJSONExportV1": "📦 Krea2 BBOX Export",
-    "Krea2PromptEffect": "✨ Krea2 Prompt Effect",
     "Krea2BBOXPromptEffect": "✨ Krea2 BBOX Prompt Effect",
 }
