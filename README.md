@@ -32,6 +32,8 @@ This makes the node useful not only for decoration, but also for fast visual dir
 
 Prompt Effect presets are mainly tuned for Krea2 workflows that often lean photographic or real-world, but they are not meant to force every image into an ultra-realistic look. Presets that do not explicitly belong to anime, manga, comic, or illustration categories try to avoid pushing the result toward those styles; they focus more on **color grading, lighting, material feel, atmosphere, and background mood**.
 
+Some effects may be weak or may not appear at all depending on the subject, background complexity, prompt conflicts, model interpretation, and the available visual space in the scene. Treat Prompt Effect as a fast direction tool, not a guaranteed fixed filter.
+
 ---
 
 ## First Steps
@@ -635,6 +637,7 @@ Flash Photo
 Direct Flash
 Disposable Flash
 Paparazzi Flash
+Red Eye Flash
 Polaroid
 iPhone Photo
 Tilt-Shift
@@ -1745,6 +1748,7 @@ Flash Photo
 Direct Flash
 Disposable Flash
 Paparazzi Flash
+Red Eye Flash
 Polaroid
 iPhone Photo
 Tilt-Shift
