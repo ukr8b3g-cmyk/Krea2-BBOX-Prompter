@@ -185,7 +185,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Photo",
     "chip": "Sil",
     "tone": "photo-look",
-    "text": "silhouette photography, dark subject outline, bright backlight, strong contrast, minimal visible detail, dramatic graphic composition"
+    "text": "silhouette photography, dark realistic subject outline, bright backlight, strong contrast, minimal visible detail, dramatic photographic composition"
   },
   {
     "name": "Glamour Photo",
@@ -241,14 +241,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Photo",
     "chip": "Neon",
     "tone": "cine",
-    "text": "neon noir photography, dark urban atmosphere, colored neon highlights, moody shadows, cinematic contrast, rain-slick reflections"
+    "text": "neon noir photography, dark realistic urban atmosphere, colored neon highlights, moody shadows, cinematic contrast, rain-slick real-world reflections"
   },
   {
     "name": "Action Still",
     "category": "Photo",
     "chip": "Action",
     "tone": "cinematic",
-    "text": "cinematic action still, dynamic composition, dramatic motion, controlled lighting, sharp subject focus, high-energy film atmosphere"
+    "text": "cinematic action still, dynamic composition, realistic motion energy, controlled lighting, sharp subject focus, high-energy film atmosphere"
   },
   {
     "name": "Natural Light",
@@ -297,7 +297,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Light",
     "chip": "Cyber",
     "tone": "lighting",
-    "text": "cyberpunk visual style, neon lights, futuristic city atmosphere, high contrast, saturated reflections, moody lighting"
+    "text": "cyberpunk night photography mood, neon lights, futuristic city atmosphere, realistic urban texture, high contrast, saturated reflections, cinematic moody lighting"
   },
   {
     "name": "Product Photo",
@@ -409,28 +409,28 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Mood",
     "chip": "Dream",
     "tone": "mood",
-    "text": "dreamy visual atmosphere, soft glow, gentle contrast, subtle haze, delicate highlights, calm emotional mood"
+    "text": "dreamy photographic atmosphere, soft glow, gentle contrast, subtle haze, delicate highlights, calm realistic emotional mood"
   },
   {
     "name": "Dark Fantasy",
     "category": "Mood",
     "chip": "Dark",
     "tone": "mood",
-    "text": "dark fantasy atmosphere, dramatic shadows, mysterious lighting, ornate details, moody cinematic composition"
+    "text": "dark fantasy atmosphere, cinematic realistic shadows, mysterious lighting, ornate real-world texture, moody photographic composition"
   },
   {
     "name": "High Detail",
     "category": "Mood",
     "chip": "Detail",
     "tone": "mood",
-    "text": "highly detailed image, crisp textures, sharp subject definition, refined materials, clean lighting, intricate visual detail"
+    "text": "highly detailed realistic image, crisp textures, sharp subject definition, refined materials, clean photographic lighting, intricate visual detail"
   },
   {
     "name": "Minimal Clean",
     "category": "Mood",
     "chip": "Minimal",
     "tone": "mood",
-    "text": "minimal clean style, simple composition, uncluttered background, balanced spacing, refined modern visual presentation"
+    "text": "minimal clean photographic style, simple composition, uncluttered background, balanced spacing, refined modern real-world presentation"
   },
   {
     "name": "Retro Pop",
@@ -440,148 +440,12 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
   },
   {
-    "name": "Kawaii Deco",
-    "category": "Deco",
-    "chip": "Kawaii",
-    "tone": "deco",
-    "thumbnail": "kawaii_deco.webp",
-    "text": "kawaii decoration style, cute pastel accents, hearts, stars, sparkles, soft playful atmosphere"
-  },
-  {
-    "name": "Sweet Deco",
-    "category": "Deco",
-    "chip": "Sweet",
-    "tone": "deco",
-    "thumbnail": "sweet_deco.webp",
-    "text": "sweet cute decoration, soft pink hearts, candy-like colors, gentle sparkles, romantic playful atmosphere"
-  },
-  {
-    "name": "Pop Cute Deco",
-    "category": "Deco",
-    "chip": "Pop",
-    "tone": "deco",
-    "thumbnail": "pop_cute_deco.webp",
-    "text": "pop cute decoration, bright colorful stickers, playful doodles, stars, sparkles, cheerful energetic atmosphere"
-  },
-  {
-    "name": "Heart Deco",
-    "category": "Deco",
-    "chip": "Heart",
-    "tone": "deco",
-    "thumbnail": "heart_deco.webp",
-    "text": "cute heart decorations, scattered hearts, playful romantic accents, soft pop atmosphere"
-  },
-  {
-    "name": "Sparkle Deco",
-    "category": "Deco",
-    "chip": "Sparkle",
-    "tone": "deco",
-    "thumbnail": "sparkle_deco.webp",
-    "text": "sparkle decorations, glittering stars, shiny highlights, magical twinkle accents"
-  },
-  {
-    "name": "Doodle Deco",
-    "category": "Deco",
-    "chip": "Doodle",
-    "tone": "deco",
-    "thumbnail": "doodle_deco.webp",
-    "text": "playful doodle decorations, hand-drawn lines, cute scribbles, casual marker accents"
-  },
-  {
-    "name": "Sticker Deco",
-    "category": "Deco",
-    "chip": "Sticker",
-    "tone": "deco",
-    "thumbnail": "sticker_deco.webp",
-    "text": "sticker-like decorations, cute sticker accents, playful pop graphics, layered decorative elements"
-  },
-  {
-    "name": "Pop Deco",
-    "category": "Deco",
-    "chip": "Pop",
-    "tone": "deco",
-    "thumbnail": "pop_deco.webp",
-    "text": "pop decoration style, bright playful accents, colorful graphic motifs, fun energetic atmosphere"
-  },
-  {
-    "name": "Frame Deco",
-    "category": "Deco",
-    "chip": "Frame",
-    "tone": "deco",
-    "thumbnail": "frame_deco.webp",
-    "text": "decorative frame accents, playful border decoration, cute graphic frame around the image"
-  },
-  {
-    "name": "Glitter Deco",
-    "category": "Deco",
-    "chip": "Glitter",
-    "tone": "deco",
-    "thumbnail": "glitter_deco.webp",
-    "text": "glitter decoration, sparkling particles, shiny festive accents, glossy decorative highlights"
-  },
-  {
-    "name": "Star Deco",
-    "category": "Deco",
-    "chip": "Star",
-    "tone": "deco",
-    "thumbnail": "star_deco.webp",
-    "text": "star decorations, scattered stars, bright twinkle accents, cute dreamy atmosphere"
-  },
-  {
-    "name": "Ribbon Deco",
-    "category": "Deco",
-    "chip": "Ribbon",
-    "tone": "deco",
-    "thumbnail": "ribbon_deco.webp",
-    "text": "ribbon decorations, cute ribbon accents, soft decorative details, playful feminine style"
-  },
-  {
-    "name": "Bubble Deco",
-    "category": "Deco",
-    "chip": "Bubble",
-    "tone": "deco",
-    "thumbnail": "bubble_deco.webp",
-    "text": "bubble decorations, floating bubbles, glossy round accents, playful light atmosphere"
-  },
-  {
-    "name": "Stamp Deco",
-    "category": "Deco",
-    "chip": "Stamp",
-    "tone": "deco",
-    "thumbnail": "stamp_deco.webp",
-    "text": "stamp-like decorations, playful graphic stamps, cute printed accents, casual photo booth style"
-  },
-  {
-    "name": "Graffiti Deco",
-    "category": "Deco",
-    "chip": "Graffiti",
-    "tone": "deco",
-    "thumbnail": "graffiti_deco.webp",
-    "text": "graffiti-style decorations, bold marker lines, playful scribbles, energetic street-style accents"
-  },
-  {
-    "name": "Neon Deco",
-    "category": "Deco",
-    "chip": "Neon",
-    "tone": "deco",
-    "thumbnail": "neon_deco.webp",
-    "text": "neon decorations, glowing outlines, bright neon accents, playful night-pop atmosphere"
-  },
-  {
-    "name": "Dreamy Deco",
-    "category": "Deco",
-    "chip": "Dreamy",
-    "tone": "deco",
-    "thumbnail": "dreamy_deco.webp",
-    "text": "dreamy decorations, soft sparkles, floating hearts, gentle glow, cute fantasy atmosphere"
-  },
-  {
     "name": "Paper Print",
     "category": "Finish",
     "chip": "Paper",
     "tone": "finish",
     "thumbnail": "paper_print.webp",
-    "text": "printed on paper, subtle paper grain, matte texture, soft ink absorption, tactile print finish"
+    "text": "printed on paper, realistic paper grain, matte texture, soft ink absorption, tactile photographic print finish"
   },
   {
     "name": "Matte Print",
@@ -589,7 +453,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Matte",
     "tone": "finish",
     "thumbnail": "matte_print.webp",
-    "text": "matte print finish, non-reflective surface, soft contrast, smooth paper texture"
+    "text": "matte print finish, realistic non-reflective surface, soft contrast, smooth paper texture, photographic material feel"
   },
   {
     "name": "Glossy Print",
@@ -597,7 +461,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Glossy",
     "tone": "finish",
     "thumbnail": "glossy_print.webp",
-    "text": "glossy print finish, reflective coating, crisp contrast, polished photo paper surface"
+    "text": "glossy print finish, realistic reflective coating, crisp contrast, polished photo paper surface"
   },
   {
     "name": "Canvas Texture",
@@ -605,7 +469,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Canvas",
     "tone": "finish",
     "thumbnail": "canvas_texture.webp",
-    "text": "canvas texture, woven fabric surface, subtle textile grain, painterly material finish"
+    "text": "canvas texture, realistic woven fabric surface, subtle textile grain, tactile material finish"
   },
   {
     "name": "Fabric Print",
@@ -613,7 +477,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Fabric",
     "tone": "finish",
     "thumbnail": "fabric_print.webp",
-    "text": "printed on fabric, soft cloth texture, woven fibers, gentle ink diffusion, textile surface finish"
+    "text": "printed on fabric, realistic soft cloth texture, woven fibers, gentle ink diffusion, textile surface finish"
   },
   {
     "name": "Metal Print",
@@ -621,7 +485,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Metal",
     "tone": "finish",
     "thumbnail": "metal_print.webp",
-    "text": "printed on metal, glossy metallic surface, reflective highlights, sleek hard material finish"
+    "text": "printed on metal, realistic glossy metallic surface, reflective highlights, sleek hard material finish"
   },
   {
     "name": "Glass Print",
@@ -629,7 +493,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Glass",
     "tone": "finish",
     "thumbnail": "glass_print.webp",
-    "text": "behind glass, glossy glass surface, subtle reflections, polished transparent finish"
+    "text": "behind glass, realistic glossy glass surface, subtle reflections, polished transparent finish"
   },
   {
     "name": "Wet Surface",
@@ -637,7 +501,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Wet",
     "tone": "finish",
     "thumbnail": "wet_surface.webp",
-    "text": "wet surface effect, water droplets, glossy highlights, damp reflective texture, fresh moisture finish"
+    "text": "wet surface effect, realistic water droplets, glossy highlights, damp reflective texture, fresh moisture finish"
   },
   {
     "name": "Water Droplets",
@@ -645,7 +509,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Drops",
     "tone": "finish",
     "thumbnail": "water_droplets.webp",
-    "text": "water droplets on surface, clear beads of moisture, glossy highlights, fresh wet finish"
+    "text": "water droplets on surface, realistic clear beads of moisture, glossy highlights, fresh wet photographic finish"
   },
   {
     "name": "Dusty Surface",
@@ -653,7 +517,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Dust",
     "tone": "finish",
     "thumbnail": "dusty_surface.webp",
-    "text": "dusty surface effect, fine dust particles, muted texture, aged dry finish, subtle grime"
+    "text": "dusty surface effect, realistic fine dust particles, muted texture, aged dry finish, subtle grime"
   },
   {
     "name": "Scratched Print",
@@ -661,7 +525,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Scratch",
     "tone": "finish",
     "thumbnail": "scratched_print.webp",
-    "text": "scratched print surface, fine scratches, worn texture, distressed physical finish"
+    "text": "scratched print surface, realistic fine scratches, worn texture, distressed physical finish"
   },
   {
     "name": "Vintage Paper",
@@ -669,7 +533,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Vintage",
     "tone": "finish",
     "thumbnail": "vintage_paper.webp",
-    "text": "vintage paper texture, aged paper grain, faded ink, warm yellowed surface, old printed finish"
+    "text": "vintage paper texture, realistic aged paper grain, faded ink, warm yellowed surface, old printed finish"
   },
   {
     "name": "Stone Surface",
@@ -677,7 +541,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Stone",
     "tone": "finish",
     "thumbnail": "stone_surface.webp",
-    "text": "stone surface texture, rough mineral grain, cool hard material finish, natural stone detail"
+    "text": "stone surface texture, realistic rough mineral grain, cool hard material finish, natural stone detail"
   },
   {
     "name": "Marble Finish",
@@ -685,7 +549,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Marble",
     "tone": "finish",
     "thumbnail": "marble_finish.webp",
-    "text": "marble surface finish, subtle veining, polished stone texture, elegant mineral material"
+    "text": "marble surface finish, realistic subtle veining, polished stone texture, elegant mineral material"
   },
   {
     "name": "Concrete Finish",
@@ -693,7 +557,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Concrete",
     "tone": "finish",
     "thumbnail": "concrete_finish.webp",
-    "text": "concrete surface texture, rough gray material, fine grain, industrial matte finish"
+    "text": "concrete surface texture, realistic rough gray material, fine grain, industrial matte finish"
   },
   {
     "name": "Rusty Metal",
@@ -701,7 +565,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Rust",
     "tone": "finish",
     "thumbnail": "rusty_metal.webp",
-    "text": "rusty metal surface, oxidized texture, reddish brown corrosion, worn industrial finish"
+    "text": "rusty metal surface, realistic oxidized texture, reddish brown corrosion, worn industrial finish"
   },
   {
     "name": "Aged Metal",
@@ -709,7 +573,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Aged",
     "tone": "finish",
     "thumbnail": "aged_metal.webp",
-    "text": "aged metal finish, tarnished surface, subtle scratches, oxidized patina, weathered material"
+    "text": "aged metal finish, realistic tarnished surface, subtle scratches, oxidized patina, weathered material"
   },
   {
     "name": "Patina Finish",
@@ -717,7 +581,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Patina",
     "tone": "finish",
     "thumbnail": "patina_finish.webp",
-    "text": "patina surface finish, green-blue oxidized metal, aged copper look, weathered decorative texture"
+    "text": "patina surface finish, realistic green-blue oxidized metal, aged copper look, weathered decorative texture"
   },
   {
     "name": "Wood Grain",
@@ -725,7 +589,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Wood",
     "tone": "finish",
     "thumbnail": "wood_grain.webp",
-    "text": "wood grain texture, natural wooden surface, warm organic material finish, visible grain lines"
+    "text": "wood grain texture, realistic natural wooden surface, warm organic material finish, visible grain lines"
   },
   {
     "name": "Leather Finish",
@@ -733,7 +597,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Leather",
     "tone": "finish",
     "thumbnail": "leather_finish.webp",
-    "text": "leather surface texture, subtle grain, soft worn material, tactile premium finish"
+    "text": "leather surface texture, realistic subtle grain, soft worn material, tactile premium finish"
   },
   {
     "name": "Ceramic Glaze",
@@ -741,7 +605,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Ceramic",
     "tone": "finish",
     "thumbnail": "ceramic_glaze.webp",
-    "text": "ceramic glazed surface, smooth glossy coating, subtle reflections, crafted material finish"
+    "text": "ceramic glazed surface, realistic smooth glossy coating, subtle reflections, crafted material finish"
   },
   {
     "name": "Plastic Finish",
@@ -749,7 +613,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Plastic",
     "tone": "finish",
     "thumbnail": "plastic_finish.webp",
-    "text": "plastic surface finish, smooth synthetic texture, clean highlights, modern manufactured material"
+    "text": "plastic surface finish, realistic smooth synthetic texture, clean highlights, modern manufactured material"
   },
   {
     "name": "Slime Finish",
@@ -757,7 +621,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Slime",
     "tone": "finish",
     "thumbnail": "slime_finish.webp",
-    "text": "slime surface finish, glossy translucent gel texture, sticky wet highlights, soft gooey material look"
+    "text": "slime surface finish, realistic glossy translucent gel texture, sticky wet highlights, soft gooey material look"
   },
   {
     "name": "Gel Finish",
@@ -765,7 +629,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Gel",
     "tone": "finish",
     "thumbnail": "gel_finish.webp",
-    "text": "gel surface finish, translucent glossy material, smooth jelly-like highlights, soft elastic texture"
+    "text": "gel surface finish, realistic translucent glossy material, smooth jelly-like highlights, soft elastic texture"
   },
   {
     "name": "Liquid Gloss",
@@ -773,7 +637,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Liquid",
     "tone": "finish",
     "thumbnail": "liquid_gloss.webp",
-    "text": "liquid glossy finish, wet reflective coating, smooth flowing highlights, polished fluid surface"
+    "text": "liquid glossy finish, realistic wet reflective coating, smooth flowing highlights, polished fluid surface"
   },
   {
     "name": "Gummy Finish",
@@ -781,7 +645,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Gummy",
     "tone": "finish",
     "thumbnail": "gummy_finish.webp",
-    "text": "gummy material finish, soft translucent candy texture, rounded glossy surface, playful elastic look"
+    "text": "gummy material finish, realistic soft translucent candy texture, rounded glossy surface, playful elastic look"
   },
   {
     "name": "Wax Finish",
@@ -789,7 +653,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Wax",
     "tone": "finish",
     "thumbnail": "wax_finish.webp",
-    "text": "wax surface finish, soft semi-gloss texture, smooth melted material, subtle warm highlights"
+    "text": "wax surface finish, realistic soft semi-gloss texture, smooth melted material, subtle warm highlights"
   },
   {
     "name": "Red Theme",
@@ -1253,7 +1117,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "CC",
     "tone": "color-theme",
     "thumbnail": "crazy_color.webp",
-    "text": "crazy color theme, playful clashing palette, unexpected color combinations, energetic stylized color grading"
+    "text": "crazy color theme, playful clashing palette, unexpected color combinations, photographic color grading, energetic real-world atmosphere"
   },
   {
     "name": "Candy Color",
@@ -1261,7 +1125,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "CC",
     "tone": "color-theme",
     "thumbnail": "candy_color.webp",
-    "text": "candy color theme, sweet bright palette, playful pastel-neon colors, cheerful glossy atmosphere"
+    "text": "candy color theme, sweet bright palette, playful pastel-neon colors, photographic color grading, cheerful glossy atmosphere"
   },
   {
     "name": "Pop Color",
@@ -1269,7 +1133,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "PC",
     "tone": "color-theme",
     "thumbnail": "pop_color.webp",
-    "text": "pop color theme, bold graphic palette, bright saturated colors, fun energetic visual style"
+    "text": "pop color theme, bold bright palette, saturated colors, photographic color grading, energetic real-world atmosphere"
   },
   {
     "name": "Dreamy Color",
@@ -1277,7 +1141,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "DC",
     "tone": "color-theme",
     "thumbnail": "dreamy_color.webp",
-    "text": "dreamy color theme, soft luminous palette, gentle haze, ethereal pastel color grading"
+    "text": "dreamy color theme, soft luminous palette, gentle haze, photographic pastel color grading, realistic atmospheric mood"
   },
   {
     "name": "Acid Color",
@@ -1285,7 +1149,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "AC",
     "tone": "color-theme",
     "thumbnail": "acid_color.webp",
-    "text": "acid color theme, intense fluorescent palette, surreal high-energy color grading, experimental atmosphere"
+    "text": "acid color theme, intense fluorescent palette, surreal high-energy photographic color grading, experimental real-world atmosphere"
   },
   {
     "name": "Cyber Color",
@@ -1293,7 +1157,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "CC",
     "tone": "color-theme",
     "thumbnail": "cyber_color.webp",
-    "text": "cyber color theme, neon cyan and magenta palette, dark futuristic contrast, digital glow atmosphere"
+    "text": "cyber color theme, neon cyan and magenta palette, dark futuristic contrast, photographic digital glow atmosphere"
   },
   {
     "name": "Rainbow Color",
@@ -1301,7 +1165,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "RC",
     "tone": "color-theme",
     "thumbnail": "rainbow_color.webp",
-    "text": "rainbow color theme, full-spectrum colorful palette, joyful multicolor grading, vibrant playful atmosphere"
+    "text": "rainbow color theme, full-spectrum colorful palette, photographic multicolor grading, vibrant real-world atmosphere"
   },
   {
     "name": "Holographic Color",
@@ -1309,7 +1173,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "HC",
     "tone": "color-theme",
     "thumbnail": "holographic_color.webp",
-    "text": "holographic color theme, iridescent pastel palette, shifting rainbow highlights, glossy futuristic color grading"
+    "text": "holographic color theme, iridescent pastel palette, shifting rainbow highlights, glossy photographic color grading"
   },
   {
     "name": "Vaporwave Color",
@@ -1317,7 +1181,79 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "VC",
     "tone": "color-theme",
     "thumbnail": "vaporwave_color.webp",
-    "text": "vaporwave color theme, pink cyan purple palette, retro digital color grading, nostalgic surreal atmosphere"
+    "text": "vaporwave color theme, pink cyan purple palette, retro digital photographic color grading, nostalgic surreal atmosphere"
+  },
+  {
+    "name": "Stardust Fantasy",
+    "category": "Color Theme",
+    "chip": "SF",
+    "tone": "color-theme",
+    "thumbnail": "stardust_fantasy.webp",
+    "text": "stardust fantasy atmosphere, soft blue lavender and pink palette, fine sparkling light particles, gentle photographic color grading, magical real-world background mood"
+  },
+  {
+    "name": "Shooting Star Fantasy",
+    "category": "Color Theme",
+    "chip": "SS",
+    "tone": "color-theme",
+    "thumbnail": "shooting_star_fantasy.webp",
+    "text": "shooting star fantasy atmosphere, deep blue and violet palette, bright streaks of light, dreamy night-sky glow, photographic color grading, energetic real-world background mood"
+  },
+  {
+    "name": "Galaxy Atmosphere",
+    "category": "Color Theme",
+    "chip": "GA",
+    "tone": "color-theme",
+    "thumbnail": "galaxy_atmosphere.webp",
+    "text": "galaxy atmosphere, deep purple blue and magenta palette, subtle cosmic glow, soft nebula-like gradients, photographic color grading, mysterious real-world background mood"
+  },
+  {
+    "name": "Aurora Mood",
+    "category": "Color Theme",
+    "chip": "AM",
+    "tone": "color-theme",
+    "thumbnail": "aurora_mood.webp",
+    "text": "aurora mood, green cyan violet and blue palette, flowing luminous gradients, atmospheric sky-like glow, photographic color grading, calm real-world background mood"
+  },
+  {
+    "name": "Dreamland Color",
+    "category": "Color Theme",
+    "chip": "DL",
+    "tone": "color-theme",
+    "thumbnail": "dreamland_color.webp",
+    "text": "dreamland color atmosphere, soft pastel rainbow palette, glowing haze, gentle photographic color grading, airy real-world background mood"
+  },
+  {
+    "name": "Heart Magic Color",
+    "category": "Color Theme",
+    "chip": "HM",
+    "tone": "color-theme",
+    "thumbnail": "heart_magic_color.webp",
+    "text": "heart magic color atmosphere, soft pink and violet palette, subtle sweet glow, gentle sparkle accents, photographic color grading, romantic real-world background mood"
+  },
+  {
+    "name": "Harajuku Decora Mood",
+    "category": "Color Theme",
+    "chip": "HD",
+    "tone": "color-theme",
+    "thumbnail": "harajuku_decora_mood.webp",
+    "text": "harajuku decora mood, colorful real-world street fashion atmosphere, pink and pastel color accents, playful accessory-like color pops, photographic color grading"
+  },
+  {
+    "name": "Pastel Kawaii Mood",
+    "category": "Color Theme",
+    "chip": "PK",
+    "tone": "color-theme",
+    "thumbnail": "pastel_kawaii_mood.webp",
+    "text": "pastel kawaii mood, soft pink mint lavender and cream palette, cute gentle atmosphere, clean photographic color grading, sweet real-world background mood"
+  },
+  {
+    "name": "Pop Kawaii Color",
+    "category": "Color Theme",
+    "chip": "PK",
+    "tone": "color-theme",
+    "thumbnail": "pop_kawaii_color.webp",
+    "text": "pop kawaii color atmosphere, bright pink cyan yellow and lavender palette, cheerful colorful accents, photographic color grading, playful real-world background mood"
   },
   {
     "name": "Fantasy Color",
@@ -1325,7 +1261,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "FC",
     "tone": "color-theme",
     "thumbnail": "fantasy_color.webp",
-    "text": "fantasy color theme, magical saturated palette, glowing imaginative color grading, whimsical atmosphere"
+    "text": "fantasy color theme, magical saturated palette, glowing photographic color grading, whimsical real-world atmosphere"
   }
 ];
 
@@ -1343,7 +1279,7 @@ const SLOTS = [
   ["blue", "BLUE", "#2f80ff", "blue_prompt", "blue_type", "blue_framing", "blue_angle"],
   ["yellow", "YELLOW", "#ffd91a", "yellow_prompt", "yellow_type", "yellow_framing", "yellow_angle"],
   ["green", "GREEN", "#35b84b", "green_prompt", "green_type", "green_framing", "green_angle"],
-  ["magenta", "MAGENTA", "#d943c8", "magenta_prompt", "magenta_type", "magenta_framing", "magenta_angle"],
+  ["magenta", "MAGENTA", "#d943c8", "magenta_prompt", "magenta_type", "magenta_framing", "magenta_angle"]
 ];
 
 const FRAMING_OPTIONS = [
@@ -1357,7 +1293,7 @@ const FRAMING_OPTIONS = [
   "Lower body",
   "Full object",
   "Detail shot",
-  "Macro detail",
+  "Macro detail"
 ];
 
 const ANGLE_OPTIONS = [
@@ -1383,7 +1319,7 @@ const ANGLE_OPTIONS = [
   "Telephoto",
   "Worm view",
   "Bird view",
-  "Foreground frame",
+  "Foreground frame"
 ];
 
 const EFFECT_WIDGETS = ["prompt_in", "enable_effect", "category", "preset", "mode", "custom_preset"];
@@ -1568,7 +1504,7 @@ const EFFECT_PRESETS = [
     "category": "Photo",
     "chip": "Sil",
     "tone": "photo-look",
-    "text": "silhouette photography, dark subject outline, bright backlight, strong contrast, minimal visible detail, dramatic graphic composition"
+    "text": "silhouette photography, dark realistic subject outline, bright backlight, strong contrast, minimal visible detail, dramatic photographic composition"
   },
   {
     "name": "Glamour Photo",
@@ -1624,14 +1560,14 @@ const EFFECT_PRESETS = [
     "category": "Photo",
     "chip": "Neon",
     "tone": "cine",
-    "text": "neon noir photography, dark urban atmosphere, colored neon highlights, moody shadows, cinematic contrast, rain-slick reflections"
+    "text": "neon noir photography, dark realistic urban atmosphere, colored neon highlights, moody shadows, cinematic contrast, rain-slick real-world reflections"
   },
   {
     "name": "Action Still",
     "category": "Photo",
     "chip": "Action",
     "tone": "cinematic",
-    "text": "cinematic action still, dynamic composition, dramatic motion, controlled lighting, sharp subject focus, high-energy film atmosphere"
+    "text": "cinematic action still, dynamic composition, realistic motion energy, controlled lighting, sharp subject focus, high-energy film atmosphere"
   },
   {
     "name": "Natural Light",
@@ -1680,7 +1616,7 @@ const EFFECT_PRESETS = [
     "category": "Light",
     "chip": "Cyber",
     "tone": "lighting",
-    "text": "cyberpunk visual style, neon lights, futuristic city atmosphere, high contrast, saturated reflections, moody lighting"
+    "text": "cyberpunk night photography mood, neon lights, futuristic city atmosphere, realistic urban texture, high contrast, saturated reflections, cinematic moody lighting"
   },
   {
     "name": "Product Photo",
@@ -1792,28 +1728,28 @@ const EFFECT_PRESETS = [
     "category": "Mood",
     "chip": "Dream",
     "tone": "mood",
-    "text": "dreamy visual atmosphere, soft glow, gentle contrast, subtle haze, delicate highlights, calm emotional mood"
+    "text": "dreamy photographic atmosphere, soft glow, gentle contrast, subtle haze, delicate highlights, calm realistic emotional mood"
   },
   {
     "name": "Dark Fantasy",
     "category": "Mood",
     "chip": "Dark",
     "tone": "mood",
-    "text": "dark fantasy atmosphere, dramatic shadows, mysterious lighting, ornate details, moody cinematic composition"
+    "text": "dark fantasy atmosphere, cinematic realistic shadows, mysterious lighting, ornate real-world texture, moody photographic composition"
   },
   {
     "name": "High Detail",
     "category": "Mood",
     "chip": "Detail",
     "tone": "mood",
-    "text": "highly detailed image, crisp textures, sharp subject definition, refined materials, clean lighting, intricate visual detail"
+    "text": "highly detailed realistic image, crisp textures, sharp subject definition, refined materials, clean photographic lighting, intricate visual detail"
   },
   {
     "name": "Minimal Clean",
     "category": "Mood",
     "chip": "Minimal",
     "tone": "mood",
-    "text": "minimal clean style, simple composition, uncluttered background, balanced spacing, refined modern visual presentation"
+    "text": "minimal clean photographic style, simple composition, uncluttered background, balanced spacing, refined modern real-world presentation"
   },
   {
     "name": "Retro Pop",
@@ -1823,148 +1759,12 @@ const EFFECT_PRESETS = [
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
   },
   {
-    "name": "Kawaii Deco",
-    "category": "Deco",
-    "chip": "Kawaii",
-    "tone": "deco",
-    "thumbnail": "kawaii_deco.webp",
-    "text": "kawaii decoration style, cute pastel accents, hearts, stars, sparkles, soft playful atmosphere"
-  },
-  {
-    "name": "Sweet Deco",
-    "category": "Deco",
-    "chip": "Sweet",
-    "tone": "deco",
-    "thumbnail": "sweet_deco.webp",
-    "text": "sweet cute decoration, soft pink hearts, candy-like colors, gentle sparkles, romantic playful atmosphere"
-  },
-  {
-    "name": "Pop Cute Deco",
-    "category": "Deco",
-    "chip": "Pop",
-    "tone": "deco",
-    "thumbnail": "pop_cute_deco.webp",
-    "text": "pop cute decoration, bright colorful stickers, playful doodles, stars, sparkles, cheerful energetic atmosphere"
-  },
-  {
-    "name": "Heart Deco",
-    "category": "Deco",
-    "chip": "Heart",
-    "tone": "deco",
-    "thumbnail": "heart_deco.webp",
-    "text": "cute heart decorations, scattered hearts, playful romantic accents, soft pop atmosphere"
-  },
-  {
-    "name": "Sparkle Deco",
-    "category": "Deco",
-    "chip": "Sparkle",
-    "tone": "deco",
-    "thumbnail": "sparkle_deco.webp",
-    "text": "sparkle decorations, glittering stars, shiny highlights, magical twinkle accents"
-  },
-  {
-    "name": "Doodle Deco",
-    "category": "Deco",
-    "chip": "Doodle",
-    "tone": "deco",
-    "thumbnail": "doodle_deco.webp",
-    "text": "playful doodle decorations, hand-drawn lines, cute scribbles, casual marker accents"
-  },
-  {
-    "name": "Sticker Deco",
-    "category": "Deco",
-    "chip": "Sticker",
-    "tone": "deco",
-    "thumbnail": "sticker_deco.webp",
-    "text": "sticker-like decorations, cute sticker accents, playful pop graphics, layered decorative elements"
-  },
-  {
-    "name": "Pop Deco",
-    "category": "Deco",
-    "chip": "Pop",
-    "tone": "deco",
-    "thumbnail": "pop_deco.webp",
-    "text": "pop decoration style, bright playful accents, colorful graphic motifs, fun energetic atmosphere"
-  },
-  {
-    "name": "Frame Deco",
-    "category": "Deco",
-    "chip": "Frame",
-    "tone": "deco",
-    "thumbnail": "frame_deco.webp",
-    "text": "decorative frame accents, playful border decoration, cute graphic frame around the image"
-  },
-  {
-    "name": "Glitter Deco",
-    "category": "Deco",
-    "chip": "Glitter",
-    "tone": "deco",
-    "thumbnail": "glitter_deco.webp",
-    "text": "glitter decoration, sparkling particles, shiny festive accents, glossy decorative highlights"
-  },
-  {
-    "name": "Star Deco",
-    "category": "Deco",
-    "chip": "Star",
-    "tone": "deco",
-    "thumbnail": "star_deco.webp",
-    "text": "star decorations, scattered stars, bright twinkle accents, cute dreamy atmosphere"
-  },
-  {
-    "name": "Ribbon Deco",
-    "category": "Deco",
-    "chip": "Ribbon",
-    "tone": "deco",
-    "thumbnail": "ribbon_deco.webp",
-    "text": "ribbon decorations, cute ribbon accents, soft decorative details, playful feminine style"
-  },
-  {
-    "name": "Bubble Deco",
-    "category": "Deco",
-    "chip": "Bubble",
-    "tone": "deco",
-    "thumbnail": "bubble_deco.webp",
-    "text": "bubble decorations, floating bubbles, glossy round accents, playful light atmosphere"
-  },
-  {
-    "name": "Stamp Deco",
-    "category": "Deco",
-    "chip": "Stamp",
-    "tone": "deco",
-    "thumbnail": "stamp_deco.webp",
-    "text": "stamp-like decorations, playful graphic stamps, cute printed accents, casual photo booth style"
-  },
-  {
-    "name": "Graffiti Deco",
-    "category": "Deco",
-    "chip": "Graffiti",
-    "tone": "deco",
-    "thumbnail": "graffiti_deco.webp",
-    "text": "graffiti-style decorations, bold marker lines, playful scribbles, energetic street-style accents"
-  },
-  {
-    "name": "Neon Deco",
-    "category": "Deco",
-    "chip": "Neon",
-    "tone": "deco",
-    "thumbnail": "neon_deco.webp",
-    "text": "neon decorations, glowing outlines, bright neon accents, playful night-pop atmosphere"
-  },
-  {
-    "name": "Dreamy Deco",
-    "category": "Deco",
-    "chip": "Dreamy",
-    "tone": "deco",
-    "thumbnail": "dreamy_deco.webp",
-    "text": "dreamy decorations, soft sparkles, floating hearts, gentle glow, cute fantasy atmosphere"
-  },
-  {
     "name": "Paper Print",
     "category": "Finish",
     "chip": "Paper",
     "tone": "finish",
     "thumbnail": "paper_print.webp",
-    "text": "printed on paper, subtle paper grain, matte texture, soft ink absorption, tactile print finish"
+    "text": "printed on paper, realistic paper grain, matte texture, soft ink absorption, tactile photographic print finish"
   },
   {
     "name": "Matte Print",
@@ -1972,7 +1772,7 @@ const EFFECT_PRESETS = [
     "chip": "Matte",
     "tone": "finish",
     "thumbnail": "matte_print.webp",
-    "text": "matte print finish, non-reflective surface, soft contrast, smooth paper texture"
+    "text": "matte print finish, realistic non-reflective surface, soft contrast, smooth paper texture, photographic material feel"
   },
   {
     "name": "Glossy Print",
@@ -1980,7 +1780,7 @@ const EFFECT_PRESETS = [
     "chip": "Glossy",
     "tone": "finish",
     "thumbnail": "glossy_print.webp",
-    "text": "glossy print finish, reflective coating, crisp contrast, polished photo paper surface"
+    "text": "glossy print finish, realistic reflective coating, crisp contrast, polished photo paper surface"
   },
   {
     "name": "Canvas Texture",
@@ -1988,7 +1788,7 @@ const EFFECT_PRESETS = [
     "chip": "Canvas",
     "tone": "finish",
     "thumbnail": "canvas_texture.webp",
-    "text": "canvas texture, woven fabric surface, subtle textile grain, painterly material finish"
+    "text": "canvas texture, realistic woven fabric surface, subtle textile grain, tactile material finish"
   },
   {
     "name": "Fabric Print",
@@ -1996,7 +1796,7 @@ const EFFECT_PRESETS = [
     "chip": "Fabric",
     "tone": "finish",
     "thumbnail": "fabric_print.webp",
-    "text": "printed on fabric, soft cloth texture, woven fibers, gentle ink diffusion, textile surface finish"
+    "text": "printed on fabric, realistic soft cloth texture, woven fibers, gentle ink diffusion, textile surface finish"
   },
   {
     "name": "Metal Print",
@@ -2004,7 +1804,7 @@ const EFFECT_PRESETS = [
     "chip": "Metal",
     "tone": "finish",
     "thumbnail": "metal_print.webp",
-    "text": "printed on metal, glossy metallic surface, reflective highlights, sleek hard material finish"
+    "text": "printed on metal, realistic glossy metallic surface, reflective highlights, sleek hard material finish"
   },
   {
     "name": "Glass Print",
@@ -2012,7 +1812,7 @@ const EFFECT_PRESETS = [
     "chip": "Glass",
     "tone": "finish",
     "thumbnail": "glass_print.webp",
-    "text": "behind glass, glossy glass surface, subtle reflections, polished transparent finish"
+    "text": "behind glass, realistic glossy glass surface, subtle reflections, polished transparent finish"
   },
   {
     "name": "Wet Surface",
@@ -2020,7 +1820,7 @@ const EFFECT_PRESETS = [
     "chip": "Wet",
     "tone": "finish",
     "thumbnail": "wet_surface.webp",
-    "text": "wet surface effect, water droplets, glossy highlights, damp reflective texture, fresh moisture finish"
+    "text": "wet surface effect, realistic water droplets, glossy highlights, damp reflective texture, fresh moisture finish"
   },
   {
     "name": "Water Droplets",
@@ -2028,7 +1828,7 @@ const EFFECT_PRESETS = [
     "chip": "Drops",
     "tone": "finish",
     "thumbnail": "water_droplets.webp",
-    "text": "water droplets on surface, clear beads of moisture, glossy highlights, fresh wet finish"
+    "text": "water droplets on surface, realistic clear beads of moisture, glossy highlights, fresh wet photographic finish"
   },
   {
     "name": "Dusty Surface",
@@ -2036,7 +1836,7 @@ const EFFECT_PRESETS = [
     "chip": "Dust",
     "tone": "finish",
     "thumbnail": "dusty_surface.webp",
-    "text": "dusty surface effect, fine dust particles, muted texture, aged dry finish, subtle grime"
+    "text": "dusty surface effect, realistic fine dust particles, muted texture, aged dry finish, subtle grime"
   },
   {
     "name": "Scratched Print",
@@ -2044,7 +1844,7 @@ const EFFECT_PRESETS = [
     "chip": "Scratch",
     "tone": "finish",
     "thumbnail": "scratched_print.webp",
-    "text": "scratched print surface, fine scratches, worn texture, distressed physical finish"
+    "text": "scratched print surface, realistic fine scratches, worn texture, distressed physical finish"
   },
   {
     "name": "Vintage Paper",
@@ -2052,7 +1852,7 @@ const EFFECT_PRESETS = [
     "chip": "Vintage",
     "tone": "finish",
     "thumbnail": "vintage_paper.webp",
-    "text": "vintage paper texture, aged paper grain, faded ink, warm yellowed surface, old printed finish"
+    "text": "vintage paper texture, realistic aged paper grain, faded ink, warm yellowed surface, old printed finish"
   },
   {
     "name": "Stone Surface",
@@ -2060,7 +1860,7 @@ const EFFECT_PRESETS = [
     "chip": "Stone",
     "tone": "finish",
     "thumbnail": "stone_surface.webp",
-    "text": "stone surface texture, rough mineral grain, cool hard material finish, natural stone detail"
+    "text": "stone surface texture, realistic rough mineral grain, cool hard material finish, natural stone detail"
   },
   {
     "name": "Marble Finish",
@@ -2068,7 +1868,7 @@ const EFFECT_PRESETS = [
     "chip": "Marble",
     "tone": "finish",
     "thumbnail": "marble_finish.webp",
-    "text": "marble surface finish, subtle veining, polished stone texture, elegant mineral material"
+    "text": "marble surface finish, realistic subtle veining, polished stone texture, elegant mineral material"
   },
   {
     "name": "Concrete Finish",
@@ -2076,7 +1876,7 @@ const EFFECT_PRESETS = [
     "chip": "Concrete",
     "tone": "finish",
     "thumbnail": "concrete_finish.webp",
-    "text": "concrete surface texture, rough gray material, fine grain, industrial matte finish"
+    "text": "concrete surface texture, realistic rough gray material, fine grain, industrial matte finish"
   },
   {
     "name": "Rusty Metal",
@@ -2084,7 +1884,7 @@ const EFFECT_PRESETS = [
     "chip": "Rust",
     "tone": "finish",
     "thumbnail": "rusty_metal.webp",
-    "text": "rusty metal surface, oxidized texture, reddish brown corrosion, worn industrial finish"
+    "text": "rusty metal surface, realistic oxidized texture, reddish brown corrosion, worn industrial finish"
   },
   {
     "name": "Aged Metal",
@@ -2092,7 +1892,7 @@ const EFFECT_PRESETS = [
     "chip": "Aged",
     "tone": "finish",
     "thumbnail": "aged_metal.webp",
-    "text": "aged metal finish, tarnished surface, subtle scratches, oxidized patina, weathered material"
+    "text": "aged metal finish, realistic tarnished surface, subtle scratches, oxidized patina, weathered material"
   },
   {
     "name": "Patina Finish",
@@ -2100,7 +1900,7 @@ const EFFECT_PRESETS = [
     "chip": "Patina",
     "tone": "finish",
     "thumbnail": "patina_finish.webp",
-    "text": "patina surface finish, green-blue oxidized metal, aged copper look, weathered decorative texture"
+    "text": "patina surface finish, realistic green-blue oxidized metal, aged copper look, weathered decorative texture"
   },
   {
     "name": "Wood Grain",
@@ -2108,7 +1908,7 @@ const EFFECT_PRESETS = [
     "chip": "Wood",
     "tone": "finish",
     "thumbnail": "wood_grain.webp",
-    "text": "wood grain texture, natural wooden surface, warm organic material finish, visible grain lines"
+    "text": "wood grain texture, realistic natural wooden surface, warm organic material finish, visible grain lines"
   },
   {
     "name": "Leather Finish",
@@ -2116,7 +1916,7 @@ const EFFECT_PRESETS = [
     "chip": "Leather",
     "tone": "finish",
     "thumbnail": "leather_finish.webp",
-    "text": "leather surface texture, subtle grain, soft worn material, tactile premium finish"
+    "text": "leather surface texture, realistic subtle grain, soft worn material, tactile premium finish"
   },
   {
     "name": "Ceramic Glaze",
@@ -2124,7 +1924,7 @@ const EFFECT_PRESETS = [
     "chip": "Ceramic",
     "tone": "finish",
     "thumbnail": "ceramic_glaze.webp",
-    "text": "ceramic glazed surface, smooth glossy coating, subtle reflections, crafted material finish"
+    "text": "ceramic glazed surface, realistic smooth glossy coating, subtle reflections, crafted material finish"
   },
   {
     "name": "Plastic Finish",
@@ -2132,7 +1932,7 @@ const EFFECT_PRESETS = [
     "chip": "Plastic",
     "tone": "finish",
     "thumbnail": "plastic_finish.webp",
-    "text": "plastic surface finish, smooth synthetic texture, clean highlights, modern manufactured material"
+    "text": "plastic surface finish, realistic smooth synthetic texture, clean highlights, modern manufactured material"
   },
   {
     "name": "Slime Finish",
@@ -2140,7 +1940,7 @@ const EFFECT_PRESETS = [
     "chip": "Slime",
     "tone": "finish",
     "thumbnail": "slime_finish.webp",
-    "text": "slime surface finish, glossy translucent gel texture, sticky wet highlights, soft gooey material look"
+    "text": "slime surface finish, realistic glossy translucent gel texture, sticky wet highlights, soft gooey material look"
   },
   {
     "name": "Gel Finish",
@@ -2148,7 +1948,7 @@ const EFFECT_PRESETS = [
     "chip": "Gel",
     "tone": "finish",
     "thumbnail": "gel_finish.webp",
-    "text": "gel surface finish, translucent glossy material, smooth jelly-like highlights, soft elastic texture"
+    "text": "gel surface finish, realistic translucent glossy material, smooth jelly-like highlights, soft elastic texture"
   },
   {
     "name": "Liquid Gloss",
@@ -2156,7 +1956,7 @@ const EFFECT_PRESETS = [
     "chip": "Liquid",
     "tone": "finish",
     "thumbnail": "liquid_gloss.webp",
-    "text": "liquid glossy finish, wet reflective coating, smooth flowing highlights, polished fluid surface"
+    "text": "liquid glossy finish, realistic wet reflective coating, smooth flowing highlights, polished fluid surface"
   },
   {
     "name": "Gummy Finish",
@@ -2164,7 +1964,7 @@ const EFFECT_PRESETS = [
     "chip": "Gummy",
     "tone": "finish",
     "thumbnail": "gummy_finish.webp",
-    "text": "gummy material finish, soft translucent candy texture, rounded glossy surface, playful elastic look"
+    "text": "gummy material finish, realistic soft translucent candy texture, rounded glossy surface, playful elastic look"
   },
   {
     "name": "Wax Finish",
@@ -2172,7 +1972,7 @@ const EFFECT_PRESETS = [
     "chip": "Wax",
     "tone": "finish",
     "thumbnail": "wax_finish.webp",
-    "text": "wax surface finish, soft semi-gloss texture, smooth melted material, subtle warm highlights"
+    "text": "wax surface finish, realistic soft semi-gloss texture, smooth melted material, subtle warm highlights"
   },
   {
     "name": "Red Theme",
@@ -2636,7 +2436,7 @@ const EFFECT_PRESETS = [
     "chip": "CC",
     "tone": "color-theme",
     "thumbnail": "crazy_color.webp",
-    "text": "crazy color theme, playful clashing palette, unexpected color combinations, energetic stylized color grading"
+    "text": "crazy color theme, playful clashing palette, unexpected color combinations, photographic color grading, energetic real-world atmosphere"
   },
   {
     "name": "Candy Color",
@@ -2644,7 +2444,7 @@ const EFFECT_PRESETS = [
     "chip": "CC",
     "tone": "color-theme",
     "thumbnail": "candy_color.webp",
-    "text": "candy color theme, sweet bright palette, playful pastel-neon colors, cheerful glossy atmosphere"
+    "text": "candy color theme, sweet bright palette, playful pastel-neon colors, photographic color grading, cheerful glossy atmosphere"
   },
   {
     "name": "Pop Color",
@@ -2652,7 +2452,7 @@ const EFFECT_PRESETS = [
     "chip": "PC",
     "tone": "color-theme",
     "thumbnail": "pop_color.webp",
-    "text": "pop color theme, bold graphic palette, bright saturated colors, fun energetic visual style"
+    "text": "pop color theme, bold bright palette, saturated colors, photographic color grading, energetic real-world atmosphere"
   },
   {
     "name": "Dreamy Color",
@@ -2660,7 +2460,7 @@ const EFFECT_PRESETS = [
     "chip": "DC",
     "tone": "color-theme",
     "thumbnail": "dreamy_color.webp",
-    "text": "dreamy color theme, soft luminous palette, gentle haze, ethereal pastel color grading"
+    "text": "dreamy color theme, soft luminous palette, gentle haze, photographic pastel color grading, realistic atmospheric mood"
   },
   {
     "name": "Acid Color",
@@ -2668,7 +2468,7 @@ const EFFECT_PRESETS = [
     "chip": "AC",
     "tone": "color-theme",
     "thumbnail": "acid_color.webp",
-    "text": "acid color theme, intense fluorescent palette, surreal high-energy color grading, experimental atmosphere"
+    "text": "acid color theme, intense fluorescent palette, surreal high-energy photographic color grading, experimental real-world atmosphere"
   },
   {
     "name": "Cyber Color",
@@ -2676,7 +2476,7 @@ const EFFECT_PRESETS = [
     "chip": "CC",
     "tone": "color-theme",
     "thumbnail": "cyber_color.webp",
-    "text": "cyber color theme, neon cyan and magenta palette, dark futuristic contrast, digital glow atmosphere"
+    "text": "cyber color theme, neon cyan and magenta palette, dark futuristic contrast, photographic digital glow atmosphere"
   },
   {
     "name": "Rainbow Color",
@@ -2684,7 +2484,7 @@ const EFFECT_PRESETS = [
     "chip": "RC",
     "tone": "color-theme",
     "thumbnail": "rainbow_color.webp",
-    "text": "rainbow color theme, full-spectrum colorful palette, joyful multicolor grading, vibrant playful atmosphere"
+    "text": "rainbow color theme, full-spectrum colorful palette, photographic multicolor grading, vibrant real-world atmosphere"
   },
   {
     "name": "Holographic Color",
@@ -2692,7 +2492,7 @@ const EFFECT_PRESETS = [
     "chip": "HC",
     "tone": "color-theme",
     "thumbnail": "holographic_color.webp",
-    "text": "holographic color theme, iridescent pastel palette, shifting rainbow highlights, glossy futuristic color grading"
+    "text": "holographic color theme, iridescent pastel palette, shifting rainbow highlights, glossy photographic color grading"
   },
   {
     "name": "Vaporwave Color",
@@ -2700,7 +2500,79 @@ const EFFECT_PRESETS = [
     "chip": "VC",
     "tone": "color-theme",
     "thumbnail": "vaporwave_color.webp",
-    "text": "vaporwave color theme, pink cyan purple palette, retro digital color grading, nostalgic surreal atmosphere"
+    "text": "vaporwave color theme, pink cyan purple palette, retro digital photographic color grading, nostalgic surreal atmosphere"
+  },
+  {
+    "name": "Stardust Fantasy",
+    "category": "Color Theme",
+    "chip": "SF",
+    "tone": "color-theme",
+    "thumbnail": "stardust_fantasy.webp",
+    "text": "stardust fantasy atmosphere, soft blue lavender and pink palette, fine sparkling light particles, gentle photographic color grading, magical real-world background mood"
+  },
+  {
+    "name": "Shooting Star Fantasy",
+    "category": "Color Theme",
+    "chip": "SS",
+    "tone": "color-theme",
+    "thumbnail": "shooting_star_fantasy.webp",
+    "text": "shooting star fantasy atmosphere, deep blue and violet palette, bright streaks of light, dreamy night-sky glow, photographic color grading, energetic real-world background mood"
+  },
+  {
+    "name": "Galaxy Atmosphere",
+    "category": "Color Theme",
+    "chip": "GA",
+    "tone": "color-theme",
+    "thumbnail": "galaxy_atmosphere.webp",
+    "text": "galaxy atmosphere, deep purple blue and magenta palette, subtle cosmic glow, soft nebula-like gradients, photographic color grading, mysterious real-world background mood"
+  },
+  {
+    "name": "Aurora Mood",
+    "category": "Color Theme",
+    "chip": "AM",
+    "tone": "color-theme",
+    "thumbnail": "aurora_mood.webp",
+    "text": "aurora mood, green cyan violet and blue palette, flowing luminous gradients, atmospheric sky-like glow, photographic color grading, calm real-world background mood"
+  },
+  {
+    "name": "Dreamland Color",
+    "category": "Color Theme",
+    "chip": "DL",
+    "tone": "color-theme",
+    "thumbnail": "dreamland_color.webp",
+    "text": "dreamland color atmosphere, soft pastel rainbow palette, glowing haze, gentle photographic color grading, airy real-world background mood"
+  },
+  {
+    "name": "Heart Magic Color",
+    "category": "Color Theme",
+    "chip": "HM",
+    "tone": "color-theme",
+    "thumbnail": "heart_magic_color.webp",
+    "text": "heart magic color atmosphere, soft pink and violet palette, subtle sweet glow, gentle sparkle accents, photographic color grading, romantic real-world background mood"
+  },
+  {
+    "name": "Harajuku Decora Mood",
+    "category": "Color Theme",
+    "chip": "HD",
+    "tone": "color-theme",
+    "thumbnail": "harajuku_decora_mood.webp",
+    "text": "harajuku decora mood, colorful real-world street fashion atmosphere, pink and pastel color accents, playful accessory-like color pops, photographic color grading"
+  },
+  {
+    "name": "Pastel Kawaii Mood",
+    "category": "Color Theme",
+    "chip": "PK",
+    "tone": "color-theme",
+    "thumbnail": "pastel_kawaii_mood.webp",
+    "text": "pastel kawaii mood, soft pink mint lavender and cream palette, cute gentle atmosphere, clean photographic color grading, sweet real-world background mood"
+  },
+  {
+    "name": "Pop Kawaii Color",
+    "category": "Color Theme",
+    "chip": "PK",
+    "tone": "color-theme",
+    "thumbnail": "pop_kawaii_color.webp",
+    "text": "pop kawaii color atmosphere, bright pink cyan yellow and lavender palette, cheerful colorful accents, photographic color grading, playful real-world background mood"
   },
   {
     "name": "Fantasy Color",
@@ -2708,10 +2580,10 @@ const EFFECT_PRESETS = [
     "chip": "FC",
     "tone": "color-theme",
     "thumbnail": "fantasy_color.webp",
-    "text": "fantasy color theme, magical saturated palette, glowing imaginative color grading, whimsical atmosphere"
+    "text": "fantasy color theme, magical saturated palette, glowing photographic color grading, whimsical real-world atmosphere"
   }
 ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Deco", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 const EFFECT_THUMBNAIL_BASE = "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/";
 function k2fxPresetSlug(name) {
@@ -3633,7 +3505,7 @@ const PROMPT_WIDGETS = [
   "red_type", "blue_type", "yellow_type", "green_type", "magenta_type",
   "prompt_ui_data",
   "red_framing", "blue_framing", "yellow_framing", "green_framing", "magenta_framing",
-  "red_angle", "blue_angle", "yellow_angle", "green_angle", "magenta_angle",
+  "red_angle", "blue_angle", "yellow_angle", "green_angle", "magenta_angle"
 ];
 
 function k2cfIsLegacyRedTestResidue(values) {

@@ -896,6 +896,69 @@
     "tone": "color-theme"
   },
   {
+    "name": "Stardust Fantasy",
+    "file": "stardust_fantasy.webp",
+    "category": "Color Theme",
+    "chip": "SF",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Shooting Star Fantasy",
+    "file": "shooting_star_fantasy.webp",
+    "category": "Color Theme",
+    "chip": "SS",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Galaxy Atmosphere",
+    "file": "galaxy_atmosphere.webp",
+    "category": "Color Theme",
+    "chip": "GA",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Aurora Mood",
+    "file": "aurora_mood.webp",
+    "category": "Color Theme",
+    "chip": "AM",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Dreamland Color",
+    "file": "dreamland_color.webp",
+    "category": "Color Theme",
+    "chip": "DL",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Heart Magic Color",
+    "file": "heart_magic_color.webp",
+    "category": "Color Theme",
+    "chip": "HM",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Harajuku Decora Mood",
+    "file": "harajuku_decora_mood.webp",
+    "category": "Color Theme",
+    "chip": "HD",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pastel Kawaii Mood",
+    "file": "pastel_kawaii_mood.webp",
+    "category": "Color Theme",
+    "chip": "PK",
+    "tone": "color-theme"
+  },
+  {
+    "name": "Pop Kawaii Color",
+    "file": "pop_kawaii_color.webp",
+    "category": "Color Theme",
+    "chip": "PK",
+    "tone": "color-theme"
+  },
+  {
     "name": "Fantasy Color",
     "file": "fantasy_color.webp",
     "category": "Color Theme",
@@ -1090,124 +1153,5 @@
     "category": "Finish",
     "chip": "Wax",
     "tone": "finish"
-  },
-  {
-    "name": "Kawaii Deco",
-    "file": "kawaii_deco.webp",
-    "category": "Deco",
-    "chip": "Kawaii",
-    "tone": "deco"
-  },
-  {
-    "name": "Sweet Deco",
-    "file": "sweet_deco.webp",
-    "category": "Deco",
-    "chip": "Sweet",
-    "tone": "deco"
-  },
-  {
-    "name": "Pop Cute Deco",
-    "file": "pop_cute_deco.webp",
-    "category": "Deco",
-    "chip": "Pop",
-    "tone": "deco"
-  },
-  {
-    "name": "Heart Deco",
-    "file": "heart_deco.webp",
-    "category": "Deco",
-    "chip": "Heart",
-    "tone": "deco"
-  },
-  {
-    "name": "Sparkle Deco",
-    "file": "sparkle_deco.webp",
-    "category": "Deco",
-    "chip": "Sparkle",
-    "tone": "deco"
-  },
-  {
-    "name": "Doodle Deco",
-    "file": "doodle_deco.webp",
-    "category": "Deco",
-    "chip": "Doodle",
-    "tone": "deco"
-  },
-  {
-    "name": "Sticker Deco",
-    "file": "sticker_deco.webp",
-    "category": "Deco",
-    "chip": "Sticker",
-    "tone": "deco"
-  },
-  {
-    "name": "Pop Deco",
-    "file": "pop_deco.webp",
-    "category": "Deco",
-    "chip": "Pop",
-    "tone": "deco"
-  },
-  {
-    "name": "Frame Deco",
-    "file": "frame_deco.webp",
-    "category": "Deco",
-    "chip": "Frame",
-    "tone": "deco"
-  },
-  {
-    "name": "Glitter Deco",
-    "file": "glitter_deco.webp",
-    "category": "Deco",
-    "chip": "Glitter",
-    "tone": "deco"
-  },
-  {
-    "name": "Star Deco",
-    "file": "star_deco.webp",
-    "category": "Deco",
-    "chip": "Star",
-    "tone": "deco"
-  },
-  {
-    "name": "Ribbon Deco",
-    "file": "ribbon_deco.webp",
-    "category": "Deco",
-    "chip": "Ribbon",
-    "tone": "deco"
-  },
-  {
-    "name": "Bubble Deco",
-    "file": "bubble_deco.webp",
-    "category": "Deco",
-    "chip": "Bubble",
-    "tone": "deco"
-  },
-  {
-    "name": "Stamp Deco",
-    "file": "stamp_deco.webp",
-    "category": "Deco",
-    "chip": "Stamp",
-    "tone": "deco"
-  },
-  {
-    "name": "Graffiti Deco",
-    "file": "graffiti_deco.webp",
-    "category": "Deco",
-    "chip": "Graffiti",
-    "tone": "deco"
-  },
-  {
-    "name": "Neon Deco",
-    "file": "neon_deco.webp",
-    "category": "Deco",
-    "chip": "Neon",
-    "tone": "deco"
-  },
-  {
-    "name": "Dreamy Deco",
-    "file": "dreamy_deco.webp",
-    "category": "Deco",
-    "chip": "Dreamy",
-    "tone": "deco"
   }
 ]

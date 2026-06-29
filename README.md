@@ -30,6 +30,8 @@ The Prompt Effect node is one of the most practical, and honestly **one of the m
 
 This makes the node useful not only for decoration, but also for fast visual direction testing. You can quickly compare photo styles, camera effects, color themes, lighting moods, and composition hints without rewriting the whole prompt each time.
 
+Prompt Effect presets are mainly tuned for Krea2 workflows that often lean photographic or real-world, but they are not meant to force every image into an ultra-realistic look. Presets that do not explicitly belong to anime, manga, comic, or illustration categories try to avoid pushing the result toward those styles; they focus more on **color grading, lighting, material feel, atmosphere, and background mood**.
+
 ---
 
 ## First Steps
@@ -715,32 +717,6 @@ Minimal Clean
 Retro Pop
 ```
 
-
-
-## Deco
-
-```text
-Kawaii Deco
-Sweet Deco
-Pop Cute Deco
-Heart Deco
-Sparkle Deco
-Doodle Deco
-Sticker Deco
-Pop Deco
-Frame Deco
-Glitter Deco
-Star Deco
-Ribbon Deco
-Bubble Deco
-Stamp Deco
-Graffiti Deco
-Neon Deco
-Dreamy Deco
-```
-
-Deco presets add playful decorative overlays such as hearts, sparkles, doodles, stickers, frames, glitter, stars, ribbons, bubbles, stamps, graffiti, neon accents, and dreamy cute effects. These are intentionally lightweight and use local WebP decoration swatches.
-
 ## Finish
 
 ```text
@@ -844,10 +820,19 @@ Cyber Color
 Rainbow Color
 Holographic Color
 Vaporwave Color
+Stardust Fantasy
+Shooting Star Fantasy
+Galaxy Atmosphere
+Aurora Mood
+Dreamland Color
+Heart Magic Color
+Harajuku Decora Mood
+Pastel Kawaii Mood
+Pop Kawaii Color
 Fantasy Color
 ```
 
-Color Theme presets apply broad palette direction such as single-color themes, two-color themes, pastel palettes, monochrome, neon, vaporwave, and playful stylized color schemes. Thumbnails are included as local WebP color swatches under `web/thumbnails/`, including presets with `&` in the display name.
+Color Theme presets apply broad palette direction such as single-color themes, two-color themes, pastel palettes, monochrome, neon, vaporwave, and world-building color moods such as stardust, galaxy, aurora, dreamland, heart magic, and Harajuku-inspired kawaii color. Thumbnails are included as local WebP color swatches under `web/thumbnails/`, including presets with `&` in the display name.
 
 ---
 
@@ -1910,6 +1895,15 @@ Cyber Color
 Rainbow Color
 Holographic Color
 Vaporwave Color
+Stardust Fantasy
+Shooting Star Fantasy
+Galaxy Atmosphere
+Aurora Mood
+Dreamland Color
+Heart Magic Color
+Harajuku Decora Mood
+Pastel Kawaii Mood
+Pop Kawaii Color
 Fantasy Color
 ```
 
