@@ -24,6 +24,12 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 - Add photographic, film, portrait, flash, art, lighting, and mood effects with the Prompt Effect node.
 - Choose style presets from a thumbnail-card UI using local WebP thumbnails.
 
+## Why Prompt Effect Matters
+
+The Prompt Effect node is one of the most practical, and honestly **one of the most enjoyable**, parts of this suite. Krea2 responds surprisingly well to concise style and effect prompts, so these presets are **genuinely useful in practice**. Even small additions such as camera looks, lighting styles, color themes, film effects, or framing hints can noticeably change the final image.
+
+This makes the node useful not only for decoration, but also for fast visual direction testing. You can quickly compare photo styles, camera effects, color themes, lighting moods, and composition hints without rewriting the whole prompt each time.
+
 ---
 
 ## First Steps
@@ -1049,6 +1055,12 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 - `width` / `height` を `EmptyLatentImage` に接続して、Canvasサイズと生成サイズを同期できます。
 - Prompt Effectノードを使って、写真風・フィルム風・ポートレート風・フラッシュ風などの効果プロンプトを追加できます。
 - スタイル選択にはWebPサムネイル付きのカードUIを使えます。
+
+## Prompt Effectが使える理由
+
+作者目線では、このスイートの中でもPrompt Effectノードが**一番楽しい部分**です。Krea2は短いスタイル指定やエフェクト指定にも意外とよく追従するため、これらのプリセットは**実際にかなり使えます**。カメラ風、ライティング、カラーテーマ、フィルム風、構図補助などを少し加えるだけでも、最終画像の印象がかなり変わります。
+
+単なる装飾用ではなく、画作りの方向性を素早く試すためのノードとして使えます。毎回プロンプト全体を書き直さなくても、写真スタイル、カメラFX、色テーマ、光の雰囲気、構図のヒントを切り替えながら比較できます。
 
 ---
 
