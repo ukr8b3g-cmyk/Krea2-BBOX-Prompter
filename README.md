@@ -324,6 +324,8 @@ a young adult woman in a business suit sitting naturally, realistic skin texture
 
 Use this only when you want visible text inside the generated image.
 
+For visible-text work, it is usually safer to keep Text elements near the end of the final prompt flow. If text instructions appear too early, Krea2 may accidentally treat later descriptive words as part of the visible text.
+
 ```text
 こんにちは | readable Japanese text with black outline
 ```
@@ -1428,6 +1430,8 @@ a young adult woman in a business suit sitting naturally, realistic skin texture
 
 画像内に実際に表示したい文字に使います。
 
+文字系の指示は、最終プロンプトの後ろ寄りに置く方が安全です。上の方に置くと、その後ろに続く通常の説明文までKrea2が表示文字として拾ってしまう可能性があります。
+
 ```text
 こんにちは | readable Japanese text with black outline
 ```
@@ -2504,6 +2508,10 @@ Object要素には `text` フィールドは付きません。
 ```
 
 Text要素は、画像内に実際に表示したい文字に使います。
+
+---
+
+Text要素は、通常のObject説明や背景説明より後ろ寄りに出す方が安全です。文字指定が前に出すぎると、後続の説明語をモデルが表示文字の一部として解釈する場合があります。
 
 ---
 
