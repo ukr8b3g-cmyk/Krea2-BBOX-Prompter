@@ -1324,6 +1324,8 @@ height
 ---
 
 ## ✨ Krea2 BBOX Prompt Effect
+<img width="967" height="857" alt="Clip_14" src="https://github.com/user-attachments/assets/37555e7a-ea5c-41a9-8984-8b0af630412a" />
+
 
 Exportから出たJSONプロンプトに、写真効果・画風効果・雰囲気効果を追加するノードです。
 
