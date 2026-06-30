@@ -1,4 +1,3 @@
-<img width="967" height="857" alt="Clip_14" src="https://github.com/user-attachments/assets/872f4120-edc0-4c47-a8c2-3be7e9c7dd85" />
 # Krea2 BBOX Prompter Suite
 <img width="1351" height="884" alt="image" src="https://github.com/user-attachments/assets/37027b23-29e9-4fe4-9ce6-26cc7b507a60" />
 
