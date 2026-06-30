@@ -183,6 +183,8 @@ prompt_ui_data
 ---
 
 ## 📦 Krea2 BBOX Export
+<img width="750" height="342" alt="Clip_17" src="https://github.com/user-attachments/assets/bc683d0a-6c61-4a90-bb3c-2ea856c48ab6" />
+
 
 Combines Canvas BBOX data and Prompter prompt data into a Krea2 JSON prompt.
 
