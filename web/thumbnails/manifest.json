@@ -259,6 +259,76 @@
     "tone": "lighting"
   },
   {
+    "name": "Sunlight",
+    "file": "sunlight.webp",
+    "category": "Light",
+    "chip": "Sun",
+    "tone": "lighting"
+  },
+  {
+    "name": "Side Light",
+    "file": "side_light.webp",
+    "category": "Light",
+    "chip": "Side",
+    "tone": "lighting"
+  },
+  {
+    "name": "Backlight",
+    "file": "backlight.webp",
+    "category": "Light",
+    "chip": "Back",
+    "tone": "lighting"
+  },
+  {
+    "name": "Top Light",
+    "file": "top_light.webp",
+    "category": "Light",
+    "chip": "Top",
+    "tone": "lighting"
+  },
+  {
+    "name": "Low Sun",
+    "file": "low_sun.webp",
+    "category": "Light",
+    "chip": "Low",
+    "tone": "lighting"
+  },
+  {
+    "name": "Overhead Sun",
+    "file": "overhead_sun.webp",
+    "category": "Light",
+    "chip": "Ovr",
+    "tone": "lighting"
+  },
+  {
+    "name": "Long Shadow",
+    "file": "long_shadow.webp",
+    "category": "Light",
+    "chip": "Long",
+    "tone": "lighting"
+  },
+  {
+    "name": "Overcast",
+    "file": "overcast.webp",
+    "category": "Light",
+    "chip": "Cloud",
+    "tone": "lighting"
+  },
+  {
+    "name": "Dappled Light",
+    "file": "dappled_light.webp",
+    "category": "Light",
+    "chip": "Dap",
+    "tone": "lighting"
+  },
+  {
+    "name": "Window Shadow",
+    "file": "window_shadow.webp",
+    "category": "Light",
+    "chip": "Win",
+    "tone": "lighting"
+  },
+  {
     "name": "Light Rays",
     "file": "light_rays.webp",
     "category": "Light",

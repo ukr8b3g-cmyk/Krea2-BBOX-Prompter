@@ -344,6 +344,86 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "golden hour lighting, warm sunlight, soft long shadows, glowing highlights, cinematic natural atmosphere"
   },
   {
+  "name": "Sunlight",
+  "category": "Light",
+  "chip": "Sun",
+  "tone": "lighting",
+  "thumbnail": "sunlight.webp",
+  "text": "sunlight, bright natural daylight, realistic light behavior, natural shadows, clear highlights, balanced outdoor illumination"
+},
+{
+  "name": "Side Light",
+  "category": "Light",
+  "chip": "Side",
+  "tone": "lighting",
+  "thumbnail": "side_light.webp",
+  "text": "side light, directional natural light from one side, realistic shadow falloff, sculpted form, balanced highlights"
+},
+{
+  "name": "Backlight",
+  "category": "Light",
+  "chip": "Back",
+  "tone": "lighting",
+  "thumbnail": "backlight.webp",
+  "text": "backlight, light behind the subject, glowing rim edge, natural silhouette tendency, realistic atmospheric separation"
+},
+{
+  "name": "Top Light",
+  "category": "Light",
+  "chip": "Top",
+  "tone": "lighting",
+  "thumbnail": "top_light.webp",
+  "text": "top light, light from above, natural overhead illumination, downward shadows, realistic highlight placement"
+},
+{
+  "name": "Low Sun",
+  "category": "Light",
+  "chip": "Low",
+  "tone": "lighting",
+  "thumbnail": "low_sun.webp",
+  "text": "low sun angle, warm directional sunlight, long soft-edged shadows, realistic late-day light behavior, natural atmosphere"
+},
+{
+  "name": "Overhead Sun",
+  "category": "Light",
+  "chip": "Ovr",
+  "tone": "lighting",
+  "thumbnail": "overhead_sun.webp",
+  "text": "overhead sun, high midday sunlight, short crisp shadows, bright clear daylight, realistic outdoor light behavior"
+},
+{
+  "name": "Long Shadow",
+  "category": "Light",
+  "chip": "Long",
+  "tone": "lighting",
+  "thumbnail": "long_shadow.webp",
+  "text": "long shadows, low-angle sunlight, extended shadow shapes across the ground, warm directional light, realistic scene depth"
+},
+{
+  "name": "Overcast",
+  "category": "Light",
+  "chip": "Cloud",
+  "tone": "lighting",
+  "thumbnail": "overcast.webp",
+  "text": "overcast light, soft diffused sky illumination, low contrast natural shadows, even realistic daylight, calm muted atmosphere"
+},
+{
+  "name": "Dappled Light",
+  "category": "Light",
+  "chip": "Dap",
+  "tone": "lighting",
+  "thumbnail": "dappled_light.webp",
+  "text": "dappled sunlight, scattered patches of light and shade, tree-filtered natural light, realistic outdoor shadow pattern"
+},
+{
+  "name": "Window Shadow",
+  "category": "Light",
+  "chip": "Win",
+  "tone": "lighting",
+  "thumbnail": "window_shadow.webp",
+  "text": "window light and shadow, sunlight entering through a window, rectangular shadow pattern, realistic indoor light behavior"
+},
+  {
     "name": "Light Rays",
     "category": "Light",
     "chip": "LR",
@@ -1862,6 +1942,86 @@ const EFFECT_PRESETS = [
     "tone": "lighting",
     "text": "golden hour lighting, warm sunlight, soft long shadows, glowing highlights, cinematic natural atmosphere"
   },
+  {
+  "name": "Sunlight",
+  "category": "Light",
+  "chip": "Sun",
+  "tone": "lighting",
+  "thumbnail": "sunlight.webp",
+  "text": "sunlight, bright natural daylight, realistic light behavior, natural shadows, clear highlights, balanced outdoor illumination"
+},
+{
+  "name": "Side Light",
+  "category": "Light",
+  "chip": "Side",
+  "tone": "lighting",
+  "thumbnail": "side_light.webp",
+  "text": "side light, directional natural light from one side, realistic shadow falloff, sculpted form, balanced highlights"
+},
+{
+  "name": "Backlight",
+  "category": "Light",
+  "chip": "Back",
+  "tone": "lighting",
+  "thumbnail": "backlight.webp",
+  "text": "backlight, light behind the subject, glowing rim edge, natural silhouette tendency, realistic atmospheric separation"
+},
+{
+  "name": "Top Light",
+  "category": "Light",
+  "chip": "Top",
+  "tone": "lighting",
+  "thumbnail": "top_light.webp",
+  "text": "top light, light from above, natural overhead illumination, downward shadows, realistic highlight placement"
+},
+{
+  "name": "Low Sun",
+  "category": "Light",
+  "chip": "Low",
+  "tone": "lighting",
+  "thumbnail": "low_sun.webp",
+  "text": "low sun angle, warm directional sunlight, long soft-edged shadows, realistic late-day light behavior, natural atmosphere"
+},
+{
+  "name": "Overhead Sun",
+  "category": "Light",
+  "chip": "Ovr",
+  "tone": "lighting",
+  "thumbnail": "overhead_sun.webp",
+  "text": "overhead sun, high midday sunlight, short crisp shadows, bright clear daylight, realistic outdoor light behavior"
+},
+{
+  "name": "Long Shadow",
+  "category": "Light",
+  "chip": "Long",
+  "tone": "lighting",
+  "thumbnail": "long_shadow.webp",
+  "text": "long shadows, low-angle sunlight, extended shadow shapes across the ground, warm directional light, realistic scene depth"
+},
+{
+  "name": "Overcast",
+  "category": "Light",
+  "chip": "Cloud",
+  "tone": "lighting",
+  "thumbnail": "overcast.webp",
+  "text": "overcast light, soft diffused sky illumination, low contrast natural shadows, even realistic daylight, calm muted atmosphere"
+},
+{
+  "name": "Dappled Light",
+  "category": "Light",
+  "chip": "Dap",
+  "tone": "lighting",
+  "thumbnail": "dappled_light.webp",
+  "text": "dappled sunlight, scattered patches of light and shade, tree-filtered natural light, realistic outdoor shadow pattern"
+},
+{
+  "name": "Window Shadow",
+  "category": "Light",
+  "chip": "Win",
+  "tone": "lighting",
+  "thumbnail": "window_shadow.webp",
+  "text": "window light and shadow, sunlight entering through a window, rectangular shadow pattern, realistic indoor light behavior"
+},
   {
     "name": "Light Rays",
     "category": "Light",
