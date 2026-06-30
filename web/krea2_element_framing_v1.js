@@ -3864,7 +3864,7 @@ function ensureStyle() {
     ${effectSizeCss}
     .k2fx-tabs{display:flex;gap:5px;flex-wrap:wrap}.k2fx-tab{background:#242424;color:#ddd;border:1px solid #444;border-radius:999px;padding:4px 9px;cursor:pointer;font-size:11px}.k2fx-tab.active{border-color:#35d0c8;color:#fff;background:#12606a}
     .k2fx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr));gap:7px}.k2fx-card{background:#1b1b1b;border:1px solid #3a3a3a;border-radius:8px;padding:6px;cursor:pointer;min-width:0}.k2fx-card:hover{border-color:#888}.k2fx-card.active{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.45) inset}.k2fx-custom-notice{grid-column:1/-1;border:1px dashed #3a3a3a;border-radius:8px;padding:12px;color:#aaa;background:#181818;font-size:12px}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);border-radius:7px;border:1px solid #333;background:linear-gradient(135deg,#1e1e1e,#4b4b4b);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800;letter-spacing:.03em;margin:0 auto 6px;max-width:100%}.k2fx-thumb.has-img{color:transparent;text-shadow:none}.k2fx-thumb.has-img::after{content:""}.k2fx-card[data-tone="Strong"] .k2fx-thumb{background:linear-gradient(135deg,#050505,#dcdcdc)}.k2fx-card[data-tone="Soft"] .k2fx-thumb{background:linear-gradient(135deg,#777,#eee)}.k2fx-card[data-tone="Analog"] .k2fx-thumb{background:linear-gradient(135deg,#3a2f24,#c0a777)}.k2fx-card[data-tone="Dramatic"] .k2fx-thumb{background:linear-gradient(135deg,#0b0c10,#8d6d42)}
-    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:5px}.k2fx-custom{display:block;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;max-height:72px;overflow:auto;white-space:pre-wrap}
+    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:5px}.k2fx-custom{display:block;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{display:block;width:100%;min-height:42px;resize:vertical;background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;box-sizing:border-box;overflow:auto;white-space:pre-wrap;user-select:text}
   `;
   document.head.appendChild(style);
 }
@@ -4099,8 +4099,10 @@ function setupEffectNode(node) {
   custom.placeholder = "Custom effect prompt...";
   custom.value = widgets.custom_preset?.value || "";
 
-  const preview = document.createElement("div");
+  const preview = document.createElement("textarea");
   preview.className = "k2fx-preview";
+  preview.readOnly = true;
+  preview.title = "Select and copy this prompt text";
 
   const DEFAULT_EFFECT_PRESET = "Realistic Photo";
   const normalizeEffectPreset = (name) => {
@@ -4120,7 +4122,7 @@ function setupEffectNode(node) {
     custom.value = widgets.custom_preset?.value || "";
     enabled.checked = widgets.enable_effect?.value !== false;
     render();
-    preview.textContent = currentEffectText() || "Effect disabled or custom text is blank.";
+    preview.value = currentEffectText() || "Effect disabled or custom text is blank.";
   };
   function setWidgetValue(name, value) {
     if (!widgets[name]) return;
@@ -4150,7 +4152,7 @@ function setupEffectNode(node) {
     };
     k2cfWriteLocalState(node, "effect", node.properties.k2cfEffectState);
     custom.classList.toggle("show", isCustomMode());
-    preview.textContent = currentEffectText() || "Effect disabled or custom text is blank.";
+    preview.value = currentEffectText() || "Effect disabled or custom text is blank.";
     try { app.graph?.setDirtyCanvas?.(true, true); } catch (_) {}
   }
   function selectPreset(name) {
@@ -4224,10 +4226,10 @@ function setupEffectNode(node) {
   custom.addEventListener("input", sync);
   custom.addEventListener("change", sync);
 
-  wrap.append(ioRow, top, sizeBar, tabs, grid);
+  wrap.append(ioRow, preview, top, sizeBar, tabs, grid);
   const footer = document.createElement("div");
   footer.className = "k2fx-footer";
-  footer.append(custom, preview);
+  footer.append(custom);
   wrap.appendChild(footer);
 
   node.addDOMWidget("krea2_prompt_effect_ui", "Krea2PromptEffectUI", wrap, {
@@ -4239,7 +4241,7 @@ function setupEffectNode(node) {
   if (!widgets.preset?.value || widgets.preset.value === "None") setWidgetValue("preset", currentPreset);
   if (!widgets.mode?.value) setWidgetValue("mode", "Preset");
   render();
-  preview.textContent = currentEffectText() || "Effect disabled or custom text is blank.";
+  preview.value = currentEffectText() || "Effect disabled or custom text is blank.";
   k2cfPersistWidgetSnapshot(node, "effect", EFFECT_WIDGETS, "v15");
   installNodePersistenceHooks(node, sync, EFFECT_WIDGETS, "k2cfEffect");
 }
