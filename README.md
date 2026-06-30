@@ -23,18 +23,18 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 - Add per-slot camera angle hints such as `Front view`, `Low angle`, and `Top-down view`.
 - Generate a Krea2-oriented JSON prompt with the Export node.
 - Connect `width` / `height` to `EmptyLatentImage` to keep the canvas size and generation size in sync.
-- Add photographic, film, portrait, flash, art, lighting, and mood effects with the Prompt Effect node.
+- Add photographic, film, portrait, flash, art, lighting, shadow-direction, and mood effects with the Prompt Effect node.
 - Choose style presets from a thumbnail-card UI using local WebP thumbnails.
 
 ## Why Prompt Effect Matters
 
 The Prompt Effect node is one of the most practical, and honestly **one of the most enjoyable**, parts of this suite. Krea2 responds surprisingly well to concise style and effect prompts, so these presets are **genuinely useful in practice**. Even small additions such as camera looks, lighting styles, color themes, film effects, or framing hints can noticeably change the final image.
 
-This makes the node useful not only for decoration, but also for fast visual direction testing. You can quickly compare photo styles, camera effects, color themes, lighting moods, and composition hints without rewriting the whole prompt each time.
+This makes the node useful not only for decoration, but also for fast visual direction testing. You can quickly compare photo styles, camera effects, color themes, lighting moods, shadow direction, and composition hints without rewriting the whole prompt each time.
 
-Prompt Effect presets are mainly tuned for Krea2 workflows that often lean photographic or real-world, but they are not meant to force every image into an ultra-realistic look. Presets that do not explicitly belong to anime, manga, comic, or illustration categories try to avoid pushing the result toward those styles; they focus more on **color grading, lighting, material feel, atmosphere, and background mood**.
+Prompt Effect presets are mainly tuned for Krea2 workflows that often lean photographic or real-world, but they are not meant to force every image into an ultra-realistic look. Anime, manga, comic, and illustration presets are still available, and Krea2 can handle those directions, but models or workflows specialized for those styles may be a better fit when that is the main goal. Presets outside those categories avoid pushing the result toward drawn styles and focus more on **color grading, lighting, material feel, atmosphere, and background mood**.
 
-Some effects may be weak or may not appear at all depending on the subject, background complexity, prompt conflicts, model interpretation, and the available visual space in the scene. Treat Prompt Effect as a fast direction tool, not a guaranteed fixed filter.
+Some effects may be weak or may not appear at all depending on the subject, background complexity, prompt conflicts, model interpretation, and the available visual space in the scene. Treat Prompt Effect as a fast direction tool, not a guaranteed fixed filter. Recent additions include practical Light presets for sunlight and shadow direction, such as side light, backlight, overhead sun, long shadow, dappled light, and window shadow.
 
 ---
 
@@ -540,6 +540,8 @@ a young adult office worker in a navy business suit, sitting naturally, realisti
 
 Even when using Japanese, write descriptive sentences rather than short labels.
 
+A mixed prompt style can work well: short tag-like terms, similar to SDXL-style prompting, plus a small amount of natural language. Krea2 can often interpret even a minimal prompt structure, but adding a short sentence usually makes the intent clearer.
+
 ---
 
 ## Use Text Only for Visible Text
@@ -727,6 +729,16 @@ Concept Art
 Natural Light
 Studio Light
 Golden Hour
+Sunlight
+Side Light
+Backlight
+Top Light
+Low Sun
+Overhead Sun
+Long Shadow
+Overcast
+Dappled Light
+Window Shadow
 Light Rays
 Low Key
 High Key
@@ -1665,6 +1677,8 @@ a young adult office worker in a navy business suit, sitting naturally, realisti
 
 日本語を使いたい場合でも、Objectでは短いラベルではなく、できるだけ説明文にしてください。
 
+SDXLのような単語単位のタグ風プロンプトに、短い自然言語を足す使い方も有効です。自然言語が少ない最小構成でもKrea2が解釈してくれる場合はありますが、短い説明文を足すと意図が伝わりやすくなります。
+
 ---
 
 ## 画像内に文字を出したい場合だけ Text を使う
@@ -1857,19 +1871,31 @@ Concept Art
 
 写真ではなくイラスト系に寄せたい時に使います。
 
+補足：このスイートは、全体としては実写系・写真系のKrea2ワークフローで使いやすい方向を重視しています。アニメ、漫画、コミック、イラスト系のプリセットもありますが、それを主目的にする場合は、その画風に強いモデルや専用ワークフローの方が合うこともあります。
+
 ## Light系
 
 ```text
 Natural Light
 Studio Light
 Golden Hour
+Sunlight
+Side Light
+Backlight
+Top Light
+Low Sun
+Overhead Sun
+Long Shadow
+Overcast
+Dappled Light
+Window Shadow
 Low Key
 High Key
 Neon Night
 Cyberpunk
 ```
 
-光の印象を変えたい時に使います。
+光の印象に加えて、光源位置、太陽の高さ、影の長さ、木漏れ日、窓影などを指定したい時に使います。
 
 ## Mood系
 
@@ -2382,7 +2408,7 @@ x2: 右
 y2: 下
 ```
 
-PromptCanvasやIdeogram系の一部形式では、bbox順が異なる場合があります。  
+他の一部ツールやJSON形式では、bbox順が異なる場合があります。  
 本ノードではKrea2 / ComfyUIで扱いやすい `xyxy` 形式を基本にしています。
 
 ---
@@ -2842,19 +2868,12 @@ Required input is missing
 
 ---
 
-## PromptCanvasとの違い
+## このノードが行わないこと
 
-このノードはPromptCanvasのように、Vision LLMやOCRでBBOXを自動生成するツールではありません。
+このノードは、自動レイアウト検出ツールではありません。  
+画像解析、OCR、自動BBOX生成は行いません。
 
-```text
-PromptCanvas:
-  画像やテキストからLLM/OCRでJSONを作る外部Webアプリ。
-
-Krea2 BBOX Prompter Suite:
-  ComfyUI内で手動BBOXを描き、Krea2向けJSONを作る軽量ノード。
-```
-
-また、PromptCanvas系のIdeogram JSONとはbbox順が異なる場合があります。
+ComfyUI内で手動BBOXを描き、それをKrea2向けJSONプロンプトへ変換するための軽量ノードです。
 
 本ノードのbbox順：
 
@@ -2963,6 +2982,7 @@ custom_nodes/
 - 手動プロンプト入力
 - JSONプロンプト生成
 - Prompt Effect追加
+- Light系プリセットによる光源位置・影方向の調整
 ```
 
 できないこと：
