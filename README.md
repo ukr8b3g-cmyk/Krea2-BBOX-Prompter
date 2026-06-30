@@ -1,6 +1,6 @@
 # Krea2 BBOX Prompter Suite
-<img width="1351" height="884" alt="image" src="https://github.com/user-attachments/assets/37027b23-29e9-4fe4-9ce6-26cc7b507a60" />
 
+<img width="1722" height="868" alt="{612BF8A2-2546-4484-8611-FAD406678783}" src="https://github.com/user-attachments/assets/4da38a62-cc7d-46b9-8b78-cdad7053eac3" />
 
 [日本語](#日本語)
 
@@ -1120,8 +1120,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 # 日本語
 
 # Krea2 BBOX Prompter Suite
-<img width="1351" height="884" alt="image" src="https://github.com/user-attachments/assets/393a5560-ff67-4658-9548-e49a3a268b3f" />
-
+<img width="1722" height="868" alt="{612BF8A2-2546-4484-8611-FAD406678783}" src="https://github.com/user-attachments/assets/716e4d0d-2196-43d8-b13d-c44cb9b77eb7" />
 
 **Krea2 BBOX Prompter Suite** は、ComfyUI上で手動でBBOX（ボックス）を描き、そのレイアウト情報を使ってKrea2向けの構造化プロンプトを作るカスタムノードです。
 
