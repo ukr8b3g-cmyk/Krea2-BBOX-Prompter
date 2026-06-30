@@ -330,6 +330,12 @@ For visible-text work, it is usually safer to keep Text elements near the end of
 こんにちは | readable Japanese text with black outline
 ```
 
+Example for a speech bubble:
+
+```text
+hello | comic panel, character speaking, speech bubble at the upper right, the speech bubble contains the exact text "hello"
+```
+
 The part before `|` is the visible text. The part after `|` describes its appearance.
 
 ```text
@@ -2527,6 +2533,12 @@ Text prompt に `|` が含まれる場合、前後で分割します。
 
 ```text
 SALE | large red text with white outline
+```
+
+吹き出しに使う例：
+
+```text
+hello | comic panel, character speaking, speech bubble at the upper right, the speech bubble contains the exact text "hello"
 ```
 
 出力：
