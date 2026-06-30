@@ -229,6 +229,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "lens distortion effect, subtle barrel distortion, warped edges, imperfect optical lens look, photographic camera artifact, real-world wide lens feel"
   },
   {
+    "name": "Fisheye Lens",
+    "category": "Camera FX",
+    "chip": "FE",
+    "tone": "Lens",
+    "thumbnail": "fisheye_lens.webp",
+    "text": "fisheye lens effect, strong barrel distortion, curved wide-angle perspective, bulging center, warped edges, photographic ultra-wide lens look, real-world camera artifact"
+  },
+  {
     "name": "Chromatic Aberration",
     "category": "Camera FX",
     "chip": "CA",
@@ -1730,6 +1738,14 @@ const EFFECT_PRESETS = [
     "tone": "Lens",
     "thumbnail": "lens_distortion.webp",
     "text": "lens distortion effect, subtle barrel distortion, warped edges, imperfect optical lens look, photographic camera artifact, real-world wide lens feel"
+  },
+  {
+    "name": "Fisheye Lens",
+    "category": "Camera FX",
+    "chip": "FE",
+    "tone": "Lens",
+    "thumbnail": "fisheye_lens.webp",
+    "text": "fisheye lens effect, strong barrel distortion, curved wide-angle perspective, bulging center, warped edges, photographic ultra-wide lens look, real-world camera artifact"
   },
   {
     "name": "Chromatic Aberration",

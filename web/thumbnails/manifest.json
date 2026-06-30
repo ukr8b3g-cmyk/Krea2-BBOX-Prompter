@@ -147,6 +147,13 @@
     "tone": "Lens"
   },
   {
+    "name": "Fisheye Lens",
+    "file": "fisheye_lens.webp",
+    "category": "Camera FX",
+    "chip": "FE",
+    "tone": "Lens"
+  },
+  {
     "name": "Chromatic Aberration",
     "file": "chromatic_aberration.webp",
     "category": "Camera FX",

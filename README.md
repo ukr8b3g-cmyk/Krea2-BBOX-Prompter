@@ -642,6 +642,7 @@ Polaroid
 iPhone Photo
 Tilt-Shift
 Lens Distortion
+Fisheye Lens
 Chromatic Aberration
 Long Exposure
 Directional Blur
