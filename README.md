@@ -40,16 +40,25 @@ Some effects may be weak or may not appear at all depending on the subject, back
 
 ## Quick Installation
 
-From your ComfyUI `custom_nodes` folder:
+For a new install:
 
 ```powershell
 cd D:\Codex\ComfyUI\custom_nodes
 git clone https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter.git Krea2-BBOX-Prompter-Suite
 ```
 
-Then restart ComfyUI and hard refresh the browser with `Ctrl + F5`.
+If the folder already exists, update it instead:
 
-If the folder already exists, update it with `git pull` from inside `Krea2-BBOX-Prompter-Suite`.
+```powershell
+cd D:\Codex\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
+git pull
+```
+
+Then restart ComfyUI and hard refresh the browser if the old UI is still cached:
+
+```text
+Ctrl + F5
+```
 
 ---
 
@@ -1197,16 +1206,25 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## クイックインストール
 
-ComfyUIの `custom_nodes` フォルダで、以下を実行します。
+新規インストールの場合：
 
 ```powershell
 cd D:\Codex\ComfyUI\custom_nodes
 git clone https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter.git Krea2-BBOX-Prompter-Suite
 ```
 
-その後、ComfyUIを再起動し、ブラウザを `Ctrl + F5` でハード更新してください。
+すでにフォルダがある場合は、更新します。
 
-すでにフォルダがある場合は、`Krea2-BBOX-Prompter-Suite` フォルダ内で `git pull` してください。
+```powershell
+cd D:\Codex\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
+git pull
+```
+
+その後、ComfyUIを再起動し、古いUIが残る場合はブラウザをハード更新してください。
+
+```text
+Ctrl + F5
+```
 
 ---
 
