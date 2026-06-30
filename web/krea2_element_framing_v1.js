@@ -3340,7 +3340,7 @@ function k2cfDefaultTextHeightForKey(key) {
 function k2cfMaxPromptTextHeightForKey(key) {
   // Guard against ComfyUI tab/app restore reflow saving a huge textarea height.
   // Keep the prompt node usable and prevent SCENE from pushing color slots off-screen.
-  return key === "scene" ? 390 : 330;
+  return key === "scene" ? 585 : 495;
 }
 
 function k2cfPromptTextHeightInRange(key, h) {
