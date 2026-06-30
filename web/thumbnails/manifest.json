@@ -112,6 +112,13 @@
     "tone": "camera-fx"
   },
   {
+    "name": "Directional Blur",
+    "file": "directional_blur.webp",
+    "category": "Camera FX",
+    "chip": "DB",
+    "tone": "Motion"
+  },
+  {
     "name": "HDR Photo",
     "file": "hdr_photo.webp",
     "category": "Photo",
@@ -131,6 +138,20 @@
     "category": "Camera FX",
     "chip": "Tilt",
     "tone": "camera-fx"
+  },
+  {
+    "name": "Lens Distortion",
+    "file": "lens_distortion.webp",
+    "category": "Camera FX",
+    "chip": "LD",
+    "tone": "Lens"
+  },
+  {
+    "name": "Chromatic Aberration",
+    "file": "chromatic_aberration.webp",
+    "category": "Camera FX",
+    "chip": "CA",
+    "tone": "Lens"
   },
   {
     "name": "Silhouette Photo",
@@ -222,6 +243,13 @@
     "category": "Light",
     "chip": "Gold",
     "tone": "lighting"
+  },
+  {
+    "name": "Light Rays",
+    "file": "light_rays.webp",
+    "category": "Light",
+    "chip": "LR",
+    "tone": "Light"
   },
   {
     "name": "Low Key",
@@ -432,6 +460,13 @@
     "category": "Camera FX",
     "chip": "VHS",
     "tone": "camera-fx"
+  },
+  {
+    "name": "Glitch Effect",
+    "file": "glitch_effect.webp",
+    "category": "Camera FX",
+    "chip": "GE",
+    "tone": "Digital"
   },
   {
     "name": "Pixelate",
@@ -1113,6 +1148,13 @@
     "tone": "finish"
   },
   {
+    "name": "Glass Distortion",
+    "file": "glass_distortion.webp",
+    "category": "Finish",
+    "chip": "GD",
+    "tone": "Finish"
+  },
+  {
     "name": "Wet Surface",
     "file": "wet_surface.webp",
     "category": "Finish",
@@ -1132,6 +1174,13 @@
     "category": "Finish",
     "chip": "Dust",
     "tone": "finish"
+  },
+  {
+    "name": "Fractal Noise",
+    "file": "fractal_noise.webp",
+    "category": "Finish",
+    "chip": "FN",
+    "tone": "Noise"
   },
   {
     "name": "Scratched Print",
@@ -1251,5 +1300,19 @@
     "category": "Finish",
     "chip": "Wax",
     "tone": "finish"
+  },
+  {
+    "name": "Hex Tile",
+    "file": "hex_tile.webp",
+    "category": "Finish",
+    "chip": "HT",
+    "tone": "Finish"
+  },
+  {
+    "name": "Kaleidoscope",
+    "file": "kaleidoscope.webp",
+    "category": "Finish",
+    "chip": "KA",
+    "tone": "Pattern"
   }
 ]

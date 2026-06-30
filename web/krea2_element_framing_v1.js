@@ -119,6 +119,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "long exposure photography, motion blur trails, smooth light streaks, stable subject focus, atmospheric night photo look"
   },
   {
+    "name": "Directional Blur",
+    "category": "Camera FX",
+    "chip": "DB",
+    "tone": "Motion",
+    "thumbnail": "directional_blur.webp",
+    "text": "directional blur effect, one-way motion streaks, fast moving photographic smear, dynamic speed lines, realistic camera motion atmosphere"
+  },
+  {
     "name": "Toy Camera",
     "category": "Camera FX",
     "chip": "Toy",
@@ -168,6 +176,30 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "VHS camcorder footage, analog video noise, scan lines, color bleed, soft low-resolution image, dated home-video recording look"
   },
   {
+    "name": "Glitch Effect",
+    "category": "Camera FX",
+    "chip": "GE",
+    "tone": "Digital",
+    "thumbnail": "glitch_effect.webp",
+    "text": "glitch effect, digital noise artifacts, horizontal and vertical pixel distortion, RGB channel shift, broken video signal, corrupted scan lines, photographic digital error atmosphere"
+  },
+  {
+    "name": "Hex Tile",
+    "category": "Finish",
+    "chip": "HT",
+    "tone": "Finish",
+    "thumbnail": "hex_tile.webp",
+    "text": "hex tile pattern, repeating honeycomb geometry, subtle tiled surface texture, photographic material detail, clean real-world patterned background"
+  },
+  {
+    "name": "Kaleidoscope",
+    "category": "Finish",
+    "chip": "KA",
+    "tone": "Pattern",
+    "thumbnail": "kaleidoscope.webp",
+    "text": "kaleidoscope pattern effect, mirrored repeating geometric shapes, colorful symmetrical background mood, photographic color texture, abstract real-world surface feel"
+  },
+  {
     "name": "HDR Photo",
     "category": "Photo",
     "chip": "HDR",
@@ -187,6 +219,22 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Tilt",
     "tone": "camera-fx",
     "text": "tilt-shift photography, selective focus, miniature-like depth, soft blurred edges, crisp central subject, stylized photo realism"
+  },
+  {
+    "name": "Lens Distortion",
+    "category": "Camera FX",
+    "chip": "LD",
+    "tone": "Lens",
+    "thumbnail": "lens_distortion.webp",
+    "text": "lens distortion effect, subtle barrel distortion, warped edges, imperfect optical lens look, photographic camera artifact, real-world wide lens feel"
+  },
+  {
+    "name": "Chromatic Aberration",
+    "category": "Camera FX",
+    "chip": "CA",
+    "tone": "Lens",
+    "thumbnail": "chromatic_aberration.webp",
+    "text": "chromatic aberration effect, subtle red cyan edge fringing, RGB color separation, optical lens artifact, photographic digital color shift"
   },
   {
     "name": "Silhouette Photo",
@@ -278,6 +326,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Gold",
     "tone": "lighting",
     "text": "golden hour lighting, warm sunlight, soft long shadows, glowing highlights, cinematic natural atmosphere"
+  },
+  {
+    "name": "Light Rays",
+    "category": "Light",
+    "chip": "LR",
+    "tone": "Light",
+    "thumbnail": "light_rays.webp",
+    "text": "light rays effect, visible beams of light, soft volumetric glow, sunlight shafts through atmosphere, cinematic photographic lighting mood"
   },
   {
     "name": "Low Key",
@@ -504,6 +560,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "behind glass, realistic glossy glass surface, subtle reflections, polished transparent finish"
   },
   {
+    "name": "Glass Distortion",
+    "category": "Finish",
+    "chip": "GD",
+    "tone": "Finish",
+    "thumbnail": "glass_distortion.webp",
+    "text": "glass distortion effect, warped refraction, subtle transparent ripples, reflective glass surface, photographic material detail, real-world distorted texture"
+  },
+  {
     "name": "Wet Surface",
     "category": "Finish",
     "chip": "Wet",
@@ -526,6 +590,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "tone": "finish",
     "thumbnail": "dusty_surface.webp",
     "text": "dusty surface effect, realistic fine dust particles, muted texture, aged dry finish, subtle grime"
+  },
+  {
+    "name": "Fractal Noise",
+    "category": "Finish",
+    "chip": "FN",
+    "tone": "Noise",
+    "thumbnail": "fractal_noise.webp",
+    "text": "fractal noise texture, cloudy procedural grain, smoky abstract background detail, organic noise pattern, photographic atmospheric surface texture"
   },
   {
     "name": "Scratched Print",
@@ -1550,6 +1622,14 @@ const EFFECT_PRESETS = [
     "text": "long exposure photography, motion blur trails, smooth light streaks, stable subject focus, atmospheric night photo look"
   },
   {
+    "name": "Directional Blur",
+    "category": "Camera FX",
+    "chip": "DB",
+    "tone": "Motion",
+    "thumbnail": "directional_blur.webp",
+    "text": "directional blur effect, one-way motion streaks, fast moving photographic smear, dynamic speed lines, realistic camera motion atmosphere"
+  },
+  {
     "name": "Toy Camera",
     "category": "Camera FX",
     "chip": "Toy",
@@ -1599,6 +1679,30 @@ const EFFECT_PRESETS = [
     "text": "VHS camcorder footage, analog video noise, scan lines, color bleed, soft low-resolution image, dated home-video recording look"
   },
   {
+    "name": "Glitch Effect",
+    "category": "Camera FX",
+    "chip": "GE",
+    "tone": "Digital",
+    "thumbnail": "glitch_effect.webp",
+    "text": "glitch effect, digital noise artifacts, horizontal and vertical pixel distortion, RGB channel shift, broken video signal, corrupted scan lines, photographic digital error atmosphere"
+  },
+  {
+    "name": "Hex Tile",
+    "category": "Finish",
+    "chip": "HT",
+    "tone": "Finish",
+    "thumbnail": "hex_tile.webp",
+    "text": "hex tile pattern, repeating honeycomb geometry, subtle tiled surface texture, photographic material detail, clean real-world patterned background"
+  },
+  {
+    "name": "Kaleidoscope",
+    "category": "Finish",
+    "chip": "KA",
+    "tone": "Pattern",
+    "thumbnail": "kaleidoscope.webp",
+    "text": "kaleidoscope pattern effect, mirrored repeating geometric shapes, colorful symmetrical background mood, photographic color texture, abstract real-world surface feel"
+  },
+  {
     "name": "HDR Photo",
     "category": "Photo",
     "chip": "HDR",
@@ -1618,6 +1722,22 @@ const EFFECT_PRESETS = [
     "chip": "Tilt",
     "tone": "camera-fx",
     "text": "tilt-shift photography, selective focus, miniature-like depth, soft blurred edges, crisp central subject, stylized photo realism"
+  },
+  {
+    "name": "Lens Distortion",
+    "category": "Camera FX",
+    "chip": "LD",
+    "tone": "Lens",
+    "thumbnail": "lens_distortion.webp",
+    "text": "lens distortion effect, subtle barrel distortion, warped edges, imperfect optical lens look, photographic camera artifact, real-world wide lens feel"
+  },
+  {
+    "name": "Chromatic Aberration",
+    "category": "Camera FX",
+    "chip": "CA",
+    "tone": "Lens",
+    "thumbnail": "chromatic_aberration.webp",
+    "text": "chromatic aberration effect, subtle red cyan edge fringing, RGB color separation, optical lens artifact, photographic digital color shift"
   },
   {
     "name": "Silhouette Photo",
@@ -1709,6 +1829,14 @@ const EFFECT_PRESETS = [
     "chip": "Gold",
     "tone": "lighting",
     "text": "golden hour lighting, warm sunlight, soft long shadows, glowing highlights, cinematic natural atmosphere"
+  },
+  {
+    "name": "Light Rays",
+    "category": "Light",
+    "chip": "LR",
+    "tone": "Light",
+    "thumbnail": "light_rays.webp",
+    "text": "light rays effect, visible beams of light, soft volumetric glow, sunlight shafts through atmosphere, cinematic photographic lighting mood"
   },
   {
     "name": "Low Key",
@@ -1935,6 +2063,14 @@ const EFFECT_PRESETS = [
     "text": "behind glass, realistic glossy glass surface, subtle reflections, polished transparent finish"
   },
   {
+    "name": "Glass Distortion",
+    "category": "Finish",
+    "chip": "GD",
+    "tone": "Finish",
+    "thumbnail": "glass_distortion.webp",
+    "text": "glass distortion effect, warped refraction, subtle transparent ripples, reflective glass surface, photographic material detail, real-world distorted texture"
+  },
+  {
     "name": "Wet Surface",
     "category": "Finish",
     "chip": "Wet",
@@ -1957,6 +2093,14 @@ const EFFECT_PRESETS = [
     "tone": "finish",
     "thumbnail": "dusty_surface.webp",
     "text": "dusty surface effect, realistic fine dust particles, muted texture, aged dry finish, subtle grime"
+  },
+  {
+    "name": "Fractal Noise",
+    "category": "Finish",
+    "chip": "FN",
+    "tone": "Noise",
+    "thumbnail": "fractal_noise.webp",
+    "text": "fractal noise texture, cloudy procedural grain, smoky abstract background detail, organic noise pattern, photographic atmospheric surface texture"
   },
   {
     "name": "Scratched Print",

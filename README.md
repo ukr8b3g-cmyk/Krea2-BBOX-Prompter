@@ -641,7 +641,10 @@ Red Eye Flash
 Polaroid
 iPhone Photo
 Tilt-Shift
+Lens Distortion
+Chromatic Aberration
 Long Exposure
+Directional Blur
 Toy Camera
 Lomography
 Night Vision
@@ -704,6 +707,7 @@ Concept Art
 Natural Light
 Studio Light
 Golden Hour
+Light Rays
 Low Key
 High Key
 Neon Night
@@ -730,9 +734,11 @@ Canvas Texture
 Fabric Print
 Metal Print
 Glass Print
+Glass Distortion
 Wet Surface
 Water Droplets
 Dusty Surface
+Fractal Noise
 Scratched Print
 Vintage Paper
 Stone Surface
