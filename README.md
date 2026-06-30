@@ -1,3 +1,4 @@
+<img width="967" height="857" alt="Clip_14" src="https://github.com/user-attachments/assets/872f4120-edc0-4c47-a8c2-3be7e9c7dd85" />
 # Krea2 BBOX Prompter Suite
 <img width="1351" height="884" alt="image" src="https://github.com/user-attachments/assets/37027b23-29e9-4fe4-9ce6-26cc7b507a60" />
 
@@ -1138,6 +1139,8 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 - スタイル選択にはWebPサムネイル付きのカードUIを使えます。
 
 ## Prompt Effectが使える理由
+<img width="967" height="857" alt="Clip_14" src="https://github.com/user-attachments/assets/13c87bc0-1277-4242-9c80-8b8305dae92b" />
+
 
 作者目線では、このスイートの中でもPrompt Effectノードが**一番楽しい部分**です。Krea2は短いスタイル指定やエフェクト指定にも意外とよく追従するため、これらのプリセットは**実際にかなり使えます**。カメラ風、ライティング、カラーテーマ、フィルム風、構図補助などを少し加えるだけでも、最終画像の印象がかなり変わります。
 
