@@ -1294,6 +1294,8 @@ prompt_ui_data
 ---
 
 ## 📦 Krea2 BBOX Export
+<img width="740" height="354" alt="image" src="https://github.com/user-attachments/assets/e5a4129d-e132-4e33-a006-b16d1bd06f53" />
+
 
 CanvasのBBOX情報とPrompterのプロンプト情報を統合して、Krea2向けJSONプロンプトを生成します。
 
