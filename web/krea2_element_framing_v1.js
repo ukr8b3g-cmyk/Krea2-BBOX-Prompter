@@ -66,28 +66,36 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Camera FX",
     "chip": "Flash",
     "tone": "camera-fx",
-    "text": "nighttime photography, dark environment, on-camera flash, dramatic shadows, illuminated foreground, deep blacks, grainy high ISO texture, unexpected direct light, photographic snapshot realism"
+    "text": "flash photo, light to medium on-camera flash, clear illuminated subject, crisp catchlight, natural surroundings, balanced shadows, casual photographic snapshot realism"
   },
   {
     "name": "Direct Flash",
     "category": "Camera FX",
     "chip": "Direct",
     "tone": "camera-fx",
-    "text": "direct flash photo, harsh frontal light, strong shadows, crisp subject detail, bright specular highlights, dark background, sharp focus, edgy photographic camera look"
+    "text": "direct flash photo, frontal camera flash, clear subject illumination, crisp highlights, visible catchlight, balanced contrast, sharp casual photographic look"
   },
   {
     "name": "Disposable Flash",
     "category": "Camera FX",
     "chip": "Disposable",
     "tone": "camera-fx",
-    "text": "disposable camera flash photo, harsh frontal flash, casual snapshot framing, grainy film texture, illuminated foreground, deep shadows, nostalgic point-and-shoot realism"
+    "text": "disposable camera flash photo, casual point-and-shoot look, medium frontal flash, slight film grain, natural snapshot framing, imperfect but realistic camera texture"
   },
   {
     "name": "Paparazzi Flash",
     "category": "Camera FX",
     "chip": "Paparazzi",
     "tone": "camera-fx",
-    "text": "paparazzi flash photography, strong repeated camera flash, bright foreground subject, deep dark background, high contrast, candid celebrity-style night snapshot, photographic realism"
+    "text": "paparazzi flash photography, strong camera flash burst, candid subject illumination, crisp highlights, energetic snapshot feeling, press-photo style realism"
+  },
+  {
+    "name": "Dark Flash",
+    "category": "Camera FX",
+    "chip": "DF",
+    "tone": "Flash",
+    "thumbnail": "dark_flash.webp",
+    "text": "dark flash photo, on-camera flash in a low-light environment, illuminated foreground subject, deeper surrounding shadows, grainy high ISO texture, dramatic snapshot realism"
   },
   {
     "name": "Red Eye Flash",
@@ -95,7 +103,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "RE",
     "tone": "Flash",
     "thumbnail": "red_eye_flash.webp",
-    "text": "red-eye flash photo effect, on-camera flash causing visible red pupils, direct frontal flash, dark environment, snapshot realism, strong catchlight, photographic camera artifact"
+    "text": "red-eye flash photo effect, on-camera flash causing visible red pupils, direct frontal flash, snapshot realism, strong catchlight, photographic camera artifact"
   },
   {
     "name": "Polaroid",
@@ -159,7 +167,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Camera FX",
     "chip": "Thermal",
     "tone": "camera-fx",
-    "text": "thermal camera image, false-color heatmap palette, glowing warm subjects, cool dark background, infrared temperature-vision look"
+    "text": "thermal camera image, false-color heatmap palette, glowing warm subjects, cooler surrounding tones, infrared temperature-vision look"
   },
   {
     "name": "Film Negative",
@@ -362,7 +370,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Light",
     "chip": "Neon",
     "tone": "lighting",
-    "text": "neon night lighting, colorful urban glow, reflective highlights, cinematic contrast, atmospheric dark background"
+    "text": "neon night lighting, colorful urban glow, reflective highlights, cinematic contrast, atmospheric background glow"
   },
   {
     "name": "Cyberpunk",
@@ -1577,28 +1585,36 @@ const EFFECT_PRESETS = [
     "category": "Camera FX",
     "chip": "Flash",
     "tone": "camera-fx",
-    "text": "nighttime photography, dark environment, on-camera flash, dramatic shadows, illuminated foreground, deep blacks, grainy high ISO texture, unexpected direct light, photographic snapshot realism"
+    "text": "flash photo, light to medium on-camera flash, clear illuminated subject, crisp catchlight, natural surroundings, balanced shadows, casual photographic snapshot realism"
   },
   {
     "name": "Direct Flash",
     "category": "Camera FX",
     "chip": "Direct",
     "tone": "camera-fx",
-    "text": "direct flash photo, harsh frontal light, strong shadows, crisp subject detail, bright specular highlights, dark background, sharp focus, edgy photographic camera look"
+    "text": "direct flash photo, frontal camera flash, clear subject illumination, crisp highlights, visible catchlight, balanced contrast, sharp casual photographic look"
   },
   {
     "name": "Disposable Flash",
     "category": "Camera FX",
     "chip": "Disposable",
     "tone": "camera-fx",
-    "text": "disposable camera flash photo, harsh frontal flash, casual snapshot framing, grainy film texture, illuminated foreground, deep shadows, nostalgic point-and-shoot realism"
+    "text": "disposable camera flash photo, casual point-and-shoot look, medium frontal flash, slight film grain, natural snapshot framing, imperfect but realistic camera texture"
   },
   {
     "name": "Paparazzi Flash",
     "category": "Camera FX",
     "chip": "Paparazzi",
     "tone": "camera-fx",
-    "text": "paparazzi flash photography, strong repeated camera flash, bright foreground subject, deep dark background, high contrast, candid celebrity-style night snapshot, photographic realism"
+    "text": "paparazzi flash photography, strong camera flash burst, candid subject illumination, crisp highlights, energetic snapshot feeling, press-photo style realism"
+  },
+  {
+    "name": "Dark Flash",
+    "category": "Camera FX",
+    "chip": "DF",
+    "tone": "Flash",
+    "thumbnail": "dark_flash.webp",
+    "text": "dark flash photo, on-camera flash in a low-light environment, illuminated foreground subject, deeper surrounding shadows, grainy high ISO texture, dramatic snapshot realism"
   },
   {
     "name": "Red Eye Flash",
@@ -1606,7 +1622,7 @@ const EFFECT_PRESETS = [
     "chip": "RE",
     "tone": "Flash",
     "thumbnail": "red_eye_flash.webp",
-    "text": "red-eye flash photo effect, on-camera flash causing visible red pupils, direct frontal flash, dark environment, snapshot realism, strong catchlight, photographic camera artifact"
+    "text": "red-eye flash photo effect, on-camera flash causing visible red pupils, direct frontal flash, snapshot realism, strong catchlight, photographic camera artifact"
   },
   {
     "name": "Polaroid",
@@ -1670,7 +1686,7 @@ const EFFECT_PRESETS = [
     "category": "Camera FX",
     "chip": "Thermal",
     "tone": "camera-fx",
-    "text": "thermal camera image, false-color heatmap palette, glowing warm subjects, cool dark background, infrared temperature-vision look"
+    "text": "thermal camera image, false-color heatmap palette, glowing warm subjects, cooler surrounding tones, infrared temperature-vision look"
   },
   {
     "name": "Film Negative",
@@ -1873,7 +1889,7 @@ const EFFECT_PRESETS = [
     "category": "Light",
     "chip": "Neon",
     "tone": "lighting",
-    "text": "neon night lighting, colorful urban glow, reflective highlights, cinematic contrast, atmospheric dark background"
+    "text": "neon night lighting, colorful urban glow, reflective highlights, cinematic contrast, atmospheric background glow"
   },
   {
     "name": "Cyberpunk",

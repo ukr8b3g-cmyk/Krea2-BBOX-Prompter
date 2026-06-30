@@ -637,6 +637,7 @@ Flash Photo
 Direct Flash
 Disposable Flash
 Paparazzi Flash
+Dark Flash
 Red Eye Flash
 Polaroid
 iPhone Photo
@@ -1755,6 +1756,7 @@ Flash Photo
 Direct Flash
 Disposable Flash
 Paparazzi Flash
+Dark Flash
 Red Eye Flash
 Polaroid
 iPhone Photo

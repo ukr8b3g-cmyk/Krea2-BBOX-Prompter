@@ -84,6 +84,13 @@
     "tone": "camera-fx"
   },
   {
+    "name": "Dark Flash",
+    "file": "dark_flash.webp",
+    "category": "Camera FX",
+    "chip": "DF",
+    "tone": "Flash"
+  },
+  {
     "name": "Red Eye Flash",
     "file": "red_eye_flash.webp",
     "category": "Camera FX",
