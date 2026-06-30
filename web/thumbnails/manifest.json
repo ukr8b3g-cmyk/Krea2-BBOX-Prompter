@@ -1398,5 +1398,40 @@
     "category": "Finish",
     "chip": "KA",
     "tone": "Pattern"
+  },
+  {
+    "name": "Insta Feed",
+    "file": "insta_feed.webp",
+    "category": "SNS",
+    "chip": "Insta",
+    "tone": "sns"
+  },
+  {
+    "name": "TikTok",
+    "file": "tiktok.webp",
+    "category": "SNS",
+    "chip": "TikTok",
+    "tone": "sns"
+  },
+  {
+    "name": "YT Thumb",
+    "file": "yt_thumb.webp",
+    "category": "SNS",
+    "chip": "YT",
+    "tone": "sns"
+  },
+  {
+    "name": "YT Vlog",
+    "file": "yt_vlog.webp",
+    "category": "SNS",
+    "chip": "Vlog",
+    "tone": "sns"
+  },
+  {
+    "name": "FB Post",
+    "file": "fb_post.webp",
+    "category": "SNS",
+    "chip": "FB",
+    "tone": "sns"
   }
 ]

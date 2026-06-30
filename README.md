@@ -23,7 +23,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 - Add per-slot camera angle hints such as `Front view`, `Low angle`, and `Top-down view`.
 - Generate a Krea2-oriented JSON prompt with the Export node.
 - Connect `width` / `height` to `EmptyLatentImage` to keep the canvas size and generation size in sync.
-- Add photographic, film, portrait, flash, art, lighting, shadow-direction, and mood effects with the Prompt Effect node.
+- Add photographic, film, portrait, flash, art, lighting, shadow-direction, SNS-style, and mood effects with the Prompt Effect node.
 - Choose style presets from a thumbnail-card UI using local WebP thumbnails.
 
 ## Why Prompt Effect Matters
@@ -676,6 +676,18 @@ Film Negative
 VHS
 ```
 
+## SNS
+
+```text
+Insta Feed
+TikTok
+YT Thumb
+YT Vlog
+FB Post
+```
+
+These presets are fixed toward photorealistic social-media looks. They are useful for Instagram-like lifestyle photos, TikTok-style energetic frames, YouTube thumbnail or vlog looks, and Facebook-style everyday posts.
+
 ## Recommended for People
 
 ```text
@@ -1160,7 +1172,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 <img width="967" height="857" alt="Clip_14" src="https://github.com/user-attachments/assets/13c87bc0-1277-4242-9c80-8b8305dae92b" />
 
 
-作者目線では、このスイートの中でもPrompt Effectノードが**一番楽しい部分**です。Krea2は短いスタイル指定やエフェクト指定にも意外とよく追従するため、これらのプリセットは**実際にかなり使えます**。カメラ風、ライティング、カラーテーマ、フィルム風、構図補助などを少し加えるだけでも、最終画像の印象がかなり変わります。
+作者目線では、このスイートの中でもPrompt Effectノードが**一番楽しい部分**です。Krea2は短いスタイル指定やエフェクト指定にも意外とよく追従するため、これらのプリセットは**実際にかなり使えます**。カメラ風、ライティング、カラーテーマ、SNS風、フィルム風、構図補助などを少し加えるだけでも、最終画像の印象がかなり変わります。
 
 単なる装飾用ではなく、画作りの方向性を素早く試すためのノードとして使えます。毎回プロンプト全体を書き直さなくても、写真スタイル、カメラFX、色テーマ、光の雰囲気、構図のヒントを切り替えながら比較できます。
 
@@ -1815,6 +1827,18 @@ Thermal Camera
 Film Negative
 VHS
 ```
+
+## SNS系
+
+```text
+Insta Feed
+TikTok
+YT Thumb
+YT Vlog
+FB Post
+```
+
+SNS投稿や動画サムネ風の見た目に寄せたい時に使います。このカテゴリは実写・写真系の効果として固定し、Instagram風、TikTok風、YouTubeサムネ風、YouTube Vlog風、Facebook投稿風を短い名前で選べるようにしています。
 
 ## 人物向けおすすめ
 

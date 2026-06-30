@@ -526,7 +526,7 @@ class Krea2ElementJSONExportV1:
         return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
-EFFECT_CATEGORIES = ('All', 'Photo', 'Camera FX', 'Art', 'Light', 'Mood', 'Color Theme', 'Finish', 'Custom', 'Custom Preset', 'Photo Look', 'Base Style', 'Portrait', 'Cinematic', 'Illustration', 'Lighting', 'Commercial')
+EFFECT_CATEGORIES = ('All', 'Photo', 'Camera FX', 'SNS', 'Art', 'Light', 'Mood', 'Color Theme', 'Finish', 'Custom', 'Custom Preset', 'Photo Look', 'Base Style', 'Portrait', 'Cinematic', 'Illustration', 'Lighting', 'Commercial')
 EFFECT_PRESETS = (
     'None',
     'Custom Preset',
@@ -556,6 +556,11 @@ EFFECT_PRESETS = (
     'Film Negative',
     'VHS',
     'Glitch Effect',
+    'Insta Feed',
+    'TikTok',
+    'YT Thumb',
+    'YT Vlog',
+    'FB Post',
     'Hex Tile',
     'Kaleidoscope',
     'HDR Photo',
@@ -763,6 +768,11 @@ EFFECT_PRESET_TEXT = {
     'Film Negative': 'film negative look, inverted colors, cyan and orange reversed tones, high contrast negative film scan, surreal photographic inversion',
     'VHS': 'VHS camcorder footage, analog video noise, scan lines, color bleed, soft low-resolution image, dated home-video recording look',
     'Glitch Effect': 'glitch effect, digital noise artifacts, horizontal and vertical pixel distortion, RGB channel shift, broken video signal, corrupted scan lines, photographic digital error atmosphere',
+    'Insta Feed': 'photorealistic instagram-style lifestyle photo, clean composition, bright natural light, polished color grading, slightly vibrant colors, casual modern mood, social media feed aesthetic',
+    'TikTok': 'photorealistic tiktok-style short video frame, energetic composition, bold colors, high contrast, trendy social media look, dynamic pose, lively casual atmosphere',
+    'YT Thumb': 'photorealistic youtube thumbnail style, clear main subject, bold lighting, strong contrast, vivid colors, attention-grabbing composition, clean readable visual focus',
+    'YT Vlog': 'photorealistic youtube vlog frame, casual handheld camera feel, natural indoor or outdoor light, authentic everyday moment, wide-angle smartphone look, relaxed lifestyle mood',
+    'FB Post': 'photorealistic facebook-style social post photo, natural everyday scene, balanced lighting, friendly casual mood, realistic colors, simple clean composition',
     'HDR Photo': 'HDR photography, wide dynamic range, crisp detail, balanced highlights and shadows, realistic textures, clear photo quality',
     'iPhone Photo': 'iPhone-style photo, natural phone camera look, realistic exposure, casual framing, sharp details, authentic everyday snapshot',
     'Tilt-Shift': 'tilt-shift photography, selective focus, miniature-like depth, soft blurred edges, crisp central subject, stylized photo realism',
@@ -969,6 +979,11 @@ EFFECT_PRESET_CATEGORY = {
     'Film Negative': 'Camera FX',
     'VHS': 'Camera FX',
     'Glitch Effect': 'Camera FX',
+    'Insta Feed': 'SNS',
+    'TikTok': 'SNS',
+    'YT Thumb': 'SNS',
+    'YT Vlog': 'SNS',
+    'FB Post': 'SNS',
     'HDR Photo': 'Photo',
     'iPhone Photo': 'Camera FX',
     'Tilt-Shift': 'Camera FX',

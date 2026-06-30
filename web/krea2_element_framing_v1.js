@@ -1542,7 +1542,47 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "tone": "color-theme",
     "thumbnail": "heterochromia_eyes.webp",
     "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
+  },,
+  {
+    "name": "Insta Feed",
+    "category": "SNS",
+    "chip": "Insta",
+    "tone": "sns",
+    "thumbnail": "insta_feed.webp",
+    "text": "photorealistic instagram-style lifestyle photo, clean composition, bright natural light, polished color grading, slightly vibrant colors, casual modern mood, social media feed aesthetic"
   },
+  {
+    "name": "TikTok",
+    "category": "SNS",
+    "chip": "TikTok",
+    "tone": "sns",
+    "thumbnail": "tiktok.webp",
+    "text": "photorealistic tiktok-style short video frame, energetic composition, bold colors, high contrast, trendy social media look, dynamic pose, lively casual atmosphere"
+  },
+  {
+    "name": "YT Thumb",
+    "category": "SNS",
+    "chip": "YT",
+    "tone": "sns",
+    "thumbnail": "yt_thumb.webp",
+    "text": "photorealistic youtube thumbnail style, clear main subject, bold lighting, strong contrast, vivid colors, attention-grabbing composition, clean readable visual focus"
+  },
+  {
+    "name": "YT Vlog",
+    "category": "SNS",
+    "chip": "Vlog",
+    "tone": "sns",
+    "thumbnail": "yt_vlog.webp",
+    "text": "photorealistic youtube vlog frame, casual handheld camera feel, natural indoor or outdoor light, authentic everyday moment, wide-angle smartphone look, relaxed lifestyle mood"
+  },
+  {
+    "name": "FB Post",
+    "category": "SNS",
+    "chip": "FB",
+    "tone": "sns",
+    "thumbnail": "fb_post.webp",
+    "text": "photorealistic facebook-style social post photo, natural everyday scene, balanced lighting, friendly casual mood, realistic colors, simple clean composition"
+  }
   ];
 
 const EFFECT_NODE = "Krea2PromptEffect";
@@ -3141,9 +3181,49 @@ const EFFECT_PRESETS = [
     "tone": "color-theme",
     "thumbnail": "heterochromia_eyes.webp",
     "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
+  },,
+  {
+    "name": "Insta Feed",
+    "category": "SNS",
+    "chip": "Insta",
+    "tone": "sns",
+    "thumbnail": "insta_feed.webp",
+    "text": "photorealistic instagram-style lifestyle photo, clean composition, bright natural light, polished color grading, slightly vibrant colors, casual modern mood, social media feed aesthetic"
   },
+  {
+    "name": "TikTok",
+    "category": "SNS",
+    "chip": "TikTok",
+    "tone": "sns",
+    "thumbnail": "tiktok.webp",
+    "text": "photorealistic tiktok-style short video frame, energetic composition, bold colors, high contrast, trendy social media look, dynamic pose, lively casual atmosphere"
+  },
+  {
+    "name": "YT Thumb",
+    "category": "SNS",
+    "chip": "YT",
+    "tone": "sns",
+    "thumbnail": "yt_thumb.webp",
+    "text": "photorealistic youtube thumbnail style, clear main subject, bold lighting, strong contrast, vivid colors, attention-grabbing composition, clean readable visual focus"
+  },
+  {
+    "name": "YT Vlog",
+    "category": "SNS",
+    "chip": "Vlog",
+    "tone": "sns",
+    "thumbnail": "yt_vlog.webp",
+    "text": "photorealistic youtube vlog frame, casual handheld camera feel, natural indoor or outdoor light, authentic everyday moment, wide-angle smartphone look, relaxed lifestyle mood"
+  },
+  {
+    "name": "FB Post",
+    "category": "SNS",
+    "chip": "FB",
+    "tone": "sns",
+    "thumbnail": "fb_post.webp",
+    "text": "photorealistic facebook-style social post photo, natural everyday scene, balanced lighting, friendly casual mood, realistic colors, simple clean composition"
+  }
   ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "SNS", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 const EFFECT_THUMBNAIL_BASE = "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/";
 function k2fxPresetSlug(name) {
