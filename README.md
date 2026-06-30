@@ -127,6 +127,8 @@ The older node may remain for compatibility with older workflows or other Krea2 
 # Node List
 
 ## 📐 Krea2 BBOX Canvas
+<img width="687" height="829" alt="Clip_15" src="https://github.com/user-attachments/assets/6b7fa76a-5949-4e1c-8a53-9c90017273de" />
+
 
 Canvas node for manually drawing BBOX regions.
 
@@ -148,6 +150,8 @@ framing_data
 ---
 
 ## 📝 Krea2 BBOX Prompter
+<img width="422" height="783" alt="Clip_16" src="https://github.com/user-attachments/assets/0554e4e7-8773-4712-859a-0e49a738915b" />
+
 
 Prompt-entry node for each color slot on the canvas.
 
@@ -207,6 +211,8 @@ Normally, connect `prompt_text` to Prompt Effect or CLIP Text Encode.
 ---
 
 ## ✨ Krea2 BBOX Prompt Effect
+<img width="967" height="857" alt="Clip_14" src="https://github.com/user-attachments/assets/e2ee8a7d-b235-40c2-b771-4e0c7aa60919" />
+
 
 Adds photographic, visual-style, or mood effect text after the JSON prompt.
 
