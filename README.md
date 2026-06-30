@@ -38,6 +38,21 @@ Some effects may be weak or may not appear at all depending on the subject, back
 
 ---
 
+## Quick Installation
+
+From your ComfyUI `custom_nodes` folder:
+
+```powershell
+cd D:\Codex\ComfyUI\custom_nodes
+git clone https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter.git Krea2-BBOX-Prompter-Suite
+```
+
+Then restart ComfyUI and hard refresh the browser with `Ctrl + F5`.
+
+If the folder already exists, update it with `git pull` from inside `Krea2-BBOX-Prompter-Suite`.
+
+---
+
 ## First Steps
 
 If a sample workflow is available, check:
@@ -571,6 +586,8 @@ Short Japanese labels in Object prompts may be accidentally drawn as text.
 ## Avoid Strong Overlap Between Object BBOX Regions
 
 Heavy overlap between Object regions can cause unwanted blending.
+
+For safer results, start with one Object BBOX first and use it as a broad placement guide. If a second Object BBOX is needed, keep it clearly separated from the first one instead of overlapping it heavily.
 
 Common problems:
 
@@ -1178,6 +1195,21 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ---
 
+## クイックインストール
+
+ComfyUIの `custom_nodes` フォルダで、以下を実行します。
+
+```powershell
+cd D:\Codex\ComfyUI\custom_nodes
+git clone https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter.git Krea2-BBOX-Prompter-Suite
+```
+
+その後、ComfyUIを再起動し、ブラウザを `Ctrl + F5` でハード更新してください。
+
+すでにフォルダがある場合は、`Krea2-BBOX-Prompter-Suite` フォルダ内で `git pull` してください。
+
+---
+
 ## まず最初に：このノードの使い方
 
 サンプルワークフローがある場合は、以下を確認してください。
@@ -1722,6 +1754,8 @@ Hello! | speech bubble with clean outline, readable comic-style text
 ## Object同士のBBOXを強く重ねない
 
 ObjectのBBOX同士をクロスオーバーさせると、追加分の領域が人物や物体として描かれてしまう場合があります。
+
+安全に試す場合は、まずObject BBOXを1つだけ置き、大まかな位置関係を決めて生成するのがおすすめです。どうしても2つ目のObject BBOXを置く場合は、強く重ねず、できるだけ明確に離して配置してください。
 
 起きやすい問題：
 
