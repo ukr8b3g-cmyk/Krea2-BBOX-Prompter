@@ -3240,10 +3240,39 @@ const EFFECT_PRESETS = [
   ];
 const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "SNS", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
-const EFFECT_THUMBNAIL_BASE_CANDIDATES = [
+function k2fxUniqueList(values) {
+  return Array.from(new Set(values.filter(Boolean)));
+}
+function k2fxThumbnailBaseFromScriptUrl(url) {
+  try {
+    return new URL("./thumbnails/", url).pathname;
+  } catch (_) {
+    return "";
+  }
+}
+function k2fxDetectThumbnailBases() {
+  const urls = [];
+  try {
+    if (document.currentScript?.src) urls.push(document.currentScript.src);
+  } catch (_) {}
+  try {
+    for (const script of Array.from(document.scripts || [])) {
+      const src = script?.src || "";
+      if (src.includes("/extensions/") && src.endsWith("/krea2_element_framing_v1.js")) urls.push(src);
+    }
+  } catch (_) {}
+  try {
+    const stack = String(new Error().stack || "");
+    const matches = stack.match(/https?:\/\/[^\s)]+\/extensions\/[^/]+\/krea2_element_framing_v1\.js/g) || [];
+    urls.push(...matches);
+  } catch (_) {}
+  return k2fxUniqueList(urls.map(k2fxThumbnailBaseFromScriptUrl));
+}
+const EFFECT_THUMBNAIL_BASE_CANDIDATES = k2fxUniqueList([
+  ...k2fxDetectThumbnailBases(),
   "/extensions/Krea2-BBOX-Prompter/thumbnails/",
   "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/",
-];
+]);
 function k2fxPresetSlug(name) {
   return String(name || "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || "preset";
 }

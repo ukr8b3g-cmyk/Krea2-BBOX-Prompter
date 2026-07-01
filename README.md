@@ -43,14 +43,14 @@ Some effects may be weak or may not appear at all depending on the subject, back
 For a new install:
 
 ```powershell
-cd D:\Codex\ComfyUI\custom_nodes
+cd C:\path\to\ComfyUI\custom_nodes
 git clone https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter.git Krea2-BBOX-Prompter-Suite
 ```
 
 If the folder already exists, update it instead:
 
 ```powershell
-cd D:\Codex\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
+cd C:\path\to\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
 git pull
 ```
 
@@ -972,7 +972,7 @@ Runtime path:
 /extensions/Krea2-BBOX-Prompter-Suite/thumbnails/<file>.webp
 ```
 
-The UI tries both paths so thumbnails can load whether the custom node folder is installed as `Krea2-BBOX-Prompter` or `Krea2-BBOX-Prompter-Suite`.
+The UI first derives the thumbnail path from the loaded extension JavaScript URL. If that cannot be detected, it falls back to both common folder-name variants so thumbnails can load whether the custom node folder is installed as `Krea2-BBOX-Prompter` or `Krea2-BBOX-Prompter-Suite`.
 
 ---
 
@@ -1115,14 +1115,14 @@ effect_text  = selected effect text only
 From your ComfyUI `custom_nodes` folder:
 
 ```powershell
-cd D:\Codex\ComfyUI\custom_nodes
+cd C:\path\to\ComfyUI\custom_nodes
 git clone https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter.git Krea2-BBOX-Prompter-Suite
 ```
 
 If the folder already exists, update it instead:
 
 ```powershell
-cd D:\Codex\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
+cd C:\path\to\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
 git pull
 ```
 
@@ -1238,14 +1238,14 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 新規インストールの場合：
 
 ```powershell
-cd D:\Codex\ComfyUI\custom_nodes
+cd C:\path\to\ComfyUI\custom_nodes
 git clone https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter.git Krea2-BBOX-Prompter-Suite
 ```
 
 すでにフォルダがある場合は、更新します。
 
 ```powershell
-cd D:\Codex\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
+cd C:\path\to\ComfyUI\custom_nodes\Krea2-BBOX-Prompter-Suite
 git pull
 ```
 
