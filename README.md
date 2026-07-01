@@ -12,6 +12,12 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ---
 
+## Update Notes
+
+- 2026-07-01: Updated the README with a first-time user guide and BBOX Export defaults. Prompt Effect now has a taller copyable prompt preview and additional tooltips.
+
+---
+
 ## What This Node Can Do
 
 - Draw BBOX regions manually to guide placement of people, objects, text, and other elements.
@@ -59,6 +65,17 @@ Then restart ComfyUI and hard refresh the browser if the old UI is still cached:
 ```text
 Ctrl + F5
 ```
+
+---
+
+## First-Time User Guide
+
+- `Canvas`: draw rough BBOX placement. Start with one Object BBOX first.
+- `Prompter`: write what should appear in each colored slot.
+- `Export`: converts Canvas and Prompter data into a Krea2 JSON prompt. Most settings can stay at their defaults.
+- `Prompt Effect`: adds photo, lighting, color, finish, SNS, or mood style text after the exported prompt.
+
+BBOX is a layout hint, not a strict mask. If you use two boxes, avoid strong overlap and keep the roles clear.
 
 ---
 
@@ -233,6 +250,18 @@ height
 ```
 
 Normally, connect `prompt_text` to Prompt Effect or CLIP Text Encode.
+
+Recommended defaults:
+
+```text
+bbox_mode: normalized_1000
+output_format: compact
+output_mode: json_with_safety_hint
+skip_empty: true
+auto_position_hint: true
+```
+
+For most workflows, leave these values unchanged. `auto_position_hint` is usually useful because it adds natural position wording from the BBOX location.
 
 ---
 
@@ -1209,6 +1238,12 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ---
 
+## 更新情報
+
+- 2026-07-01：READMEに初回ユーザー向けガイドとBBOX Exportの推奨設定を追加。Prompt Effectのコピー可能なプロンプト表示欄を広げ、ツールチップを追加しました。
+
+---
+
 ## このノードでできること
 
 - 手動でBBOXを描いて、人物・物体・文字などの配置を指定できます。
@@ -1254,6 +1289,17 @@ git pull
 ```text
 Ctrl + F5
 ```
+
+---
+
+## 初回ユーザー向けガイド
+
+- `Canvas`: BBOXのおおまかな位置を描きます。まずはObjectのBBOXを1つだけで試すのがおすすめです。
+- `Prompter`: 各色スロットに、そこへ出したい内容を書きます。
+- `Export`: CanvasとPrompterの情報をKrea2向けJSONプロンプトへ変換します。多くの場合、設定は初期値のままで問題ありません。
+- `Prompt Effect`: Export後のプロンプトに、写真、光、色、仕上げ、SNS、ムード系の効果テキストを追加します。
+
+BBOXは厳密なマスクではなく、配置のヒントです。2つ使う場合は、強く重ねず、役割を分ける方が安定します。
 
 ---
 
@@ -1430,6 +1476,18 @@ height
 ```
 
 通常は `prompt_text` を Prompt Effect または CLIP Text Encode へ接続します。
+
+推奨初期値：
+
+```text
+bbox_mode: normalized_1000
+output_format: compact
+output_mode: json_with_safety_hint
+skip_empty: true
+auto_position_hint: true
+```
+
+通常はこのままで問題ありません。`auto_position_hint` はBBOX位置を自然文で補助するため、基本的にON推奨です。
 
 ---
 

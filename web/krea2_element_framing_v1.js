@@ -4334,7 +4334,7 @@ function ensureStyle() {
     ${effectSizeCss}
     .k2fx-tabs{display:flex;gap:5px;flex-wrap:wrap}.k2fx-tab{background:#242424;color:#ddd;border:1px solid #444;border-radius:999px;padding:4px 9px;cursor:pointer;font-size:11px}.k2fx-tab.active{border-color:#35d0c8;color:#fff;background:#12606a}
     .k2fx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr));gap:7px}.k2fx-card{background:#1b1b1b;border:1px solid #3a3a3a;border-radius:8px;padding:6px;cursor:pointer;min-width:0}.k2fx-card:hover{border-color:#888}.k2fx-card.active{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.45) inset}.k2fx-custom-notice{grid-column:1/-1;border:1px dashed #3a3a3a;border-radius:8px;padding:12px;color:#aaa;background:#181818;font-size:12px}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);border-radius:7px;border:1px solid #333;background:linear-gradient(135deg,#1e1e1e,#4b4b4b);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800;letter-spacing:.03em;margin:0 auto 6px;max-width:100%}.k2fx-thumb.has-img{color:transparent;text-shadow:none}.k2fx-thumb.has-img::after{content:""}.k2fx-card[data-tone="Strong"] .k2fx-thumb{background:linear-gradient(135deg,#050505,#dcdcdc)}.k2fx-card[data-tone="Soft"] .k2fx-thumb{background:linear-gradient(135deg,#777,#eee)}.k2fx-card[data-tone="Analog"] .k2fx-thumb{background:linear-gradient(135deg,#3a2f24,#c0a777)}.k2fx-card[data-tone="Dramatic"] .k2fx-thumb{background:linear-gradient(135deg,#0b0c10,#8d6d42)}
-    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:6px}.k2fx-footer:not(.show){display:none}.k2fx-custom{display:block;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{display:block;width:100%;min-height:42px;max-height:180px;resize:vertical;background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;box-sizing:border-box;overflow:auto;white-space:pre-wrap;user-select:text}.k2fx-custom-presetbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.k2fx-custom-presetbar label{color:#35d0c8;font-weight:700;font-size:11px}.k2fx-custom-presetbar select{flex:1 1 150px;min-width:120px;background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px}.k2fx-custom-presetbar button{background:#2b2b2b;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 7px;cursor:pointer;font-size:11px}.k2fx-custom-presetbar button:hover{border-color:#35d0c8}
+    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:6px}.k2fx-footer:not(.show){display:none}.k2fx-custom{display:block;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{display:block;width:100%;min-height:42px;max-height:240px;resize:vertical;background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;box-sizing:border-box;overflow:auto;white-space:pre-wrap;user-select:text}.k2fx-custom-presetbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.k2fx-custom-presetbar label{color:#35d0c8;font-weight:700;font-size:11px}.k2fx-custom-presetbar select{flex:1 1 150px;min-width:120px;background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px}.k2fx-custom-presetbar button{background:#2b2b2b;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 7px;cursor:pointer;font-size:11px}.k2fx-custom-presetbar button:hover{border-color:#35d0c8}
   `;
   document.head.appendChild(style);
 }
@@ -4521,8 +4521,10 @@ function setupEffectNode(node) {
   const search = document.createElement("input");
   search.className = "k2fx-search";
   search.placeholder = "Search presets...";
+  search.title = "Filter effect presets by name, category, or prompt text.";
   const toggleLabel = document.createElement("label");
   toggleLabel.className = "k2fx-toggle k2fx-switch-label";
+  toggleLabel.title = "Enable or disable Prompt Effect without removing the node.";
   const enabled = document.createElement("input");
   enabled.type = "checkbox";
   enabled.checked = widgets.enable_effect?.value !== false;
@@ -4537,6 +4539,7 @@ function setupEffectNode(node) {
   const readThumbSize = () => Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(localStorage.getItem(EFFECT_THUMB_SIZE_KEY)) || 135));
   const sizeBar = document.createElement("label");
   sizeBar.className = "k2fx-sizebar";
+  sizeBar.title = "Change thumbnail card size in the Prompt Effect gallery.";
   const sizeText = document.createElement("span");
   sizeText.textContent = "Size";
   const sizeSlider = document.createElement("input");
@@ -4568,25 +4571,58 @@ function setupEffectNode(node) {
   const custom = document.createElement("textarea");
   custom.className = "k2fx-custom";
   custom.placeholder = "Custom effect prompt...";
+  custom.title = "Write a custom effect prompt. Save it from the Custom tab if needed.";
   custom.value = widgets.custom_preset?.value || "";
   const customPresetBar = document.createElement("div");
   customPresetBar.className = "k2fx-custom-presetbar";
   const customPresetLabel = document.createElement("label");
   customPresetLabel.textContent = "Preset";
+  customPresetLabel.title = "Local Custom presets are stored in user_presets.";
   const customPresetSelect = document.createElement("select");
+  customPresetSelect.title = "Choose a saved local Custom effect preset.";
   const customSave = document.createElement("button");
   customSave.textContent = "Save";
+  customSave.title = "Save the current Custom effect prompt to local user_presets JSON.";
   const customLoad = document.createElement("button");
   customLoad.textContent = "Load";
+  customLoad.title = "Load the selected Custom effect preset into the Custom prompt box.";
   const customDelete = document.createElement("button");
   customDelete.textContent = "Delete";
+  customDelete.title = "Delete the selected Custom effect preset from local user_presets JSON.";
   customPresetBar.append(customPresetLabel, customPresetSelect, customSave, customLoad, customDelete);
   let customEffectPresets = [];
 
   const preview = document.createElement("textarea");
   preview.className = "k2fx-preview";
   preview.readOnly = true;
-  preview.title = "Select and copy this prompt text";
+  preview.title = "Selected effect prompt. Drag the corner to make this box taller; select text to copy.";
+  let previewResize = null;
+  function isPreviewResizePoint(ev) {
+    const r = preview.getBoundingClientRect();
+    return ev.clientX >= r.right - 24 && ev.clientY >= r.bottom - 24;
+  }
+  function endPreviewResize() {
+    previewResize = null;
+    document.removeEventListener("pointermove", movePreviewResize, true);
+    document.removeEventListener("pointerup", endPreviewResize, true);
+    document.removeEventListener("pointercancel", endPreviewResize, true);
+  }
+  function movePreviewResize(ev) {
+    if (!previewResize) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    const next = Math.max(42, Math.min(240, previewResize.height + ev.clientY - previewResize.y));
+    preview.style.height = `${next}px`;
+  }
+  preview.addEventListener("pointerdown", (ev) => {
+    if (!isPreviewResizePoint(ev)) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    previewResize = { y: ev.clientY, height: preview.getBoundingClientRect().height };
+    document.addEventListener("pointermove", movePreviewResize, true);
+    document.addEventListener("pointerup", endPreviewResize, true);
+    document.addEventListener("pointercancel", endPreviewResize, true);
+  });
 
   const DEFAULT_EFFECT_PRESET = "Realistic Photo";
   const normalizeEffectPreset = (name) => {
@@ -5007,11 +5043,13 @@ function setupCanvasNode(node) {
   tools.prepend(showBtn, drawBtn, resetCanvasBtn);
   const langSelect = document.createElement("select");
   langSelect.className = "k2cf-select";
+  langSelect.title = "Choose Canvas UI language. Auto follows the node setting.";
   for (const v of ["Auto", "English", "Japanese 日本語"]) langSelect.appendChild(option(v, v));
   langSelect.value = widgets.ui_language?.value || "Auto";
   controls.ui_language = langSelect;
   const gridTop = document.createElement("select");
   gridTop.className = "k2cf-select";
+  gridTop.title = "Choose the canvas guide overlay.";
   for (const g of ["Off", "Thirds", "Center Cross"]) gridTop.appendChild(option(g, g));
   gridTop.value = widgets.grid_mode?.value || "Thirds";
   controls.grid = gridTop;
@@ -5053,12 +5091,15 @@ function setupCanvasNode(node) {
   sizePanel.innerHTML = `<h4>${tr(resolveLang(controls.ui_language?.value || "Auto"), "latentSize")}</h4>`;
   const preset = document.createElement("select");
   preset.className = "k2cf-select";
+  preset.title = "Choose the latent canvas size preset.";
   const width = document.createElement("input");
   width.className = "k2cf-num";
   width.type = "number";
+  width.title = "Custom latent canvas width.";
   const height = document.createElement("input");
   height.className = "k2cf-num";
   height.type = "number";
+  height.title = "Custom latent canvas height.";
   controls.preset = preset; controls.width = width; controls.height = height;
   function fillPresetSelect(selected) {
     preset.innerHTML = "";
