@@ -3240,13 +3240,20 @@ const EFFECT_PRESETS = [
   ];
 const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "SNS", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
-const EFFECT_THUMBNAIL_BASE = "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/";
+const EFFECT_THUMBNAIL_BASE_CANDIDATES = [
+  "/extensions/Krea2-BBOX-Prompter/thumbnails/",
+  "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/",
+];
 function k2fxPresetSlug(name) {
   return String(name || "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || "preset";
 }
-function k2fxThumbnailUrl(preset) {
+function k2fxThumbnailFile(preset) {
   const file = preset?.thumbnail || `${k2fxPresetSlug(preset?.name)}.webp`;
-  return `${EFFECT_THUMBNAIL_BASE}${file}`;
+  return file;
+}
+function k2fxThumbnailUrls(preset) {
+  const file = k2fxThumbnailFile(preset);
+  return EFFECT_THUMBNAIL_BASE_CANDIDATES.map((base) => `${base}${file}`);
 }
 
 
@@ -4700,13 +4707,23 @@ function setupEffectNode(node) {
       const thumb = document.createElement("div");
       thumb.className = "k2fx-thumb";
       thumb.textContent = p.chip;
-      const imgUrl = k2fxThumbnailUrl(p);
-      thumb.style.backgroundImage = `url("${imgUrl}")`;
+      const imgUrls = k2fxThumbnailUrls(p);
+      let imgUrlIndex = 0;
+      thumb.style.backgroundImage = `url("${imgUrls[imgUrlIndex]}")`;
       thumb.classList.add("has-img");
       // If an image is missing, fall back to the original text/gradient card.
       const probe = new Image();
-      probe.onerror = () => { thumb.style.backgroundImage = ""; thumb.classList.remove("has-img"); };
-      probe.src = imgUrl;
+      probe.onerror = () => {
+        imgUrlIndex += 1;
+        if (imgUrlIndex < imgUrls.length) {
+          thumb.style.backgroundImage = `url("${imgUrls[imgUrlIndex]}")`;
+          probe.src = imgUrls[imgUrlIndex];
+          return;
+        }
+        thumb.style.backgroundImage = "";
+        thumb.classList.remove("has-img");
+      };
+      probe.src = imgUrls[imgUrlIndex];
       const name = document.createElement("div");
       name.className = "k2fx-name";
       name.textContent = p.name;

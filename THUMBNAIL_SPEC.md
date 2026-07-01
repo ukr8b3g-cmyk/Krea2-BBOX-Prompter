@@ -27,8 +27,11 @@ Krea2-BBOX-Prompter-Suite/
 The browser should load thumbnails from the local ComfyUI extension path:
 
 ```text
-/extensions/Krea2-BBOX-Prompter-Suite/web/thumbnails/<file>.webp
+/extensions/Krea2-BBOX-Prompter/thumbnails/<file>.webp
+/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/<file>.webp
 ```
+
+The UI tries both folder-name variants so thumbnails can load from installs named either `Krea2-BBOX-Prompter` or `Krea2-BBOX-Prompter-Suite`.
 
 Do not fetch thumbnail images from GitHub raw URLs or external CDNs at runtime.
 

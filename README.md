@@ -968,8 +968,11 @@ Color Theme presets apply broad palette direction such as single-color themes, t
 Runtime path:
 
 ```text
-/extensions/Krea2-BBOX-Prompter-Suite/web/thumbnails/<file>.webp
+/extensions/Krea2-BBOX-Prompter/thumbnails/<file>.webp
+/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/<file>.webp
 ```
+
+The UI tries both paths so thumbnails can load whether the custom node folder is installed as `Krea2-BBOX-Prompter` or `Krea2-BBOX-Prompter-Suite`.
 
 ---
 
