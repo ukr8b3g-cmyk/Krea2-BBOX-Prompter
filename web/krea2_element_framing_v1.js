@@ -1630,6 +1630,7 @@ const ANGLE_OPTIONS = [
   "3/4 left",
   "Eye level",
   "POV",
+  "Top POV",
   "Side view",
   "Profile right",
   "Profile left",
