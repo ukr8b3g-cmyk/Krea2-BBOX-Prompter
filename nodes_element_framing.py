@@ -534,6 +534,7 @@ EFFECT_PRESETS = (
     '35mm Film',
     'Cinematic Photo',
     'Soft Portrait',
+    'Milky Portrait',
     'B&W Soft',
     'B&W Strong',
     'Film Noir',
@@ -746,6 +747,7 @@ EFFECT_PRESET_TEXT = {
     '35mm Film': 'analog 35mm film photo, visible film grain, subtle halation, natural color, soft contrast, realistic skin texture',
     'Cinematic Photo': 'cinematic film still, dramatic lighting, controlled contrast, strong depth, realistic atmosphere, detailed composition, filmic photo look',
     'Soft Portrait': 'soft portrait photography, flattering natural light, natural skin texture, shallow depth of field, gentle contrast, clean facial details',
+    'Milky Portrait': 'white milky tone, pale milky cream palette with soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, delicate calm mood',
     'B&W Soft': 'soft black and white photography, monochrome grayscale tones, no color, gentle contrast, soft film grain, natural skin texture',
     'B&W Strong': 'strong black and white photography, monochrome grayscale tones, no color, high contrast, deep blacks, bright whites, dramatic film grain',
     'Film Noir': 'film noir photography, black and white tones, dramatic shadows, low-key lighting, high contrast, mysterious cinematic atmosphere',
@@ -957,6 +959,7 @@ EFFECT_PRESET_CATEGORY = {
     '35mm Film': 'Camera FX',
     'Cinematic Photo': 'Photo',
     'Soft Portrait': 'Photo',
+    'Milky Portrait': 'Photo',
     'B&W Soft': 'Photo',
     'B&W Strong': 'Photo',
     'Film Noir': 'Photo',
@@ -1232,3 +1235,4 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Krea2ElementJSONExportV1": "📦 Krea2 BBOX Export",
     "Krea2BBOXPromptEffect": "✨ Krea2 BBOX Prompt Effect",
 }
+

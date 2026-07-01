@@ -1,4 +1,4 @@
-const { app } = window.comfyAPI.app;
+﻿const { app } = window.comfyAPI.app;
 window.__k2efFramingV1Build = "v1_element_framing_angle_card_20260629";
 
 const CANVAS_NODE = "Krea2ElementFramingV1Canvas";
@@ -32,6 +32,13 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Port",
     "tone": "portrait",
     "text": "soft portrait photography, flattering natural light, natural skin texture, shallow depth of field, gentle contrast, clean facial details"
+  },
+  {
+    "name": "Milky Portrait",
+    "category": "Photo",
+    "chip": "Milky",
+    "tone": "portrait",
+    "text": "white milky tone, pale milky cream palette with soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, delicate calm mood"
   },
   {
     "name": "B&W Soft",
@@ -1673,6 +1680,13 @@ const EFFECT_PRESETS = [
     "text": "soft portrait photography, flattering natural light, natural skin texture, shallow depth of field, gentle contrast, clean facial details"
   },
   {
+    "name": "Milky Portrait",
+    "category": "Photo",
+    "chip": "Milky",
+    "tone": "portrait",
+    "text": "white milky tone, pale milky cream palette with soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, delicate calm mood"
+  },
+  {
     "name": "B&W Soft",
     "category": "Photo",
     "chip": "B&W Soft",
@@ -3259,6 +3273,7 @@ const PROMPT_LANGUAGE_KEY = "krea2_element_framing_v1_prompt_ui_language";
 const CANVAS_LANGUAGE_KEY = "krea2_element_framing_v1_canvas_ui_language";
 const CANVAS_GRID_KEY = "krea2_element_framing_v1_canvas_grid";
 const EFFECT_THUMB_SIZE_KEY = "krea2_element_framing_v1_effect_thumb_size";
+const EFFECT_CUSTOM_PRESET_API = "/krea2_bbox_prompt_effect/custom_presets";
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 1024;
 const DEFAULT_PRESET = "1024 x 1024";
@@ -4282,7 +4297,7 @@ function ensureStyle() {
     ${effectSizeCss}
     .k2fx-tabs{display:flex;gap:5px;flex-wrap:wrap}.k2fx-tab{background:#242424;color:#ddd;border:1px solid #444;border-radius:999px;padding:4px 9px;cursor:pointer;font-size:11px}.k2fx-tab.active{border-color:#35d0c8;color:#fff;background:#12606a}
     .k2fx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr));gap:7px}.k2fx-card{background:#1b1b1b;border:1px solid #3a3a3a;border-radius:8px;padding:6px;cursor:pointer;min-width:0}.k2fx-card:hover{border-color:#888}.k2fx-card.active{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.45) inset}.k2fx-custom-notice{grid-column:1/-1;border:1px dashed #3a3a3a;border-radius:8px;padding:12px;color:#aaa;background:#181818;font-size:12px}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);border-radius:7px;border:1px solid #333;background:linear-gradient(135deg,#1e1e1e,#4b4b4b);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800;letter-spacing:.03em;margin:0 auto 6px;max-width:100%}.k2fx-thumb.has-img{color:transparent;text-shadow:none}.k2fx-thumb.has-img::after{content:""}.k2fx-card[data-tone="Strong"] .k2fx-thumb{background:linear-gradient(135deg,#050505,#dcdcdc)}.k2fx-card[data-tone="Soft"] .k2fx-thumb{background:linear-gradient(135deg,#777,#eee)}.k2fx-card[data-tone="Analog"] .k2fx-thumb{background:linear-gradient(135deg,#3a2f24,#c0a777)}.k2fx-card[data-tone="Dramatic"] .k2fx-thumb{background:linear-gradient(135deg,#0b0c10,#8d6d42)}
-    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:5px}.k2fx-custom{display:block;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{display:block;width:100%;min-height:42px;resize:vertical;background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;box-sizing:border-box;overflow:auto;white-space:pre-wrap;user-select:text}
+    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:6px}.k2fx-footer:not(.show){display:none}.k2fx-custom{display:block;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{display:block;width:100%;min-height:42px;resize:vertical;background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;box-sizing:border-box;overflow:auto;white-space:pre-wrap;user-select:text}.k2fx-custom-presetbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.k2fx-custom-presetbar label{color:#35d0c8;font-weight:700;font-size:11px}.k2fx-custom-presetbar select{flex:1 1 150px;min-width:120px;background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px}.k2fx-custom-presetbar button{background:#2b2b2b;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 7px;cursor:pointer;font-size:11px}.k2fx-custom-presetbar button:hover{border-color:#35d0c8}
   `;
   document.head.appendChild(style);
 }
@@ -4511,11 +4526,25 @@ function setupEffectNode(node) {
   if (!EFFECT_CATEGORIES.includes(activeCategory)) activeCategory = "Photo";
   const grid = document.createElement("div");
   grid.className = "k2fx-grid";
+  let footer = null;
 
   const custom = document.createElement("textarea");
   custom.className = "k2fx-custom";
   custom.placeholder = "Custom effect prompt...";
   custom.value = widgets.custom_preset?.value || "";
+  const customPresetBar = document.createElement("div");
+  customPresetBar.className = "k2fx-custom-presetbar";
+  const customPresetLabel = document.createElement("label");
+  customPresetLabel.textContent = "Preset";
+  const customPresetSelect = document.createElement("select");
+  const customSave = document.createElement("button");
+  customSave.textContent = "Save";
+  const customLoad = document.createElement("button");
+  customLoad.textContent = "Load";
+  const customDelete = document.createElement("button");
+  customDelete.textContent = "Delete";
+  customPresetBar.append(customPresetLabel, customPresetSelect, customSave, customLoad, customDelete);
+  let customEffectPresets = [];
 
   const preview = document.createElement("textarea");
   preview.className = "k2fx-preview";
@@ -4570,8 +4599,66 @@ function setupEffectNode(node) {
     };
     k2cfWriteLocalState(node, "effect", node.properties.k2cfEffectState);
     custom.classList.toggle("show", isCustomMode());
+    footer?.classList.toggle("show", isCustomMode());
     preview.value = currentEffectText() || "Effect disabled or custom text is blank.";
     try { app.graph?.setDirtyCanvas?.(true, true); } catch (_) {}
+  }
+  function refreshCustomPresetSelect(selected = "") {
+    customPresetSelect.innerHTML = "";
+    customPresetSelect.appendChild(option("", "(None)"));
+    for (const p of customEffectPresets) customPresetSelect.appendChild(option(p.name, p.name));
+    customPresetSelect.value = customEffectPresets.some((p) => p.name === selected) ? selected : "";
+  }
+  async function loadCustomEffectPresets(selected = "") {
+    try {
+      const res = await fetch(EFFECT_CUSTOM_PRESET_API, {cache: "no-store"});
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      customEffectPresets = Array.isArray(data.presets) ? data.presets : [];
+      refreshCustomPresetSelect(selected || customPresetSelect.value);
+    } catch (err) {
+      customEffectPresets = [];
+      refreshCustomPresetSelect("");
+      console.warn("[Krea2 BBOX] Failed to load custom effect presets", err);
+    }
+  }
+  async function saveCustomEffectPreset() {
+    const current = customPresetSelect.value || "";
+    const name = prompt("Custom effect preset name", current || "My Effect");
+    if (!name) return;
+    const text = String(custom.value || "").trim();
+    if (!text) {
+      alert("Custom effect prompt is blank.");
+      return;
+    }
+    const res = await fetch(EFFECT_CUSTOM_PRESET_API, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({name, text}),
+    });
+    if (!res.ok) {
+      alert("Failed to save custom preset.");
+      return;
+    }
+    const data = await res.json();
+    customEffectPresets = Array.isArray(data.presets) ? data.presets : [];
+    refreshCustomPresetSelect(name);
+  }
+  async function deleteCustomEffectPreset() {
+    const name = customPresetSelect.value || "";
+    if (!name) return;
+    const res = await fetch(`${EFFECT_CUSTOM_PRESET_API}/delete`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({name}),
+    });
+    if (!res.ok) {
+      alert("Failed to delete custom preset.");
+      return;
+    }
+    const data = await res.json();
+    customEffectPresets = Array.isArray(data.presets) ? data.presets : [];
+    refreshCustomPresetSelect("");
   }
   function selectPreset(name) {
     currentPreset = normalizeEffectPreset(name);
@@ -4636,18 +4723,31 @@ function setupEffectNode(node) {
       grid.appendChild(notice);
     }
   }
-  function render() { renderTabs(); renderCards(); custom.classList.toggle("show", isCustomMode()); }
+  function render() {
+    renderTabs();
+    renderCards();
+    custom.classList.toggle("show", isCustomMode());
+    footer?.classList.toggle("show", isCustomMode());
+  }
 
   search.addEventListener("input", () => { renderCards(); });
   enabled.addEventListener("change", sync);
   sizeSlider.addEventListener("input", () => applyThumbSize(sizeSlider.value));
   custom.addEventListener("input", sync);
   custom.addEventListener("change", sync);
+  customLoad.addEventListener("click", () => {
+    const found = customEffectPresets.find((p) => p.name === customPresetSelect.value);
+    if (!found) return;
+    custom.value = found.text || "";
+    selectCustom();
+  });
+  customSave.addEventListener("click", () => { saveCustomEffectPreset(); });
+  customDelete.addEventListener("click", () => { deleteCustomEffectPreset(); });
 
   wrap.append(ioRow, preview, top, sizeBar, tabs, grid);
-  const footer = document.createElement("div");
+  footer = document.createElement("div");
   footer.className = "k2fx-footer";
-  footer.append(custom);
+  footer.append(custom, customPresetBar);
   wrap.appendChild(footer);
 
   node.addDOMWidget("krea2_prompt_effect_ui", "Krea2PromptEffectUI", wrap, {
@@ -4660,6 +4760,7 @@ function setupEffectNode(node) {
   if (!widgets.mode?.value) setWidgetValue("mode", "Preset");
   render();
   preview.value = currentEffectText() || "Effect disabled or custom text is blank.";
+  loadCustomEffectPresets();
   k2cfPersistWidgetSnapshot(node, "effect", EFFECT_WIDGETS, "v15");
   installNodePersistenceHooks(node, sync, EFFECT_WIDGETS, "k2cfEffect");
 }
@@ -6157,3 +6258,4 @@ window.__k2cfResetPromptHeightCacheV29 = function() {
   try { app.graph?.setDirtyCanvas?.(true, true); } catch (_) {}
   return true;
 };
+

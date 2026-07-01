@@ -4,3 +4,4 @@ __pycache__/
 Thumbs.db
 *.tmp
 *.bak
+user_presets/

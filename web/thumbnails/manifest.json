@@ -28,6 +28,13 @@
     "tone": "portrait"
   },
   {
+    "name": "Milky Portrait",
+    "file": "milky_portrait.webp",
+    "category": "Photo",
+    "chip": "Milky",
+    "tone": "portrait"
+  },
+  {
     "name": "B&W Soft",
     "file": "bandw_soft.webp",
     "category": "Photo",
