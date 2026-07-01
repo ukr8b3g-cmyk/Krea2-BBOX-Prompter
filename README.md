@@ -606,6 +606,14 @@ Hello! | speech bubble with clean outline, readable comic-style text
 
 Short Japanese labels in Object prompts may be accidentally drawn as text.
 
+Small logos or icons can also be unstable. For example, `tiktok logo, no text` may remove not only letters, but also visual parts that look like text, marks, or coordinate-like details.
+
+For small logo-like icons, describe them as simple symbols or marks instead of relying only on `no text`.
+
+```text
+tiktok-style music note icon, simple black cyan pink logo mark, no readable letters, no words
+```
+
 ---
 
 ## Avoid Strong Overlap Between Object BBOX Regions
@@ -1799,6 +1807,14 @@ Hello! | speech bubble with clean outline, readable comic-style text
 ```
 
 逆に、Objectで日本語単語だけを書くと、それが誤って画像内に描かれる可能性があります。
+
+小さいロゴやアイコンも安定しにくい場合があります。たとえば `tiktok logo, no text` のように書くと、文字だけでなく、文字・記号・座標軸のように見える部分まで消えてしまうことがあります。
+
+小さいロゴ風アイコンを出したい場合は、単に `no text` とするより、文字ではないシンプルなマークとして説明する方が安定する場合があります。
+
+```text
+tiktok-style music note icon, simple black cyan pink logo mark, no readable letters, no words
+```
 
 ---
 
