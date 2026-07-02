@@ -35,6 +35,13 @@
     "tone": "portrait"
   },
   {
+    "name": "Glow Portrait",
+    "file": "glow_portrait.webp",
+    "category": "Photo",
+    "chip": "Glow",
+    "tone": "portrait"
+  },
+  {
     "name": "B&W Soft",
     "file": "bandw_soft.webp",
     "category": "Photo",

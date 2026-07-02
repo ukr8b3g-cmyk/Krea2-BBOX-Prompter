@@ -14,6 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
+- 2026-07-02: Added Glow Portrait, improved Custom preset save/overwrite handling, and enabled ComfyUI-Custom-Scripts autocomplete inside internal Pbox prompt fields when available.
 - 2026-07-01: Updated the README with a first-time user guide and BBOX Export defaults. Prompt Effect now has a taller copyable prompt preview and additional tooltips.
 
 ---
@@ -1240,6 +1241,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
+- 2026-07-02：Glow Portraitを追加。Custom presetの保存・上書き確認を改善し、ComfyUI-Custom-Scriptsがある環境ではPbox内部プロンプト欄でもAutoCompleteを使えるようにしました。
 - 2026-07-01：READMEに初回ユーザー向けガイドとBBOX Exportの推奨設定を追加。Prompt Effectのコピー可能なプロンプト表示欄を広げ、ツールチップを追加しました。
 
 ---

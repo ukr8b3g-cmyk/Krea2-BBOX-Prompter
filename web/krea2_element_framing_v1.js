@@ -3,6 +3,40 @@ window.__k2efFramingV1Build = "v1_element_framing_angle_card_20260629";
 
 const CANVAS_NODE = "Krea2ElementFramingV1Canvas";
 const PROMPT_NODE = "Krea2ElementFramingV1Prompt";
+let k2cfPyssssAutocompletePromise = null;
+
+function k2cfLoadPyssssAutocomplete() {
+  if (!k2cfPyssssAutocompletePromise) {
+    const urls = [
+      "/extensions/comfyui-custom-scripts/js/common/autocomplete.js",
+      "/extensions/ComfyUI-Custom-Scripts/js/common/autocomplete.js",
+    ];
+    k2cfPyssssAutocompletePromise = urls.reduce(
+      (promise, url) => promise.catch(() => import(url)),
+      Promise.reject()
+    ).catch((err) => {
+      console.info("[Krea2 BBOX] ComfyUI-Custom-Scripts autocomplete is not available.", err);
+      return null;
+    });
+  }
+  return k2cfPyssssAutocompletePromise;
+}
+
+function k2cfAttachPyssssAutocomplete(textarea) {
+  if (!textarea || textarea.__k2cfPyssssAutocomplete) return;
+  textarea.__k2cfPyssssAutocomplete = "pending";
+  k2cfLoadPyssssAutocomplete().then((mod) => {
+    if (!mod?.TextAreaAutoComplete) {
+      textarea.__k2cfPyssssAutocomplete = false;
+      return;
+    }
+    new mod.TextAreaAutoComplete(textarea);
+    textarea.__k2cfPyssssAutocomplete = true;
+  }).catch((err) => {
+    textarea.__k2cfPyssssAutocomplete = false;
+    console.warn("[Krea2 BBOX] Failed to attach autocomplete.", err);
+  });
+}
 // Prompt Effect display preset catalog; duplicate legacy aliases are backend-only.
 window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
   {
@@ -39,6 +73,13 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Milky",
     "tone": "portrait",
     "text": "white milky tone, pale milky cream palette with soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, delicate calm mood"
+  },
+  {
+    "name": "Glow Portrait",
+    "category": "Photo",
+    "chip": "Glow",
+    "tone": "portrait",
+    "text": "dreamy photographic atmosphere, soft milky cream palette, soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, luminous soft glow, soft radiant highlights, airy subtle haze, gentle bloom effect, calm realistic emotional mood"
   },
   {
     "name": "B&W Soft",
@@ -1686,6 +1727,13 @@ const EFFECT_PRESETS = [
     "chip": "Milky",
     "tone": "portrait",
     "text": "white milky tone, pale milky cream palette with soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, delicate calm mood"
+  },
+  {
+    "name": "Glow Portrait",
+    "category": "Photo",
+    "chip": "Glow",
+    "tone": "portrait",
+    "text": "dreamy photographic atmosphere, soft milky cream palette, soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, luminous soft glow, soft radiant highlights, airy subtle haze, gentle bloom effect, calm realistic emotional mood"
   },
   {
     "name": "B&W Soft",
@@ -4573,6 +4621,7 @@ function setupEffectNode(node) {
   custom.placeholder = "Custom effect prompt...";
   custom.title = "Write a custom effect prompt. Save it from the Custom tab if needed.";
   custom.value = widgets.custom_preset?.value || "";
+  k2cfAttachPyssssAutocomplete(custom);
   const customPresetBar = document.createElement("div");
   customPresetBar.className = "k2fx-custom-presetbar";
   const customPresetLabel = document.createElement("label");
@@ -4697,25 +4746,32 @@ function setupEffectNode(node) {
   }
   async function saveCustomEffectPreset() {
     const current = customPresetSelect.value || "";
-    const name = prompt("Custom effect preset name", current || "My Effect");
+    const name = String(prompt("Custom effect preset name", current || "My Effect") || "").trim();
     if (!name) return;
     const text = String(custom.value || "").trim();
     if (!text) {
       alert("Custom effect prompt is blank.");
       return;
     }
-    const res = await fetch(EFFECT_CUSTOM_PRESET_API, {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({name, text}),
-    });
-    if (!res.ok) {
-      alert("Failed to save custom preset.");
+    const selectNames = Array.from(customPresetSelect.options).map((opt) => String(opt.value || "").trim()).filter(Boolean);
+    const exists = selectNames.includes(name) || customEffectPresets.some((p) => String(p?.name || "").trim() === name);
+    if (exists && !confirm(`Preset "${name}" already exists.\nOverwrite it?`)) return;
+    let data = null;
+    try {
+      const res = await fetch(EFFECT_CUSTOM_PRESET_API, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name, text}),
+      });
+      data = await res.json().catch(() => null);
+      if (!res.ok) throw new Error(data?.error || `HTTP ${res.status}`);
+    } catch (err) {
+      alert(`Failed to save custom preset.\n${err?.message || err}`);
       return;
     }
-    const data = await res.json();
     customEffectPresets = Array.isArray(data.presets) ? data.presets : [];
     refreshCustomPresetSelect(name);
+    await loadCustomEffectPresets(name);
   }
   async function deleteCustomEffectPreset() {
     const name = customPresetSelect.value || "";
@@ -5961,12 +6017,14 @@ function setupPromptNode(node) {
   sceneText.placeholder = tr(resolveLang(promptLangSelect.value), "scenePlaceholder");
   sceneText.value = widgets.scene?.value || "";
   controls.scene = sceneText;
+  k2cfAttachPyssssAutocomplete(sceneText);
 
   const backgroundText = document.createElement("textarea");
   backgroundText.className = "k2cf-text";
   backgroundText.placeholder = tr(resolveLang(promptLangSelect.value), "backgroundPlaceholder");
   backgroundText.value = widgets.background?.value || "";
   controls.background = backgroundText;
+  k2cfAttachPyssssAutocomplete(backgroundText);
   sceneText.addEventListener("input", sync);
   backgroundText.addEventListener("input", sync);
   sceneText.addEventListener("change", sync);
@@ -6114,6 +6172,7 @@ function setupPromptNode(node) {
     ta.placeholder = tr(resolveLang(promptLangSelect.value), "enterPrompt").replace("{label}", label);
     ta.value = widgets[promptName]?.value || "";
     controls[promptName] = ta;
+    k2cfAttachPyssssAutocomplete(ta);
     const typeSelect = document.createElement("select");
     typeSelect.className = "k2cf-type";
     typeSelect.title = tr(resolveLang(promptLangSelect.value), "elementType");
