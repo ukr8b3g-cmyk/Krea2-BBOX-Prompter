@@ -5741,8 +5741,9 @@ function setupPromptNode(node) {
   const defaultPromptUiState = () => ({
     version: "prompt_ui_element_v1",
     heightCaptureMode: K2CF_PROMPT_HEIGHT_CAPTURE_MODE,
-    textHeights: {},
-    slotOpen: { red: true, blue: true, yellow: true, green: false, magenta: false },
+    textHeights: { red_prompt: 169, blue_prompt: 169, yellow_prompt: 169, green_prompt: 169, magenta_prompt: 169 },
+    textHeightManual: { red_prompt: true, blue_prompt: true, yellow_prompt: true, green_prompt: true, magenta_prompt: true },
+    slotOpen: { red: true, blue: true, yellow: false, green: false, magenta: false },
     scenePreset: "",
     slotPreset: {},
     slotValues: {},
