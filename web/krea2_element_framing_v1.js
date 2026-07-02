@@ -5749,12 +5749,15 @@ function setupPromptNode(node) {
     saved_at: Date.now(),
   });
   const promptUiWidgetState = k2cfReadJsonObject(widgets.prompt_ui_data?.value);
-  const promptUiCandidates = [
+  const workflowPromptUiCandidates = [
     node.properties?.k2cfPromptUiState,
     node.__k2cfConfiguredPromptUiState,
     promptUiWidgetState,
-    k2cfReadLocalState(node, "prompt_ui"),
   ].filter((state) => k2cfPromptUiHasMeaningfulState(state));
+  const localPromptUiState = k2cfReadLocalState(node, "prompt_ui");
+  const promptUiCandidates = workflowPromptUiCandidates.length
+    ? workflowPromptUiCandidates
+    : [localPromptUiState].filter((state) => k2cfPromptUiHasMeaningfulState(state));
   const storedPromptUiState = k2cfPickLatestState(promptUiCandidates) || {};
   const promptUiState = defaultPromptUiState();
   Object.assign(promptUiState, storedPromptUiState);
