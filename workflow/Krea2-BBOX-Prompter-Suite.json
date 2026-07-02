@@ -562,7 +562,7 @@
             "obj",
             "obj",
             "obj",
-            "{\"version\":\"prompt_ui_element_v1\",\"heightCaptureMode\":\"resize_grip_v29\",\"textHeights\":{\"red_prompt\":169,\"blue_prompt\":147,\"yellow_prompt\":148,\"green_prompt\":148,\"magenta_prompt\":148},\"textHeightManual\":{\"red_prompt\":true,\"blue_prompt\":true,\"yellow_prompt\":true,\"green_prompt\":true,\"magenta_prompt\":true},\"slotOpen\":{\"red\":true,\"blue\":true,\"yellow\":false,\"green\":false,\"magenta\":false},\"scenePreset\":\"\",\"slotPreset\":{},\"slotValues\":{\"red\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"blue\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"yellow\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"green\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"magenta\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"}},\"saved_at\":1782996805264}",
+            "{\"version\":\"prompt_ui_element_v1\",\"heightCaptureMode\":\"resize_grip_v29\",\"textHeights\":{\"red_prompt\":169,\"blue_prompt\":169,\"yellow_prompt\":169,\"green_prompt\":169,\"magenta_prompt\":169},\"textHeightManual\":{\"red_prompt\":true,\"blue_prompt\":true,\"yellow_prompt\":true,\"green_prompt\":true,\"magenta_prompt\":true},\"slotOpen\":{\"red\":true,\"blue\":true,\"yellow\":false,\"green\":false,\"magenta\":false},\"scenePreset\":\"\",\"slotPreset\":{},\"slotValues\":{\"red\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"blue\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"yellow\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"green\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"magenta\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"}},\"saved_at\":1782996805264}",
             "Auto",
             "Auto",
             "Auto",
@@ -581,10 +581,10 @@
           "heightCaptureMode": "resize_grip_v29",
           "textHeights": {
             "red_prompt": 169,
-            "blue_prompt": 147,
-            "yellow_prompt": 148,
-            "green_prompt": 148,
-            "magenta_prompt": 148
+            "blue_prompt": 169,
+            "yellow_prompt": 169,
+            "green_prompt": 169,
+            "magenta_prompt": 169
           },
           "textHeightManual": {
             "red_prompt": true,
