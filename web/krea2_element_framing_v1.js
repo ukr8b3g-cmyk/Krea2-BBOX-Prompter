@@ -3387,6 +3387,11 @@ const I18N = {
     canvasPreset: "Canvas Preset",
     canvasPresetNote: "Saves size, boxes, guide, UI language, and camera values together.",
     scenePreset: "Scene Preset",
+    scenePresetHelp: "Save or load the main scene/background prompt as a local preset.",
+    scenePresetSelectHelp: "Choose a saved scene/background preset.",
+    sceneSaveHelp: "Save the current scene/background prompt as a preset.",
+    sceneLoadHelp: "Load the selected scene/background preset into the text box.",
+    sceneDeleteHelp: "Delete the selected scene/background preset.",
     promptPreset: "Preset",
     savePreset: "Save Preset",
     loadPreset: "Load",
@@ -3407,8 +3412,13 @@ const I18N = {
     prompt: "Prompt",
     clearPrompt: "Clear this prompt",
     elementType: "Type",
+    elementTypeHelp: "Choose what this colored box describes. Object is for subjects; Text is for letters, logos, signs, or speech bubbles.",
     framing: "Framing",
+    framingHelp: "Choose how the subject should be framed inside this colored box.",
     angle: "Angle",
+    angleHelp: "Choose the viewing direction or camera perspective for this colored box.",
+    slotHeaderHelp: "{label} box prompt. Click to open or close this section.",
+    slotPromptHelp: "Write what should appear in this colored box. Keep boxes simple and avoid overlapping instructions.",
     enterPrompt: "Enter prompt for {label} box..."
   },
   ja: {
@@ -3434,6 +3444,11 @@ const I18N = {
     canvasPreset: "キャンバスプリセット",
     canvasPresetNote: "サイズ、ボックス、ガイド、UI言語、カメラ値をまとめて保存します。",
     scenePreset: "シーンプリセット",
+    scenePresetHelp: "シーン / 背景プロンプトをローカルプリセットとして保存・読込します。",
+    scenePresetSelectHelp: "保存済みのシーン / 背景プリセットを選びます。",
+    sceneSaveHelp: "現在のシーン / 背景プロンプトをプリセット保存します。",
+    sceneLoadHelp: "選択したシーン / 背景プリセットを入力欄へ読み込みます。",
+    sceneDeleteHelp: "選択したシーン / 背景プリセットを削除します。",
     promptPreset: "プリセット",
     savePreset: "プリセット保存",
     loadPreset: "読込",
@@ -3454,8 +3469,13 @@ const I18N = {
     prompt: "プロンプト",
     clearPrompt: "このプロンプトを消去",
     elementType: "タイプ",
+    elementTypeHelp: "この色ボックスで指定する対象を選びます。Objectは被写体、Textは文字・ロゴ・看板・吹き出し向けです。",
     framing: "フレーミング",
+    framingHelp: "この色ボックス内で、被写体をどの範囲で写すかを選びます。",
     angle: "アングル",
+    angleHelp: "この色ボックスに対する視点・カメラ角度を選びます。",
+    slotHeaderHelp: "{label} ボックスのプロンプト欄です。クリックで開閉します。",
+    slotPromptHelp: "この色ボックス内に出したい内容を書きます。指示はシンプルにし、ボックス同士の矛盾や重なりを避けてください。",
     enterPrompt: "{label} ボックスのプロンプトを入力..."
   }
 };
@@ -4302,6 +4322,41 @@ function stop(ev) {
   ev.stopPropagation();
 }
 
+function k2cfIsWheelInteractiveTarget(target) {
+  const el = target?.closest?.("input, textarea, select, button, option, [contenteditable='true'], .k2fx-wrap, .k2cf-overlay");
+  return !!el;
+}
+
+function k2cfForwardWheelToGraph(ev) {
+  if (k2cfIsWheelInteractiveTarget(ev.target)) return;
+  const canvasEl = app?.canvas?.canvas || window.comfyAPI?.app?.app?.canvas?.canvas;
+  if (!canvasEl) return;
+  ev.preventDefault();
+  ev.stopPropagation();
+  const forwarded = new WheelEvent("wheel", {
+    bubbles: true,
+    cancelable: true,
+    view: window,
+    deltaX: ev.deltaX,
+    deltaY: ev.deltaY,
+    deltaZ: ev.deltaZ,
+    deltaMode: ev.deltaMode,
+    clientX: ev.clientX,
+    clientY: ev.clientY,
+    screenX: ev.screenX,
+    screenY: ev.screenY,
+    ctrlKey: ev.ctrlKey,
+    shiftKey: ev.shiftKey,
+    altKey: ev.altKey,
+    metaKey: ev.metaKey,
+  });
+  canvasEl.dispatchEvent(forwarded);
+}
+
+function k2cfAllowWheelZoomOnEmptySpace(wrap) {
+  wrap?.addEventListener?.("wheel", k2cfForwardWheelToGraph, { passive: false });
+}
+
 function button(text, title) {
   const el = document.createElement("button");
   el.className = "k2cf-btn";
@@ -5033,6 +5088,7 @@ function setupCanvasNode(node) {
 
   const wrap = document.createElement("div");
   wrap.className = "k2cf-wrap";
+  k2cfAllowWheelZoomOnEmptySpace(wrap);
   const toolbar = document.createElement("div");
   toolbar.className = "k2cf-toolbar";
   const tools = document.createElement("div");
@@ -5997,6 +6053,7 @@ function setupPromptNode(node) {
 
   const wrap = document.createElement("div");
   wrap.className = "k2cf-prompt-wrap";
+  k2cfAllowWheelZoomOnEmptySpace(wrap);
   const promptLangBar = document.createElement("div");
   promptLangBar.className = "k2cf-prompt-top";
   const promptLangGroup = document.createElement("div");
@@ -6067,17 +6124,27 @@ function setupPromptNode(node) {
     sceneText.placeholder = tr(lang, "scenePlaceholder");
     if (typeof backgroundText !== "undefined" && backgroundText) backgroundText.placeholder = tr(lang, "backgroundPlaceholder");
     scenePresetLabel.textContent = tr(lang, "scenePreset");
+    scenePresetLabel.title = tr(lang, "scenePresetHelp");
+    scenePresetSelect.title = tr(lang, "scenePresetSelectHelp");
     sceneSave.textContent = tr(lang, "save");
+    sceneSave.title = tr(lang, "sceneSaveHelp");
     sceneLoad.textContent = tr(lang, "loadPreset");
+    sceneLoad.title = tr(lang, "sceneLoadHelp");
     sceneDelete.textContent = tr(lang, "deletePreset");
+    sceneDelete.title = tr(lang, "sceneDeleteHelp");
     for (const item of promptCards) {
       item.promptLabel.textContent = tr(lang, "prompt");
-      if (item.typeSelect) item.typeSelect.title = tr(lang, "elementType");
+      if (item.head) item.head.title = tr(lang, "slotHeaderHelp").replace("{label}", item.label);
+      if (item.ta) item.ta.title = tr(lang, "slotPromptHelp");
+      if (item.typeSelect) item.typeSelect.title = tr(lang, "elementTypeHelp");
       if (item.typeLabel) item.typeLabel.textContent = tr(lang, "elementType");
-      if (item.framingSelect) item.framingSelect.title = tr(lang, "framing");
+      if (item.typeLabel) item.typeLabel.title = tr(lang, "elementTypeHelp");
+      if (item.framingSelect) item.framingSelect.title = tr(lang, "framingHelp");
       if (item.framingLabel) item.framingLabel.textContent = tr(lang, "framing");
-      if (item.angleSelect) item.angleSelect.title = tr(lang, "angle");
+      if (item.framingLabel) item.framingLabel.title = tr(lang, "framingHelp");
+      if (item.angleSelect) item.angleSelect.title = tr(lang, "angleHelp");
       if (item.angleLabel) item.angleLabel.textContent = tr(lang, "angle");
+      if (item.angleLabel) item.angleLabel.title = tr(lang, "angleHelp");
       item.ta.placeholder = tr(lang, "enterPrompt").replace("{label}", item.label);
       if (item.del) item.del.title = tr(lang, "clearPrompt");
       if (item.presetLabel) item.presetLabel.textContent = tr(lang, "promptPreset");
@@ -6161,6 +6228,7 @@ function setupPromptNode(node) {
     card.className = "k2cf-slot-card";
     const head = document.createElement("div");
     head.className = "k2cf-slot-head";
+    head.title = tr(resolveLang(promptLangSelect.value), "slotHeaderHelp").replace("{label}", label);
     const left = document.createElement("div");
     left.className = "k2cf-slot-head-left";
     left.innerHTML = `<span class="k2cf-dot" style="background:${color}"></span>${label}`;
@@ -6174,24 +6242,25 @@ function setupPromptNode(node) {
     const ta = document.createElement("textarea");
     ta.className = "k2cf-text";
     ta.placeholder = tr(resolveLang(promptLangSelect.value), "enterPrompt").replace("{label}", label);
+    ta.title = tr(resolveLang(promptLangSelect.value), "slotPromptHelp");
     ta.value = widgets[promptName]?.value || "";
     controls[promptName] = ta;
     k2cfAttachPyssssAutocomplete(ta);
     const typeSelect = document.createElement("select");
     typeSelect.className = "k2cf-type";
-    typeSelect.title = tr(resolveLang(promptLangSelect.value), "elementType");
+    typeSelect.title = tr(resolveLang(promptLangSelect.value), "elementTypeHelp");
     for (const [value, text] of TYPE_OPTIONS) typeSelect.appendChild(option(value, text));
     typeSelect.value = widgets[typeName]?.value || "obj";
     controls[typeName] = typeSelect;
     const framingSelect = document.createElement("select");
     framingSelect.className = "k2cf-framing";
-    framingSelect.title = tr(resolveLang(promptLangSelect.value), "framing");
+    framingSelect.title = tr(resolveLang(promptLangSelect.value), "framingHelp");
     for (const value of FRAMING_OPTIONS) framingSelect.appendChild(option(value, value));
     framingSelect.value = widgets[framingName]?.value || "Auto";
     controls[framingName] = framingSelect;
     const angleSelect = document.createElement("select");
     angleSelect.className = "k2cf-framing";
-    angleSelect.title = tr(resolveLang(promptLangSelect.value), "angle");
+    angleSelect.title = tr(resolveLang(promptLangSelect.value), "angleHelp");
     for (const value of ANGLE_OPTIONS) angleSelect.appendChild(option(value, value));
     angleSelect.value = widgets[angleName]?.value || "Auto";
     controls[angleName] = angleSelect;
@@ -6225,18 +6294,21 @@ function setupPromptNode(node) {
     typeRow.className = "k2cf-presetbar";
     const typeLabel = document.createElement("label");
     typeLabel.textContent = "Type";
+    typeLabel.title = tr(resolveLang(promptLangSelect.value), "elementTypeHelp");
     typeLabel.style.minWidth = "34px";
     typeLabel.style.color = "#ddd";
     const framingRow = document.createElement("div");
     framingRow.className = "k2cf-presetbar";
     const framingLabel = document.createElement("label");
     framingLabel.textContent = "Framing";
+    framingLabel.title = tr(resolveLang(promptLangSelect.value), "framingHelp");
     framingLabel.style.minWidth = "56px";
     framingLabel.style.color = "#ddd";
     const angleRow = document.createElement("div");
     angleRow.className = "k2cf-presetbar";
     const angleLabel = document.createElement("label");
     angleLabel.textContent = "Angle";
+    angleLabel.title = tr(resolveLang(promptLangSelect.value), "angleHelp");
     angleLabel.style.minWidth = "56px";
     angleLabel.style.color = "#ddd";
     typeRow.append(typeLabel, typeSelect);
@@ -6300,6 +6372,7 @@ function setupPromptNode(node) {
     promptLabelHidden.style.display = "none";
     promptCards.push({
       label,
+      head,
       ta,
       typeSelect,
       framingSelect,
