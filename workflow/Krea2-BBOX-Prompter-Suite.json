@@ -1,8 +1,8 @@
 {
   "id": "c7149c69-b1c6-45de-9f79-bdc0bfd7499f",
   "revision": 0,
-  "last_node_id": 144,
-  "last_link_id": 210,
+  "last_node_id": 145,
+  "last_link_id": 211,
   "nodes": [
     {
       "id": 10,
@@ -82,7 +82,7 @@
         {
           "name": "prompt_ui_data",
           "type": "KREA2_ELEMENT_PROMPT_DATA",
-          "link": 194
+          "link": 211
         }
       ],
       "outputs": [
@@ -161,108 +161,6 @@
       ]
     },
     {
-      "id": 131,
-      "type": "Krea2ElementFramingV1Prompt",
-      "pos": [
-        -1180,
-        -180
-      ],
-      "size": [
-        540,
-        990
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "prompt_ui_data",
-          "type": "KREA2_ELEMENT_PROMPT_DATA",
-          "links": [
-            194
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Krea2ElementFramingV1Prompt",
-        "k2cfPromptState": {
-          "version": "v15",
-          "widgets_values": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "obj",
-            "obj",
-            "obj",
-            "obj",
-            "obj",
-            "obj",
-            "{\"version\":\"prompt_ui_element_v1\",\"heightCaptureMode\":\"resize_grip_v29\",\"textHeights\":{\"red_prompt\":169,\"blue_prompt\":147,\"yellow_prompt\":148},\"textHeightManual\":{\"red_prompt\":true,\"blue_prompt\":true,\"yellow_prompt\":true},\"slotOpen\":{\"red\":true,\"blue\":true,\"yellow\":false,\"green\":false,\"magenta\":false},\"scenePreset\":\"\",\"slotPreset\":{\"red\":\"\",\"blue\":\"\",\"yellow\":\"\",\"green\":\"\",\"magenta\":\"\"},\"saved_at\":1782663124466}",
-            "Auto",
-            "Auto",
-            "Auto",
-            "Auto",
-            "Auto"
-          ],
-          "saved_at": 1782663252176
-        },
-        "k2cfPromptUiState": {
-          "version": "prompt_ui_element_v1",
-          "heightCaptureMode": "resize_grip_v29",
-          "textHeights": {
-            "red_prompt": 169,
-            "blue_prompt": 147,
-            "yellow_prompt": 148
-          },
-          "textHeightManual": {
-            "red_prompt": true,
-            "blue_prompt": true,
-            "yellow_prompt": true
-          },
-          "slotOpen": {
-            "red": true,
-            "blue": true,
-            "yellow": false,
-            "green": false,
-            "magenta": false
-          },
-          "scenePreset": "",
-          "slotPreset": {
-            "red": "",
-            "blue": "",
-            "yellow": "",
-            "green": "",
-            "magenta": ""
-          },
-          "saved_at": 1782663124466
-        }
-      },
-      "widgets_values": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "obj",
-        "obj",
-        "obj",
-        "obj",
-        "obj",
-        "obj",
-        "{\"version\":\"prompt_ui_element_v1\",\"heightCaptureMode\":\"resize_grip_v29\",\"textHeights\":{\"red_prompt\":169,\"blue_prompt\":147,\"yellow_prompt\":148},\"textHeightManual\":{\"red_prompt\":true,\"blue_prompt\":true,\"yellow_prompt\":true},\"slotOpen\":{\"red\":true,\"blue\":true,\"yellow\":false,\"green\":false,\"magenta\":false},\"scenePreset\":\"\",\"slotPreset\":{\"red\":\"\",\"blue\":\"\",\"yellow\":\"\",\"green\":\"\",\"magenta\":\"\"},\"saved_at\":1782663124466}",
-        "Auto",
-        "Auto",
-        "Auto",
-        "Auto",
-        "Auto"
-      ]
-    },
-    {
       "id": 132,
       "type": "Krea2ElementFramingV1Canvas",
       "pos": [
@@ -274,7 +172,7 @@
         980
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -301,7 +199,7 @@
             "{\"sets\":[],\"selected\":\"\"}",
             "{\"sets\":[],\"selected\":\"\"}"
           ],
-          "saved_at": 1782663252177
+          "saved_at": 1782996891522
         }
       },
       "widgets_values": [
@@ -314,57 +212,6 @@
         "Auto",
         "{\"sets\":[],\"selected\":\"\"}",
         "{\"sets\":[],\"selected\":\"\"}"
-      ]
-    },
-    {
-      "id": 140,
-      "type": "Krea2BBOXPromptEffect",
-      "pos": [
-        -610,
-        -180
-      ],
-      "size": [
-        570,
-        1000
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "prompt_in",
-          "type": "STRING",
-          "widget": {
-            "name": "prompt_in"
-          },
-          "link": 206
-        }
-      ],
-      "outputs": [
-        {
-          "name": "prompt_out",
-          "type": "STRING",
-          "links": [
-            204
-          ]
-        },
-        {
-          "name": "effect_text",
-          "type": "STRING",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Krea2BBOXPromptEffect"
-      },
-      "widgets_values": [
-        "",
-        true,
-        "Photo",
-        "Realistic Photo",
-        "Preset",
-        "",
-        ""
       ]
     },
     {
@@ -431,7 +278,7 @@
         110
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -512,7 +359,7 @@
         110
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -549,7 +396,7 @@
         70
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -673,6 +520,205 @@
         "Node name for S&R": "ConditioningZeroOut"
       },
       "widgets_values": []
+    },
+    {
+      "id": 145,
+      "type": "Krea2ElementFramingV1Prompt",
+      "pos": [
+        -1180,
+        -180
+      ],
+      "size": [
+        540,
+        990
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "prompt_ui_data",
+          "type": "KREA2_ELEMENT_PROMPT_DATA",
+          "links": [
+            211
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2ElementFramingV1Prompt",
+        "k2cfPromptState": {
+          "version": "v15",
+          "widgets_values": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "obj",
+            "obj",
+            "obj",
+            "obj",
+            "obj",
+            "{\"version\":\"prompt_ui_element_v1\",\"heightCaptureMode\":\"resize_grip_v29\",\"textHeights\":{\"red_prompt\":135,\"blue_prompt\":128,\"yellow_prompt\":131,\"green_prompt\":134,\"magenta_prompt\":132},\"textHeightManual\":{\"red_prompt\":true,\"blue_prompt\":true,\"yellow_prompt\":true,\"green_prompt\":true,\"magenta_prompt\":true},\"slotOpen\":{\"red\":true,\"blue\":true,\"yellow\":false,\"green\":false,\"magenta\":false},\"scenePreset\":\"\",\"slotPreset\":{},\"slotValues\":{\"red\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"blue\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"yellow\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"green\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"magenta\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"}},\"saved_at\":1782996805264}",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto"
+          ],
+          "saved_at": 1782996891523
+        },
+        "k2cfPromptUiState": {
+          "version": "prompt_ui_element_v1",
+          "heightCaptureMode": "resize_grip_v29",
+          "textHeights": {
+            "red_prompt": 135,
+            "blue_prompt": 128,
+            "yellow_prompt": 131,
+            "green_prompt": 134,
+            "magenta_prompt": 132
+          },
+          "textHeightManual": {
+            "red_prompt": true,
+            "blue_prompt": true,
+            "yellow_prompt": true,
+            "green_prompt": true,
+            "magenta_prompt": true
+          },
+          "slotOpen": {
+            "red": true,
+            "blue": true,
+            "yellow": false,
+            "green": false,
+            "magenta": false
+          },
+          "scenePreset": "",
+          "slotPreset": {},
+          "slotValues": {
+            "red": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            },
+            "blue": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            },
+            "yellow": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            },
+            "green": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            },
+            "magenta": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            }
+          },
+          "saved_at": 1782996805264
+        }
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "obj",
+        "obj",
+        "obj",
+        "obj",
+        "obj",
+        "{\"version\":\"prompt_ui_element_v1\",\"heightCaptureMode\":\"resize_grip_v29\",\"textHeights\":{\"red_prompt\":135,\"blue_prompt\":128,\"yellow_prompt\":131,\"green_prompt\":134,\"magenta_prompt\":132},\"textHeightManual\":{\"red_prompt\":true,\"blue_prompt\":true,\"yellow_prompt\":true,\"green_prompt\":true,\"magenta_prompt\":true},\"slotOpen\":{\"red\":true,\"blue\":true,\"yellow\":false,\"green\":false,\"magenta\":false},\"scenePreset\":\"\",\"slotPreset\":{},\"slotValues\":{\"red\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"blue\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"yellow\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"green\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"magenta\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"}},\"saved_at\":1782996805264}",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto"
+      ]
+    },
+    {
+      "id": 140,
+      "type": "Krea2BBOXPromptEffect",
+      "pos": [
+        -610,
+        -180
+      ],
+      "size": [
+        570,
+        1000
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt_in",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt_in"
+          },
+          "link": 206
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt_out",
+          "type": "STRING",
+          "links": [
+            204
+          ]
+        },
+        {
+          "name": "effect_text",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2BBOXPromptEffect",
+        "k2cfEffectState": {
+          "version": "v15",
+          "widgets_values": [
+            "",
+            true,
+            "All",
+            "Realistic Photo",
+            "Preset",
+            ""
+          ],
+          "saved_at": 1782996891523
+        }
+      },
+      "widgets_values": [
+        "",
+        true,
+        "All",
+        "Realistic Photo",
+        "Preset",
+        ""
+      ]
     }
   ],
   "links": [
@@ -749,14 +795,6 @@
       "KREA2_ELEMENT_FRAMING_DATA"
     ],
     [
-      194,
-      131,
-      0,
-      134,
-      1,
-      "KREA2_ELEMENT_PROMPT_DATA"
-    ],
-    [
       197,
       134,
       1,
@@ -795,6 +833,14 @@
       2,
       0,
       "MODEL"
+    ],
+    [
+      211,
+      145,
+      0,
+      134,
+      1,
+      "KREA2_ELEMENT_PROMPT_DATA"
     ]
   ],
   "groups": [
@@ -814,10 +860,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5566773162939527,
+      "scale": 0.612345047923348,
       "offset": [
-        3203.5097682134447,
-        650.7601304170423
+        3172.4170271813273,
+        475.18314455602757
       ]
     },
     "workflow_notes": "Native ComfyUI 0.25.0+ Krea2 workflow. Uses official CLIPLoader/UNETLoader nodes. Requires 3 model files (see Note node).",
