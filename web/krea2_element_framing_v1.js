@@ -3674,7 +3674,7 @@ function k2cfLooksLikePromptUiState(value) {
 }
 
 function k2cfDefaultTextHeightForKey(key) {
-  return key === "scene" ? 125 : 76;
+  return key === "scene" ? 125 : 210;
 }
 
 function k2cfMaxPromptTextHeightForKey(key) {
@@ -4371,7 +4371,7 @@ function ensureStyle() {
     .k2cf-slot-card.collapsed .k2cf-slot-body{display:none}
     .k2cf-slot-card.collapsed{padding-bottom:6px}
     .k2cf-dot{display:inline-block;width:11px;height:11px;border-radius:99px;margin-right:7px}
-    .k2cf-text{width:100%;min-height:76px;resize:vertical;background:#151515;color:#eee;border:1px solid #3f3f3f;border-radius:5px;padding:8px;box-sizing:border-box;font:12px monospace}
+    .k2cf-text{width:100%;min-height:210px;resize:vertical;background:#151515;color:#eee;border:1px solid #3f3f3f;border-radius:5px;padding:8px;box-sizing:border-box;font:12px monospace}
     .k2cf-scene .k2cf-text{min-height:125px}
     .k2cf-slot-body{display:grid;grid-template-columns:1fr 132px;gap:8px;align-items:start}
     .k2cf-slot-side{display:flex;flex-direction:column;gap:7px;align-items:stretch}
