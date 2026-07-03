@@ -14,6 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
+- 2026-07-04: Added a `Copy to Custom` workflow for editing built-in Prompt Effect text safely without modifying the built-in presets.
 - 2026-07-04: Added B&W Glow / Anime in Photo updates and a note about avoiding strong color instructions when using monochrome effects.
 - 2026-07-02: Added Glow Portrait, improved Custom preset save/overwrite handling, and enabled ComfyUI-Custom-Scripts autocomplete inside internal Pbox prompt fields when available.
 - 2026-07-01: Updated the README with a first-time user guide and BBOX Export defaults. Prompt Effect now has a taller copyable prompt preview and additional tooltips.
@@ -314,6 +315,8 @@ Use `prompt_out` for normal generation. `effect_text` is for compatibility and i
 ### Custom Effect User Presets
 
 When the `Custom` category is selected, you can save your own Prompt Effect text as a user preset.
+
+Built-in presets are kept read-only because directly editing them could make updates harder to manage or accidentally overwrite the original preset behavior. If you want to adjust a built-in preset, select it first, use `Copy to Custom`, edit the copied text, and save it as your own Custom preset. This is useful when you want to remove unwanted words such as `character`, `girl`, or image-quality phrases that do not fit your target image.
 
 User presets are saved locally here:
 
@@ -1244,6 +1247,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
+- 2026-07-04：組み込みPrompt Effectを壊さず編集版を作れるように、`Copy to Custom` の使い方を追加しました。
 - 2026-07-04：B&W Glow / Anime in Photo関連の更新と、モノクロ系エフェクト使用時の色指定に関する注意を追加しました。
 - 2026-07-02：Glow Portraitを追加。Custom presetの保存・上書き確認を改善し、ComfyUI-Custom-Scriptsがある環境ではPbox内部プロンプト欄でもAutoCompleteを使えるようにしました。
 - 2026-07-01：READMEに初回ユーザー向けガイドとBBOX Exportの推奨設定を追加。Prompt Effectのコピー可能なプロンプト表示欄を広げ、ツールチップを追加しました。
@@ -1544,6 +1548,8 @@ effect_text
 ### Custom Effectのユーザープリセット
 
 `Custom` カテゴリを選択すると、自分で書いたPrompt Effect文をユーザープリセットとして保存できます。
+
+組み込みプリセットを直接編集できるようにすると、アップデート時に元のプリセットが上書きされたり、どれが標準でどれがユーザー編集版なのか分かりにくくなる可能性があります。既存プリセットを調整したい場合は、先にプリセットを選択し、`Copy to Custom` でCustom欄へコピーしてから編集し、自分用プリセットとして保存してください。`character`、`girl`、画質強調系の語句など、目的に合わない単語を外したい場合に使えます。
 
 保存先はローカルの以下のファイルです。
 

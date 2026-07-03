@@ -4213,6 +4213,9 @@ function setupEffectNode(node) {
   customPresetLabel.title = "Local Custom presets are stored in user_presets.";
   const customPresetSelect = document.createElement("select");
   customPresetSelect.title = "Choose a saved local Custom effect preset.";
+  const customCopy = document.createElement("button");
+  customCopy.textContent = "Copy to Custom";
+  customCopy.title = "Copy the selected built-in preset prompt into Custom so you can edit and save your own version.";
   const customSave = document.createElement("button");
   customSave.textContent = "Save";
   customSave.title = "Save the current Custom effect prompt to local user_presets JSON.";
@@ -4222,7 +4225,7 @@ function setupEffectNode(node) {
   const customDelete = document.createElement("button");
   customDelete.textContent = "Delete";
   customDelete.title = "Delete the selected Custom effect preset from local user_presets JSON.";
-  customPresetBar.append(customPresetLabel, customPresetSelect, customSave, customLoad, customDelete);
+  customPresetBar.append(customPresetLabel, customPresetSelect, customCopy, customSave, customLoad, customDelete);
   let customEffectPresets = [];
 
   const preview = document.createElement("textarea");
@@ -4446,6 +4449,12 @@ function setupEffectNode(node) {
     render();
     sync();
   }
+  function copySelectedPresetToCustom() {
+    const preset = EFFECT_PRESETS.find((p) => p.name === selectedPreset());
+    if (!preset?.text) return;
+    custom.value = preset.text;
+    selectCustom();
+  }
   function renderTabs() {
     tabs.innerHTML = "";
     for (const cat of EFFECT_CATEGORIES) {
@@ -4517,6 +4526,7 @@ function setupEffectNode(node) {
   sizeSlider.addEventListener("input", () => applyThumbSize(sizeSlider.value));
   custom.addEventListener("input", sync);
   custom.addEventListener("change", sync);
+  customCopy.addEventListener("click", copySelectedPresetToCustom);
   customLoad.addEventListener("click", () => {
     const found = customEffectPresets.find((p) => p.name === customPresetSelect.value);
     if (!found) return;
