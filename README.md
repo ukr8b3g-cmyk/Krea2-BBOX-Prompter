@@ -14,6 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
+- 2026-07-04: Added a new Weather category with photorealistic outdoor scenery presets and GPT-generated WebP thumbnails.
 - 2026-07-04: Added a `Copy to Custom` workflow for editing built-in Prompt Effect text safely without modifying the built-in presets.
 - 2026-07-04: Added B&W Glow / Anime in Photo updates and a note about avoiding strong color instructions when using monochrome effects.
 - 2026-07-02: Added Glow Portrait, improved Custom preset save/overwrite handling, and enabled ComfyUI-Custom-Scripts autocomplete inside internal Pbox prompt fields when available.
@@ -846,6 +847,22 @@ Neon Night
 Cyberpunk
 ```
 
+## Weather
+
+```text
+Clear Sky
+Cloudy
+Rainy
+Heavy Rain
+After Rain
+Foggy
+Snowy
+Stormy
+Heat Haze
+```
+
+Weather presets are tuned for photorealistic outdoor scenery and natural atmosphere. They affect sky, air, visibility, wet surfaces, snow, storm mood, and heat shimmer rather than light direction alone.
+
 ## Mood
 
 ```text
@@ -1247,6 +1264,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
+- 2026-07-04：実写系の屋外シーン向けに、WeatherカテゴリとGPT生成WebPサムネイルを追加しました。
 - 2026-07-04：組み込みPrompt Effectを壊さず編集版を作れるように、`Copy to Custom` の使い方を追加しました。
 - 2026-07-04：B&W Glow / Anime in Photo関連の更新と、モノクロ系エフェクト使用時の色指定に関する注意を追加しました。
 - 2026-07-02：Glow Portraitを追加。Custom presetの保存・上書き確認を改善し、ComfyUI-Custom-Scriptsがある環境ではPbox内部プロンプト欄でもAutoCompleteを使えるようにしました。
@@ -2098,6 +2116,22 @@ Cyberpunk
 ```
 
 光の印象に加えて、光源位置、太陽の高さ、影の長さ、木漏れ日、窓影などを指定したい時に使います。
+
+## Weather系
+
+```text
+Clear Sky
+Cloudy
+Rainy
+Heavy Rain
+After Rain
+Foggy
+Snowy
+Stormy
+Heat Haze
+```
+
+実写系の屋外シーン向けです。空、空気感、視界、濡れた路面、雪、嵐、陽炎などを変えたい時に使います。Light系とは分けて、天候や大気の状態を指定するカテゴリです。
 
 ## Mood系
 

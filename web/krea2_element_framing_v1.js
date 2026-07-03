@@ -485,6 +485,78 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "neon night lighting, colorful urban glow, reflective highlights, cinematic contrast, atmospheric background glow"
   },
   {
+    "name": "Clear Sky",
+    "category": "Weather",
+    "chip": "Clear",
+    "tone": "weather",
+    "thumbnail": "clear_sky.webp",
+    "text": "clear sky weather, clean blue sky, crisp visibility, calm daylight, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Cloudy",
+    "category": "Weather",
+    "chip": "Cloud",
+    "tone": "weather",
+    "thumbnail": "cloudy.webp",
+    "text": "cloudy weather, overcast sky, soft diffused daylight, muted shadows, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Rainy",
+    "category": "Weather",
+    "chip": "Rain",
+    "tone": "weather",
+    "thumbnail": "rainy.webp",
+    "text": "rainy weather, wet surfaces, soft reflections, visible raindrops, damp atmosphere, overcast daylight, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Heavy Rain",
+    "category": "Weather",
+    "chip": "Heavy",
+    "tone": "weather",
+    "thumbnail": "heavy_rain.webp",
+    "text": "heavy rain, strong wet atmosphere, visible rain streaks, glossy wet ground, low visibility, photorealistic outdoor scenery, realistic natural weather mood"
+  },
+  {
+    "name": "After Rain",
+    "category": "Weather",
+    "chip": "After",
+    "tone": "weather",
+    "thumbnail": "after_rain.webp",
+    "text": "after-rain atmosphere, wet pavement, fresh air, soft reflections, clearing sky, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Foggy",
+    "category": "Weather",
+    "chip": "Fog",
+    "tone": "weather",
+    "thumbnail": "foggy.webp",
+    "text": "foggy weather, misty air, low contrast distance, reduced visibility, atmospheric depth, photorealistic outdoor scenery, realistic natural haze"
+  },
+  {
+    "name": "Snowy",
+    "category": "Weather",
+    "chip": "Snow",
+    "tone": "weather",
+    "thumbnail": "snowy.webp",
+    "text": "snowy weather, falling snow, cold air, snow-covered ground, soft winter light, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Stormy",
+    "category": "Weather",
+    "chip": "Storm",
+    "tone": "weather",
+    "thumbnail": "stormy.webp",
+    "text": "stormy weather, dark clouds, dramatic sky, strong wind mood, tense atmosphere, photorealistic outdoor scenery, realistic natural lighting"
+  },
+  {
+    "name": "Heat Haze",
+    "category": "Weather",
+    "chip": "Heat",
+    "tone": "weather",
+    "thumbnail": "heat_haze.webp",
+    "text": "heat haze, shimmering hot air, dry atmosphere, harsh sunlight, washed distant contrast, photorealistic outdoor scenery, realistic summer heat mood"
+  },
+  {
     "name": "Product Photo",
     "category": "Photo",
     "chip": "Product",
@@ -1820,6 +1892,78 @@ const EFFECT_PRESETS = [
     "text": "neon night lighting, colorful urban glow, reflective highlights, cinematic contrast, atmospheric background glow"
   },
   {
+    "name": "Clear Sky",
+    "category": "Weather",
+    "chip": "Clear",
+    "tone": "weather",
+    "thumbnail": "clear_sky.webp",
+    "text": "clear sky weather, clean blue sky, crisp visibility, calm daylight, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Cloudy",
+    "category": "Weather",
+    "chip": "Cloud",
+    "tone": "weather",
+    "thumbnail": "cloudy.webp",
+    "text": "cloudy weather, overcast sky, soft diffused daylight, muted shadows, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Rainy",
+    "category": "Weather",
+    "chip": "Rain",
+    "tone": "weather",
+    "thumbnail": "rainy.webp",
+    "text": "rainy weather, wet surfaces, soft reflections, visible raindrops, damp atmosphere, overcast daylight, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Heavy Rain",
+    "category": "Weather",
+    "chip": "Heavy",
+    "tone": "weather",
+    "thumbnail": "heavy_rain.webp",
+    "text": "heavy rain, strong wet atmosphere, visible rain streaks, glossy wet ground, low visibility, photorealistic outdoor scenery, realistic natural weather mood"
+  },
+  {
+    "name": "After Rain",
+    "category": "Weather",
+    "chip": "After",
+    "tone": "weather",
+    "thumbnail": "after_rain.webp",
+    "text": "after-rain atmosphere, wet pavement, fresh air, soft reflections, clearing sky, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Foggy",
+    "category": "Weather",
+    "chip": "Fog",
+    "tone": "weather",
+    "thumbnail": "foggy.webp",
+    "text": "foggy weather, misty air, low contrast distance, reduced visibility, atmospheric depth, photorealistic outdoor scenery, realistic natural haze"
+  },
+  {
+    "name": "Snowy",
+    "category": "Weather",
+    "chip": "Snow",
+    "tone": "weather",
+    "thumbnail": "snowy.webp",
+    "text": "snowy weather, falling snow, cold air, snow-covered ground, soft winter light, photorealistic outdoor scenery, realistic natural atmosphere"
+  },
+  {
+    "name": "Stormy",
+    "category": "Weather",
+    "chip": "Storm",
+    "tone": "weather",
+    "thumbnail": "stormy.webp",
+    "text": "stormy weather, dark clouds, dramatic sky, strong wind mood, tense atmosphere, photorealistic outdoor scenery, realistic natural lighting"
+  },
+  {
+    "name": "Heat Haze",
+    "category": "Weather",
+    "chip": "Heat",
+    "tone": "weather",
+    "thumbnail": "heat_haze.webp",
+    "text": "heat haze, shimmering hot air, dry atmosphere, harsh sunlight, washed distant contrast, photorealistic outdoor scenery, realistic summer heat mood"
+  },
+  {
     "name": "Product Photo",
     "category": "Photo",
     "chip": "Product",
@@ -2648,7 +2792,7 @@ const EFFECT_PRESETS = [
     "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
   }
   ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 function k2fxUniqueList(values) {
   return Array.from(new Set(values.filter(Boolean)));
