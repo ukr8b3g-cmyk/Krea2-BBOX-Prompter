@@ -14,9 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
-- 2026-07-04: Added a new Weather category with photorealistic outdoor scenery presets and GPT-generated WebP thumbnails.
-- 2026-07-04: Added a `Copy to Custom` workflow for editing built-in Prompt Effect text safely without modifying the built-in presets.
-- 2026-07-04: Added B&W Glow / Anime in Photo updates and a note about avoiding strong color instructions when using monochrome effects.
+- 2026-07-04: Added Weather presets with GPT-generated WebP thumbnails, Copy to Custom workflow, B&W Glow / Anime in Photo updates, and monochrome prompt guidance.
 - 2026-07-02: Added Glow Portrait, improved Custom preset save/overwrite handling, and enabled ComfyUI-Custom-Scripts autocomplete inside internal Pbox prompt fields when available.
 - 2026-07-01: Updated the README with a first-time user guide and BBOX Export defaults. Prompt Effect now has a taller copyable prompt preview and additional tooltips.
 
@@ -1264,9 +1262,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
-- 2026-07-04：実写系の屋外シーン向けに、WeatherカテゴリとGPT生成WebPサムネイルを追加しました。
-- 2026-07-04：組み込みPrompt Effectを壊さず編集版を作れるように、`Copy to Custom` の使い方を追加しました。
-- 2026-07-04：B&W Glow / Anime in Photo関連の更新と、モノクロ系エフェクト使用時の色指定に関する注意を追加しました。
+- 2026-07-04：WeatherカテゴリとGPT生成WebPサムネイル、`Copy to Custom`、B&W Glow / Anime in Photo関連、モノクロ系エフェクトの注意、日本語ユーザー向け補助ノードへのリンクを追加しました。
 - 2026-07-02：Glow Portraitを追加。Custom presetの保存・上書き確認を改善し、ComfyUI-Custom-Scriptsがある環境ではPbox内部プロンプト欄でもAutoCompleteを使えるようにしました。
 - 2026-07-01：READMEに初回ユーザー向けガイドとBBOX Exportの推奨設定を追加。Prompt Effectのコピー可能なプロンプト表示欄を広げ、ツールチップを追加しました。
 
@@ -1330,6 +1326,16 @@ Ctrl + F5
 - `Prompt Effect`: Export後のプロンプトに、写真、光、色、仕上げ、SNS、ムード系の効果テキストを追加します。
 
 BBOXは厳密なマスクではなく、配置のヒントです。2つ使う場合は、強く重ねず、役割を分ける方が安定します。
+
+---
+
+## 日本語タグ入力の補助
+
+日本語でタグ候補や英語タグの意味を確認しながらプロンプトを書きたい場合は、別ノードの [Danbooru Tag JP Assist](https://github.com/ukr8b3g-cmyk/Danbooru-Tag-JP-Assist) も併用できます。
+
+この補助ノードは、Danbooru系タグや自然言語タグの候補表示、日本語訳・別名表示、タグ入力支援を目的としたComfyUI用の補助ツールです。Krea2 BBOX Prompter本体とは別ノードですが、BBOX内のプロンプトや通常のテキスト入力を補助する用途で使えます。
+
+最大の特徴は `All` モードです。複数のタグファイルや翻訳ファイルを、基本的に重複を抑えながらまとめて読み込み、ひとつの候補リストとして使えます。現在はベータ機能として扱ってください。
 
 ---
 
