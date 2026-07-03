@@ -9,8 +9,8 @@ function k2cfLoadPyssssAutocomplete() {
   if (!k2cfPyssssAutocompletePromise) {
     const urls = [
       "/extensions/comfyui-custom-scripts/js/common/autocomplete.js",
-      "/extensions/ComfyUI-Custom-Scripts/js/common/autocomplete.js",
-    ];
+      "/extensions/ComfyUI-Custom-Scripts/js/common/autocomplete.js"
+  ];
     k2cfPyssssAutocompletePromise = urls.reduce(
       (promise, url) => promise.catch(() => import(url)),
       Promise.reject()
@@ -79,7 +79,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "category": "Photo",
     "chip": "Glow",
     "tone": "portrait",
-    "text": "dreamy photographic atmosphere, soft milky cream palette, soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, luminous soft glow, soft radiant highlights, airy subtle haze, gentle bloom effect, calm realistic emotional mood"
+    "text": "dreamy photographic atmosphere, soft milky cream palette, soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, luminous soft glow, soft radiant highlights, airy subtle haze, gentle bloom effect, calm realistic emotional mood, flash, illuminated subject, crisp catchlight,"
   },
   {
     "name": "B&W Soft",
@@ -87,6 +87,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "B&W Soft",
     "tone": "bw",
     "text": "soft black and white photography, monochrome grayscale tones, no color, gentle contrast, soft film grain, natural skin texture"
+  },
+  {
+    "name": "B&W Glow",
+    "category": "Photo",
+    "chip": "B&W Glow",
+    "tone": "bw",
+    "thumbnail": "bandw_glow.webp",
+    "text": "pure black and white glow portrait, monochrome grayscale photography, no color, soft monochrome tones, luminous soft glow, flash, illuminated subject, crisp catchlight, bright gentle highlights, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, airy subtle haze, calm realistic emotional mood"
   },
   {
     "name": "B&W Strong",
@@ -270,6 +278,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "iPhone-style photo, natural phone camera look, realistic exposure, casual framing, sharp details, authentic everyday snapshot"
   },
   {
+    "name": "Flip Phone",
+    "category": "Camera FX",
+    "chip": "Flip",
+    "tone": "camera-fx",
+    "thumbnail": "flip_phone.webp",
+    "text": "flip phone camera photo, early 2000s low-resolution mobile snapshot, tiny sensor noise, JPEG compression artifacts, chroma noise, soft blur, mild defocus, imperfect focus, low contrast, muted colors, slight color shift, uneven white balance, casual accidental snapshot feel"
+  },
+  {
     "name": "Tilt-Shift",
     "category": "Camera FX",
     "chip": "Tilt",
@@ -439,38 +455,6 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
   "thumbnail": "overhead_sun.webp",
   "text": "overhead sun, high midday sunlight, short crisp shadows, bright clear daylight, realistic outdoor light behavior"
 },
-{
-  "name": "Long Shadow",
-  "category": "Light",
-  "chip": "Long",
-  "tone": "lighting",
-  "thumbnail": "long_shadow.webp",
-  "text": "long shadows, low-angle sunlight, extended shadow shapes across the ground, warm directional light, realistic scene depth"
-},
-{
-  "name": "Overcast",
-  "category": "Light",
-  "chip": "Cloud",
-  "tone": "lighting",
-  "thumbnail": "overcast.webp",
-  "text": "overcast light, soft diffused sky illumination, low contrast natural shadows, even realistic daylight, calm muted atmosphere"
-},
-{
-  "name": "Dappled Light",
-  "category": "Light",
-  "chip": "Dap",
-  "tone": "lighting",
-  "thumbnail": "dappled_light.webp",
-  "text": "dappled sunlight, scattered patches of light and shade, tree-filtered natural light, realistic outdoor shadow pattern"
-},
-{
-  "name": "Window Shadow",
-  "category": "Light",
-  "chip": "Win",
-  "tone": "lighting",
-  "thumbnail": "window_shadow.webp",
-  "text": "window light and shadow, sunlight entering through a window, rectangular shadow pattern, realistic indoor light behavior"
-},
   {
     "name": "Light Rays",
     "category": "Light",
@@ -499,13 +483,6 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Neon",
     "tone": "lighting",
     "text": "neon night lighting, colorful urban glow, reflective highlights, cinematic contrast, atmospheric background glow"
-  },
-  {
-    "name": "Cyberpunk",
-    "category": "Light",
-    "chip": "Cyber",
-    "tone": "lighting",
-    "text": "cyberpunk night photography mood, neon lights, futuristic city atmosphere, realistic urban texture, high contrast, saturated reflections, cinematic moody lighting"
   },
   {
     "name": "Product Photo",
@@ -555,6 +532,14 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "chip": "Anime",
     "tone": "illustration",
     "text": "soft anime illustration, gentle lighting, delicate line art, pastel color palette, smooth shading, calm atmosphere"
+  },
+  {
+    "name": "Anime in Photo",
+    "category": "Art",
+    "chip": "A+Photo",
+    "tone": "illustration",
+    "thumbnail": "anime_in_photo.webp",
+    "text": "anime-style character in a realistic photographic background, illustrated character with clean anime features, real-world photo environment, natural photographic lighting, realistic depth and perspective, believable scene integration, clear contrast between animated subject and real background"
   },
   {
     "name": "Manga B&W",
@@ -1056,22 +1041,6 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "bright color theme, high-key luminous palette, clean bright color grading, airy atmosphere"
   },
   {
-    "name": "Soft Theme",
-    "category": "Color Theme",
-    "chip": "Soft",
-    "tone": "color-theme",
-    "thumbnail": "soft_theme.webp",
-    "text": "soft color theme, gentle low-contrast palette, smooth soft color grading, calm delicate atmosphere"
-  },
-  {
-    "name": "Vivid Theme",
-    "category": "Color Theme",
-    "chip": "Vivid",
-    "tone": "color-theme",
-    "thumbnail": "vivid_theme.webp",
-    "text": "vivid color theme, highly saturated palette, bold color grading, energetic visual impact"
-  },
-  {
     "name": "Earth Theme",
     "category": "Color Theme",
     "chip": "Earth",
@@ -1088,260 +1057,12 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "text": "cream color theme, soft cream palette, warm gentle color grading, light elegant atmosphere"
   },
   {
-    "name": "Lavender Theme",
-    "category": "Color Theme",
-    "chip": "Lavender",
-    "tone": "color-theme",
-    "thumbnail": "lavender_theme.webp",
-    "text": "lavender color theme, soft lavender palette, gentle violet color grading, dreamy calm atmosphere"
-  },
-  {
-    "name": "Mint Theme",
-    "category": "Color Theme",
-    "chip": "Mint",
-    "tone": "color-theme",
-    "thumbnail": "mint_theme.webp",
-    "text": "mint color theme, fresh mint palette, light green-blue color grading, clean airy atmosphere"
-  },
-  {
-    "name": "Peach Theme",
-    "category": "Color Theme",
-    "chip": "Peach",
-    "tone": "color-theme",
-    "thumbnail": "peach_theme.webp",
-    "text": "peach color theme, soft peach palette, warm delicate color grading, friendly gentle atmosphere"
-  },
-  {
-    "name": "Rose Theme",
-    "category": "Color Theme",
-    "chip": "Rose",
-    "tone": "color-theme",
-    "thumbnail": "rose_theme.webp",
-    "text": "rose color theme, romantic rose palette, soft red-pink color grading, elegant warm atmosphere"
-  },
-  {
-    "name": "Aqua Theme",
-    "category": "Color Theme",
-    "chip": "Aqua",
-    "tone": "color-theme",
-    "thumbnail": "aqua_theme.webp",
-    "text": "aqua color theme, clear aqua palette, fresh watery color grading, bright clean atmosphere"
-  },
-  {
-    "name": "Pastel Pink",
-    "category": "Color Theme",
-    "chip": "PP",
-    "tone": "color-theme",
-    "thumbnail": "pastel_pink.webp",
-    "text": "pastel pink color theme, very soft pink palette, gentle rosy color grading, airy delicate mood"
-  },
-  {
-    "name": "Pastel Blue",
-    "category": "Color Theme",
-    "chip": "PB",
-    "tone": "color-theme",
-    "thumbnail": "pastel_blue.webp",
-    "text": "pastel blue color theme, very soft blue palette, gentle cool color grading, calm airy mood"
-  },
-  {
-    "name": "Pastel Purple",
-    "category": "Color Theme",
-    "chip": "PP",
-    "tone": "color-theme",
-    "thumbnail": "pastel_purple.webp",
-    "text": "pastel purple color theme, very soft violet palette, delicate dreamy color grading, gentle atmosphere"
-  },
-  {
-    "name": "Pastel Green",
-    "category": "Color Theme",
-    "chip": "PG",
-    "tone": "color-theme",
-    "thumbnail": "pastel_green.webp",
-    "text": "pastel green color theme, very soft green palette, fresh gentle color grading, light natural mood"
-  },
-  {
-    "name": "Pastel Yellow",
-    "category": "Color Theme",
-    "chip": "PY",
-    "tone": "color-theme",
-    "thumbnail": "pastel_yellow.webp",
-    "text": "pastel yellow color theme, very soft yellow palette, light sunny color grading, cheerful gentle mood"
-  },
-  {
-    "name": "Pastel Orange",
-    "category": "Color Theme",
-    "chip": "PO",
-    "tone": "color-theme",
-    "thumbnail": "pastel_orange.webp",
-    "text": "pastel orange color theme, very soft orange palette, warm gentle color grading, cozy light mood"
-  },
-  {
-    "name": "Pastel Mint",
-    "category": "Color Theme",
-    "chip": "PM",
-    "tone": "color-theme",
-    "thumbnail": "pastel_mint.webp",
-    "text": "pastel mint color theme, soft mint palette, clean fresh color grading, light airy atmosphere"
-  },
-  {
-    "name": "Pastel Lavender",
-    "category": "Color Theme",
-    "chip": "PL",
-    "tone": "color-theme",
-    "thumbnail": "pastel_lavender.webp",
-    "text": "pastel lavender color theme, soft lavender palette, delicate violet color grading, dreamy airy mood"
-  },
-  {
-    "name": "Pastel Peach",
-    "category": "Color Theme",
-    "chip": "PP",
-    "tone": "color-theme",
-    "thumbnail": "pastel_peach.webp",
-    "text": "pastel peach color theme, soft peach palette, warm gentle color grading, delicate friendly mood"
-  },
-  {
-    "name": "Pastel Rose",
-    "category": "Color Theme",
-    "chip": "PR",
-    "tone": "color-theme",
-    "thumbnail": "pastel_rose.webp",
-    "text": "pastel rose color theme, soft rose palette, gentle romantic color grading, airy elegant mood"
-  },
-  {
-    "name": "Pastel Aqua",
-    "category": "Color Theme",
-    "chip": "PA",
-    "tone": "color-theme",
-    "thumbnail": "pastel_aqua.webp",
-    "text": "pastel aqua color theme, soft aqua palette, clean watery color grading, light refreshing mood"
-  },
-  {
-    "name": "Pastel Cream",
-    "category": "Color Theme",
-    "chip": "PC",
-    "tone": "color-theme",
-    "thumbnail": "pastel_cream.webp",
-    "text": "pastel cream color theme, soft cream palette, warm light color grading, gentle elegant mood"
-  },
-  {
     "name": "Black & White",
     "category": "Color Theme",
     "chip": "B&W",
     "tone": "color-theme",
     "thumbnail": "black_white.webp",
     "text": "black and white color theme, pure monochrome palette, strong tonal contrast, clean graphic color grading"
-  },
-  {
-    "name": "Red & Blue",
-    "category": "Color Theme",
-    "chip": "R&B",
-    "tone": "color-theme",
-    "thumbnail": "red_blue.webp",
-    "text": "red and blue color theme, bold dual-color palette, strong warm-cool contrast, dynamic color grading"
-  },
-  {
-    "name": "Pink & Blue",
-    "category": "Color Theme",
-    "chip": "P&B",
-    "tone": "color-theme",
-    "thumbnail": "pink_blue.webp",
-    "text": "pink and blue color theme, playful dual-color palette, soft warm-cool contrast, vibrant color harmony"
-  },
-  {
-    "name": "Purple & Cyan",
-    "category": "Color Theme",
-    "chip": "P&C",
-    "tone": "color-theme",
-    "thumbnail": "purple_cyan.webp",
-    "text": "purple and cyan color theme, vivid dual-color palette, electric cool contrast, futuristic color grading"
-  },
-  {
-    "name": "Orange & Teal",
-    "category": "Color Theme",
-    "chip": "O&T",
-    "tone": "color-theme",
-    "thumbnail": "orange_teal.webp",
-    "text": "orange and teal color theme, cinematic complementary palette, warm-cool contrast, polished color grading"
-  },
-  {
-    "name": "Yellow & Purple",
-    "category": "Color Theme",
-    "chip": "Y&P",
-    "tone": "color-theme",
-    "thumbnail": "yellow_purple.webp",
-    "text": "yellow and purple color theme, bold complementary palette, playful contrast, vivid graphic atmosphere"
-  },
-  {
-    "name": "Green & Magenta",
-    "category": "Color Theme",
-    "chip": "G&M",
-    "tone": "color-theme",
-    "thumbnail": "green_magenta.webp",
-    "text": "green and magenta color theme, high-contrast complementary palette, energetic stylized color grading"
-  },
-  {
-    "name": "Black & Red",
-    "category": "Color Theme",
-    "chip": "B&R",
-    "tone": "color-theme",
-    "thumbnail": "black_red.webp",
-    "text": "black and red color theme, dark dramatic palette, intense red accents, bold high-contrast atmosphere"
-  },
-  {
-    "name": "Black & Gold",
-    "category": "Color Theme",
-    "chip": "B&G",
-    "tone": "color-theme",
-    "thumbnail": "black_gold.webp",
-    "text": "black and gold color theme, luxury dark palette, golden highlights, premium dramatic color grading"
-  },
-  {
-    "name": "White & Blue",
-    "category": "Color Theme",
-    "chip": "W&B",
-    "tone": "color-theme",
-    "thumbnail": "white_blue.webp",
-    "text": "white and blue color theme, clean bright palette, crisp blue accents, fresh minimal color grading"
-  },
-  {
-    "name": "Pastel Pink & Blue",
-    "category": "Color Theme",
-    "chip": "P&B",
-    "tone": "color-theme",
-    "thumbnail": "pastel_pink_blue.webp",
-    "text": "pastel pink and blue color theme, soft dual pastel palette, gentle warm-cool balance, airy atmosphere"
-  },
-  {
-    "name": "Pastel Mint & Lavender",
-    "category": "Color Theme",
-    "chip": "P&L",
-    "tone": "color-theme",
-    "thumbnail": "pastel_mint_lavender.webp",
-    "text": "pastel mint and lavender color theme, soft dreamy dual palette, fresh delicate color harmony"
-  },
-  {
-    "name": "Pastel Peach & Cream",
-    "category": "Color Theme",
-    "chip": "P&C",
-    "tone": "color-theme",
-    "thumbnail": "pastel_peach_cream.webp",
-    "text": "pastel peach and cream color theme, warm soft dual palette, cozy gentle color grading"
-  },
-  {
-    "name": "Pastel Yellow & Green",
-    "category": "Color Theme",
-    "chip": "P&G",
-    "tone": "color-theme",
-    "thumbnail": "pastel_yellow_green.webp",
-    "text": "pastel yellow and green color theme, soft sunny natural palette, fresh cheerful color grading"
-  },
-  {
-    "name": "Pastel Aqua & Pink",
-    "category": "Color Theme",
-    "chip": "P&P",
-    "tone": "color-theme",
-    "thumbnail": "pastel_aqua_pink.webp",
-    "text": "pastel aqua and pink color theme, soft playful dual palette, fresh rosy color harmony"
   },
   {
     "name": "Crazy Color",
@@ -1590,46 +1311,6 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
     "tone": "color-theme",
     "thumbnail": "heterochromia_eyes.webp",
     "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
-  },,
-  {
-    "name": "Insta Feed",
-    "category": "SNS",
-    "chip": "Insta",
-    "tone": "sns",
-    "thumbnail": "insta_feed.webp",
-    "text": "photorealistic instagram-style lifestyle photo, clean composition, bright natural light, polished color grading, slightly vibrant colors, casual modern mood, social media feed aesthetic"
-  },
-  {
-    "name": "TikTok",
-    "category": "SNS",
-    "chip": "TikTok",
-    "tone": "sns",
-    "thumbnail": "tiktok.webp",
-    "text": "photorealistic tiktok-style short video frame, energetic composition, bold colors, high contrast, trendy social media look, dynamic pose, lively casual atmosphere"
-  },
-  {
-    "name": "YT Thumb",
-    "category": "SNS",
-    "chip": "YT",
-    "tone": "sns",
-    "thumbnail": "yt_thumb.webp",
-    "text": "photorealistic youtube thumbnail style, clear main subject, bold lighting, strong contrast, vivid colors, attention-grabbing composition, clean readable visual focus"
-  },
-  {
-    "name": "YT Vlog",
-    "category": "SNS",
-    "chip": "Vlog",
-    "tone": "sns",
-    "thumbnail": "yt_vlog.webp",
-    "text": "photorealistic youtube vlog frame, casual handheld camera feel, natural indoor or outdoor light, authentic everyday moment, wide-angle smartphone look, relaxed lifestyle mood"
-  },
-  {
-    "name": "FB Post",
-    "category": "SNS",
-    "chip": "FB",
-    "tone": "sns",
-    "thumbnail": "fb_post.webp",
-    "text": "photorealistic facebook-style social post photo, natural everyday scene, balanced lighting, friendly casual mood, realistic colors, simple clean composition"
   }
   ];
 
@@ -1640,7 +1321,7 @@ const K2CF_CANVAS_DEFAULT_SIZE = [830, 980];
 const K2CF_PROMPT_DEFAULT_SIZE = [540, 990];
 const K2CF_PROMPT_LEGACY_BUG_SIZES = [[400, 572]];
 
-const K2CF_PROMPT_HEIGHT_CAPTURE_MODE = "resize_grip_v29";
+const K2CF_PROMPT_HEIGHT_CAPTURE_MODE = "resize_grip_v31";
 
 const SLOTS = [
   ["red", "RED", "#ff3b30", "red_prompt", "red_type", "red_framing", "red_angle"],
@@ -1733,7 +1414,7 @@ const EFFECT_PRESETS = [
     "category": "Photo",
     "chip": "Glow",
     "tone": "portrait",
-    "text": "dreamy photographic atmosphere, soft milky cream palette, soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, luminous soft glow, soft radiant highlights, airy subtle haze, gentle bloom effect, calm realistic emotional mood"
+    "text": "dreamy photographic atmosphere, soft milky cream palette, soft portrait photography, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, luminous soft glow, soft radiant highlights, airy subtle haze, gentle bloom effect, calm realistic emotional mood, flash, illuminated subject, crisp catchlight,"
   },
   {
     "name": "B&W Soft",
@@ -1741,6 +1422,14 @@ const EFFECT_PRESETS = [
     "chip": "B&W Soft",
     "tone": "bw",
     "text": "soft black and white photography, monochrome grayscale tones, no color, gentle contrast, soft film grain, natural skin texture"
+  },
+  {
+    "name": "B&W Glow",
+    "category": "Photo",
+    "chip": "B&W Glow",
+    "tone": "bw",
+    "thumbnail": "bandw_glow.webp",
+    "text": "pure black and white glow portrait, monochrome grayscale photography, no color, soft monochrome tones, luminous soft glow, flash, illuminated subject, crisp catchlight, bright gentle highlights, natural soft skin texture, shallow depth of field, gentle contrast, smooth tonal gradation, clean facial details, airy subtle haze, calm realistic emotional mood"
   },
   {
     "name": "B&W Strong",
@@ -1924,6 +1613,14 @@ const EFFECT_PRESETS = [
     "text": "iPhone-style photo, natural phone camera look, realistic exposure, casual framing, sharp details, authentic everyday snapshot"
   },
   {
+    "name": "Flip Phone",
+    "category": "Camera FX",
+    "chip": "Flip",
+    "tone": "camera-fx",
+    "thumbnail": "flip_phone.webp",
+    "text": "flip phone camera photo, early 2000s low-resolution mobile snapshot, tiny sensor noise, JPEG compression artifacts, chroma noise, soft blur, mild defocus, imperfect focus, low contrast, muted colors, slight color shift, uneven white balance, casual accidental snapshot feel"
+  },
+  {
     "name": "Tilt-Shift",
     "category": "Camera FX",
     "chip": "Tilt",
@@ -2093,38 +1790,6 @@ const EFFECT_PRESETS = [
   "thumbnail": "overhead_sun.webp",
   "text": "overhead sun, high midday sunlight, short crisp shadows, bright clear daylight, realistic outdoor light behavior"
 },
-{
-  "name": "Long Shadow",
-  "category": "Light",
-  "chip": "Long",
-  "tone": "lighting",
-  "thumbnail": "long_shadow.webp",
-  "text": "long shadows, low-angle sunlight, extended shadow shapes across the ground, warm directional light, realistic scene depth"
-},
-{
-  "name": "Overcast",
-  "category": "Light",
-  "chip": "Cloud",
-  "tone": "lighting",
-  "thumbnail": "overcast.webp",
-  "text": "overcast light, soft diffused sky illumination, low contrast natural shadows, even realistic daylight, calm muted atmosphere"
-},
-{
-  "name": "Dappled Light",
-  "category": "Light",
-  "chip": "Dap",
-  "tone": "lighting",
-  "thumbnail": "dappled_light.webp",
-  "text": "dappled sunlight, scattered patches of light and shade, tree-filtered natural light, realistic outdoor shadow pattern"
-},
-{
-  "name": "Window Shadow",
-  "category": "Light",
-  "chip": "Win",
-  "tone": "lighting",
-  "thumbnail": "window_shadow.webp",
-  "text": "window light and shadow, sunlight entering through a window, rectangular shadow pattern, realistic indoor light behavior"
-},
   {
     "name": "Light Rays",
     "category": "Light",
@@ -2153,13 +1818,6 @@ const EFFECT_PRESETS = [
     "chip": "Neon",
     "tone": "lighting",
     "text": "neon night lighting, colorful urban glow, reflective highlights, cinematic contrast, atmospheric background glow"
-  },
-  {
-    "name": "Cyberpunk",
-    "category": "Light",
-    "chip": "Cyber",
-    "tone": "lighting",
-    "text": "cyberpunk night photography mood, neon lights, futuristic city atmosphere, realistic urban texture, high contrast, saturated reflections, cinematic moody lighting"
   },
   {
     "name": "Product Photo",
@@ -2209,6 +1867,14 @@ const EFFECT_PRESETS = [
     "chip": "Anime",
     "tone": "illustration",
     "text": "soft anime illustration, gentle lighting, delicate line art, pastel color palette, smooth shading, calm atmosphere"
+  },
+  {
+    "name": "Anime in Photo",
+    "category": "Art",
+    "chip": "A+Photo",
+    "tone": "illustration",
+    "thumbnail": "anime_in_photo.webp",
+    "text": "anime-style character in a realistic photographic background, illustrated character with clean anime features, real-world photo environment, natural photographic lighting, realistic depth and perspective, believable scene integration, clear contrast between animated subject and real background"
   },
   {
     "name": "Manga B&W",
@@ -2710,22 +2376,6 @@ const EFFECT_PRESETS = [
     "text": "bright color theme, high-key luminous palette, clean bright color grading, airy atmosphere"
   },
   {
-    "name": "Soft Theme",
-    "category": "Color Theme",
-    "chip": "Soft",
-    "tone": "color-theme",
-    "thumbnail": "soft_theme.webp",
-    "text": "soft color theme, gentle low-contrast palette, smooth soft color grading, calm delicate atmosphere"
-  },
-  {
-    "name": "Vivid Theme",
-    "category": "Color Theme",
-    "chip": "Vivid",
-    "tone": "color-theme",
-    "thumbnail": "vivid_theme.webp",
-    "text": "vivid color theme, highly saturated palette, bold color grading, energetic visual impact"
-  },
-  {
     "name": "Earth Theme",
     "category": "Color Theme",
     "chip": "Earth",
@@ -2742,260 +2392,12 @@ const EFFECT_PRESETS = [
     "text": "cream color theme, soft cream palette, warm gentle color grading, light elegant atmosphere"
   },
   {
-    "name": "Lavender Theme",
-    "category": "Color Theme",
-    "chip": "Lavender",
-    "tone": "color-theme",
-    "thumbnail": "lavender_theme.webp",
-    "text": "lavender color theme, soft lavender palette, gentle violet color grading, dreamy calm atmosphere"
-  },
-  {
-    "name": "Mint Theme",
-    "category": "Color Theme",
-    "chip": "Mint",
-    "tone": "color-theme",
-    "thumbnail": "mint_theme.webp",
-    "text": "mint color theme, fresh mint palette, light green-blue color grading, clean airy atmosphere"
-  },
-  {
-    "name": "Peach Theme",
-    "category": "Color Theme",
-    "chip": "Peach",
-    "tone": "color-theme",
-    "thumbnail": "peach_theme.webp",
-    "text": "peach color theme, soft peach palette, warm delicate color grading, friendly gentle atmosphere"
-  },
-  {
-    "name": "Rose Theme",
-    "category": "Color Theme",
-    "chip": "Rose",
-    "tone": "color-theme",
-    "thumbnail": "rose_theme.webp",
-    "text": "rose color theme, romantic rose palette, soft red-pink color grading, elegant warm atmosphere"
-  },
-  {
-    "name": "Aqua Theme",
-    "category": "Color Theme",
-    "chip": "Aqua",
-    "tone": "color-theme",
-    "thumbnail": "aqua_theme.webp",
-    "text": "aqua color theme, clear aqua palette, fresh watery color grading, bright clean atmosphere"
-  },
-  {
-    "name": "Pastel Pink",
-    "category": "Color Theme",
-    "chip": "PP",
-    "tone": "color-theme",
-    "thumbnail": "pastel_pink.webp",
-    "text": "pastel pink color theme, very soft pink palette, gentle rosy color grading, airy delicate mood"
-  },
-  {
-    "name": "Pastel Blue",
-    "category": "Color Theme",
-    "chip": "PB",
-    "tone": "color-theme",
-    "thumbnail": "pastel_blue.webp",
-    "text": "pastel blue color theme, very soft blue palette, gentle cool color grading, calm airy mood"
-  },
-  {
-    "name": "Pastel Purple",
-    "category": "Color Theme",
-    "chip": "PP",
-    "tone": "color-theme",
-    "thumbnail": "pastel_purple.webp",
-    "text": "pastel purple color theme, very soft violet palette, delicate dreamy color grading, gentle atmosphere"
-  },
-  {
-    "name": "Pastel Green",
-    "category": "Color Theme",
-    "chip": "PG",
-    "tone": "color-theme",
-    "thumbnail": "pastel_green.webp",
-    "text": "pastel green color theme, very soft green palette, fresh gentle color grading, light natural mood"
-  },
-  {
-    "name": "Pastel Yellow",
-    "category": "Color Theme",
-    "chip": "PY",
-    "tone": "color-theme",
-    "thumbnail": "pastel_yellow.webp",
-    "text": "pastel yellow color theme, very soft yellow palette, light sunny color grading, cheerful gentle mood"
-  },
-  {
-    "name": "Pastel Orange",
-    "category": "Color Theme",
-    "chip": "PO",
-    "tone": "color-theme",
-    "thumbnail": "pastel_orange.webp",
-    "text": "pastel orange color theme, very soft orange palette, warm gentle color grading, cozy light mood"
-  },
-  {
-    "name": "Pastel Mint",
-    "category": "Color Theme",
-    "chip": "PM",
-    "tone": "color-theme",
-    "thumbnail": "pastel_mint.webp",
-    "text": "pastel mint color theme, soft mint palette, clean fresh color grading, light airy atmosphere"
-  },
-  {
-    "name": "Pastel Lavender",
-    "category": "Color Theme",
-    "chip": "PL",
-    "tone": "color-theme",
-    "thumbnail": "pastel_lavender.webp",
-    "text": "pastel lavender color theme, soft lavender palette, delicate violet color grading, dreamy airy mood"
-  },
-  {
-    "name": "Pastel Peach",
-    "category": "Color Theme",
-    "chip": "PP",
-    "tone": "color-theme",
-    "thumbnail": "pastel_peach.webp",
-    "text": "pastel peach color theme, soft peach palette, warm gentle color grading, delicate friendly mood"
-  },
-  {
-    "name": "Pastel Rose",
-    "category": "Color Theme",
-    "chip": "PR",
-    "tone": "color-theme",
-    "thumbnail": "pastel_rose.webp",
-    "text": "pastel rose color theme, soft rose palette, gentle romantic color grading, airy elegant mood"
-  },
-  {
-    "name": "Pastel Aqua",
-    "category": "Color Theme",
-    "chip": "PA",
-    "tone": "color-theme",
-    "thumbnail": "pastel_aqua.webp",
-    "text": "pastel aqua color theme, soft aqua palette, clean watery color grading, light refreshing mood"
-  },
-  {
-    "name": "Pastel Cream",
-    "category": "Color Theme",
-    "chip": "PC",
-    "tone": "color-theme",
-    "thumbnail": "pastel_cream.webp",
-    "text": "pastel cream color theme, soft cream palette, warm light color grading, gentle elegant mood"
-  },
-  {
     "name": "Black & White",
     "category": "Color Theme",
     "chip": "B&W",
     "tone": "color-theme",
     "thumbnail": "black_white.webp",
     "text": "black and white color theme, pure monochrome palette, strong tonal contrast, clean graphic color grading"
-  },
-  {
-    "name": "Red & Blue",
-    "category": "Color Theme",
-    "chip": "R&B",
-    "tone": "color-theme",
-    "thumbnail": "red_blue.webp",
-    "text": "red and blue color theme, bold dual-color palette, strong warm-cool contrast, dynamic color grading"
-  },
-  {
-    "name": "Pink & Blue",
-    "category": "Color Theme",
-    "chip": "P&B",
-    "tone": "color-theme",
-    "thumbnail": "pink_blue.webp",
-    "text": "pink and blue color theme, playful dual-color palette, soft warm-cool contrast, vibrant color harmony"
-  },
-  {
-    "name": "Purple & Cyan",
-    "category": "Color Theme",
-    "chip": "P&C",
-    "tone": "color-theme",
-    "thumbnail": "purple_cyan.webp",
-    "text": "purple and cyan color theme, vivid dual-color palette, electric cool contrast, futuristic color grading"
-  },
-  {
-    "name": "Orange & Teal",
-    "category": "Color Theme",
-    "chip": "O&T",
-    "tone": "color-theme",
-    "thumbnail": "orange_teal.webp",
-    "text": "orange and teal color theme, cinematic complementary palette, warm-cool contrast, polished color grading"
-  },
-  {
-    "name": "Yellow & Purple",
-    "category": "Color Theme",
-    "chip": "Y&P",
-    "tone": "color-theme",
-    "thumbnail": "yellow_purple.webp",
-    "text": "yellow and purple color theme, bold complementary palette, playful contrast, vivid graphic atmosphere"
-  },
-  {
-    "name": "Green & Magenta",
-    "category": "Color Theme",
-    "chip": "G&M",
-    "tone": "color-theme",
-    "thumbnail": "green_magenta.webp",
-    "text": "green and magenta color theme, high-contrast complementary palette, energetic stylized color grading"
-  },
-  {
-    "name": "Black & Red",
-    "category": "Color Theme",
-    "chip": "B&R",
-    "tone": "color-theme",
-    "thumbnail": "black_red.webp",
-    "text": "black and red color theme, dark dramatic palette, intense red accents, bold high-contrast atmosphere"
-  },
-  {
-    "name": "Black & Gold",
-    "category": "Color Theme",
-    "chip": "B&G",
-    "tone": "color-theme",
-    "thumbnail": "black_gold.webp",
-    "text": "black and gold color theme, luxury dark palette, golden highlights, premium dramatic color grading"
-  },
-  {
-    "name": "White & Blue",
-    "category": "Color Theme",
-    "chip": "W&B",
-    "tone": "color-theme",
-    "thumbnail": "white_blue.webp",
-    "text": "white and blue color theme, clean bright palette, crisp blue accents, fresh minimal color grading"
-  },
-  {
-    "name": "Pastel Pink & Blue",
-    "category": "Color Theme",
-    "chip": "P&B",
-    "tone": "color-theme",
-    "thumbnail": "pastel_pink_blue.webp",
-    "text": "pastel pink and blue color theme, soft dual pastel palette, gentle warm-cool balance, airy atmosphere"
-  },
-  {
-    "name": "Pastel Mint & Lavender",
-    "category": "Color Theme",
-    "chip": "P&L",
-    "tone": "color-theme",
-    "thumbnail": "pastel_mint_lavender.webp",
-    "text": "pastel mint and lavender color theme, soft dreamy dual palette, fresh delicate color harmony"
-  },
-  {
-    "name": "Pastel Peach & Cream",
-    "category": "Color Theme",
-    "chip": "P&C",
-    "tone": "color-theme",
-    "thumbnail": "pastel_peach_cream.webp",
-    "text": "pastel peach and cream color theme, warm soft dual palette, cozy gentle color grading"
-  },
-  {
-    "name": "Pastel Yellow & Green",
-    "category": "Color Theme",
-    "chip": "P&G",
-    "tone": "color-theme",
-    "thumbnail": "pastel_yellow_green.webp",
-    "text": "pastel yellow and green color theme, soft sunny natural palette, fresh cheerful color grading"
-  },
-  {
-    "name": "Pastel Aqua & Pink",
-    "category": "Color Theme",
-    "chip": "P&P",
-    "tone": "color-theme",
-    "thumbnail": "pastel_aqua_pink.webp",
-    "text": "pastel aqua and pink color theme, soft playful dual palette, fresh rosy color harmony"
   },
   {
     "name": "Crazy Color",
@@ -3244,49 +2646,9 @@ const EFFECT_PRESETS = [
     "tone": "color-theme",
     "thumbnail": "heterochromia_eyes.webp",
     "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
-  },,
-  {
-    "name": "Insta Feed",
-    "category": "SNS",
-    "chip": "Insta",
-    "tone": "sns",
-    "thumbnail": "insta_feed.webp",
-    "text": "photorealistic instagram-style lifestyle photo, clean composition, bright natural light, polished color grading, slightly vibrant colors, casual modern mood, social media feed aesthetic"
-  },
-  {
-    "name": "TikTok",
-    "category": "SNS",
-    "chip": "TikTok",
-    "tone": "sns",
-    "thumbnail": "tiktok.webp",
-    "text": "photorealistic tiktok-style short video frame, energetic composition, bold colors, high contrast, trendy social media look, dynamic pose, lively casual atmosphere"
-  },
-  {
-    "name": "YT Thumb",
-    "category": "SNS",
-    "chip": "YT",
-    "tone": "sns",
-    "thumbnail": "yt_thumb.webp",
-    "text": "photorealistic youtube thumbnail style, clear main subject, bold lighting, strong contrast, vivid colors, attention-grabbing composition, clean readable visual focus"
-  },
-  {
-    "name": "YT Vlog",
-    "category": "SNS",
-    "chip": "Vlog",
-    "tone": "sns",
-    "thumbnail": "yt_vlog.webp",
-    "text": "photorealistic youtube vlog frame, casual handheld camera feel, natural indoor or outdoor light, authentic everyday moment, wide-angle smartphone look, relaxed lifestyle mood"
-  },
-  {
-    "name": "FB Post",
-    "category": "SNS",
-    "chip": "FB",
-    "tone": "sns",
-    "thumbnail": "fb_post.webp",
-    "text": "photorealistic facebook-style social post photo, natural everyday scene, balanced lighting, friendly casual mood, realistic colors, simple clean composition"
   }
   ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "SNS", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 function k2fxUniqueList(values) {
   return Array.from(new Set(values.filter(Boolean)));
@@ -3319,8 +2681,9 @@ function k2fxDetectThumbnailBases() {
 const EFFECT_THUMBNAIL_BASE_CANDIDATES = k2fxUniqueList([
   ...k2fxDetectThumbnailBases(),
   "/extensions/Krea2-BBOX-Prompter/thumbnails/",
-  "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/",
-]);
+  "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/"
+  ]);
+const EFFECT_THUMBNAIL_CACHE_VERSION = "20260703_flip_phone";
 function k2fxPresetSlug(name) {
   return String(name || "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || "preset";
 }
@@ -3330,7 +2693,7 @@ function k2fxThumbnailFile(preset) {
 }
 function k2fxThumbnailUrls(preset) {
   const file = k2fxThumbnailFile(preset);
-  return EFFECT_THUMBNAIL_BASE_CANDIDATES.map((base) => `${base}${file}`);
+  return EFFECT_THUMBNAIL_BASE_CANDIDATES.map((base) => `${base}${file}?v=${EFFECT_THUMBNAIL_CACHE_VERSION}`);
 }
 
 
@@ -3566,9 +2929,14 @@ function k2cfPickLatestState(states) {
   return valid[0];
 }
 
+function k2cfHasEffectTextHeights(state) {
+  if (!state?.text_heights || typeof state.text_heights !== "object") return false;
+  return Object.values(state.text_heights).some((value) => Number(value) > 0);
+}
+
 function k2cfLocalStateKeys(node, kind) {
   const keys = [k2cfNodeStorageKey(node, kind)];
-  if (kind === "prompt_ui" || kind.endsWith("_node_size")) keys.push(k2cfNodeFallbackStorageKey(node, kind));
+  if (kind === "prompt_ui" || kind === "effect" || kind.endsWith("_node_size")) keys.push(k2cfNodeFallbackStorageKey(node, kind));
   return keys;
 }
 
@@ -3576,7 +2944,8 @@ function k2cfReadLocalState(node, kind) {
   // Prompt/canvas widget values must come only from workflow node/widget state.
   // Browser local/session fallback can resurrect stale prompt text or stale latent sizes
   // (for example 1024 x 1536) when ComfyUI rebuilds a tab.
-  if (kind === "prompt" || kind === "canvas" || kind === "effect") return null;
+  // Effect uses session-only fallback for UI state such as selected effect and text box heights.
+  if (kind === "prompt" || kind === "canvas") return null;
   const states = [];
   for (const key of k2cfLocalStateKeys(node, kind)) {
     states.push(k2cfReadSessionJson(key));
@@ -3592,7 +2961,7 @@ function k2cfWriteLocalState(node, kind, data) {
   const value = JSON.stringify(data);
   for (const key of k2cfLocalStateKeys(node, kind)) {
     try { sessionStorage.setItem(key, value); } catch (_) {}
-    if (kind === "prompt_ui" || kind.endsWith("_node_size")) {
+    if (kind === "prompt_ui" || kind === "effect" || kind.endsWith("_node_size")) {
       try { localStorage.setItem(key, value); } catch (_) {}
     }
   }
@@ -3602,8 +2971,22 @@ function k2cfBestSavedState(node, kind) {
   const propName = kind === "prompt" ? "k2cfPromptState" : (kind === "effect" ? "k2cfEffectState" : "k2cfCanvasState");
   const workflowCandidates = [
     node?.properties?.[propName],
-    kind === "prompt" ? node?.__k2cfConfiguredPromptState : (kind === "effect" ? node?.__k2cfConfiguredEffectState : node?.__k2cfConfiguredCanvasState),
-  ].filter((state) => Array.isArray(state?.widgets_values) && k2cfHasMeaningfulState(state.widgets_values));
+    kind === "prompt" ? node?.__k2cfConfiguredPromptState : (kind === "effect" ? node?.__k2cfConfiguredEffectState : node?.__k2cfConfiguredCanvasState)
+  ].filter((state) => Array.isArray(state?.widgets_values) && (
+    k2cfHasMeaningfulState(state.widgets_values) ||
+    (kind === "effect" && k2cfHasEffectTextHeights(state))
+  ));
+  if (kind === "effect") {
+    const localState = k2cfReadLocalState(node, kind);
+    const effectCandidates = workflowCandidates.slice();
+    if (Array.isArray(localState?.widgets_values) && (
+      k2cfHasMeaningfulState(localState.widgets_values) ||
+      k2cfHasEffectTextHeights(localState)
+    )) {
+      effectCandidates.push(localState);
+    }
+    return k2cfPickLatestState(effectCandidates);
+  }
   if (workflowCandidates.length) {
     workflowCandidates.sort((a, b) => Number(b.saved_at || 0) - Number(a.saved_at || 0));
     const picked = workflowCandidates[0];
@@ -3615,7 +2998,10 @@ function k2cfBestSavedState(node, kind) {
   if (kind === "canvas" && node?.__k2cfSkipLocalCanvasState) return null;
 
   const localState = k2cfReadLocalState(node, kind);
-  if (Array.isArray(localState?.widgets_values) && k2cfHasMeaningfulState(localState.widgets_values)) {
+  if (Array.isArray(localState?.widgets_values) && (
+    k2cfHasMeaningfulState(localState.widgets_values) ||
+    (kind === "effect" && k2cfHasEffectTextHeights(localState))
+  )) {
     if (kind === "prompt") localState.widgets_values = k2cfSanitizePromptValues(localState.widgets_values);
     return localState;
   }
@@ -3700,7 +3086,7 @@ function k2cfDefaultTextHeightForKey(key) {
 function k2cfMaxPromptTextHeightForKey(key) {
   // Guard against ComfyUI tab/app restore reflow saving a huge textarea height.
   // Keep the prompt node usable and prevent SCENE from pushing color slots off-screen.
-  return key === "scene" ? 585 : 495;
+  return 360;
 }
 
 function k2cfPromptTextHeightInRange(key, h) {
@@ -4082,9 +3468,13 @@ function k2cfPersistWidgetSnapshot(node, kind, widgetNames, version = "v15") {
     : kind === "effect"
       ? k2cfMergeEffectWithPrevious(widgetNames, currentWidgetValues, previous?.widgets_values)
     : k2cfMergeWithPrevious(widgetNames, currentWidgetValues, previous?.widgets_values);
-  if (!k2cfHasMeaningfulState(values)) return;
+  const hasEffectTextHeights = kind === "effect" && k2cfHasEffectTextHeights(previous);
+  if (!k2cfHasMeaningfulState(values) && !hasEffectTextHeights) return;
   node.properties = node.properties || {};
   const state = { version, widgets_values: values.slice(), saved_at: Date.now() };
+  if (kind === "effect" && k2cfHasEffectTextHeights(previous)) {
+    state.text_heights = Object.assign({}, previous.text_heights);
+  }
   if (kind === "prompt") node.properties.k2cfPromptState = state;
   if (kind === "effect") node.properties.k2cfEffectState = state;
   if (kind === "canvas") node.properties.k2cfCanvasState = state;
@@ -4116,6 +3506,7 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
     try { node.__k2cfNodeSizeSnapshot?.(); } catch (_) {}
     const previous = k2cfBestSavedState(node, kind);
     syncFn?.(false);
+    const latest = kind === "effect" ? k2cfBestSavedState(node, kind) : previous;
     const currentValues = k2cfWidgetValues(node, widgetNames);
     const values = kind === "prompt"
       ? (node.__k2cfAllowDefaultOverwrite
@@ -4139,6 +3530,10 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
     }
     node.properties = node.properties || {};
     const state = { version: "v15", widgets_values: values.slice(), saved_at: Date.now() };
+    if (kind === "effect") {
+      const textHeightSource = k2cfHasEffectTextHeights(latest) ? latest : previous;
+      if (k2cfHasEffectTextHeights(textHeightSource)) state.text_heights = Object.assign({}, textHeightSource.text_heights);
+    }
     if (kind === "prompt") node.properties.k2cfPromptState = state;
     if (kind === "effect") node.properties.k2cfEffectState = state;
     if (kind === "canvas") node.properties.k2cfCanvasState = state;
@@ -4323,13 +3718,22 @@ function stop(ev) {
 }
 
 function k2cfIsWheelInteractiveTarget(target) {
-  const el = target?.closest?.("input, textarea, select, button, option, [contenteditable='true'], .k2fx-wrap, .k2cf-overlay");
+  const el = target?.closest?.("input, textarea, select, button, option, [contenteditable='true'], .k2fx-wrap, .k2cf-overlay, .k2cf-screen");
   return !!el;
+}
+
+function k2cfIsPointerInteractiveTarget(target) {
+  const el = target?.closest?.("input, textarea, select, button, option, [contenteditable='true'], .k2fx-wrap, .k2cf-overlay, .k2cf-screen, .k2cf-slot-head");
+  return !!el;
+}
+
+function k2cfGraphCanvas() {
+  return app?.canvas?.canvas || window.comfyAPI?.app?.app?.canvas?.canvas;
 }
 
 function k2cfForwardWheelToGraph(ev) {
   if (k2cfIsWheelInteractiveTarget(ev.target)) return;
-  const canvasEl = app?.canvas?.canvas || window.comfyAPI?.app?.app?.canvas?.canvas;
+  const canvasEl = k2cfGraphCanvas();
   if (!canvasEl) return;
   ev.preventDefault();
   ev.stopPropagation();
@@ -4354,7 +3758,117 @@ function k2cfForwardWheelToGraph(ev) {
 }
 
 function k2cfAllowWheelZoomOnEmptySpace(wrap) {
-  wrap?.addEventListener?.("wheel", k2cfForwardWheelToGraph, { passive: false });
+  wrap?.addEventListener?.("wheel", k2cfForwardWheelToGraph, { passive: false, capture: true });
+}
+
+function k2cfForwardMouseEventToGraph(type, ev, canvasEl) {
+  const forwarded = new MouseEvent(type, {
+    bubbles: true,
+    cancelable: true,
+    view: window,
+    button: ev.button,
+    buttons: ev.buttons,
+    clientX: ev.clientX,
+    clientY: ev.clientY,
+    screenX: ev.screenX,
+    screenY: ev.screenY,
+    ctrlKey: ev.ctrlKey,
+    shiftKey: ev.shiftKey,
+    altKey: ev.altKey,
+    metaKey: ev.metaKey,
+  });
+  canvasEl.dispatchEvent(forwarded);
+}
+
+function k2cfPanGraphBy(dx, dy) {
+  const graphCanvas = app?.canvas || window.comfyAPI?.app?.app?.canvas;
+  const ds = graphCanvas?.ds;
+  if (!ds?.offset) return false;
+  const scale = Number(ds.scale) || 1;
+  ds.offset[0] += dx / scale;
+  ds.offset[1] += dy / scale;
+  graphCanvas.setDirty?.(true, true);
+  graphCanvas.draw?.(true, true);
+  return true;
+}
+
+function k2cfSetPanCursor(active) {
+  document.body.style.cursor = active ? "grabbing" : "";
+}
+
+let k2cfMiddlePanStartedAt = 0;
+
+function k2cfStartMiddlePan(ev, moveType, upType, cancelType) {
+  if (ev.button !== 1) return false;
+  if (k2cfIsPointerInteractiveTarget(ev.target)) return false;
+  const canvasEl = k2cfGraphCanvas();
+  if (!canvasEl) return false;
+  const now = Date.now();
+  if (now - k2cfMiddlePanStartedAt < 80) return true;
+  k2cfMiddlePanStartedAt = now;
+  ev.preventDefault();
+  ev.stopPropagation();
+  let lastX = ev.clientX;
+  let lastY = ev.clientY;
+  k2cfSetPanCursor(true);
+  const directMove = (moveEv) => {
+    moveEv.preventDefault();
+    moveEv.stopPropagation();
+    const dx = moveEv.clientX - lastX;
+    const dy = moveEv.clientY - lastY;
+    lastX = moveEv.clientX;
+    lastY = moveEv.clientY;
+    if (!k2cfPanGraphBy(dx, dy)) k2cfForwardMouseEventToGraph("mousemove", moveEv, canvasEl);
+  };
+  const directUp = (upEv) => {
+    upEv.preventDefault();
+    upEv.stopPropagation();
+    k2cfSetPanCursor(false);
+    window.removeEventListener(moveType, directMove, true);
+    window.removeEventListener(upType, directUp, true);
+    if (cancelType) window.removeEventListener(cancelType, directUp, true);
+  };
+  window.addEventListener(moveType, directMove, true);
+  window.addEventListener(upType, directUp, true);
+  if (cancelType) window.addEventListener(cancelType, directUp, true);
+  return true;
+}
+
+function k2cfAllowGraphPanOnEmptySpace(wrap) {
+  wrap?.addEventListener?.("pointerdown", (ev) => {
+    k2cfStartMiddlePan(ev, "pointermove", "pointerup", "pointercancel");
+  }, true);
+  wrap?.addEventListener?.("auxclick", (ev) => {
+    if (ev.button === 1 && !k2cfIsPointerInteractiveTarget(ev.target)) {
+      ev.preventDefault();
+      ev.stopPropagation();
+    }
+  }, true);
+  wrap?.addEventListener?.("mousedown", (ev) => {
+    if (ev.button !== 0 && ev.button !== 1) return;
+    if (k2cfIsPointerInteractiveTarget(ev.target)) return;
+    const canvasEl = k2cfGraphCanvas();
+    if (!canvasEl) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    if (k2cfStartMiddlePan(ev, "mousemove", "mouseup")) return;
+    k2cfForwardMouseEventToGraph("mousedown", ev, canvasEl);
+
+    const forwardMove = (moveEv) => {
+      moveEv.preventDefault();
+      moveEv.stopPropagation();
+      k2cfForwardMouseEventToGraph("mousemove", moveEv, canvasEl);
+    };
+    const stopForwarding = (upEv) => {
+      upEv.preventDefault();
+      upEv.stopPropagation();
+      k2cfForwardMouseEventToGraph("mouseup", upEv, canvasEl);
+      window.removeEventListener("mousemove", forwardMove, true);
+      window.removeEventListener("mouseup", stopForwarding, true);
+    };
+    window.addEventListener("mousemove", forwardMove, true);
+    window.addEventListener("mouseup", stopForwarding, true);
+  }, true);
 }
 
 function button(text, title) {
@@ -4369,8 +3883,15 @@ function button(text, title) {
 function ensureStyle() {
   const existingStyle = document.getElementById("krea2-bbox-prompter-suite-style-v1");
   const effectSizeCss = `.k2fx-sizebar{display:flex;justify-content:flex-end;align-items:center;gap:6px;margin-top:-4px;color:#aaa;font-size:10.5px}.k2fx-sizebar input{width:110px;accent-color:#35d0c8}.k2fx-sizebar output{width:36px;text-align:right;color:#ddd}`;
+  const effectTextareaResizeCss = `/* k2fx-textarea-resize-v3 */.k2fx-textarea-box{position:relative;display:block;min-width:0}.k2fx-textarea-box textarea{display:block;width:100%;resize:none!important;max-height:360px}.k2fx-preview,.k2fx-custom{max-height:360px}.k2fx-preview{min-height:42px}.k2fx-custom{min-height:70px}.k2fx-resize-grip{position:absolute;right:4px;bottom:4px;width:16px;height:16px;cursor:nwse-resize;z-index:3;border-radius:3px}.k2fx-resize-grip::before{content:"";position:absolute;right:3px;bottom:3px;width:8px;height:8px;border-right:2px solid #777;border-bottom:2px solid #777}.k2fx-resize-grip:hover::before{border-color:#35d0c8}`;
+  const panCursorCss = `.k2cf-scene,.k2cf-slot-card,.k2cf-slot-body,.k2cf-slot-side,.k2cf-panel,.k2cf-panels{cursor:grab}.k2cf-scene textarea,.k2cf-slot-card textarea,.k2cf-slot-card select,.k2cf-slot-card button,.k2cf-panel input,.k2cf-panel select,.k2cf-panel button,.k2cf-slot-head{cursor:auto}`;
   if (existingStyle) {
+    existingStyle.textContent = existingStyle.textContent
+      .replace(/\.k2cf-wrap,\.k2cf-prompt-wrap(?:,[^{]+)?\{pointer-events:none\}/g, "")
+      .replace(/\.k2cf-wrap input,[^{]+?\{pointer-events:auto\}/g, "");
     if (!existingStyle.textContent.includes("k2fx-sizebar")) existingStyle.textContent += effectSizeCss;
+    if (!existingStyle.textContent.includes("k2fx-textarea-resize-v3")) existingStyle.textContent += effectTextareaResizeCss;
+    if (!existingStyle.textContent.includes("k2cf-slot-body,.k2cf-slot-side,.k2cf-panel")) existingStyle.textContent += panCursorCss;
     if (!existingStyle.textContent.includes("--k2fx-thumb-w")) {
       existingStyle.textContent += `.k2fx-grid{grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr))}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);max-width:100%}`;
     }
@@ -4425,6 +3946,8 @@ function ensureStyle() {
     .k2cf-slot-head{cursor:pointer}.k2cf-slot-head-left{display:flex;align-items:center;gap:0}.k2cf-foldmark{font-size:11px;color:#aaa;margin-left:8px}
     .k2cf-slot-card.collapsed .k2cf-slot-body{display:none}
     .k2cf-slot-card.collapsed{padding-bottom:6px}
+    .k2cf-scene,.k2cf-slot-card,.k2cf-slot-body,.k2cf-slot-side,.k2cf-panel,.k2cf-panels{cursor:grab}
+    .k2cf-scene textarea,.k2cf-slot-card textarea,.k2cf-slot-card select,.k2cf-slot-card button,.k2cf-panel input,.k2cf-panel select,.k2cf-panel button,.k2cf-slot-head{cursor:auto}
     .k2cf-dot{display:inline-block;width:11px;height:11px;border-radius:99px;margin-right:7px}
     .k2cf-text{width:100%;min-height:125px;resize:vertical;background:#151515;color:#eee;border:1px solid #3f3f3f;border-radius:5px;padding:8px;box-sizing:border-box;font:12px monospace}
     .k2cf-scene .k2cf-text{min-height:125px}
@@ -4437,7 +3960,8 @@ function ensureStyle() {
     ${effectSizeCss}
     .k2fx-tabs{display:flex;gap:5px;flex-wrap:wrap}.k2fx-tab{background:#242424;color:#ddd;border:1px solid #444;border-radius:999px;padding:4px 9px;cursor:pointer;font-size:11px}.k2fx-tab.active{border-color:#35d0c8;color:#fff;background:#12606a}
     .k2fx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr));gap:7px}.k2fx-card{background:#1b1b1b;border:1px solid #3a3a3a;border-radius:8px;padding:6px;cursor:pointer;min-width:0}.k2fx-card:hover{border-color:#888}.k2fx-card.active{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.45) inset}.k2fx-custom-notice{grid-column:1/-1;border:1px dashed #3a3a3a;border-radius:8px;padding:12px;color:#aaa;background:#181818;font-size:12px}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);border-radius:7px;border:1px solid #333;background:linear-gradient(135deg,#1e1e1e,#4b4b4b);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800;letter-spacing:.03em;margin:0 auto 6px;max-width:100%}.k2fx-thumb.has-img{color:transparent;text-shadow:none}.k2fx-thumb.has-img::after{content:""}.k2fx-card[data-tone="Strong"] .k2fx-thumb{background:linear-gradient(135deg,#050505,#dcdcdc)}.k2fx-card[data-tone="Soft"] .k2fx-thumb{background:linear-gradient(135deg,#777,#eee)}.k2fx-card[data-tone="Analog"] .k2fx-thumb{background:linear-gradient(135deg,#3a2f24,#c0a777)}.k2fx-card[data-tone="Dramatic"] .k2fx-thumb{background:linear-gradient(135deg,#0b0c10,#8d6d42)}
-    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:6px}.k2fx-footer:not(.show){display:none}.k2fx-custom{display:block;width:100%;min-height:70px;resize:vertical;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{display:block;width:100%;min-height:42px;max-height:240px;resize:vertical;background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;box-sizing:border-box;overflow:auto;white-space:pre-wrap;user-select:text}.k2fx-custom-presetbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.k2fx-custom-presetbar label{color:#35d0c8;font-weight:700;font-size:11px}.k2fx-custom-presetbar select{flex:1 1 150px;min-width:120px;background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px}.k2fx-custom-presetbar button{background:#2b2b2b;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 7px;cursor:pointer;font-size:11px}.k2fx-custom-presetbar button:hover{border-color:#35d0c8}
+    .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:6px}.k2fx-footer:not(.show){display:none}.k2fx-custom{display:block;width:100%;min-height:70px;resize:none;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{display:block;width:100%;min-height:42px;max-height:240px;resize:none;background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;box-sizing:border-box;overflow:auto;white-space:pre-wrap;user-select:text}.k2fx-custom-presetbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.k2fx-custom-presetbar label{color:#35d0c8;font-weight:700;font-size:11px}.k2fx-custom-presetbar select{flex:1 1 150px;min-width:120px;background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px}.k2fx-custom-presetbar button{background:#2b2b2b;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 7px;cursor:pointer;font-size:11px}.k2fx-custom-presetbar button:hover{border-color:#35d0c8}
+    ${effectTextareaResizeCss}
   `;
   document.head.appendChild(style);
 }
@@ -4599,6 +4123,11 @@ function setupEffectNode(node) {
   applyConfiguredValuesToWidgets(node, EFFECT_WIDGETS, configuredValues);
   const savedEffectState = k2cfBestSavedState(node, "effect");
   if (savedEffectState) applyConfiguredValuesToWidgets(node, EFFECT_WIDGETS, savedEffectState.widgets_values);
+  const effectTextHeights = Object.assign(
+    {},
+    node.__k2cfConfiguredEffectState?.text_heights || {},
+    savedEffectState?.text_heights || {}
+  );
 
   const wrap = document.createElement("div");
   wrap.className = "k2fx-wrap";
@@ -4700,33 +4229,99 @@ function setupEffectNode(node) {
   preview.className = "k2fx-preview";
   preview.readOnly = true;
   preview.title = "Selected effect prompt. Drag the corner to make this box taller; select text to copy.";
-  let previewResize = null;
-  function isPreviewResizePoint(ev) {
-    const r = preview.getBoundingClientRect();
-    return ev.clientX >= r.right - 24 && ev.clientY >= r.bottom - 24;
+  const effectTextHeightBounds = {
+    prompt: [42, 360],
+    preview: [42, 360],
+    custom: [70, 360],
+  };
+  const validEffectTextHeight = (key, value) => {
+    const [min, max] = effectTextHeightBounds[key] || [42, 360];
+    const raw = Number(value) || 0;
+    if (!Number.isFinite(raw) || raw <= 0) return 0;
+    const next = Math.round(raw);
+    return Number.isFinite(next) ? Math.max(min, Math.min(max, next)) : 0;
+  };
+  const applyEffectTextHeight = (key, el) => {
+    const h = validEffectTextHeight(key, effectTextHeights[key]);
+    if (!h) return;
+    el.style.height = `${h}px`;
+    el.dataset.k2fxAppliedHeight = `${h}px`;
+  };
+  const isEffectTextResizePoint = (el, ev) => {
+    const r = el.getBoundingClientRect();
+    return ev.clientX >= r.right - 28 && ev.clientX <= r.right + 8 &&
+      ev.clientY >= r.bottom - 28 && ev.clientY <= r.bottom + 8;
+  };
+  function writeEffectState(markDirty = false) {
+    node.widgets_values = EFFECT_WIDGETS.map((n) => widgets[n]?.value ?? "");
+    node.properties = node.properties || {};
+    node.properties.k2cfEffectState = {
+      version: "v16",
+      widgets_values: node.widgets_values.slice(),
+      text_heights: Object.assign({}, effectTextHeights),
+      saved_at: Date.now(),
+    };
+    k2cfWriteLocalState(node, "effect", node.properties.k2cfEffectState);
+    if (markDirty) {
+      try { app.graph?.setDirtyCanvas?.(true, true); } catch (_) {}
+    }
   }
-  function endPreviewResize() {
-    previewResize = null;
-    document.removeEventListener("pointermove", movePreviewResize, true);
-    document.removeEventListener("pointerup", endPreviewResize, true);
-    document.removeEventListener("pointercancel", endPreviewResize, true);
-  }
-  function movePreviewResize(ev) {
-    if (!previewResize) return;
-    ev.preventDefault();
-    ev.stopPropagation();
-    const next = Math.max(42, Math.min(240, previewResize.height + ev.clientY - previewResize.y));
-    preview.style.height = `${next}px`;
-  }
-  preview.addEventListener("pointerdown", (ev) => {
-    if (!isPreviewResizePoint(ev)) return;
-    ev.preventDefault();
-    ev.stopPropagation();
-    previewResize = { y: ev.clientY, height: preview.getBoundingClientRect().height };
-    document.addEventListener("pointermove", movePreviewResize, true);
-    document.addEventListener("pointerup", endPreviewResize, true);
-    document.addEventListener("pointercancel", endPreviewResize, true);
-  });
+  const saveEffectTextHeight = (key, el, markDirty = true) => {
+    const rect = el.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    const h = validEffectTextHeight(key, rect.height || el.offsetHeight || parseFloat(el.style.height || "0"));
+    if (!h) return;
+    if (Math.abs(Number(effectTextHeights[key] || 0) - h) <= 2) {
+      if (markDirty) writeEffectState(true);
+      return;
+    }
+    effectTextHeights[key] = h;
+    el.dataset.k2fxAppliedHeight = `${h}px`;
+    writeEffectState(markDirty);
+  };
+  const installEffectTextResize = (key, el, gripEl = null) => {
+    applyEffectTextHeight(key, el);
+    let drag = null;
+    const stopDrag = () => {
+      if (drag) saveEffectTextHeight(key, el, true);
+      drag = null;
+      document.removeEventListener("pointermove", moveDrag, true);
+      document.removeEventListener("pointerup", stopDrag, true);
+      document.removeEventListener("pointercancel", stopDrag, true);
+    };
+    const moveDrag = (ev) => {
+      if (!drag) return;
+      ev.preventDefault();
+      ev.stopPropagation();
+      const [min, max] = effectTextHeightBounds[key] || [42, 360];
+      const next = Math.max(min, Math.min(max, drag.height + ev.clientY - drag.y));
+      el.style.height = `${Math.round(next)}px`;
+      saveEffectTextHeight(key, el, false);
+    };
+    const downTarget = gripEl || el;
+    downTarget.addEventListener("pointerdown", (ev) => {
+      if (!gripEl && !isEffectTextResizePoint(el, ev)) return;
+      ev.preventDefault();
+      ev.stopPropagation();
+      drag = { y: ev.clientY, height: el.getBoundingClientRect().height };
+      try { downTarget.setPointerCapture?.(ev.pointerId); } catch (_) {}
+      document.addEventListener("pointermove", moveDrag, true);
+      document.addEventListener("pointerup", stopDrag, true);
+      document.addEventListener("pointercancel", stopDrag, true);
+    }, true);
+  };
+  const makeEffectTextareaBox = (key, el) => {
+    const box = document.createElement("div");
+    box.className = `k2fx-textarea-box k2fx-${key}-box`;
+    const grip = document.createElement("div");
+    grip.className = "k2fx-resize-grip";
+    grip.title = "Drag to resize this prompt box.";
+    box.append(el, grip);
+    installEffectTextResize(key, el, grip);
+    return box;
+  };
+  const previewBox = makeEffectTextareaBox("preview", preview);
+  const customBox = makeEffectTextareaBox("custom", custom);
 
   const DEFAULT_EFFECT_PRESET = "Realistic Photo";
   const normalizeEffectPreset = (name) => {
@@ -4767,14 +4362,7 @@ function setupEffectNode(node) {
     setWidgetValue("category", activeCategory || "Photo");
     if (!isCustomMode()) setWidgetValue("preset", selectedPreset());
     setWidgetValue("custom_preset", custom.value || "");
-    node.widgets_values = EFFECT_WIDGETS.map((n) => widgets[n]?.value ?? "");
-    node.properties = node.properties || {};
-    node.properties.k2cfEffectState = {
-      version: "v15",
-      widgets_values: node.widgets_values.slice(),
-      saved_at: Date.now(),
-    };
-    k2cfWriteLocalState(node, "effect", node.properties.k2cfEffectState);
+    writeEffectState(false);
     custom.classList.toggle("show", isCustomMode());
     footer?.classList.toggle("show", isCustomMode());
     preview.value = currentEffectText() || "Effect disabled or custom text is blank.";
@@ -4938,10 +4526,10 @@ function setupEffectNode(node) {
   customSave.addEventListener("click", () => { saveCustomEffectPreset(); });
   customDelete.addEventListener("click", () => { deleteCustomEffectPreset(); });
 
-  wrap.append(ioRow, preview, top, sizeBar, tabs, grid);
+  wrap.append(ioRow, previewBox, top, sizeBar, tabs, grid);
   footer = document.createElement("div");
   footer.className = "k2fx-footer";
-  footer.append(custom, customPresetBar);
+  footer.append(customBox, customPresetBar);
   wrap.appendChild(footer);
 
   node.addDOMWidget("krea2_prompt_effect_ui", "Krea2PromptEffectUI", wrap, {
@@ -4956,6 +4544,7 @@ function setupEffectNode(node) {
   preview.value = currentEffectText() || "Effect disabled or custom text is blank.";
   loadCustomEffectPresets();
   k2cfPersistWidgetSnapshot(node, "effect", EFFECT_WIDGETS, "v15");
+  writeEffectState(false);
   installNodePersistenceHooks(node, sync, EFFECT_WIDGETS, "k2cfEffect");
 }
 
@@ -5089,6 +4678,7 @@ function setupCanvasNode(node) {
   const wrap = document.createElement("div");
   wrap.className = "k2cf-wrap";
   k2cfAllowWheelZoomOnEmptySpace(wrap);
+  k2cfAllowGraphPanOnEmptySpace(wrap);
   const toolbar = document.createElement("div");
   toolbar.className = "k2cf-toolbar";
   const tools = document.createElement("div");
@@ -5218,8 +4808,8 @@ function setupCanvasNode(node) {
     const presetGroups = [
       ["1024 x 1024", "1536 x 1536", "2048 x 2048"],
       ["1024 x 1344", "1024 x 1536", "1152 x 1536", "1536 x 2048"],
-      ["1344 x 1024", "1536 x 1024", "1536 x 1152", "2048 x 1536"],
-    ];
+      ["1344 x 1024", "1536 x 1024", "1536 x 1152", "2048 x 1536"]
+  ];
     let sepIndex = 0;
     for (const group of presetGroups) {
       if (sepIndex++ > 0) {
@@ -5809,12 +5399,11 @@ function setupPromptNode(node) {
   const workflowPromptUiCandidates = [
     node.properties?.k2cfPromptUiState,
     node.__k2cfConfiguredPromptUiState,
-    promptUiWidgetState,
+    promptUiWidgetState
   ].filter((state) => k2cfPromptUiHasMeaningfulState(state));
   const localPromptUiState = k2cfReadLocalState(node, "prompt_ui");
-  const promptUiCandidates = workflowPromptUiCandidates.length
-    ? workflowPromptUiCandidates
-    : [localPromptUiState].filter((state) => k2cfPromptUiHasMeaningfulState(state));
+  const promptUiCandidates = workflowPromptUiCandidates
+    .concat([localPromptUiState].filter((state) => k2cfPromptUiHasMeaningfulState(state)));
   const storedPromptUiState = k2cfPickLatestState(promptUiCandidates) || {};
   const promptUiState = defaultPromptUiState();
   Object.assign(promptUiState, storedPromptUiState);
@@ -5896,8 +5485,8 @@ function setupPromptNode(node) {
       node.properties?.k2cfPromptUiState,
       node.__k2cfConfiguredPromptUiState,
       k2cfReadJsonObject(widgets.prompt_ui_data?.value),
-      k2cfReadLocalState(node, "prompt_ui"),
-    ].filter((state) => k2cfPromptUiHasMeaningfulState(state));
+      k2cfReadLocalState(node, "prompt_ui")
+  ].filter((state) => k2cfPromptUiHasMeaningfulState(state));
     if (!states.length) return;
     states.sort((a, b) => Number(a.saved_at || 0) - Number(b.saved_at || 0));
     for (const state of states) mergePromptUiState(state);
@@ -5932,7 +5521,7 @@ function setupPromptNode(node) {
     // v28: text area size is persisted only after an actual manual size change.
     // A plain click/focus in the textarea should not save the current/default height.
     const changedByUser = Math.abs(Math.round(observed || 0) - Math.round(applied || 0)) > 4;
-    const changed = recordTextHeight(key, observed, allowShrink, Boolean(manual && changedByUser));
+    const changed = recordTextHeight(key, observed, allowShrink, Boolean((manual || changedByUser) && changedByUser));
     if (changed) {
       const px = `${Math.round(observed)}px`;
       el.dataset.k2cfAppliedHeight = px;
@@ -5952,7 +5541,8 @@ function setupPromptNode(node) {
   }
 
   function applyAllSavedTextHeights() {
-    applySavedTextHeight("scene", sceneText); if (typeof backgroundText !== "undefined" && backgroundText) applySavedTextHeight("background", backgroundText); applySavedTextHeight("background", backgroundText);
+    applySavedTextHeight("scene", sceneText);
+    applySavedTextHeight("background", backgroundText);
     for (const [, , , promptName] of SLOTS) {
       if (controls[promptName]) applySavedTextHeight(promptName, controls[promptName]);
     }
@@ -6023,12 +5613,6 @@ function setupPromptNode(node) {
       }, 160);
     };
 
-    if (window.ResizeObserver) {
-      const ro = new ResizeObserver(() => {
-        if (isResizeGripDrag) saveHeight(false, false, true);
-      });
-      ro.observe(el);
-    }
     if (window.MutationObserver) {
       const mo = new MutationObserver(() => {
         if (isResizeGripDrag) saveHeight(false, false, true);
@@ -6054,6 +5638,7 @@ function setupPromptNode(node) {
   const wrap = document.createElement("div");
   wrap.className = "k2cf-prompt-wrap";
   k2cfAllowWheelZoomOnEmptySpace(wrap);
+  k2cfAllowGraphPanOnEmptySpace(wrap);
   const promptLangBar = document.createElement("div");
   promptLangBar.className = "k2cf-prompt-top";
   const promptLangGroup = document.createElement("div");
@@ -6195,7 +5780,8 @@ function setupPromptNode(node) {
     if (Number(preset.height) >= 45) {
       promptUiState.textHeights.scene = Number(preset.height);
       promptUiState.textHeightManual.scene = true;
-      applySavedTextHeight("scene", sceneText); if (typeof backgroundText !== "undefined" && backgroundText) applySavedTextHeight("background", backgroundText); applySavedTextHeight("background", backgroundText);
+      applySavedTextHeight("scene", sceneText);
+      applySavedTextHeight("background", backgroundText);
     }
     sync();
     savePromptUiState();
@@ -6482,4 +6068,5 @@ window.__k2cfResetPromptHeightCacheV29 = function() {
   try { app.graph?.setDirtyCanvas?.(true, true); } catch (_) {}
   return true;
 };
+
 

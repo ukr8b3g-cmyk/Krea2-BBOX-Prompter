@@ -14,6 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
+- 2026-07-04: Added B&W Glow / Anime in Photo updates and a note about avoiding strong color instructions when using monochrome effects.
 - 2026-07-02: Added Glow Portrait, improved Custom preset save/overwrite handling, and enabled ComfyUI-Custom-Scripts autocomplete inside internal Pbox prompt fields when available.
 - 2026-07-01: Updated the README with a first-time user guide and BBOX Export defaults. Prompt Effect now has a taller copyable prompt preview and additional tooltips.
 
@@ -42,6 +43,8 @@ This makes the node useful not only for decoration, but also for fast visual dir
 Prompt Effect presets are mainly tuned for Krea2 workflows that often lean photographic or real-world, but they are not meant to force every image into an ultra-realistic look. Anime, manga, comic, and illustration presets are still available, and Krea2 can handle those directions, but models or workflows specialized for those styles may be a better fit when that is the main goal. Presets outside those categories avoid pushing the result toward drawn styles and focus more on **color grading, lighting, material feel, atmosphere, and background mood**.
 
 Some effects may be weak or may not appear at all depending on the subject, background complexity, prompt conflicts, model interpretation, and the available visual space in the scene. Treat Prompt Effect as a fast direction tool, not a guaranteed fixed filter. Recent additions include practical Light presets for sunlight and shadow direction, such as side light, backlight, overhead sun, long shadow, dappled light, and window shadow.
+
+When using monochrome / B&W effects, avoid strong color instructions in the base prompt. Color words can weaken or cancel the black-and-white effect, so keep the prompt mostly neutral when you want a monochrome result.
 
 ---
 
@@ -1241,6 +1244,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
+- 2026-07-04：B&W Glow / Anime in Photo関連の更新と、モノクロ系エフェクト使用時の色指定に関する注意を追加しました。
 - 2026-07-02：Glow Portraitを追加。Custom presetの保存・上書き確認を改善し、ComfyUI-Custom-Scriptsがある環境ではPbox内部プロンプト欄でもAutoCompleteを使えるようにしました。
 - 2026-07-01：READMEに初回ユーザー向けガイドとBBOX Exportの推奨設定を追加。Prompt Effectのコピー可能なプロンプト表示欄を広げ、ツールチップを追加しました。
 
@@ -1267,6 +1271,8 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 作者目線では、このスイートの中でもPrompt Effectノードが**一番楽しい部分**です。Krea2は短いスタイル指定やエフェクト指定にも意外とよく追従するため、これらのプリセットは**実際にかなり使えます**。カメラ風、ライティング、カラーテーマ、SNS風、フィルム風、構図補助などを少し加えるだけでも、最終画像の印象がかなり変わります。
 
 単なる装飾用ではなく、画作りの方向性を素早く試すためのノードとして使えます。毎回プロンプト全体を書き直さなくても、写真スタイル、カメラFX、色テーマ、光の雰囲気、構図のヒントを切り替えながら比較できます。
+
+モノクロ / B&W系エフェクトを使う場合は、ベースプロンプトに強い色指定を入れすぎないでください。色指定が強いと白黒効果が弱くなったり、相殺される場合があります。モノクロにしたい場合は、プロンプトをできるだけニュートラルにしておく方が安定します。
 
 ---
 
