@@ -535,6 +535,7 @@ EFFECT_CATEGORIES = (
     'Art',
     'Light',
     'Weather',
+    'Background',
     'Mood',
     'Color Theme',
     'Finish',
@@ -719,6 +720,74 @@ EFFECT_PRESETS = (
     'Tropical Island Color',
     'Virtual Diva Teal',
     'Heterochromia Eyes',
+    'Classroom',
+    'Train Interior',
+    'Bus Interior',
+    'Living Room',
+    'Kitchen',
+    'Bathroom',
+    'Shower Room',
+    'Bedroom',
+    'Dining Room',
+    'Modern Hotel',
+    'Cafe',
+    'Office',
+    'Library',
+    'Art Museum',
+    'Gallery Room',
+    'City Street',
+    'Shopping Mall',
+    'Airport',
+    'Rooftop',
+    'European Street',
+    'Paris Street',
+    'New York Street',
+    'Street Snap',
+    'Graffiti Wall',
+    'Back Alley',
+    'Underpass',
+    'Night Street',
+    'Industrial Street',
+    'Convenience Store',
+    'Japanese Room',
+    'Forest Path',
+    'Restaurant',
+    'Bar',
+    'School Hallway',
+    'Gym Room',
+    'Subway Station',
+    'Supermarket',
+    'Riverbank',
+    'Harbor',
+    'Greenhouse',
+    'Kyoto Temple',
+    'Beach',
+    'Tropical Beach',
+    'Ocean Cottage',
+    'Beach Bungalow',
+    'Resort Pool',
+    'Public Pool',
+    'Aquarium',
+    'Ship Deck',
+    'Factory Line',
+    'Workshop',
+    'Abandoned Building',
+    'Ruins Interior',
+    'Old Warehouse',
+    'Fantasy Castle',
+    'Magic Forest',
+    'RPG Town',
+    'Dungeon Hall',
+    'Ancient Ruins',
+    'MMO Field',
+    'Rock Stage',
+    'Idol Stage',
+    'Rooftop Stage',
+    'Beer Garden',
+    'Live House',
+    'Theater Stage',
+    'Dance Studio',
+    'Studio Plain',
 )
 EFFECT_PRESET_TEXT = {
     'None': '',
@@ -899,6 +968,74 @@ EFFECT_PRESET_TEXT = {
     'Tropical Island Color': 'tropical island color atmosphere, turquoise ocean, lush green, sunlit yellow and coral accents, bright vacation mood, photographic color grading, real-world background atmosphere',
     'Virtual Diva Teal': 'virtual diva teal color atmosphere, teal cyan black and soft neon accents, digital stage-like color mood, clean photographic color grading, vivid real-world background atmosphere',
     'Heterochromia Eyes': 'heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail',
+    'Classroom': 'photorealistic empty classroom background, clean school interior, desks and blackboard, natural indoor lighting, practical everyday scene, no people',
+    'Train Interior': 'photorealistic train interior background, commuter rail carriage, seats and windows, clean public transport scene, natural available light, no people',
+    'Bus Interior': 'photorealistic bus interior background, rows of seats, aisle and windows, everyday public transport setting, realistic lighting, no people',
+    'Living Room': 'photorealistic living room background, comfortable home interior, sofa and warm practical decor, natural window light, clean everyday setting, no people',
+    'Kitchen': 'photorealistic kitchen background, clean home kitchen, counters and cabinets, practical indoor lighting, realistic everyday interior, no people',
+    'Bathroom': 'photorealistic bathroom background, clean residential bathroom, tiles and mirror, soft indoor lighting, realistic private interior, no people',
+    'Shower Room': 'photorealistic shower room background, clean tiled shower space, glass and bathroom fixtures, soft realistic lighting, no people',
+    'Bedroom': 'photorealistic bedroom background, simple bed and calm room decor, soft natural light, realistic home interior, no people',
+    'Dining Room': 'photorealistic dining room background, dining table and chairs, clean home interior, balanced indoor lighting, no people',
+    'Modern Hotel': 'photorealistic modern hotel room background, clean upscale interior, bed and soft ambient lighting, realistic travel setting, no people',
+    'Cafe': 'photorealistic cafe background, cozy coffee shop interior, tables and warm lighting, realistic everyday location, no people',
+    'Office': 'photorealistic office background, modern workplace interior, desks and clean business setting, balanced indoor light, no people',
+    'Library': 'photorealistic library background, bookshelves and quiet reading space, warm indoor lighting, realistic calm atmosphere, no people',
+    'Art Museum': 'photorealistic art museum background, clean gallery hall, framed artworks and spacious interior, soft exhibition lighting, no people',
+    'Gallery Room': 'photorealistic gallery room background, minimalist exhibition space, white walls and polished floor, controlled indoor lighting, no people',
+    'City Street': 'photorealistic city street background, everyday urban street, buildings and sidewalk, natural daylight, practical real-world scene, no people',
+    'Shopping Mall': 'photorealistic shopping mall background, clean indoor commercial space, storefronts and polished floor, bright practical lighting, no people',
+    'Airport': 'photorealistic airport terminal background, clean travel concourse, glass and signage, bright indoor lighting, no people',
+    'Rooftop': 'photorealistic rooftop background, open city rooftop space, skyline view and practical outdoor lighting, realistic urban setting, no people',
+    'European Street': 'photorealistic European street background, classic building facades, sidewalk and calm travel atmosphere, natural daylight, no people',
+    'Paris Street': 'photorealistic Paris street background, elegant urban architecture, sidewalk cafe feeling, natural daylight, realistic travel scene, no people',
+    'New York Street': 'photorealistic New York street background, dense urban blocks, storefronts and sidewalk, realistic city daylight, no people',
+    'Street Snap': 'photorealistic street snapshot background, casual outdoor urban location, natural available light, everyday documentary atmosphere, no people',
+    'Graffiti Wall': 'photorealistic graffiti wall background, colorful painted urban wall, street texture and practical daylight, realistic location, no people',
+    'Back Alley': 'photorealistic back alley background, narrow urban passage, textured walls and pavement, natural practical lighting, realistic street scene, no people',
+    'Underpass': 'photorealistic underpass background, concrete urban passage, overhead structure and street texture, realistic available light, no people',
+    'Night Street': 'photorealistic night street background, urban street lights, reflective pavement and evening atmosphere, realistic low light scene, no people',
+    'Industrial Street': 'photorealistic industrial street background, warehouse exterior, loading doors and concrete walls, neutral daylight, realistic practical location, no people',
+    'Convenience Store': 'photorealistic convenience store background, bright retail aisles, shelves and refrigerated cases, clean indoor lighting, no people',
+    'Japanese Room': 'photorealistic traditional Japanese tatami room background, shoji screens, tatami floor, wooden interior and alcove, warm calm lighting, no people',
+    'Forest Path': 'photorealistic forest path background, green woodland trail, mossy trees and natural sunlight, calm outdoor nature setting, no people',
+    'Restaurant': 'photorealistic restaurant background, warm dining room interior, tables, chairs and ambient lighting, realistic indoor location, no people',
+    'Bar': 'photorealistic bar background, warm dim lounge interior, wooden counter, stools and bottle shelves, realistic moody indoor lighting, no people',
+    'School Hallway': 'photorealistic school hallway background, lockers, classroom doors, windows and polished floor, bright realistic indoor lighting, no people',
+    'Gym Room': 'photorealistic gymnasium background, indoor sports hall, polished wooden floor, court lines, basketball hoops and bright window light, no people',
+    'Subway Station': 'photorealistic subway station background, underground train platform, tiled walls, station signs and practical fluorescent lighting, no people',
+    'Supermarket': 'supermarket aisle background, product shelves, bright practical lighting, everyday shopping atmosphere, no main human subject',
+    'Riverbank': 'riverbank background, walkway, railing, water, open sky, calm outdoor atmosphere, no main human subject',
+    'Harbor': 'harbor background, boats, water, warehouses, seaside industrial atmosphere, no main human subject',
+    'Greenhouse': 'greenhouse background, glass roof, plants, soft daylight, calm botanical atmosphere, no main human subject',
+    'Kyoto Temple': 'traditional Kyoto temple background, wooden architecture, garden, calm Japanese atmosphere, no main human subject',
+    'Beach': 'beach background, sand, ocean, bright natural daylight, no main human subject',
+    'Tropical Beach': 'tropical beach background, white sand, blue ocean, palm trees, bright resort atmosphere, no main human subject',
+    'Ocean Cottage': 'oceanfront cottage veranda background, sea view, wooden deck, calm resort atmosphere, no main human subject',
+    'Beach Bungalow': 'beach bungalow room background, wooden interior, ocean light, relaxed tropical resort mood, no main human subject',
+    'Resort Pool': 'resort swimming pool background, clear blue water, poolside chairs, bright vacation atmosphere, no main human subject',
+    'Public Pool': 'public swimming pool background, blue pool lanes, tiled floor, clean daytime facility atmosphere, no main human subject',
+    'Aquarium': 'aquarium background, large blue fish tank, soft underwater light, calm indoor atmosphere, no main human subject',
+    'Ship Deck': 'large ship deck background, ocean view, railings, open sky, cinematic travel atmosphere, no main human subject',
+    'Factory Line': 'factory production line background, industrial machines, conveyor belt, practical work lighting, no main human subject',
+    'Workshop': 'industrial workshop background, tools, workbench, metal parts, realistic factory atmosphere, no main human subject',
+    'Abandoned Building': 'abandoned building background, cracked walls, broken windows, dusty floor, quiet ruined atmosphere, no main human subject',
+    'Ruins Interior': 'ruined interior background, weathered walls, debris, aged concrete, dramatic abandoned space, no main human subject',
+    'Old Warehouse': 'old warehouse background, large empty space, concrete floor, metal beams, dim industrial atmosphere, no main human subject',
+    'Fantasy Castle': 'fantasy castle background, stone towers, grand courtyard, atmospheric adventure setting',
+    'Magic Forest': 'magical forest background, glowing plants, ancient trees, misty fantasy atmosphere',
+    'RPG Town': 'fantasy RPG town background, stone streets, wooden shops, adventure game atmosphere',
+    'Dungeon Hall': 'fantasy dungeon hall background, stone walls, torch light, mysterious adventure setting',
+    'Ancient Ruins': 'ancient ruins background, broken stone pillars, overgrown plants, adventure exploration atmosphere',
+    'MMO Field': '3D fantasy game field background, open grassland, distant mountains, adventure MMO atmosphere',
+    'Rock Stage': 'rock concert stage background, amplifiers, spotlights, stage truss, dramatic live music atmosphere, no main human subject',
+    'Idol Stage': 'idol performance stage background, colorful lights, LED screen, polished stage floor, bright concert atmosphere, no main human subject',
+    'Rooftop Stage': 'rooftop stage background, small outdoor platform, city skyline, casual local event atmosphere, no main human subject',
+    'Beer Garden': 'beer garden background, outdoor tables, warm lanterns, relaxed evening terrace atmosphere, no main human subject',
+    'Live House': 'small live house stage background, dark walls, microphone stand, stage lights, intimate music venue atmosphere, no main human subject',
+    'Theater Stage': 'theater stage background, curtains, warm stage lights, classic performance space, no main human subject',
+    'Dance Studio': 'dance studio background, mirror wall, wooden floor, practice room lighting, no main human subject',
+    'Studio Plain': 'plain studio background, neutral wall, simple clean space, uncluttered composition, no main human subject',
 }
 EFFECT_PRESET_CATEGORY = {
     'None': 'All',
@@ -1078,7 +1215,99 @@ EFFECT_PRESET_CATEGORY = {
     'Tropical Island Color': 'Color Theme',
     'Virtual Diva Teal': 'Color Theme',
     'Heterochromia Eyes': 'Color Theme',
+    'Classroom': 'Background',
+    'Train Interior': 'Background',
+    'Bus Interior': 'Background',
+    'Living Room': 'Background',
+    'Kitchen': 'Background',
+    'Bathroom': 'Background',
+    'Shower Room': 'Background',
+    'Bedroom': 'Background',
+    'Dining Room': 'Background',
+    'Modern Hotel': 'Background',
+    'Cafe': 'Background',
+    'Office': 'Background',
+    'Library': 'Background',
+    'Art Museum': 'Background',
+    'Gallery Room': 'Background',
+    'City Street': 'Background',
+    'Shopping Mall': 'Background',
+    'Airport': 'Background',
+    'Rooftop': 'Background',
+    'European Street': 'Background',
+    'Paris Street': 'Background',
+    'New York Street': 'Background',
+    'Street Snap': 'Background',
+    'Graffiti Wall': 'Background',
+    'Back Alley': 'Background',
+    'Underpass': 'Background',
+    'Night Street': 'Background',
+    'Industrial Street': 'Background',
+    'Convenience Store': 'Background',
+    'Japanese Room': 'Background',
+    'Forest Path': 'Background',
+    'Restaurant': 'Background',
+    'Bar': 'Background',
+    'School Hallway': 'Background',
+    'Gym Room': 'Background',
+    'Subway Station': 'Background',
+    'Supermarket': 'Background',
+    'Riverbank': 'Background',
+    'Harbor': 'Background',
+    'Greenhouse': 'Background',
+    'Kyoto Temple': 'Background',
+    'Beach': 'Background',
+    'Tropical Beach': 'Background',
+    'Ocean Cottage': 'Background',
+    'Beach Bungalow': 'Background',
+    'Resort Pool': 'Background',
+    'Public Pool': 'Background',
+    'Aquarium': 'Background',
+    'Ship Deck': 'Background',
+    'Factory Line': 'Background',
+    'Workshop': 'Background',
+    'Abandoned Building': 'Background',
+    'Ruins Interior': 'Background',
+    'Old Warehouse': 'Background',
+    'Fantasy Castle': 'Background',
+    'Magic Forest': 'Background',
+    'RPG Town': 'Background',
+    'Dungeon Hall': 'Background',
+    'Ancient Ruins': 'Background',
+    'MMO Field': 'Background',
+    'Rock Stage': 'Background',
+    'Idol Stage': 'Background',
+    'Rooftop Stage': 'Background',
+    'Beer Garden': 'Background',
+    'Live House': 'Background',
+    'Theater Stage': 'Background',
+    'Dance Studio': 'Background',
+    'Studio Plain': 'Background',
 }
+
+EFFECT_STYLE_BOOST_TEXT = {
+    "Photo": "natural photo look, realistic lighting, real-world materials, camera-based detail",
+    "Anime": "anime style, clean linework, cel-shaded color, illustrated character look",
+}
+
+
+def _normalize_style_boost(value):
+    v = _clean(value).lower()
+    if v == "photo":
+        return "Photo"
+    if v == "anime":
+        return "Anime"
+    return ""
+
+
+def _append_style_boost(effect, style_boost):
+    base = _clean(effect)
+    boost = EFFECT_STYLE_BOOST_TEXT.get(_normalize_style_boost(style_boost), "")
+    if not boost:
+        return base
+    if boost.lower() in base.lower():
+        return base
+    return f"{base}, {boost}" if base else boost
 
 class Krea2PromptEffect:
     @classmethod
@@ -1094,6 +1323,7 @@ class Krea2PromptEffect:
                 "preset": ("STRING", {"default": "Realistic Photo", "multiline": False, "dynamicPrompts": False}),
                 "mode": ("STRING", {"default": "Preset", "multiline": False, "dynamicPrompts": False}),
                 "custom_preset": _text("", multiline=True),
+                "style_boost": ("STRING", {"default": "", "multiline": False, "dynamicPrompts": False}),
             }
         }
 
@@ -1104,7 +1334,7 @@ class Krea2PromptEffect:
     FUNCTION = "execute"
     CATEGORY = "Krea2/BBOX Prompter Suite"
 
-    def execute(self, prompt_in="", enable_effect=True, category="Photo", preset="Realistic Photo", mode="Preset", custom_preset=""):
+    def execute(self, prompt_in="", enable_effect=True, category="Photo", preset="Realistic Photo", mode="Preset", custom_preset="", style_boost=""):
         prompt_in = _clean(prompt_in)
         mode = _clean(mode) or "Preset"
         preset = _clean(preset) or "Realistic Photo"
@@ -1120,6 +1350,7 @@ class Krea2PromptEffect:
                 effect = _clean(custom_preset)
             else:
                 effect = _clean(EFFECT_PRESET_TEXT.get(preset, ""))
+            effect = _append_style_boost(effect, style_boost)
         if prompt_in and effect:
             out = f"{prompt_in}\n{effect}"
         else:
@@ -1149,3 +1380,4 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Krea2ElementJSONExportV1": "📦 Krea2 BBOX Export",
     "Krea2BBOXPromptEffect": "✨ Krea2 BBOX Prompt Effect",
 }
+

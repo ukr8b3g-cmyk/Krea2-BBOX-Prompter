@@ -1400,9 +1400,8 @@ const SLOTS = [
   ["blue", "BLUE", "#2f80ff", "blue_prompt", "blue_type", "blue_framing", "blue_angle"],
   ["yellow", "YELLOW", "#ffd91a", "yellow_prompt", "yellow_type", "yellow_framing", "yellow_angle"],
   ["green", "GREEN", "#35b84b", "green_prompt", "green_type", "green_framing", "green_angle"],
-  ["magenta", "MAGENTA", "#d943c8", "magenta_prompt", "magenta_type", "magenta_framing", "magenta_angle"]
+  ["magenta", "MAGENTA", "#d943c8", "magenta_prompt", "magenta_type", "magenta_framing", "magenta_angle"],
 ];
-
 const FRAMING_OPTIONS = [
   "Auto",
   "Cowboy shot",
@@ -1444,7 +1443,11 @@ const ANGLE_OPTIONS = [
   "Foreground frame"
 ];
 
-const EFFECT_WIDGETS = ["prompt_in", "enable_effect", "category", "preset", "mode", "custom_preset"];
+const EFFECT_WIDGETS = ["prompt_in", "enable_effect", "category", "preset", "mode", "custom_preset", "style_boost"];
+const EFFECT_STYLE_BOOST_TEXT = {
+  Photo: "natural photo look, realistic lighting, real-world materials, camera-based detail",
+  Anime: "anime style, clean linework, cel-shaded color, illustrated character look",
+};
 const EFFECT_PRESETS = [
   {
     "name": "Realistic Photo",
@@ -2790,9 +2793,523 @@ const EFFECT_PRESETS = [
     "tone": "color-theme",
     "thumbnail": "heterochromia_eyes.webp",
     "text": "heterochromia eyes, natural realistic iris detail, different eye colors, one blue eye and one amber or green eye, subtle photographic color accent, clean real-world portrait detail"
+  },
+  {
+      "name": "Classroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "classroom.webp",
+      "text": "photorealistic empty classroom background, clean school interior, desks and blackboard, natural indoor lighting, practical everyday scene, no people"
+    },
+    {
+      "name": "Train Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "train_interior.webp",
+      "text": "photorealistic train interior background, commuter rail carriage, seats and windows, clean public transport scene, natural available light, no people"
+    },
+    {
+      "name": "Bus Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bus_interior.webp",
+      "text": "photorealistic bus interior background, rows of seats, aisle and windows, everyday public transport setting, realistic lighting, no people"
+    },
+    {
+      "name": "Living Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "living_room.webp",
+      "text": "photorealistic living room background, comfortable home interior, sofa and warm practical decor, natural window light, clean everyday setting, no people"
+    },
+    {
+      "name": "Kitchen",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "kitchen.webp",
+      "text": "photorealistic kitchen background, clean home kitchen, counters and cabinets, practical indoor lighting, realistic everyday interior, no people"
+    },
+    {
+      "name": "Bathroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bathroom.webp",
+      "text": "photorealistic bathroom background, clean residential bathroom, tiles and mirror, soft indoor lighting, realistic private interior, no people"
+    },
+    {
+      "name": "Shower Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "shower_room.webp",
+      "text": "photorealistic shower room background, clean tiled shower space, glass and bathroom fixtures, soft realistic lighting, no people"
+    },
+    {
+      "name": "Bedroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bedroom.webp",
+      "text": "photorealistic bedroom background, simple bed and calm room decor, soft natural light, realistic home interior, no people"
+    },
+    {
+      "name": "Dining Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "dining_room.webp",
+      "text": "photorealistic dining room background, dining table and chairs, clean home interior, balanced indoor lighting, no people"
+    },
+    {
+      "name": "Modern Hotel",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "modern_hotel.webp",
+      "text": "photorealistic modern hotel room background, clean upscale interior, bed and soft ambient lighting, realistic travel setting, no people"
+    },
+    {
+      "name": "Cafe",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "cafe.webp",
+      "text": "photorealistic cafe background, cozy coffee shop interior, tables and warm lighting, realistic everyday location, no people"
+    },
+    {
+      "name": "Office",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "office.webp",
+      "text": "photorealistic office background, modern workplace interior, desks and clean business setting, balanced indoor light, no people"
+    },
+    {
+      "name": "Library",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "library.webp",
+      "text": "photorealistic library background, bookshelves and quiet reading space, warm indoor lighting, realistic calm atmosphere, no people"
+    },
+    {
+      "name": "Art Museum",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "art_museum.webp",
+      "text": "photorealistic art museum background, clean gallery hall, framed artworks and spacious interior, soft exhibition lighting, no people"
+    },
+    {
+      "name": "Gallery Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "gallery_room.webp",
+      "text": "photorealistic gallery room background, minimalist exhibition space, white walls and polished floor, controlled indoor lighting, no people"
+    },
+    {
+      "name": "City Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "city_street.webp",
+      "text": "photorealistic city street background, everyday urban street, buildings and sidewalk, natural daylight, practical real-world scene, no people"
+    },
+    {
+      "name": "Shopping Mall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "shopping_mall.webp",
+      "text": "photorealistic shopping mall background, clean indoor commercial space, storefronts and polished floor, bright practical lighting, no people"
+    },
+    {
+      "name": "Airport",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "airport.webp",
+      "text": "photorealistic airport terminal background, clean travel concourse, glass and signage, bright indoor lighting, no people"
+    },
+    {
+      "name": "Rooftop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rooftop.webp",
+      "text": "photorealistic rooftop background, open city rooftop space, skyline view and practical outdoor lighting, realistic urban setting, no people"
+    },
+    {
+      "name": "European Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "european_street.webp",
+      "text": "photorealistic European street background, classic building facades, sidewalk and calm travel atmosphere, natural daylight, no people"
+    },
+    {
+      "name": "Paris Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "paris_street.webp",
+      "text": "photorealistic Paris street background, elegant urban architecture, sidewalk cafe feeling, natural daylight, realistic travel scene, no people"
+    },
+    {
+      "name": "New York Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "new_york_street.webp",
+      "text": "photorealistic New York street background, dense urban blocks, storefronts and sidewalk, realistic city daylight, no people"
+    },
+    {
+      "name": "Street Snap",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "street_snap.webp",
+      "text": "photorealistic street snapshot background, casual outdoor urban location, natural available light, everyday documentary atmosphere, no people"
+    },
+    {
+      "name": "Graffiti Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "graffiti_wall.webp",
+      "text": "photorealistic graffiti wall background, colorful painted urban wall, street texture and practical daylight, realistic location, no people"
+    },
+    {
+      "name": "Back Alley",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "back_alley.webp",
+      "text": "photorealistic back alley background, narrow urban passage, textured walls and pavement, natural practical lighting, realistic street scene, no people"
+    },
+    {
+      "name": "Underpass",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "underpass.webp",
+      "text": "photorealistic underpass background, concrete urban passage, overhead structure and street texture, realistic available light, no people"
+    },
+    {
+      "name": "Night Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "night_street.webp",
+      "text": "photorealistic night street background, urban street lights, reflective pavement and evening atmosphere, realistic low light scene, no people"
+    },
+    {
+      "name": "Industrial Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "industrial_street.webp",
+      "text": "photorealistic industrial street background, warehouse exterior, loading doors and concrete walls, neutral daylight, realistic practical location, no people"
+    },
+    {
+      "name": "Convenience Store",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "convenience_store.webp",
+      "text": "photorealistic convenience store background, bright retail aisles, shelves and refrigerated cases, clean indoor lighting, no people"
+    },
+    {
+      "name": "Japanese Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "japanese_room.webp",
+      "text": "photorealistic traditional Japanese tatami room background, shoji screens, tatami floor, wooden interior and alcove, warm calm lighting, no people"
+    }
+,
+  {
+    "name": "Forest Path",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "forest_path.webp",
+    "text": "photorealistic forest path background, green woodland trail, mossy trees and natural sunlight, calm outdoor nature setting, no people"
+  }
+,
+  {
+    "name": "Restaurant",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "restaurant.webp",
+    "text": "photorealistic restaurant background, warm dining room interior, tables, chairs and ambient lighting, realistic indoor location, no people"
+  }
+,
+  {
+    "name": "Bar",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "bar.webp",
+    "text": "photorealistic bar background, warm dim lounge interior, wooden counter, stools and bottle shelves, realistic moody indoor lighting, no people"
+  }
+,
+  {
+    "name": "School Hallway",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "school_hallway.webp",
+    "text": "photorealistic school hallway background, lockers, classroom doors, windows and polished floor, bright realistic indoor lighting, no people"
+  }
+,
+  {
+    "name": "Gym Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "gym_room.webp",
+    "text": "photorealistic gymnasium background, indoor sports hall, polished wooden floor, court lines, basketball hoops and bright window light, no people"
+  }
+,
+  {
+    "name": "Subway Station",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "subway_station.webp",
+    "text": "photorealistic subway station background, underground train platform, tiled walls, station signs and practical fluorescent lighting, no people"
+  }
+,
+  {
+    "name": "Supermarket",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "supermarket.webp",
+    "text": "supermarket aisle background, product shelves, bright practical lighting, everyday shopping atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Riverbank",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "riverbank.webp",
+    "text": "riverbank background, walkway, railing, water, open sky, calm outdoor atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Harbor",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "harbor.webp",
+    "text": "harbor background, boats, water, warehouses, seaside industrial atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Greenhouse",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "greenhouse.webp",
+    "text": "greenhouse background, glass roof, plants, soft daylight, calm botanical atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Kyoto Temple",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "kyoto_temple.webp",
+    "text": "traditional Kyoto temple background, wooden architecture, garden, calm Japanese atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Beach",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "beach.webp",
+    "text": "beach background, sand, ocean, bright natural daylight, no main human subject"
+  }
+,
+  {
+    "name": "Tropical Beach",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "tropical_beach.webp",
+    "text": "tropical beach background, white sand, blue ocean, palm trees, bright resort atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Ocean Cottage",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "ocean_cottage.webp",
+    "text": "oceanfront cottage veranda background, sea view, wooden deck, calm resort atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Beach Bungalow",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "beach_bungalow.webp",
+    "text": "beach bungalow room background, wooden interior, ocean light, relaxed tropical resort mood, no main human subject"
+  }
+,
+  {
+    "name": "Resort Pool",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "resort_pool.webp",
+    "text": "resort swimming pool background, clear blue water, poolside chairs, bright vacation atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Public Pool",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "public_pool.webp",
+    "text": "public swimming pool background, blue pool lanes, tiled floor, clean daytime facility atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Aquarium",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "aquarium.webp",
+    "text": "aquarium background, large blue fish tank, soft underwater light, calm indoor atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Ship Deck",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "ship_deck.webp",
+    "text": "large ship deck background, ocean view, railings, open sky, cinematic travel atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Factory Line",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "factory_line.webp",
+    "text": "factory production line background, industrial machines, conveyor belt, practical work lighting, no main human subject"
+  }
+,
+  {
+    "name": "Workshop",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "workshop.webp",
+    "text": "industrial workshop background, tools, workbench, metal parts, realistic factory atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Abandoned Building",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "abandoned_building.webp",
+    "text": "abandoned building background, cracked walls, broken windows, dusty floor, quiet ruined atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Ruins Interior",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "ruins_interior.webp",
+    "text": "ruined interior background, weathered walls, debris, aged concrete, dramatic abandoned space, no main human subject"
+  }
+,
+  {
+    "name": "Old Warehouse",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "old_warehouse.webp",
+    "text": "old warehouse background, large empty space, concrete floor, metal beams, dim industrial atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Fantasy Castle",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "fantasy_castle.webp",
+    "text": "fantasy castle background, stone towers, grand courtyard, atmospheric adventure setting"
+  }
+,
+  {
+    "name": "Magic Forest",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "magic_forest.webp",
+    "text": "magical forest background, glowing plants, ancient trees, misty fantasy atmosphere"
+  }
+,
+  {
+    "name": "RPG Town",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "rpg_town.webp",
+    "text": "fantasy RPG town background, stone streets, wooden shops, adventure game atmosphere"
+  }
+,
+  {
+    "name": "Dungeon Hall",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "dungeon_hall.webp",
+    "text": "fantasy dungeon hall background, stone walls, torch light, mysterious adventure setting"
+  }
+,
+  {
+    "name": "Ancient Ruins",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "ancient_ruins.webp",
+    "text": "ancient ruins background, broken stone pillars, overgrown plants, adventure exploration atmosphere"
+  }
+,
+  {
+    "name": "MMO Field",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "mmo_field.webp",
+    "text": "3D fantasy game field background, open grassland, distant mountains, adventure MMO atmosphere"
+  }
+,
+  {
+    "name": "Rock Stage",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "rock_stage.webp",
+    "text": "rock concert stage background, amplifiers, spotlights, stage truss, dramatic live music atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Idol Stage",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "idol_stage.webp",
+    "text": "idol performance stage background, colorful lights, LED screen, polished stage floor, bright concert atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Rooftop Stage",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "rooftop_stage.webp",
+    "text": "rooftop stage background, small outdoor platform, city skyline, casual local event atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Beer Garden",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "beer_garden.webp",
+    "text": "beer garden background, outdoor tables, warm lanterns, relaxed evening terrace atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Live House",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "live_house.webp",
+    "text": "small live house stage background, dark walls, microphone stand, stage lights, intimate music venue atmosphere, no main human subject"
+  }
+,
+  {
+    "name": "Theater Stage",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "theater_stage.webp",
+    "text": "theater stage background, curtains, warm stage lights, classic performance space, no main human subject"
+  }
+,
+  {
+    "name": "Dance Studio",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "dance_studio.webp",
+    "text": "dance studio background, mirror wall, wooden floor, practice room lighting, no main human subject"
+  }
+,
+  {
+    "name": "Studio Plain",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "studio_plain.webp",
+    "text": "plain studio background, neutral wall, simple clean space, uncluttered composition, no main human subject"
   }
   ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Mood", "Color Theme", "Finish", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Background", "Mood", "Color Theme", "Finish", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 function k2fxUniqueList(values) {
   return Array.from(new Set(values.filter(Boolean)));
@@ -3806,7 +4323,7 @@ const PROMPT_WIDGETS = [
   "red_type", "blue_type", "yellow_type", "green_type", "magenta_type",
   "prompt_ui_data",
   "red_framing", "blue_framing", "yellow_framing", "green_framing", "magenta_framing",
-  "red_angle", "blue_angle", "yellow_angle", "green_angle", "magenta_angle"
+  "red_angle", "blue_angle", "yellow_angle", "green_angle", "magenta_angle",
 ];
 
 function k2cfIsLegacyRedTestResidue(values) {
@@ -4027,6 +4544,7 @@ function button(text, title) {
 function ensureStyle() {
   const existingStyle = document.getElementById("krea2-bbox-prompter-suite-style-v1");
   const effectSizeCss = `.k2fx-sizebar{display:flex;justify-content:flex-end;align-items:center;gap:6px;margin-top:-4px;color:#aaa;font-size:10.5px}.k2fx-sizebar input{width:110px;accent-color:#35d0c8}.k2fx-sizebar output{width:36px;text-align:right;color:#ddd}`;
+  const effectStyleBoostCss = `/* k2fx-styleboost-toggle-v2 */.k2fx-styleboost{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-top:-2px;color:#aaa;font-size:10.5px}.k2fx-styleboost-label{color:#35d0c8;font-weight:700;margin-right:2px}.k2fx-boost-toggle{display:flex;align-items:center;gap:5px;color:#bbb;font-size:11px;white-space:nowrap;cursor:pointer}.k2fx-boost-toggle input{display:none}.k2fx-boost-switch{width:32px;height:17px;border-radius:99px;background:#444;border:1px solid #666;position:relative;display:inline-block;box-sizing:border-box}.k2fx-boost-switch::after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;left:1px;top:1px;background:#bbb;transition:left .12s ease,background .12s ease}.k2fx-boost-toggle input:checked + .k2fx-boost-switch{background:#138f8b;border-color:#35d0c8}.k2fx-boost-toggle input:checked + .k2fx-boost-switch::after{left:16px;background:#fff}.k2fx-boost-toggle.active{color:#fff}`;
   const effectTextareaResizeCss = `/* k2fx-textarea-resize-v3 */.k2fx-textarea-box{position:relative;display:block;min-width:0}.k2fx-textarea-box textarea{display:block;width:100%;resize:none!important;max-height:360px}.k2fx-preview,.k2fx-custom{max-height:360px}.k2fx-preview{min-height:42px}.k2fx-custom{min-height:70px}.k2fx-resize-grip{position:absolute;right:4px;bottom:4px;width:16px;height:16px;cursor:nwse-resize;z-index:3;border-radius:3px}.k2fx-resize-grip::before{content:"";position:absolute;right:3px;bottom:3px;width:8px;height:8px;border-right:2px solid #777;border-bottom:2px solid #777}.k2fx-resize-grip:hover::before{border-color:#35d0c8}`;
   const panCursorCss = `.k2cf-scene,.k2cf-slot-card,.k2cf-slot-body,.k2cf-slot-side,.k2cf-panel,.k2cf-panels{cursor:grab}.k2cf-scene textarea,.k2cf-slot-card textarea,.k2cf-slot-card select,.k2cf-slot-card button,.k2cf-panel input,.k2cf-panel select,.k2cf-panel button,.k2cf-slot-head{cursor:auto}`;
   if (existingStyle) {
@@ -4034,6 +4552,7 @@ function ensureStyle() {
       .replace(/\.k2cf-wrap,\.k2cf-prompt-wrap(?:,[^{]+)?\{pointer-events:none\}/g, "")
       .replace(/\.k2cf-wrap input,[^{]+?\{pointer-events:auto\}/g, "");
     if (!existingStyle.textContent.includes("k2fx-sizebar")) existingStyle.textContent += effectSizeCss;
+    if (!existingStyle.textContent.includes("k2fx-styleboost-toggle-v2")) existingStyle.textContent += effectStyleBoostCss;
     if (!existingStyle.textContent.includes("k2fx-textarea-resize-v3")) existingStyle.textContent += effectTextareaResizeCss;
     if (!existingStyle.textContent.includes("k2cf-slot-body,.k2cf-slot-side,.k2cf-panel")) existingStyle.textContent += panCursorCss;
     if (!existingStyle.textContent.includes("--k2fx-thumb-w")) {
@@ -4102,6 +4621,7 @@ function ensureStyle() {
     .k2fx-wrap{display:flex;flex-direction:column;gap:9px;color:#ddd;font:12px sans-serif;height:100%;min-height:0;overflow:auto;background:#111;border:1px solid #333;border-radius:8px;padding:9px;box-sizing:border-box}.k2fx-io{display:flex;align-items:center;gap:7px;background:#161616;border:1px solid #333;border-radius:6px;padding:4px 7px;color:#bfeeea;font-size:11px;font-weight:700}.k2fx-io .dot{width:9px;height:9px;border-radius:50%;background:#4cff68;box-shadow:0 0 0 1px #193 inset}.k2fx-io .name{color:#ddd;font-weight:600}
     .k2fx-top{display:grid;grid-template-columns:auto 1fr auto;gap:7px;align-items:center}.k2fx-title{font-weight:700;color:#35d0c8;white-space:nowrap}.k2fx-search{min-width:0;background:#202020;color:#eee;border:1px solid #555;border-radius:6px;padding:5px 7px;box-sizing:border-box}.k2fx-switch-label{gap:6px}.k2fx-switch-label input{display:none}.k2fx-switch{width:34px;height:18px;border-radius:99px;background:#444;border:1px solid #666;position:relative;display:inline-block;vertical-align:middle;box-sizing:border-box}.k2fx-switch::after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;left:1px;top:1px;background:#bbb;transition:left .12s ease,background .12s ease}.k2fx-switch-label input:checked + .k2fx-switch{background:#138f8b;border-color:#35d0c8}.k2fx-switch-label input:checked + .k2fx-switch::after{left:17px;background:#fff}.k2fx-toggle{display:flex;align-items:center;gap:5px;color:#bbb;font-size:11px;white-space:nowrap}
     ${effectSizeCss}
+    ${effectStyleBoostCss}
     .k2fx-tabs{display:flex;gap:5px;flex-wrap:wrap}.k2fx-tab{background:#242424;color:#ddd;border:1px solid #444;border-radius:999px;padding:4px 9px;cursor:pointer;font-size:11px}.k2fx-tab.active{border-color:#35d0c8;color:#fff;background:#12606a}
     .k2fx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr));gap:7px}.k2fx-card{background:#1b1b1b;border:1px solid #3a3a3a;border-radius:8px;padding:6px;cursor:pointer;min-width:0}.k2fx-card:hover{border-color:#888}.k2fx-card.active{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.45) inset}.k2fx-custom-notice{grid-column:1/-1;border:1px dashed #3a3a3a;border-radius:8px;padding:12px;color:#aaa;background:#181818;font-size:12px}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);border-radius:7px;border:1px solid #333;background:linear-gradient(135deg,#1e1e1e,#4b4b4b);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800;letter-spacing:.03em;margin:0 auto 6px;max-width:100%}.k2fx-thumb.has-img{color:transparent;text-shadow:none}.k2fx-thumb.has-img::after{content:""}.k2fx-card[data-tone="Strong"] .k2fx-thumb{background:linear-gradient(135deg,#050505,#dcdcdc)}.k2fx-card[data-tone="Soft"] .k2fx-thumb{background:linear-gradient(135deg,#777,#eee)}.k2fx-card[data-tone="Analog"] .k2fx-thumb{background:linear-gradient(135deg,#3a2f24,#c0a777)}.k2fx-card[data-tone="Dramatic"] .k2fx-thumb{background:linear-gradient(135deg,#0b0c10,#8d6d42)}
     .k2fx-name{font-weight:700;font-size:12px;color:#eee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.k2fx-desc{color:#aaa;font-size:10.5px;line-height:1.25;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.k2fx-footer{display:flex;flex-direction:column;gap:6px}.k2fx-footer:not(.show){display:none}.k2fx-custom{display:block;width:100%;min-height:70px;resize:none;background:#151515;color:#eee;border:1px solid #444;border-radius:6px;padding:7px;box-sizing:border-box;font:11px monospace}.k2fx-preview{display:block;width:100%;min-height:42px;max-height:240px;resize:none;background:#151515;border:1px solid #333;border-radius:7px;color:#aaa;font:10.5px monospace;padding:7px;box-sizing:border-box;overflow:auto;white-space:pre-wrap;user-select:text}.k2fx-custom-presetbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap}.k2fx-custom-presetbar label{color:#35d0c8;font-weight:700;font-size:11px}.k2fx-custom-presetbar select{flex:1 1 150px;min-width:120px;background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px}.k2fx-custom-presetbar button{background:#2b2b2b;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 7px;cursor:pointer;font-size:11px}.k2fx-custom-presetbar button:hover{border-color:#35d0c8}
@@ -4335,6 +4855,38 @@ function setupEffectNode(node) {
   sizeBar.append(sizeText, sizeSlider, sizeValue);
   applyThumbSize(sizeSlider.value);
 
+  const normalizeStyleBoost = (value) => {
+    const v = String(value || "").trim().toLowerCase();
+    if (v === "photo") return "Photo";
+    if (v === "anime") return "Anime";
+    return "";
+  };
+  let activeStyleBoost = normalizeStyleBoost(widgets.style_boost?.value);
+  const styleBoostBar = document.createElement("div");
+  styleBoostBar.className = "k2fx-styleboost";
+  styleBoostBar.title = "Optional short style booster appended after the selected effect prompt.";
+  const styleBoostLabel = document.createElement("span");
+  styleBoostLabel.className = "k2fx-styleboost-label";
+  styleBoostLabel.textContent = "Style Boost";
+  const makeBoostToggle = (label, title) => {
+    const wrapLabel = document.createElement("label");
+    wrapLabel.className = "k2fx-boost-toggle";
+    wrapLabel.title = title;
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    const slider = document.createElement("span");
+    slider.className = "k2fx-boost-switch";
+    const text = document.createElement("span");
+    text.textContent = label;
+    wrapLabel.append(input, slider, text);
+    return { wrapLabel, input };
+  };
+  const boostPhotoControl = makeBoostToggle("Photo", "Append a short realistic photo booster.");
+  const boostAnimeControl = makeBoostToggle("Anime", "Append a short anime style booster.");
+  const boostPhoto = boostPhotoControl.input;
+  const boostAnime = boostAnimeControl.input;
+  styleBoostBar.append(styleBoostLabel, boostPhotoControl.wrapLabel, boostAnimeControl.wrapLabel);
+
   const tabs = document.createElement("div");
   tabs.className = "k2fx-tabs";
   let activeCategory = widgets.category?.value || "Photo";
@@ -4481,10 +5033,33 @@ function setupEffectNode(node) {
     currentPreset = normalizeEffectPreset(currentPreset || widgets.preset?.value);
     return currentPreset;
   };
+  const styleBoostText = () => EFFECT_STYLE_BOOST_TEXT[activeStyleBoost] || "";
+  const effectWithStyleBoost = (text) => {
+    const base = String(text || "").trim();
+    const boost = styleBoostText();
+    if (!boost) return base;
+    if (base.toLowerCase().includes(boost.toLowerCase())) return base;
+    return base ? `${base}, ${boost}` : boost;
+  };
+  function renderStyleBoostButtons() {
+    boostPhoto.checked = activeStyleBoost === "Photo";
+    boostAnime.checked = activeStyleBoost === "Anime";
+    boostPhotoControl.wrapLabel.classList.toggle("active", activeStyleBoost === "Photo");
+    boostAnimeControl.wrapLabel.classList.toggle("active", activeStyleBoost === "Anime");
+    boostPhoto.setAttribute("aria-pressed", activeStyleBoost === "Photo" ? "true" : "false");
+    boostAnime.setAttribute("aria-pressed", activeStyleBoost === "Anime" ? "true" : "false");
+  }
+  function setStyleBoost(value) {
+    const next = normalizeStyleBoost(value);
+    activeStyleBoost = activeStyleBoost === next ? "" : next;
+    renderStyleBoostButtons();
+    sync();
+  }
   hydrateEffectUiFromWidgets = () => {
     currentPreset = normalizeEffectPreset(widgets.preset?.value);
     activeCategory = EFFECT_PRESET_ALIASES[widgets.category?.value] || widgets.category?.value || "Photo";
     if (!EFFECT_CATEGORIES.includes(activeCategory)) activeCategory = "Photo";
+    activeStyleBoost = normalizeStyleBoost(widgets.style_boost?.value);
     custom.value = widgets.custom_preset?.value || "";
     enabled.checked = widgets.enable_effect?.value !== false;
     render();
@@ -4500,15 +5075,16 @@ function setupEffectNode(node) {
   const isCustomMode = () => ["Custom", "Custom Preset"].includes(widgets.mode?.value || "Preset");
   function currentEffectText() {
     if (!enabled.checked) return "";
-    if (isCustomMode()) return custom.value || "";
+    if (isCustomMode()) return effectWithStyleBoost(custom.value || "");
     const preset = EFFECT_PRESETS.find((p) => p.name === selectedPreset());
-    return preset?.text || "";
+    return effectWithStyleBoost(preset?.text || "");
   }
   function sync() {
     setWidgetValue("enable_effect", Boolean(enabled.checked));
     setWidgetValue("category", activeCategory || "Photo");
     if (!isCustomMode()) setWidgetValue("preset", selectedPreset());
     setWidgetValue("custom_preset", custom.value || "");
+    setWidgetValue("style_boost", activeStyleBoost || "");
     writeEffectState(false);
     custom.classList.toggle("show", isCustomMode());
     footer?.classList.toggle("show", isCustomMode());
@@ -4661,12 +5237,15 @@ function setupEffectNode(node) {
   function render() {
     renderTabs();
     renderCards();
+    renderStyleBoostButtons();
     custom.classList.toggle("show", isCustomMode());
     footer?.classList.toggle("show", isCustomMode());
   }
 
   search.addEventListener("input", () => { renderCards(); });
   enabled.addEventListener("change", sync);
+  boostPhoto.addEventListener("change", () => setStyleBoost("Photo"));
+  boostAnime.addEventListener("change", () => setStyleBoost("Anime"));
   sizeSlider.addEventListener("input", () => applyThumbSize(sizeSlider.value));
   custom.addEventListener("input", sync);
   custom.addEventListener("change", sync);
@@ -4680,7 +5259,7 @@ function setupEffectNode(node) {
   customSave.addEventListener("click", () => { saveCustomEffectPreset(); });
   customDelete.addEventListener("click", () => { deleteCustomEffectPreset(); });
 
-  wrap.append(ioRow, previewBox, top, sizeBar, tabs, grid);
+  wrap.append(ioRow, previewBox, top, sizeBar, styleBoostBar, tabs, grid);
   footer = document.createElement("div");
   footer.className = "k2fx-footer";
   footer.append(customBox, customPresetBar);
@@ -6222,5 +6801,6 @@ window.__k2cfResetPromptHeightCacheV29 = function() {
   try { app.graph?.setDirtyCanvas?.(true, true); } catch (_) {}
   return true;
 };
+
 
 
