@@ -1,4 +1,4 @@
-﻿const { app } = window.comfyAPI.app;
+const { app } = window.comfyAPI.app;
 window.__k2efFramingV1Build = "v1_element_framing_angle_card_20260629";
 
 const CANVAS_NODE = "Krea2ElementFramingV1Canvas";
@@ -1388,6 +1388,7 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
 
 const EFFECT_NODE = "Krea2PromptEffect";
 const EFFECT_NODE_BBOX = "Krea2BBOXPromptEffect";
+const EFFECT_NODE_BACKGROUND = "Krea2BackgroundEffect";
 
 const K2CF_CANVAS_DEFAULT_SIZE = [830, 980];
 const K2CF_PROMPT_DEFAULT_SIZE = [540, 990];
@@ -3842,6 +3843,8 @@ const EFFECT_PRESETS = [
   }
   ];
 const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Background", "Mood", "Color Theme", "Finish", "Custom"];
+const EFFECT_MAIN_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Mood", "Color Theme", "Finish", "Custom"];
+const EFFECT_BACKGROUND_CATEGORIES = ["Background", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 function k2fxUniqueList(values) {
   return Array.from(new Set(values.filter(Boolean)));
@@ -3876,7 +3879,7 @@ const EFFECT_THUMBNAIL_BASE_CANDIDATES = k2fxUniqueList([
   "/extensions/Krea2-BBOX-Prompter/thumbnails/",
   "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/"
   ]);
-const EFFECT_THUMBNAIL_CACHE_VERSION = "20260703_flip_phone";
+const EFFECT_THUMBNAIL_CACHE_VERSION = "20260708_backgrounds_new";
 function k2fxPresetSlug(name) {
   return String(name || "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || "preset";
 }
@@ -3887,6 +3890,47 @@ function k2fxThumbnailFile(preset) {
 function k2fxThumbnailUrls(preset) {
   const file = k2fxThumbnailFile(preset);
   return EFFECT_THUMBNAIL_BASE_CANDIDATES.map((base) => `${base}${file}?v=${EFFECT_THUMBNAIL_CACHE_VERSION}`);
+}
+
+function k2fxBackgroundPresetJsonUrls() {
+  const roots = EFFECT_THUMBNAIL_BASE_CANDIDATES.map((base) => String(base || "").replace(/\/thumbnails\/?$/, "/"));
+  return k2fxUniqueList([
+    ...roots.map((base) => `${base}background_presets.json?v=${EFFECT_THUMBNAIL_CACHE_VERSION}`),
+    "/extensions/Krea2-BBOX-Prompter/background_presets.json",
+    "/extensions/Krea2-BBOX-Prompter-Suite/background_presets.json"
+  ]);
+}
+let k2fxExternalBackgroundPresets = null;
+let k2fxBackgroundPresetLoadPromise = null;
+function k2fxNormalizeBackgroundPresetData(data) {
+  const items = Array.isArray(data) ? data : Array.isArray(data?.presets) ? data.presets : [];
+  return items.map((preset) => ({...preset, category: preset.category || "Background"}))
+    .filter((preset) => preset.name && preset.text);
+}
+async function k2fxLoadBackgroundPresets() {
+  if (k2fxBackgroundPresetLoadPromise) return k2fxBackgroundPresetLoadPromise;
+  k2fxBackgroundPresetLoadPromise = (async () => {
+    for (const url of k2fxBackgroundPresetJsonUrls()) {
+      try {
+        const res = await fetch(url, {cache: "no-store"});
+        if (!res.ok) continue;
+        const presets = k2fxNormalizeBackgroundPresetData(await res.json());
+        if (presets.length) {
+          k2fxExternalBackgroundPresets = presets;
+          return presets;
+        }
+      } catch (_) {}
+    }
+    k2fxExternalBackgroundPresets = [];
+    return [];
+  })();
+  return k2fxBackgroundPresetLoadPromise;
+}
+function k2fxEffectPresets() {
+  if (Array.isArray(k2fxExternalBackgroundPresets) && k2fxExternalBackgroundPresets.length) {
+    return EFFECT_PRESETS.filter((preset) => preset?.category !== "Background").concat(k2fxExternalBackgroundPresets);
+  }
+  return EFFECT_PRESETS;
 }
 
 
@@ -5250,7 +5294,7 @@ function k2cfInstallDebugHelpers() {
 app.registerExtension({
   name: "krea2.element.framing.v1",
   beforeRegisterNodeDef(nodeType, nodeData) {
-    if (nodeData.name !== CANVAS_NODE && nodeData.name !== PROMPT_NODE && nodeData.name !== EFFECT_NODE && nodeData.name !== EFFECT_NODE_BBOX) return;
+    if (nodeData.name !== CANVAS_NODE && nodeData.name !== PROMPT_NODE && nodeData.name !== EFFECT_NODE && nodeData.name !== EFFECT_NODE_BBOX && nodeData.name !== EFFECT_NODE_BACKGROUND) return;
     k2cfInstallWorkflowLoadHook();
     k2cfInstallPromptUiLifecycleHooks();
     k2cfInstallDebugHelpers();
@@ -5291,14 +5335,22 @@ app.registerExtension({
       if (nodeData.name === CANVAS_NODE) setupCanvasNode(this);
       if (nodeData.name === PROMPT_NODE) setupPromptNode(this);
       if (nodeData.name === EFFECT_NODE || nodeData.name === EFFECT_NODE_BBOX) setupEffectNode(this);
+      if (nodeData.name === EFFECT_NODE_BACKGROUND) setupEffectNode(this, { backgroundOnly: true });
     };
   },
 });
 
 
-function setupEffectNode(node) {
+function setupEffectNode(node, options = {}) {
+  const isBackgroundNode = Boolean(options.backgroundOnly);
+  const nodeCategories = isBackgroundNode ? EFFECT_BACKGROUND_CATEGORIES : EFFECT_MAIN_CATEGORIES;
+  const defaultCategory = isBackgroundNode ? "Background" : "Photo";
+  const defaultPreset = isBackgroundNode ? "Classroom" : "Realistic Photo";
   node.resizable = true;
   node.serialize_widgets = true;
+  if (isBackgroundNode) {
+    node.widgets_start_y = Math.max(Number(node.widgets_start_y) || 0, 76);
+  }
   const widgets = {};
   for (const name of EFFECT_WIDGETS) widgets[name] = widget(node, name);
   Object.values(widgets).forEach(hideWidget);
@@ -5345,14 +5397,14 @@ function setupEffectNode(node) {
   top.className = "k2fx-top";
   const title = document.createElement("div");
   title.className = "k2fx-title";
-  title.textContent = "Prompt Effect";
+  title.textContent = isBackgroundNode ? "Background Effect" : "Prompt Effect";
   const search = document.createElement("input");
   search.className = "k2fx-search";
   search.placeholder = "Search presets...";
-  search.title = "Filter effect presets by name, category, or prompt text.";
+  search.title = isBackgroundNode ? "Filter background presets by name or prompt text." : "Filter effect presets by name, category, or prompt text.";
   const toggleLabel = document.createElement("label");
   toggleLabel.className = "k2fx-toggle k2fx-switch-label";
-  toggleLabel.title = "Enable or disable Prompt Effect without removing the node.";
+  toggleLabel.title = isBackgroundNode ? "Enable or disable Background Effect without removing the node." : "Enable or disable Prompt Effect without removing the node.";
   const enabled = document.createElement("input");
   enabled.type = "checkbox";
   enabled.checked = widgets.enable_effect?.value !== false;
@@ -5363,11 +5415,12 @@ function setupEffectNode(node) {
   toggleLabel.append(enabled, switchUi, switchText);
   top.append(title, search, toggleLabel);
   const thumbSizeMin = 80;
-  const thumbSizeMax = 180;
-  const readThumbSize = () => Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(localStorage.getItem(EFFECT_THUMB_SIZE_KEY)) || 135));
+  const thumbSizeMax = 240;
+  const thumbSizeDefault = 180;
+  const readThumbSize = () => Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(localStorage.getItem(EFFECT_THUMB_SIZE_KEY)) || thumbSizeDefault));
   const sizeBar = document.createElement("label");
   sizeBar.className = "k2fx-sizebar";
-  sizeBar.title = "Change thumbnail card size in the Prompt Effect gallery.";
+  sizeBar.title = isBackgroundNode ? "Change thumbnail card size in the Background Effect gallery." : "Change thumbnail card size in the Prompt Effect gallery.";
   const sizeText = document.createElement("span");
   sizeText.textContent = "Size";
   const sizeSlider = document.createElement("input");
@@ -5378,7 +5431,7 @@ function setupEffectNode(node) {
   sizeSlider.value = String(readThumbSize());
   const sizeValue = document.createElement("output");
   function applyThumbSize(value) {
-    const size = Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(value) || 135));
+    const size = Math.min(thumbSizeMax, Math.max(thumbSizeMin, Number(value) || thumbSizeDefault));
     wrap.style.setProperty("--k2fx-thumb-w", `${size}px`);
     sizeSlider.value = String(size);
     sizeValue.textContent = `${size}`;
@@ -5393,7 +5446,7 @@ function setupEffectNode(node) {
     if (v === "anime") return "Anime";
     return "";
   };
-  let activeStyleBoost = normalizeStyleBoost(widgets.style_boost?.value);
+  let activeStyleBoost = isBackgroundNode ? "" : normalizeStyleBoost(widgets.style_boost?.value);
   const styleBoostBar = document.createElement("div");
   styleBoostBar.className = "k2fx-styleboost";
   styleBoostBar.title = "Optional short style booster appended after the selected effect prompt.";
@@ -5421,9 +5474,9 @@ function setupEffectNode(node) {
 
   const tabs = document.createElement("div");
   tabs.className = "k2fx-tabs";
-  let activeCategory = widgets.category?.value || "Photo";
+  let activeCategory = widgets.category?.value || defaultCategory;
   activeCategory = EFFECT_PRESET_ALIASES[activeCategory] || activeCategory;
-  if (!EFFECT_CATEGORIES.includes(activeCategory)) activeCategory = "Photo";
+  if (!nodeCategories.includes(activeCategory)) activeCategory = defaultCategory;
   const grid = document.createElement("div");
   grid.className = "k2fx-grid";
   let footer = null;
@@ -5554,11 +5607,21 @@ function setupEffectNode(node) {
   const previewBox = makeEffectTextareaBox("preview", preview);
   const customBox = makeEffectTextareaBox("custom", custom);
 
-  const DEFAULT_EFFECT_PRESET = "Realistic Photo";
+  const DEFAULT_EFFECT_PRESET = defaultPreset;
+  const isBackgroundPreset = (preset) => {
+    return preset?.category === "Background" || (Array.isArray(preset?.categories) && preset.categories.includes("Background"));
+  };
+  const isAllowedPreset = (preset) => {
+    if (!preset) return false;
+    return isBackgroundNode ? isBackgroundPreset(preset) : !isBackgroundPreset(preset);
+  };
+  const backgroundPresetsReady = () => !isBackgroundNode || Array.isArray(k2fxExternalBackgroundPresets);
   const normalizeEffectPreset = (name) => {
     const raw = name || DEFAULT_EFFECT_PRESET;
     const v = EFFECT_PRESET_ALIASES[raw] || raw;
-    return EFFECT_PRESETS.some((p)=>p.name===v) ? v : DEFAULT_EFFECT_PRESET;
+    if (k2fxEffectPresets().some((p)=>p.name===v && isAllowedPreset(p))) return v;
+    if (isBackgroundNode && !backgroundPresetsReady()) return v || DEFAULT_EFFECT_PRESET;
+    return DEFAULT_EFFECT_PRESET;
   };
   let currentPreset = normalizeEffectPreset(widgets.preset?.value);
   const selectedPreset = () => {
@@ -5574,6 +5637,10 @@ function setupEffectNode(node) {
     return base ? `${base}, ${boost}` : boost;
   };
   function renderStyleBoostButtons() {
+    if (isBackgroundNode) {
+      activeStyleBoost = "";
+      return;
+    }
     boostPhoto.checked = activeStyleBoost === "Photo";
     boostAnime.checked = activeStyleBoost === "Anime";
     boostPhotoControl.wrapLabel.classList.toggle("active", activeStyleBoost === "Photo");
@@ -5582,16 +5649,23 @@ function setupEffectNode(node) {
     boostAnime.setAttribute("aria-pressed", activeStyleBoost === "Anime" ? "true" : "false");
   }
   function setStyleBoost(value) {
+    if (isBackgroundNode) return;
     const next = normalizeStyleBoost(value);
     activeStyleBoost = activeStyleBoost === next ? "" : next;
     renderStyleBoostButtons();
     sync();
   }
   hydrateEffectUiFromWidgets = () => {
+    k2fxLoadBackgroundPresets().then(() => {
+      currentPreset = normalizeEffectPreset(widgets.preset?.value || currentPreset);
+      if (!isCustomMode()) setWidgetValue("preset", currentPreset);
+      render();
+      sync();
+    }).catch(() => {});
     currentPreset = normalizeEffectPreset(widgets.preset?.value);
-    activeCategory = EFFECT_PRESET_ALIASES[widgets.category?.value] || widgets.category?.value || "Photo";
-    if (!EFFECT_CATEGORIES.includes(activeCategory)) activeCategory = "Photo";
-    activeStyleBoost = normalizeStyleBoost(widgets.style_boost?.value);
+    activeCategory = EFFECT_PRESET_ALIASES[widgets.category?.value] || widgets.category?.value || defaultCategory;
+    if (!nodeCategories.includes(activeCategory)) activeCategory = defaultCategory;
+    activeStyleBoost = isBackgroundNode ? "" : normalizeStyleBoost(widgets.style_boost?.value);
     custom.value = widgets.custom_preset?.value || "";
     enabled.checked = widgets.enable_effect?.value !== false;
     render();
@@ -5608,15 +5682,15 @@ function setupEffectNode(node) {
   function currentEffectText() {
     if (!enabled.checked) return "";
     if (isCustomMode()) return effectWithStyleBoost(custom.value || "");
-    const preset = EFFECT_PRESETS.find((p) => p.name === selectedPreset());
+    const preset = k2fxEffectPresets().find((p) => p.name === selectedPreset());
     return effectWithStyleBoost(preset?.text || "");
   }
   function sync() {
     setWidgetValue("enable_effect", Boolean(enabled.checked));
-    setWidgetValue("category", activeCategory || "Photo");
+    setWidgetValue("category", activeCategory || defaultCategory);
     if (!isCustomMode()) setWidgetValue("preset", selectedPreset());
     setWidgetValue("custom_preset", custom.value || "");
-    setWidgetValue("style_boost", activeStyleBoost || "");
+    setWidgetValue("style_boost", isBackgroundNode ? "" : activeStyleBoost || "");
     writeEffectState(false);
     custom.classList.toggle("show", isCustomMode());
     footer?.classList.toggle("show", isCustomMode());
@@ -5702,14 +5776,20 @@ function setupEffectNode(node) {
     sync();
   }
   function copySelectedPresetToCustom() {
-    const preset = EFFECT_PRESETS.find((p) => p.name === selectedPreset());
+    const preset = k2fxEffectPresets().find((p) => p.name === selectedPreset());
     if (!preset?.text) return;
     custom.value = preset.text;
     selectCustom();
   }
+  k2fxLoadBackgroundPresets().then(() => {
+    currentPreset = normalizeEffectPreset(widgets.preset?.value || currentPreset);
+    if (!isCustomMode()) setWidgetValue("preset", currentPreset);
+    render();
+    sync();
+  }).catch(() => {});
   function renderTabs() {
     tabs.innerHTML = "";
-    for (const cat of EFFECT_CATEGORIES) {
+    for (const cat of nodeCategories) {
       const b = document.createElement("button");
       b.className = "k2fx-tab" + (activeCategory === cat ? " active" : "");
       b.textContent = cat;
@@ -5720,8 +5800,9 @@ function setupEffectNode(node) {
   function renderCards() {
     const q = String(search.value || "").trim().toLowerCase();
     grid.innerHTML = "";
-    const list = activeCategory === "Custom" ? [] : EFFECT_PRESETS.filter((p) => {
-      const catOk = activeCategory === "All" || p.category === activeCategory || (Array.isArray(p.categories) && p.categories.includes(activeCategory));
+    const list = activeCategory === "Custom" ? [] : k2fxEffectPresets().filter((p) => {
+      const categoryMatch = activeCategory === "All" || p.category === activeCategory || (Array.isArray(p.categories) && p.categories.includes(activeCategory));
+      const catOk = isBackgroundNode ? isAllowedPreset(p) && categoryMatch : isAllowedPreset(p) && categoryMatch;
       const qOk = !q || (p.name + " " + p.category + " " + p.text).toLowerCase().includes(q);
       return catOk && qOk;
     });
@@ -5791,7 +5872,12 @@ function setupEffectNode(node) {
   customSave.addEventListener("click", () => { saveCustomEffectPreset(); });
   customDelete.addEventListener("click", () => { deleteCustomEffectPreset(); });
 
-  wrap.append(ioRow, previewBox, top, sizeBar, styleBoostBar, tabs, grid);
+  if (isBackgroundNode) {
+    styleBoostBar.style.display = "none";
+  }
+  wrap.append(ioRow, previewBox, top, sizeBar);
+  if (!isBackgroundNode) wrap.append(styleBoostBar);
+  wrap.append(tabs, grid);
   footer = document.createElement("div");
   footer.className = "k2fx-footer";
   footer.append(customBox, customPresetBar);

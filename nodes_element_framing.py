@@ -1,5 +1,7 @@
 import json
 import hashlib
+import re
+from pathlib import Path
 from math import gcd
 
 MAX_RESOLUTION = 16384
@@ -1516,11 +1518,96 @@ class Krea2BBOXPromptEffect(Krea2PromptEffect):
     CATEGORY = "Krea2/BBOX Prompter Suite"
 
 
+def _load_background_presets_from_json():
+    presets = {}
+    try:
+        path = Path(__file__).resolve().parent / "web" / "background_presets.json"
+        data = json.loads(path.read_text(encoding="utf-8-sig"))
+    except Exception:
+        return presets
+    items = data if isinstance(data, list) else data.get("presets", []) if isinstance(data, dict) else []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        name = _clean(item.get("name", ""))
+        text = _clean(item.get("text", ""))
+        if name and text:
+            presets[name] = text
+    return presets
+
+
+BACKGROUND_PRESET_TEXT = _load_background_presets_from_json()
+
+
+def _background_preset_names_from_web():
+    if BACKGROUND_PRESET_TEXT:
+        return set(BACKGROUND_PRESET_TEXT)
+    names = set()
+    try:
+        js_path = Path(__file__).resolve().parent / "web" / "krea2_element_framing_v1.js"
+        text = js_path.read_text(encoding="utf-8")
+    except Exception:
+        return names
+
+    for match in re.finditer(r'\{\s*"name":\s*"([^"]+)"[\s\S]*?\n\s*\}', text):
+        block = match.group(0)
+        name = match.group(1)
+        if '"category": "Background"' in block and name in EFFECT_PRESET_TEXT:
+            names.add(name)
+    return names
+
+
+BACKGROUND_PRESET_NAMES = _background_preset_names_from_web()
+
+
+class Krea2BackgroundEffect:
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "prompt_in": _text(""),
+                "enable_effect": ("BOOLEAN", {"default": True}),
+                "category": ("STRING", {"default": "Background", "multiline": False, "dynamicPrompts": False}),
+                "preset": ("STRING", {"default": "Classroom", "multiline": False, "dynamicPrompts": False}),
+                "mode": ("STRING", {"default": "Preset", "multiline": False, "dynamicPrompts": False}),
+                "custom_preset": _text("", multiline=True),
+                "style_boost": ("STRING", {"default": "", "multiline": False, "dynamicPrompts": False}),
+            }
+        }
+
+    RETURN_TYPES = ("STRING", "STRING")
+    RETURN_NAMES = ("prompt_out", "background_text")
+    FUNCTION = "execute"
+    CATEGORY = "Krea2/BBOX Prompter Suite"
+
+    def execute(self, prompt_in="", enable_effect=True, category="Background", preset="Classroom", mode="Preset", custom_preset="", style_boost=""):
+        prompt_in = _clean(prompt_in)
+        mode = _clean(mode) or "Preset"
+        preset = _clean(preset)
+        background = ""
+        if enable_effect:
+            if mode in ("Custom", "Custom Preset") or preset == "Custom Preset":
+                background = _clean(custom_preset)
+            elif preset and preset not in ("None", "(None)") and preset in BACKGROUND_PRESET_NAMES:
+                background = _clean(BACKGROUND_PRESET_TEXT.get(preset) or EFFECT_PRESET_TEXT.get(preset, ""))
+        if prompt_in and background:
+            out = f"{prompt_in}\n{background}"
+        else:
+            out = prompt_in or background
+        return (out, background)
+
+    @classmethod
+    def IS_CHANGED(cls, *args, **kwargs):
+        payload = json.dumps([args, kwargs], ensure_ascii=False, sort_keys=True)
+        return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
 NODE_CLASS_MAPPINGS = {
     "Krea2ElementFramingV1Canvas": Krea2ElementFramingV1Canvas,
     "Krea2ElementFramingV1Prompt": Krea2ElementFramingV1Prompt,
     "Krea2ElementJSONExportV1": Krea2ElementJSONExportV1,
     "Krea2BBOXPromptEffect": Krea2BBOXPromptEffect,
+    "Krea2BackgroundEffect": Krea2BackgroundEffect,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -1528,5 +1615,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "Krea2ElementFramingV1Prompt": "📝 Krea2 BBOX Prompter",
     "Krea2ElementJSONExportV1": "📦 Krea2 BBOX Export",
     "Krea2BBOXPromptEffect": "✨ Krea2 BBOX Prompt Effect",
+    "Krea2BackgroundEffect": "🌄 Krea2 Background Effect",
 }
-
