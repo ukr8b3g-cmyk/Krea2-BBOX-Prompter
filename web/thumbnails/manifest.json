@@ -154,6 +154,13 @@
     "tone": "camera-fx"
   },
   {
+    "name": "Flip Phone",
+    "file": "flip_phone.webp",
+    "category": "Camera FX",
+    "chip": "Flip",
+    "tone": "camera-fx"
+  },
+  {
     "name": "Tilt-Shift",
     "file": "tilt_shift.webp",
     "category": "Camera FX",
@@ -1447,5 +1454,544 @@
     "category": "SNS",
     "chip": "FB",
     "tone": "sns"
+  },
+  {
+    "name": "Window Portrait",
+    "file": "window_portrait.webp",
+    "category": "Background",
+    "chip": "WP",
+    "tone": "background"
+  },
+  {
+    "name": "Convenience Counter",
+    "file": "convenience_counter.webp",
+    "category": "Background",
+    "chip": "CC",
+    "tone": "background"
+  },
+  {
+    "name": "Photo Studio",
+    "file": "photo_studio.webp",
+    "category": "Background",
+    "chip": "PS",
+    "tone": "background"
+  },
+  {
+    "name": "Retro Arcade",
+    "file": "retro_arcade.webp",
+    "category": "Background",
+    "chip": "RA",
+    "tone": "background"
+  },
+  {
+    "name": "Purikura Booth",
+    "file": "purikura_booth.webp",
+    "category": "Background",
+    "chip": "PB",
+    "tone": "background"
+  },
+  {
+    "name": "Girl Room",
+    "file": "girl_room.webp",
+    "category": "Background",
+    "chip": "GR",
+    "tone": "background"
+  },
+  {
+    "name": "Boy Room",
+    "file": "boy_room.webp",
+    "category": "Background",
+    "chip": "BR",
+    "tone": "background"
+  },
+  {
+    "name": "Family Living",
+    "file": "family_living.webp",
+    "category": "Background",
+    "chip": "FL",
+    "tone": "background"
+  },
+  {
+    "name": "Harajuku Shop",
+    "file": "harajuku_shop.webp",
+    "category": "Background",
+    "chip": "HS",
+    "tone": "background"
+  },
+  {
+    "name": "Traditional Tea Room",
+    "file": "traditional_tea_room.webp",
+    "category": "Background",
+    "chip": "TTR",
+    "tone": "background"
+  },
+  {
+    "name": "Fireworks",
+    "file": "fireworks.webp",
+    "category": "Background",
+    "chip": "Fire",
+    "tone": "background"
+  },
+  {
+    "name": "Summer Festival Stalls",
+    "file": "summer_festival_stalls.webp",
+    "category": "Background",
+    "chip": "SFS",
+    "tone": "background"
+  },
+  {
+    "name": "Painting Classroom",
+    "file": "painting_classroom.webp",
+    "category": "Background",
+    "chip": "PC",
+    "tone": "background"
+  },
+  {
+    "name": "School Infirmary",
+    "file": "school_infirmary.webp",
+    "category": "Background",
+    "chip": "SI",
+    "tone": "background"
+  },
+  {
+    "name": "Shrine Grounds",
+    "file": "shrine_grounds.webp",
+    "category": "Background",
+    "chip": "SG",
+    "tone": "background"
+  },
+  {
+    "name": "Shopping Arcade",
+    "file": "shopping_arcade.webp",
+    "category": "Background",
+    "chip": "SA",
+    "tone": "background"
+  },
+  {
+    "name": "Karaoke Room",
+    "file": "karaoke_room.webp",
+    "category": "Background",
+    "chip": "KR",
+    "tone": "background"
+  },
+  {
+    "name": "Family Restaurant",
+    "file": "family_restaurant.webp",
+    "category": "Background",
+    "chip": "FR",
+    "tone": "background"
+  },
+  {
+    "name": "School Rooftop",
+    "file": "school_rooftop.webp",
+    "category": "Background",
+    "chip": "SR",
+    "tone": "background"
+  },
+  {
+    "name": "Park Bench",
+    "file": "park_bench.webp",
+    "category": "Background",
+    "chip": "PB",
+    "tone": "background"
+  },
+  {
+    "name": "Hair Salon",
+    "file": "hair_salon.webp",
+    "category": "Background",
+    "chip": "HS",
+    "tone": "background"
+  },
+  {
+    "name": "Old Sento",
+    "file": "old_sento_changing_room.webp",
+    "category": "Background",
+    "chip": "OS",
+    "tone": "background"
+  },
+  {
+    "name": "Outdoor Onsen",
+    "file": "outdoor_onsen.webp",
+    "category": "Background",
+    "chip": "OO",
+    "tone": "background"
+  },
+  {
+    "name": "Station Rotary",
+    "file": "station_rotary.webp",
+    "category": "Background",
+    "chip": "SR",
+    "tone": "background"
+  },
+  {
+    "name": "Railroad Crossing",
+    "file": "railroad_crossing.webp",
+    "category": "Background",
+    "chip": "RC",
+    "tone": "background"
+  },
+  {
+    "name": "Convenience Store Front Close",
+    "file": "convenience_store_front_close.webp",
+    "category": "Background",
+    "chip": "CSF",
+    "tone": "background"
+  },
+  {
+    "name": "Wagashi Shop",
+    "file": "wagashi_shop.webp",
+    "category": "Background",
+    "chip": "WS",
+    "tone": "background"
+  },
+  {
+    "name": "Ryokan Hallway",
+    "file": "ryokan_hallway.webp",
+    "category": "Background",
+    "chip": "RH",
+    "tone": "background"
+  },
+  {
+    "name": "Bus Stop",
+    "file": "bus_stop.webp",
+    "category": "Background",
+    "chip": "BS",
+    "tone": "background"
+  },
+  {
+    "name": "Riverside",
+    "file": "riverside.webp",
+    "category": "Background",
+    "chip": "Rive",
+    "tone": "background"
+  },
+  {
+    "name": "Night Alley",
+    "file": "night_alley.webp",
+    "category": "Background",
+    "chip": "NA",
+    "tone": "background"
+  },
+  {
+    "name": "Hospital Waiting Room",
+    "file": "hospital_waiting_room.webp",
+    "category": "Background",
+    "chip": "HWR",
+    "tone": "background"
+  },
+  {
+    "name": "Hospital Room",
+    "file": "hospital_room.webp",
+    "category": "Background",
+    "chip": "HR",
+    "tone": "background"
+  },
+  {
+    "name": "Coin Laundry",
+    "file": "coin_laundry.webp",
+    "category": "Background",
+    "chip": "CL",
+    "tone": "background"
+  },
+  {
+    "name": "Apartment Entrance",
+    "file": "apartment_entrance.webp",
+    "category": "Background",
+    "chip": "AE",
+    "tone": "background"
+  },
+  {
+    "name": "School Festival Classroom",
+    "file": "school_festival_classroom.webp",
+    "category": "Background",
+    "chip": "SFC",
+    "tone": "background"
+  },
+  {
+    "name": "School Hallway",
+    "file": "school_hallway.webp",
+    "category": "Background",
+    "chip": "SH",
+    "tone": "background"
+  },
+  {
+    "name": "Old Kissaten",
+    "file": "old_kissaten.webp",
+    "category": "Background",
+    "chip": "OK",
+    "tone": "background"
+  },
+  {
+    "name": "School Gym",
+    "file": "school_gym.webp",
+    "category": "Background",
+    "chip": "SG",
+    "tone": "background"
+  },
+  {
+    "name": "Ticket Gate Closeup",
+    "file": "ticket_gate_closeup.webp",
+    "category": "Background",
+    "chip": "TGC",
+    "tone": "background"
+  },
+  {
+    "name": "Movie Theater Seats",
+    "file": "movie_theater_seats.webp",
+    "category": "Background",
+    "chip": "MTS",
+    "tone": "background"
+  },
+  {
+    "name": "Drugstore",
+    "file": "drugstore.webp",
+    "category": "Background",
+    "chip": "Drug",
+    "tone": "background"
+  },
+  {
+    "name": "Luxury Hotel Front",
+    "file": "luxury_hotel_front.webp",
+    "category": "Background",
+    "chip": "LHF",
+    "tone": "background"
+  },
+  {
+    "name": "Cheap Motel Front",
+    "file": "cheap_motel_front.webp",
+    "category": "Background",
+    "chip": "CMF",
+    "tone": "background"
+  },
+  {
+    "name": "Airport Lobby",
+    "file": "airport_lobby.webp",
+    "category": "Background",
+    "chip": "AL",
+    "tone": "background"
+  },
+  {
+    "name": "Cherry Blossom Avenue",
+    "file": "cherry_blossom_avenue.webp",
+    "category": "Background",
+    "chip": "CBA",
+    "tone": "background"
+  },
+  {
+    "name": "Campsite",
+    "file": "campsite.webp",
+    "category": "Background",
+    "chip": "Camp",
+    "tone": "background"
+  },
+  {
+    "name": "Observation Deck",
+    "file": "observation_deck.webp",
+    "category": "Background",
+    "chip": "OD",
+    "tone": "background"
+  },
+  {
+    "name": "Livehouse Dressing Room",
+    "file": "livehouse_dressing_room.webp",
+    "category": "Background",
+    "chip": "LDR",
+    "tone": "background"
+  },
+  {
+    "name": "1970s Spaceship",
+    "file": "1970s_spaceship_bridge.webp",
+    "category": "Background",
+    "chip": "1S",
+    "tone": "background"
+  },
+  {
+    "name": "Western Saloon",
+    "file": "western_saloon.webp",
+    "category": "Background",
+    "chip": "WS",
+    "tone": "background"
+  },
+  {
+    "name": "Western Swinging Doors",
+    "file": "western_swinging_doors.webp",
+    "category": "Background",
+    "chip": "WSD",
+    "tone": "background"
+  },
+  {
+    "name": "Edo Nagaya",
+    "file": "edo_nagaya_alley.webp",
+    "category": "Background",
+    "chip": "EN",
+    "tone": "background"
+  },
+  {
+    "name": "Detective Office",
+    "file": "detective_office.webp",
+    "category": "Background",
+    "chip": "DO",
+    "tone": "background"
+  },
+  {
+    "name": "Pirate Ship Deck",
+    "file": "pirate_ship_deck.webp",
+    "category": "Background",
+    "chip": "PSD",
+    "tone": "background"
+  },
+  {
+    "name": "Medieval Castle Hall",
+    "file": "medieval_castle_hall.webp",
+    "category": "Background",
+    "chip": "MCH",
+    "tone": "background"
+  },
+  {
+    "name": "Interrogation Room",
+    "file": "interrogation_room.webp",
+    "category": "Background",
+    "chip": "IR",
+    "tone": "background"
+  },
+  {
+    "name": "News Studio",
+    "file": "news_studio.webp",
+    "category": "Background",
+    "chip": "NS",
+    "tone": "background"
+  },
+  {
+    "name": "1970s Drama Set",
+    "file": "1970s_family_drama_set.webp",
+    "category": "Background",
+    "chip": "1DS",
+    "tone": "background"
+  },
+  {
+    "name": "Old Japanese Rural Village",
+    "file": "old_japanese_rural_village.webp",
+    "category": "Background",
+    "chip": "OJR",
+    "tone": "background"
+  },
+  {
+    "name": "Track And Field Stadium",
+    "file": "track_and_field_stadium.webp",
+    "category": "Background",
+    "chip": "TAF",
+    "tone": "background"
+  },
+  {
+    "name": "Baseball Dugout",
+    "file": "baseball_dugout.webp",
+    "category": "Background",
+    "chip": "BD",
+    "tone": "background"
+  },
+  {
+    "name": "Boxing Gym",
+    "file": "boxing_gym.webp",
+    "category": "Background",
+    "chip": "BG",
+    "tone": "background"
+  },
+  {
+    "name": "Concert Hall Piano",
+    "file": "concert_hall_piano.webp",
+    "category": "Background",
+    "chip": "CHP",
+    "tone": "background"
+  },
+  {
+    "name": "Broadcast Room",
+    "file": "broadcast_room.webp",
+    "category": "Background",
+    "chip": "BR",
+    "tone": "background"
+  },
+  {
+    "name": "Station Stairs Escalator",
+    "file": "station_stairs_escalator.webp",
+    "category": "Background",
+    "chip": "SSE",
+    "tone": "background"
+  },
+  {
+    "name": "Elevator Interior",
+    "file": "elevator_interior.webp",
+    "category": "Background",
+    "chip": "EI",
+    "tone": "background"
+  },
+  {
+    "name": "Department Store Rooftop",
+    "file": "department_store_rooftop.webp",
+    "category": "Background",
+    "chip": "DSR",
+    "tone": "background"
+  },
+  {
+    "name": "Game Show Set",
+    "file": "game_show_set.webp",
+    "category": "Background",
+    "chip": "GSS",
+    "tone": "background"
+  },
+  {
+    "name": "Luxury Limo Rear Seat",
+    "file": "luxury_limo_rear_seat.webp",
+    "category": "Background",
+    "chip": "LLR",
+    "tone": "background"
+  },
+  {
+    "name": "Meeting Room",
+    "file": "meeting_room.webp",
+    "category": "Background",
+    "chip": "MR",
+    "tone": "background"
+  },
+  {
+    "name": "Record Shop",
+    "file": "record_shop.webp",
+    "category": "Background",
+    "chip": "RS",
+    "tone": "background"
+  },
+  {
+    "name": "Street Live",
+    "file": "shutter_street_live.webp",
+    "category": "Background",
+    "chip": "SL",
+    "tone": "background"
+  },
+  {
+    "name": "Command Room",
+    "file": "operations_command_room.webp",
+    "category": "Background",
+    "chip": "CR",
+    "tone": "background"
+  },
+  {
+    "name": "Gyudon Counter",
+    "file": "gyudon_counter.webp",
+    "category": "Background",
+    "chip": "GC",
+    "tone": "background"
+  },
+  {
+    "name": "Hamburger Shop",
+    "file": "hamburger_shop.webp",
+    "category": "Background",
+    "chip": "HS",
+    "tone": "background"
+  },
+  {
+    "name": "Pop Diner",
+    "file": "bright_pop_diner.webp",
+    "category": "Background",
+    "chip": "PD",
+    "tone": "background"
   }
 ]

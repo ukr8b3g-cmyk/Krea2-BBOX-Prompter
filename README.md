@@ -14,6 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
+- 2026-07-08: Added an expanded Background preset set with local WebP thumbnails, and kept Style Boost optional so it adds no prompt text when off.
 - 2026-07-04: Added Weather presets with GPT-generated WebP thumbnails, Copy to Custom workflow, B&W Glow / Anime in Photo updates, and monochrome prompt guidance.
 - 2026-07-02: Added Glow Portrait, improved Custom preset save/overwrite handling, and enabled ComfyUI-Custom-Scripts autocomplete inside internal Pbox prompt fields when available.
 - 2026-07-01: Updated the README with a first-time user guide and BBOX Export defaults. Prompt Effect now has a taller copyable prompt preview and additional tooltips.
@@ -31,7 +32,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 - Add per-slot camera angle hints such as `Front view`, `Low angle`, and `Top-down view`.
 - Generate a Krea2-oriented JSON prompt with the Export node.
 - Connect `width` / `height` to `EmptyLatentImage` to keep the canvas size and generation size in sync.
-- Add photographic, film, portrait, flash, art, lighting, weather, color theme, finish, and mood effects with the Prompt Effect node.
+- Add photographic, film, portrait, flash, art, lighting, weather, background, color theme, finish, and mood effects with the Prompt Effect node.
 - Choose style presets from a thumbnail-card UI using local WebP thumbnails.
 
 ## Why Prompt Effect Matters
@@ -77,7 +78,7 @@ Ctrl + F5
 - `Canvas`: draw rough BBOX placement. Start with one Object BBOX first.
 - `Prompter`: write what should appear in each colored slot.
 - `Export`: converts Canvas and Prompter data into a Krea2 JSON prompt. Most settings can stay at their defaults.
-- `Prompt Effect`: adds photo, lighting, color, finish, SNS, or mood style text after the exported prompt.
+- `Prompt Effect`: adds photo, lighting, weather, background, color, finish, or mood style text after the exported prompt.
 
 BBOX is a layout hint, not a strict mask. If you use two boxes, avoid strong overlap and keep the roles clear.
 
@@ -715,6 +716,8 @@ Prompt Effect = photo/style correction
 
 # Prompt Effect Presets
 
+This list is generated from the current built-in Prompt Effect presets. The prompt text itself is intentionally not listed here; use the Prompt Effect node preview or Copy to Custom when you want to inspect or edit a preset.
+
 ## Photo
 
 ```text
@@ -722,7 +725,9 @@ Realistic Photo
 Cinematic Photo
 Soft Portrait
 Milky Portrait
+Glow Portrait
 B&W Soft
+B&W Glow
 B&W Strong
 Film Noir
 Noir Photo
@@ -732,6 +737,17 @@ Silhouette Photo
 Glamour Photo
 Landscape Photo
 Street Photo
+Beauty Photo
+Editorial Portrait
+Candid Portrait
+Movie Still
+Neon Noir
+Action Still
+Product Photo
+Food Photo
+Fashion Editorial
+Architecture
+Interior Design
 ```
 
 ## Camera FX
@@ -745,11 +761,6 @@ Paparazzi Flash
 Dark Flash
 Red Eye Flash
 Polaroid
-iPhone Photo
-Tilt-Shift
-Lens Distortion
-Fisheye Lens
-Chromatic Aberration
 Long Exposure
 Directional Blur
 Toy Camera
@@ -759,39 +770,13 @@ Security Camera
 Thermal Camera
 Film Negative
 VHS
-```
-
-## Recommended for People
-
-```text
-Soft Portrait
-Milky Portrait
-Glamour Photo
-Beauty Photo
-Editorial Portrait
-Candid Portrait
-Natural Light
-Studio Light
-```
-
-## Flash
-
-```text
-Flash Photo
-Direct Flash
-Disposable Flash
-Paparazzi Flash
-```
-
-These flash presets are grouped under `Camera FX` in the UI.
-
-## B&W / Noir
-
-```text
-B&W Soft
-B&W Strong
-Film Noir
-Noir Photo
+Glitch Effect
+iPhone Photo
+Flip Phone
+Tilt-Shift
+Lens Distortion
+Fisheye Lens
+Chromatic Aberration
 ```
 
 ## Art
@@ -799,6 +784,7 @@ Noir Photo
 ```text
 Anime Clean
 Anime Soft
+Anime in Photo
 Manga B&W
 Illustration
 Painterly
@@ -841,7 +827,154 @@ Stormy
 Heat Haze
 ```
 
-Weather presets are tuned for photorealistic outdoor scenery and natural atmosphere. They affect sky, air, visibility, wet surfaces, snow, storm mood, and heat shimmer rather than light direction alone.
+## Background
+
+```text
+Classroom
+Train Interior
+Bus Interior
+Living Room
+Kitchen
+Bathroom
+Shower Room
+Bedroom
+Dining Room
+Modern Hotel
+Cafe
+Office
+Library
+Art Museum
+Gallery Room
+City Street
+Shopping Mall
+Airport
+Rooftop
+European Street
+Paris Street
+New York Street
+Street Snap
+Graffiti Wall
+Back Alley
+Underpass
+Night Street
+Industrial Street
+Convenience Store
+Japanese Room
+Forest Path
+Restaurant
+Bar
+School Hallway
+Gym Room
+Subway Station
+Supermarket
+Riverbank
+Harbor
+Greenhouse
+Kyoto Temple
+Beach
+Tropical Beach
+Ocean Cottage
+Beach Bungalow
+Resort Pool
+Public Pool
+Aquarium
+Ship Deck
+Factory Line
+Workshop
+Abandoned Building
+Ruins Interior
+Old Warehouse
+Fantasy Castle
+Magic Forest
+RPG Town
+Dungeon Hall
+Ancient Ruins
+MMO Field
+Rock Stage
+Idol Stage
+Rooftop Stage
+Beer Garden
+Live House
+Theater Stage
+Dance Studio
+Studio Plain
+Window Portrait
+Convenience Counter
+Photo Studio
+Retro Arcade
+Purikura Booth
+Girl Room
+Boy Room
+Family Living
+Harajuku Shop
+Traditional Tea Room
+Fireworks
+Summer Festival Stalls
+Painting Classroom
+School Infirmary
+Shrine Grounds
+Shopping Arcade
+Karaoke Room
+Family Restaurant
+School Rooftop
+Park Bench
+Hair Salon
+Old Sento
+Outdoor Onsen
+Station Rotary
+Railroad Crossing
+Convenience Store Front Close
+Wagashi Shop
+Ryokan Hallway
+Bus Stop
+Riverside
+Night Alley
+Hospital Waiting Room
+Hospital Room
+Coin Laundry
+Apartment Entrance
+School Festival Classroom
+Old Kissaten
+School Gym
+Ticket Gate Closeup
+Movie Theater Seats
+Drugstore
+Luxury Hotel Front
+Cheap Motel Front
+Airport Lobby
+Cherry Blossom Avenue
+Campsite
+Observation Deck
+Livehouse Dressing Room
+1970s Spaceship
+Western Saloon
+Western Swinging Doors
+Edo Nagaya
+Detective Office
+Pirate Ship Deck
+Medieval Castle Hall
+Interrogation Room
+News Studio
+1970s Drama Set
+Old Japanese Rural Village
+Track And Field Stadium
+Baseball Dugout
+Boxing Gym
+Concert Hall Piano
+Broadcast Room
+Station Stairs Escalator
+Elevator Interior
+Department Store Rooftop
+Game Show Set
+Luxury Limo Rear Seat
+Meeting Room
+Record Shop
+Street Live
+Command Room
+Gyudon Counter
+Hamburger Shop
+Pop Diner
+```
 
 ## Mood
 
@@ -852,42 +985,6 @@ High Detail
 Minimal Clean
 Retro Pop
 ```
-
-## Finish
-
-```text
-Paper Print
-Matte Print
-Glossy Print
-Canvas Texture
-Fabric Print
-Metal Print
-Glass Print
-Glass Distortion
-Wet Surface
-Water Droplets
-Dusty Surface
-Fractal Noise
-Scratched Print
-Vintage Paper
-Stone Surface
-Marble Finish
-Concrete Finish
-Rusty Metal
-Aged Metal
-Patina Finish
-Wood Grain
-Leather Finish
-Ceramic Glaze
-Plastic Finish
-Slime Finish
-Gel Finish
-Liquid Gloss
-Gummy Finish
-Wax Finish
-```
-
-Finish presets add final surface and material-like effects such as paper, canvas, fabric, metal, glass, wet surfaces, dust, scratches, stone, rust, wood, leather, ceramic, plastic, slime, gel, gummy, and wax. Thumbnails are local WebP material swatches under `web/thumbnails/`.
 
 ## Color Theme
 
@@ -914,42 +1011,9 @@ Gold Theme
 Silver Theme
 Dark Theme
 Bright Theme
-Soft Theme
-Vivid Theme
 Earth Theme
 Cream Theme
-Lavender Theme
-Mint Theme
-Peach Theme
-Rose Theme
-Aqua Theme
-Pastel Pink
-Pastel Blue
-Pastel Purple
-Pastel Green
-Pastel Yellow
-Pastel Orange
-Pastel Mint
-Pastel Lavender
-Pastel Peach
-Pastel Rose
-Pastel Aqua
-Pastel Cream
 Black & White
-Red & Blue
-Pink & Blue
-Purple & Cyan
-Orange & Teal
-Yellow & Purple
-Green & Magenta
-Black & Red
-Black & Gold
-White & Blue
-Pastel Pink & Blue
-Pastel Mint & Lavender
-Pastel Peach & Cream
-Pastel Yellow & Green
-Pastel Aqua & Pink
 Crazy Color
 Candy Color
 Pop Color
@@ -983,7 +1047,53 @@ Virtual Diva Teal
 Heterochromia Eyes
 ```
 
-Color Theme presets apply broad palette direction such as single-color themes, two-color themes, pastel palettes, monochrome, neon, vaporwave, world-building color moods, and cultural or regional color moods such as Japanese, Western desert, Indian festival, Arabian night, Egyptian gold, Chinese lantern, Nordic winter, tropical island, and virtual diva teal. These mood presets often show up most clearly when the scene has a simple or open background, where Krea2 has room to reflect the palette and atmosphere. Thumbnails are included as local WebP color swatches under `web/thumbnails/`, including presets with `&` in the display name.
+## Finish
+
+```text
+Hex Tile
+Kaleidoscope
+Paper Print
+Matte Print
+Glossy Print
+Canvas Texture
+Fabric Print
+Metal Print
+Glass Print
+Glass Distortion
+Wet Surface
+Water Droplets
+Dusty Surface
+Fractal Noise
+Scratched Print
+Vintage Paper
+Stone Surface
+Marble Finish
+Concrete Finish
+Rusty Metal
+Aged Metal
+Patina Finish
+Wood Grain
+Leather Finish
+Ceramic Glaze
+Plastic Finish
+Slime Finish
+Gel Finish
+Liquid Gloss
+Gummy Finish
+Wax Finish
+```
+
+## Custom
+
+Custom presets are user-authored effect prompts saved locally. They are useful when you want to copy a built-in preset, edit a few words, and reuse that edited version without changing the bundled presets.
+
+## Notes
+
+- Weather presets are tuned for photorealistic outdoor scenery and atmosphere.
+- Background presets provide reusable scene/background prompts such as rooms, shops, streets, stages, schools, travel scenes, beaches, pools, and fantasy/game-like locations.
+- Finish presets add material or surface treatment such as paper, glass, marble, metal, wood, leather, gel, water, dust, or scratches.
+- Color Theme presets are broad palette and mood directions. They often show up most clearly when the scene has a simple or open background.
+- Monochrome presets work best when the main prompt does not strongly request specific colors.
 
 ---
 
@@ -1244,6 +1354,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
+- 2026-07-08：Backgroundカテゴリを大幅に追加し、ローカルWebPサムネイルと最新プリセット一覧を更新しました。Style BoostはOFF時に追加プロンプトを一切出力しない仕様です。
 - 2026-07-04：WeatherカテゴリとGPT生成WebPサムネイル、`Copy to Custom`、B&W Glow / Anime in Photo関連、モノクロ系エフェクトの注意、日本語ユーザー向け補助ノードへのリンクを追加しました。
 - 2026-07-02：Glow Portraitを追加。Custom presetの保存・上書き確認を改善し、ComfyUI-Custom-Scriptsがある環境ではPbox内部プロンプト欄でもAutoCompleteを使えるようにしました。
 - 2026-07-01：READMEに初回ユーザー向けガイドとBBOX Exportの推奨設定を追加。Prompt Effectのコピー可能なプロンプト表示欄を広げ、ツールチップを追加しました。
@@ -1305,7 +1416,7 @@ Ctrl + F5
 - `Canvas`: BBOXのおおまかな位置を描きます。まずはObjectのBBOXを1つだけで試すのがおすすめです。
 - `Prompter`: 各色スロットに、そこへ出したい内容を書きます。
 - `Export`: CanvasとPrompterの情報をKrea2向けJSONプロンプトへ変換します。多くの場合、設定は初期値のままで問題ありません。
-- `Prompt Effect`: Export後のプロンプトに、写真、光、色、仕上げ、SNS、ムード系の効果テキストを追加します。
+- `Prompt Effect`: Export????????????????????????????????????????????
 
 BBOXは厳密なマスクではなく、配置のヒントです。2つ使う場合は、強く重ねず、役割を分ける方が安定します。
 
@@ -1968,6 +2079,8 @@ Prompt Effect = 写真・画風の補正
 
 # Prompt Effectプリセットの使い分け
 
+この一覧は、現在組み込み済みのPrompt Effectプリセットから生成しています。各プリセットのプロンプト本文はここには載せず、ノード上のプレビューまたは Copy to Custom で確認・編集する運用です。
+
 ## Photo系
 
 ```text
@@ -1975,7 +2088,9 @@ Realistic Photo
 Cinematic Photo
 Soft Portrait
 Milky Portrait
+Glow Portrait
 B&W Soft
+B&W Glow
 B&W Strong
 Film Noir
 Noir Photo
@@ -1985,9 +2100,20 @@ Silhouette Photo
 Glamour Photo
 Landscape Photo
 Street Photo
+Beauty Photo
+Editorial Portrait
+Candid Portrait
+Movie Still
+Neon Noir
+Action Still
+Product Photo
+Food Photo
+Fashion Editorial
+Architecture
+Interior Design
 ```
 
-## Camera FX系
+## Camera FX
 
 ```text
 35mm Film
@@ -1998,9 +2124,8 @@ Paparazzi Flash
 Dark Flash
 Red Eye Flash
 Polaroid
-iPhone Photo
-Tilt-Shift
 Long Exposure
+Directional Blur
 Toy Camera
 Lomography
 Night Vision
@@ -2008,52 +2133,21 @@ Security Camera
 Thermal Camera
 Film Negative
 VHS
+Glitch Effect
+iPhone Photo
+Flip Phone
+Tilt-Shift
+Lens Distortion
+Fisheye Lens
+Chromatic Aberration
 ```
-
-## 人物向けおすすめ
-
-```text
-Soft Portrait
-Milky Portrait
-Glamour Photo
-Beauty Photo
-Editorial Portrait
-Candid Portrait
-Natural Light
-Studio Light
-```
-
-人物の肌、光、ポートレート感を整えたい時に使います。
-
-## フラッシュ系
-
-```text
-Flash Photo
-Direct Flash
-Disposable Flash
-Paparazzi Flash
-```
-
-写ルンです、古いコンパクトカメラ、パーティースナップ、夜の路上スナップのような面白い効果を出したい時に使えます。
-
-UI上ではこれらのフラッシュ系プリセットは `Camera FX` に分類されます。
-
-## B&W / Noir系
-
-```text
-B&W Soft
-B&W Strong
-Film Noir
-Noir Photo
-```
-
-白黒写真、ハイコントラスト、映画的な陰影を作りたい時に使います。
 
 ## Art系
 
 ```text
 Anime Clean
 Anime Soft
+Anime in Photo
 Manga B&W
 Illustration
 Painterly
@@ -2063,10 +2157,6 @@ Comic
 Pixelate
 Concept Art
 ```
-
-写真ではなくイラスト系に寄せたい時に使います。
-
-補足：このスイートは、全体としては実写系・写真系のKrea2ワークフローで使いやすい方向を重視しています。アニメ、漫画、コミック、イラスト系のプリセットもありますが、それを主目的にする場合は、その画風に強いモデルや専用ワークフローの方が合うこともあります。
 
 ## Light系
 
@@ -2086,8 +2176,6 @@ High Key
 Neon Night
 ```
 
-光の印象に加えて、光源位置、太陽の高さ、光線、ローキー、ハイキー、ネオン夜景などを指定したい時に使います。
-
 ## Weather系
 
 ```text
@@ -2102,7 +2190,154 @@ Stormy
 Heat Haze
 ```
 
-実写系の屋外シーン向けです。空、空気感、視界、濡れた路面、雪、嵐、陽炎などを変えたい時に使います。Light系とは分けて、天候や大気の状態を指定するカテゴリです。
+## Background系
+
+```text
+Classroom
+Train Interior
+Bus Interior
+Living Room
+Kitchen
+Bathroom
+Shower Room
+Bedroom
+Dining Room
+Modern Hotel
+Cafe
+Office
+Library
+Art Museum
+Gallery Room
+City Street
+Shopping Mall
+Airport
+Rooftop
+European Street
+Paris Street
+New York Street
+Street Snap
+Graffiti Wall
+Back Alley
+Underpass
+Night Street
+Industrial Street
+Convenience Store
+Japanese Room
+Forest Path
+Restaurant
+Bar
+School Hallway
+Gym Room
+Subway Station
+Supermarket
+Riverbank
+Harbor
+Greenhouse
+Kyoto Temple
+Beach
+Tropical Beach
+Ocean Cottage
+Beach Bungalow
+Resort Pool
+Public Pool
+Aquarium
+Ship Deck
+Factory Line
+Workshop
+Abandoned Building
+Ruins Interior
+Old Warehouse
+Fantasy Castle
+Magic Forest
+RPG Town
+Dungeon Hall
+Ancient Ruins
+MMO Field
+Rock Stage
+Idol Stage
+Rooftop Stage
+Beer Garden
+Live House
+Theater Stage
+Dance Studio
+Studio Plain
+Window Portrait
+Convenience Counter
+Photo Studio
+Retro Arcade
+Purikura Booth
+Girl Room
+Boy Room
+Family Living
+Harajuku Shop
+Traditional Tea Room
+Fireworks
+Summer Festival Stalls
+Painting Classroom
+School Infirmary
+Shrine Grounds
+Shopping Arcade
+Karaoke Room
+Family Restaurant
+School Rooftop
+Park Bench
+Hair Salon
+Old Sento
+Outdoor Onsen
+Station Rotary
+Railroad Crossing
+Convenience Store Front Close
+Wagashi Shop
+Ryokan Hallway
+Bus Stop
+Riverside
+Night Alley
+Hospital Waiting Room
+Hospital Room
+Coin Laundry
+Apartment Entrance
+School Festival Classroom
+Old Kissaten
+School Gym
+Ticket Gate Closeup
+Movie Theater Seats
+Drugstore
+Luxury Hotel Front
+Cheap Motel Front
+Airport Lobby
+Cherry Blossom Avenue
+Campsite
+Observation Deck
+Livehouse Dressing Room
+1970s Spaceship
+Western Saloon
+Western Swinging Doors
+Edo Nagaya
+Detective Office
+Pirate Ship Deck
+Medieval Castle Hall
+Interrogation Room
+News Studio
+1970s Drama Set
+Old Japanese Rural Village
+Track And Field Stadium
+Baseball Dugout
+Boxing Gym
+Concert Hall Piano
+Broadcast Room
+Station Stairs Escalator
+Elevator Interior
+Department Store Rooftop
+Game Show Set
+Luxury Limo Rear Seat
+Meeting Room
+Record Shop
+Street Live
+Command Room
+Gyudon Counter
+Hamburger Shop
+Pop Diner
+```
 
 ## Mood系
 
@@ -2114,9 +2349,7 @@ Minimal Clean
 Retro Pop
 ```
 
-全体の雰囲気を変えたい時に使います。
-
-## Color Theme系
+## Color Theme
 
 ```text
 Fantasy Color
@@ -2141,42 +2374,9 @@ Gold Theme
 Silver Theme
 Dark Theme
 Bright Theme
-Soft Theme
-Vivid Theme
 Earth Theme
 Cream Theme
-Lavender Theme
-Mint Theme
-Peach Theme
-Rose Theme
-Aqua Theme
-Pastel Pink
-Pastel Blue
-Pastel Purple
-Pastel Green
-Pastel Yellow
-Pastel Orange
-Pastel Mint
-Pastel Lavender
-Pastel Peach
-Pastel Rose
-Pastel Aqua
-Pastel Cream
 Black & White
-Red & Blue
-Pink & Blue
-Purple & Cyan
-Orange & Teal
-Yellow & Purple
-Green & Magenta
-Black & Red
-Black & Gold
-White & Blue
-Pastel Pink & Blue
-Pastel Mint & Lavender
-Pastel Peach & Cream
-Pastel Yellow & Green
-Pastel Aqua & Pink
 Crazy Color
 Candy Color
 Pop Color
@@ -2210,7 +2410,53 @@ Virtual Diva Teal
 Heterochromia Eyes
 ```
 
-単色テーマ、二色テーマ、パステル、白黒、ネオン、Vaporwave、お遊び系など、画面全体の配色傾向を変えるためのプリセットです。サムネイルは `web/thumbnails/` に同梱されたローカルWebPカラースウォッチを使用します。
+## Finish系
+
+```text
+Hex Tile
+Kaleidoscope
+Paper Print
+Matte Print
+Glossy Print
+Canvas Texture
+Fabric Print
+Metal Print
+Glass Print
+Glass Distortion
+Wet Surface
+Water Droplets
+Dusty Surface
+Fractal Noise
+Scratched Print
+Vintage Paper
+Stone Surface
+Marble Finish
+Concrete Finish
+Rusty Metal
+Aged Metal
+Patina Finish
+Wood Grain
+Leather Finish
+Ceramic Glaze
+Plastic Finish
+Slime Finish
+Gel Finish
+Liquid Gloss
+Gummy Finish
+Wax Finish
+```
+
+## Custom
+
+Customプリセットは、ユーザーが自分で作成してローカル保存するエフェクトプロンプトです。組み込みプリセットを `Copy to Custom` でコピーし、不要な語句を削って保存する用途にも向いています。
+
+## 注意
+
+- Weatherプリセットは、実写系の屋外シーンや空気感を補強する用途を想定しています。
+- Backgroundプリセットは、部屋、店舗、街、ステージ、学校、旅行先、ビーチ、プール、ファンタジーやゲーム風ロケーションなどの背景指定を再利用しやすくするものです。
+- Finishプリセットは、紙、ガラス、大理石、金属、木、革、ジェル、水滴、ほこり、傷など、表面や質感の仕上げを追加します。
+- Color Themeプリセットは、色調やムードの方向付けです。背景が単純な場合ほど反映されやすい傾向があります。
+- モノクロ系プリセットを使う場合、通常プロンプト側で強い色指定を入れすぎない方が安定します。
 
 ---
 

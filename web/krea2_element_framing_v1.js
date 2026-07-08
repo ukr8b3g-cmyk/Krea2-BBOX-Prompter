@@ -3034,7 +3034,7 @@ const EFFECT_PRESETS = [
     "category": "Background",
     "tone": "background",
     "thumbnail": "school_hallway.webp",
-    "text": "photorealistic school hallway background, lockers, classroom doors, windows and polished floor, bright realistic indoor lighting, no people"
+    "text": "Japanese school hallway after school background, Classroom doors, lockers, windows with soft afternoon light, quiet empty corridor atmosphere"
   }
 ,
   {
@@ -3307,6 +3307,538 @@ const EFFECT_PRESETS = [
     "tone": "background",
     "thumbnail": "studio_plain.webp",
     "text": "plain studio background, neutral wall, simple clean space, uncluttered composition, no main human subject"
+  },
+  {
+    "name": "Window Portrait",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "window_portrait.webp",
+    "text": "Window-side portrait setting, large window with soft natural daylight, sheer curtains, simple chair or small table near the window, calm indoor portrait atmosphere, clean realistic room"
+  },
+  {
+    "name": "Convenience Counter",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "convenience_counter.webp",
+    "text": "Japanese convenience store checkout counter, bright fluorescent lighting, cashier counter, register area, product shelves behind the counter, everyday retail interior, background setting"
+  },
+  {
+    "name": "Photo Studio",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "photo_studio.webp",
+    "text": "Professional photography studio interior, white seamless backdrop, strobes, softboxes, light stands, reflector boards, clean open shooting space, background setting"
+  },
+  {
+    "name": "Retro Arcade",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "retro_arcade.webp",
+    "text": "Japanese 2000s game arcade interior, sit-down arcade cabinets, fighting game machines, dim lighting, glowing CRT screens, colorful buttons and joysticks, background setting"
+  },
+  {
+    "name": "Purikura Booth",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "purikura_booth.webp",
+    "text": "Realistic Japanese purikura booth background, Close portrait-booth distance, pastel white and pink backdrop, side glossy panels and short entrance curtain edge, No floor, no machine"
+  },
+  {
+    "name": "Girl Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "girl_room.webp",
+    "text": "Cute teenage girl bedroom, pastel bedding, plush toys, small study desk, cute stationery, mirror, soft curtains, warm cozy lighting, background setting"
+  },
+  {
+    "name": "Boy Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "boy_room.webp",
+    "text": "Teenage boy bedroom, simple blue-toned decor, study desk, manga books, plastic model kits, sports poster, casual bedding, practical room atmosphere, background setting"
+  },
+  {
+    "name": "Family Living",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "family_living.webp",
+    "text": "Ordinary family living room, sofa, television, low table, shelves, warm ceiling light, comfortable everyday domestic atmosphere, background setting"
+  },
+  {
+    "name": "Harajuku Shop",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "harajuku_shop.webp",
+    "text": "Harajuku kawaii fashion shop interior, colorful clothing racks, cute accessories, pop pastel decor, bright retail lighting, realistic boutique atmosphere, background setting"
+  },
+  {
+    "name": "Traditional Tea Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "traditional_tea_room.webp",
+    "text": "Small traditional Japanese chashitsu tea room, Tatami mats, low nijiriguchi entrance near the floor, tokonoma alcove, simple wood and plaster walls, soft shoji daylight, or modern objects, background setting"
+  },
+  {
+    "name": "Fireworks",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "fireworks.webp",
+    "text": "Japanese summer fireworks festival background, Colorful fireworks over a riverside or town skyline, subtle lanterns and festival stalls below, realistic night atmosphere"
+  },
+  {
+    "name": "Summer Festival Stalls",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "summer_festival_stalls.webp",
+    "text": "Realistic Japanese summer matsuri night street, Rows of yatai food stalls, warm lanterns, steam, cooking equipment, festival crowd atmosphere, background setting"
+  },
+  {
+    "name": "Painting Classroom",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "painting_classroom.webp",
+    "text": "Realistic painting classroom background, Easels, art supplies and canvases around, Empty small platform and plain stool in the center, no central model"
+  },
+  {
+    "name": "School Infirmary",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "school_infirmary.webp",
+    "text": "Japanese school infirmary background, White beds with privacy curtains, medicine cabinet, desk, clean quiet room, soft daylight"
+  },
+  {
+    "name": "Shrine Grounds",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "shrine_grounds.webp",
+    "text": "Japanese shrine grounds background, Torii gate, stone path, trees, lanterns, temizuya basin, traditional shrine buildings, calm daytime atmosphere"
+  },
+  {
+    "name": "Shopping Arcade",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "shopping_arcade.webp",
+    "text": "Japanese shopping arcade background, Covered local shotengai street, small shops, storefront awnings, bicycles, warm everyday atmosphere"
+  },
+  {
+    "name": "Karaoke Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "karaoke_room.webp",
+    "text": "Japanese karaoke room background, Private room with sofas, low table, wall monitor, microphones, song remote, colorful realistic lighting"
+  },
+  {
+    "name": "Family Restaurant",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "family_restaurant.webp",
+    "text": "Japanese family restaurant booth background, Table seat with bench sofas, menus without readable text, drink bar area in the distance, warm casual lighting"
+  },
+  {
+    "name": "School Rooftop",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "school_rooftop.webp",
+    "text": "Japanese school rooftop background, Rooftop fence, concrete floor, stairwell door, distant city and sky, calm after-school atmosphere"
+  },
+  {
+    "name": "Park Bench",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "park_bench.webp",
+    "text": "Japanese park bench background, Simple bench in a neighborhood park, trees, path, grass, soft daylight, calm everyday atmosphere"
+  },
+  {
+    "name": "Hair Salon",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "hair_salon.webp",
+    "text": "Japanese hair salon background, Styling chairs, large mirrors, shampoo station, clean shelves, hair tools, bright realistic salon lighting"
+  },
+  {
+    "name": "Old Sento",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "old_sento_changing_room.webp",
+    "text": "Old Japanese sento changing room background, Wooden lockers, wicker baskets, bench, scale, old fans, warm worn Showa-era public bath atmosphere"
+  },
+  {
+    "name": "Outdoor Onsen",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "outdoor_onsen.webp",
+    "text": "Typical Japanese outdoor onsen background, Stone hot spring bath, steam, wooden ryokan details, mountains or forest scenery behind, calm natural atmosphere"
+  },
+  {
+    "name": "Station Rotary",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "station_rotary.webp",
+    "text": "Japanese station rotary background, Bus stops, taxi area, station entrance, streetlights, everyday waiting-place atmosphere"
+  },
+  {
+    "name": "Railroad Crossing",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "railroad_crossing.webp",
+    "text": "Small Japanese railroad crossing background, Crossing gate, tracks, quiet residential street, houses and utility poles"
+  },
+  {
+    "name": "Convenience Store Front Close",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "convenience_store_front_close.webp",
+    "text": "Japanese convenience store front entrance background at night, Camera very close to the storefront, automatic glass doors, bright interior, vending machines and small entrance area"
+  },
+  {
+    "name": "Wagashi Shop",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "wagashi_shop.webp",
+    "text": "Traditional Japanese wagashi shop interior background, Glass display case, sweets, wooden shelves, wrapping counter, warm calm lighting"
+  },
+  {
+    "name": "Ryokan Hallway",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "ryokan_hallway.webp",
+    "text": "Japanese ryokan hallway background, Tatami or wooden corridor, shoji screens, lantern lights, quiet traditional inn atmosphere"
+  },
+  {
+    "name": "Bus Stop",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "bus_stop.webp",
+    "text": "Japanese bus stop background, Roadside shelter, bench, timetable board, local street or countryside road, calm waiting atmosphere"
+  },
+  {
+    "name": "Riverside",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "riverside.webp",
+    "text": "Japanese riverside embankment background, Wide river, grassy levee, walking path, bridge, open sky, quiet everyday atmosphere"
+  },
+  {
+    "name": "Night Alley",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "night_alley.webp",
+    "text": "Japanese night alley background, Narrow street, small restaurant lights, vending machine glow, wet pavement, quiet dramatic mood"
+  },
+  {
+    "name": "Hospital Waiting Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "hospital_waiting_room.webp",
+    "text": "Japanese hospital waiting room background, Rows of chairs, reception counter, clean walls, quiet modern clinic atmosphere"
+  },
+  {
+    "name": "Hospital Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "hospital_room.webp",
+    "text": "Japanese hospital patient room background, Single bed, privacy curtain, bedside table, window daylight, calm medical room"
+  },
+  {
+    "name": "Coin Laundry",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "coin_laundry.webp",
+    "text": "Japanese coin laundry background, Washing machines, dryers, folding table, bench, clean fluorescent lighting"
+  },
+  {
+    "name": "Apartment Entrance",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "apartment_entrance.webp",
+    "text": "Japanese apartment entrance background, Lobby, mailboxes, glass doors, intercom panel, tiled floor, clean everyday residential atmosphere"
+  },
+  {
+    "name": "School Festival Classroom",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "school_festival_classroom.webp",
+    "text": "Japanese school festival classroom background, Decorated classroom, desks, handmade paper decorations, booth setup, lively culture festival mood"
+  },
+  {
+    "name": "Old Kissaten",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "old_kissaten.webp",
+    "text": "Old Japanese kissaten cafe interior background, Wood paneling, red or brown chairs, small tables, counter, warm lamps, nostalgic Showa-era atmosphere"
+  },
+  {
+    "name": "School Gym",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "school_gym.webp",
+    "text": "Japanese school gymnasium background, Wooden floor, basketball hoops, stage curtain, wall bars, high windows, quiet school event atmosphere"
+  },
+  {
+    "name": "Ticket Gate Closeup",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "ticket_gate_closeup.webp",
+    "text": "Japanese ticket gate close-up background, Camera very close to automatic ticket gates, IC card readers and gate flaps visible, station concourse behind"
+  },
+  {
+    "name": "Movie Theater Seats",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "movie_theater_seats.webp",
+    "text": "Movie theater seat background, Close front-facing view of empty cinema chairs, armrests and cup holders visible, dark auditorium behind, no screen shown"
+  },
+  {
+    "name": "Drugstore",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "drugstore.webp",
+    "text": "Japanese drugstore interior background, Aisles of medicine, cosmetics and daily goods, bright fluorescent lighting, clean shelves, everyday shop atmosphere"
+  },
+  {
+    "name": "Luxury Hotel Front",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "luxury_hotel_front.webp",
+    "text": "Luxury hotel front desk background, Close view of elegant reception counter, marble or wood finishes, warm lobby lighting, flowers, polished high-end atmosphere"
+  },
+  {
+    "name": "Cheap Motel Front",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "cheap_motel_front.webp",
+    "text": "Cheap American motel front desk background, Worn reception counter, old key rack, tired fluorescent light, dated decor, worn service counter details"
+  },
+  {
+    "name": "Airport Lobby",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "airport_lobby.webp",
+    "text": "Airport lobby background, Check-in counters, waiting seats, glass walls, luggage carts, bright modern terminal lighting, travel atmosphere"
+  },
+  {
+    "name": "Cherry Blossom Avenue",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "cherry_blossom_avenue.webp",
+    "text": "Japanese cherry blossom avenue background, Rows of sakura trees in bloom, path or small street, soft spring daylight, petals, calm seasonal atmosphere"
+  },
+  {
+    "name": "Campsite",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "campsite.webp",
+    "text": "Japanese campsite background, Tent, simple camp chairs, fire pit, forest or lakeside scenery, soft evening light, relaxed outdoor atmosphere"
+  },
+  {
+    "name": "Observation Deck",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "observation_deck.webp",
+    "text": "Japanese observation deck background, Railing, coin binoculars, wide city or mountain view, open sky, calm sightseeing atmosphere"
+  },
+  {
+    "name": "Livehouse Dressing Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "livehouse_dressing_room.webp",
+    "text": "Live house dressing room vanity background, Makeup table with many round bulbs around mirrors, simple chair, small backstage room, worn walls, cables and bags"
+  },
+  {
+    "name": "1970s Spaceship",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "1970s_spaceship_bridge.webp",
+    "text": "1970s science fiction spaceship bridge background, Analog control panels, chunky buttons, round colored lamps, retro monitors, central captain chair, classic movie set feeling"
+  },
+  {
+    "name": "Western Saloon",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "western_saloon.webp",
+    "text": "Western saloon set background, Large wooden bar counter, round tables, bottles, swinging saloon doors visible, dusty old western town atmosphere"
+  },
+  {
+    "name": "Western Swinging Doors",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "western_swinging_doors.webp",
+    "text": "Western saloon swinging doors background, Classic half-height wooden swing doors very large and close to camera, dusty street outside, saloon interior edges visible"
+  },
+  {
+    "name": "Edo Nagaya",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "edo_nagaya_alley.webp",
+    "text": "Edo period nagaya alley set background, Narrow wooden tenement lane, lattice windows, sliding doors, buckets, stone path, old jidaigeki drama set feeling"
+  },
+  {
+    "name": "Detective Office",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "detective_office.webp",
+    "text": "Classic detective office set background, Old wooden desk, venetian blinds, file cabinets, desk lamp, papers, smoky noir lighting, private investigator room"
+  },
+  {
+    "name": "Pirate Ship Deck",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "pirate_ship_deck.webp",
+    "text": "Pirate ship deck background, Wooden deck, mast, ropes, barrels, cannon, ocean and sky behind, adventure movie set atmosphere"
+  },
+  {
+    "name": "Medieval Castle Hall",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "medieval_castle_hall.webp",
+    "text": "Medieval castle great hall background, Stone walls, long wooden table, banners, candle stands, large fireplace, heavy dramatic atmosphere"
+  },
+  {
+    "name": "Interrogation Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "interrogation_room.webp",
+    "text": "Old Japanese police drama interrogation room background, Small plain table with a desk lamp and a bowl of katsudon, two metal folding chairs facing each other, bare concrete walls, harsh dim light"
+  },
+  {
+    "name": "News Studio",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "news_studio.webp",
+    "text": "Television news studio background, Anchor desk, studio lights, camera area, large abstract monitor wall with, polished broadcast set"
+  },
+  {
+    "name": "1970s Drama Set",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "1970s_family_drama_set.webp",
+    "text": "1970s family drama living room TV set background, Retro sofa, low table, old wallpaper, warm lamps, visible studio cameras and lighting stands, clearly a filming set"
+  },
+  {
+    "name": "Old Japanese Rural Village",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "old_japanese_rural_village.webp",
+    "text": "Old Japanese rural village background, Camera close to a poor wooden farmhouse, the house large in frame, rough vegetable field beside it, dirt path, simple farm tools"
+  },
+  {
+    "name": "Track And Field Stadium",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "track_and_field_stadium.webp",
+    "text": "Track and field stadium background, Red running track lanes, starting blocks, field area, stadium seats, daytime athletic competition atmosphere, No main athlete or logos"
+  },
+  {
+    "name": "Baseball Dugout",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "baseball_dugout.webp",
+    "text": "Baseball dugout front background, Close view near the team bench, dugout roof, bench, bats, helmets, field and grass visible beyond"
+  },
+  {
+    "name": "Boxing Gym",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "boxing_gym.webp",
+    "text": "Boxing gym background, Boxing ring, punching bags, speed bag, worn mats, old posters without readable text, gritty training atmosphere"
+  },
+  {
+    "name": "Concert Hall Piano",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "concert_hall_piano.webp",
+    "text": "Concert hall grand piano seat background, Close view of a grand piano and piano bench on stage, polished floor, warm stage lights, empty audience seats behind"
+  },
+  {
+    "name": "Broadcast Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "broadcast_room.webp",
+    "text": "Japanese broadcast room background, Close view of microphones, audio mixer, headphones, monitors, soundproof walls, compact school or studio booth atmosphere"
+  },
+  {
+    "name": "Station Stairs Escalator",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "station_stairs_escalator.webp",
+    "text": "Japanese station stairs and escalator background, Close view of stairs beside an escalator, handrails, tiled walls, station lighting, commuter flow atmosphere"
+  },
+  {
+    "name": "Elevator Interior",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "elevator_interior.webp",
+    "text": "Elevator interior background, Close view inside a modern elevator, metal walls, handrail, mirror panel, control buttons without readable text, clean confined atmosphere"
+  },
+  {
+    "name": "Department Store Rooftop",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "department_store_rooftop.webp",
+    "text": "Showa-era department store rooftop amusement park background, Small old rides, coin-operated children machines, railings, city view, worn nostalgic rooftop atmosphere"
+  },
+  {
+    "name": "Game Show Set",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "game_show_set.webp",
+    "text": "Japanese TV game show set background, Contestant podiums, colorful panels, quiz board, bright studio lights, flashy entertainment atmosphere"
+  },
+  {
+    "name": "Luxury Limo Rear Seat",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "luxury_limo_rear_seat.webp",
+    "text": "Luxury limousine rear seat background, Spacious leather back seat, privacy divider, ambient lights, polished trim, champagne glasses without labels, elegant night ride atmosphere"
+  },
+  {
+    "name": "Meeting Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "meeting_room.webp",
+    "text": "Modern meeting room background, Large conference table, chairs, wall monitor, whiteboard, glass partitions, clean office lighting"
+  },
+  {
+    "name": "Record Shop",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "record_shop.webp",
+    "text": "Record shop interior background, Rows of vinyl bins, album shelves with unreadable covers, listening counter, posters without readable text, warm indie shop atmosphere"
+  },
+  {
+    "name": "Street Live",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "shutter_street_live.webp",
+    "text": "Street live performance in front of a closed shop shutter, Metal shutter close behind, microphone stand, guitar case, portable speaker, night street lights, background setting"
+  },
+  {
+    "name": "Command Room",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "operations_command_room.webp",
+    "text": "Operations command room background, Large central table, wall maps without readable text, monitors, radios, tactical boards, dim focused lighting, serious mission control atmosphere"
+  },
+  {
+    "name": "Gyudon Counter",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "gyudon_counter.webp",
+    "text": "Japanese gyudon chain restaurant interior background, Eye-level view centered on a long counter, stools, kitchen area behind, menu boards without readable text"
+  },
+  {
+    "name": "Hamburger Shop",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "hamburger_shop.webp",
+    "text": "Generic hamburger fast food restaurant interior background, Front counter, order registers, menu boards without readable text, booths and tray area, bright clean casual atmosphere, No brand logos"
+  },
+  {
+    "name": "Pop Diner",
+    "category": "Background",
+    "tone": "background",
+    "thumbnail": "bright_pop_diner.webp",
+    "text": "Bright pop 1950s American diner interior background, Chrome counter, red and turquoise vinyl stools, colorful booths, jukebox, checker floor, cheerful retro atmosphere"
   }
   ];
 const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Background", "Mood", "Color Theme", "Finish", "Custom"];
