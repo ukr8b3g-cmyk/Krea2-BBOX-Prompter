@@ -1,4 +1,4 @@
-# Krea2 BBOX Prompter Suite
+﻿# Krea2 BBOX Prompter Suite
 
 <img width="1722" height="868" alt="{612BF8A2-2546-4484-8611-FAD406678783}" src="https://github.com/user-attachments/assets/4da38a62-cc7d-46b9-8b78-cdad7053eac3" />
 
@@ -14,7 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
-- 2026-07-09: Added more Background Effect presets from local WebP assets, including travel streets, transport interiors, arcades, capsule hotel, pachinko/slot interiors, sauna, vending machine corner, data center, showroom, planetarium, skate park, recording booth, and desert highway. Background thumbnails now use the updated cache version.
+- 2026-07-09: Added more Background Effect presets from local WebP assets, including travel streets, transport interiors, arcades, capsule hotel, pachinko/slot interiors, sauna, vending machine corner, data center, showroom, planetarium, skate park, recording booth, and desert highway. Background thumbnails now use the updated cache version. Replaced the recommended test workflow with `workflow/Krea2-BBOX-Node-Test.json`.
 - 2026-07-08: Added an expanded Background preset set with local WebP thumbnails, and kept Style Boost optional so it adds no prompt text when off.
 - 2026-07-04: Added Weather presets with GPT-generated WebP thumbnails, Copy to Custom workflow, B&W Glow / Anime in Photo updates, and monochrome prompt guidance.
 - 2026-07-02: Added Glow Portrait, improved Custom preset save/overwrite handling, and enabled ComfyUI-Custom-Scripts autocomplete inside internal Pbox prompt fields when available.
@@ -87,7 +87,13 @@ BBOX is a layout hint, not a strict mask. If you use two boxes, avoid strong ove
 
 ## First Steps
 
-If a sample workflow is available, check:
+Current template workflow:
+
+```text
+https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter/blob/main/workflow/Krea2-BBOX-Node-Test.json
+```
+
+Other workflow files, if present, are in:
 
 ```text
 https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter/tree/main/workflow
@@ -101,7 +107,8 @@ Basic workflow:
 3. Write prompts for each color slot in 📝 Krea2 BBOX Prompter.
 4. Convert the layout and prompts into JSON with 📦 Krea2 BBOX Export.
 5. Add photographic or style effects with ✨ Krea2 BBOX Prompt Effect.
-6. Connect the final prompt to CLIP Text Encode.
+6. Add scene/background presets with 🖼️ Krea2 BBOX Background Effect when needed.
+7. Connect the final prompt to CLIP Text Encode.
 ```
 
 ---
@@ -113,7 +120,8 @@ flowchart LR
     A["📐 Krea2 BBOX Canvas<br/>BBOX creation and size control"] -->|framing_data| C["📦 Krea2 BBOX Export<br/>Krea2 JSON generation"]
     B["📝 Krea2 BBOX Prompter<br/>Scene / Background / Box prompts"] -->|prompt_ui_data| C
     C -->|prompt_text| D["✨ Krea2 BBOX Prompt Effect<br/>Effect prompt append"]
-    D -->|prompt_out| E["CLIP Text Encode<br/>text"]
+    D -->|prompt_out| F["🖼️ Krea2 BBOX Background Effect<br/>Optional background prompt append"]
+    F -->|prompt_out| E["CLIP Text Encode<br/>text"]
     C -->|width| F["EmptyLatentImage<br/>width"]
     C -->|height| F
 ```
@@ -1352,6 +1360,8 @@ Export
   ↓
 Prompt Effect
   ↓
+Background Effect (optional)
+  ↓
 CLIP Text Encode
 ```
 
@@ -1386,7 +1396,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
-- 2026-07-09：Background EffectにローカルWebP素材から追加背景を登録しました。旅行系ストリート、交通機関内、アーケード、カプセルホテル、パチンコ/スロット店内、サウナ、自販機コーナー、データセンター、ショールーム、プラネタリウム、スケートパーク、録音ブース、砂漠道路などを追加し、背景サムネイルのキャッシュ版も更新しました。
+- 2026-07-09：Background EffectにローカルWebP素材から追加背景を登録しました。旅行系ストリート、交通機関内、アーケード、カプセルホテル、パチンコ/スロット店内、サウナ、自販機コーナー、データセンター、ショールーム、プラネタリウム、スケートパーク、録音ブース、砂漠道路などを追加し、背景サムネイルのキャッシュ版も更新しました。 推奨テストワークフローを `workflow/Krea2-BBOX-Node-Test.json` に差し替えました。
 - 2026-07-08：Backgroundカテゴリを大幅に追加し、ローカルWebPサムネイルと最新プリセット一覧を更新しました。Style BoostはOFF時に追加プロンプトを一切出力しない仕様です。
 - 2026-07-04：WeatherカテゴリとGPT生成WebPサムネイル、`Copy to Custom`、B&W Glow / Anime in Photo関連、モノクロ系エフェクトの注意、日本語ユーザー向け補助ノードへのリンクを追加しました。
 - 2026-07-02：Glow Portraitを追加。Custom presetの保存・上書き確認を改善し、ComfyUI-Custom-Scriptsがある環境ではPbox内部プロンプト欄でもAutoCompleteを使えるようにしました。
@@ -1467,7 +1477,13 @@ BBOXは厳密なマスクではなく、配置のヒントです。2つ使う場
 
 ## まず最初に：このノードの使い方
 
-サンプルワークフローがある場合は、以下を確認してください。
+現在のテンプレートワークフローはこちらです。
+
+```text
+https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter/blob/main/workflow/Krea2-BBOX-Node-Test.json
+```
+
+その他のワークフローファイルがある場合は、以下にあります。
 
 ```text
 https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter/tree/main/workflow
@@ -1481,7 +1497,8 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter/tree/main/workflow
 3. 📝 Krea2 BBOX Prompter で各色スロットにプロンプトを書く
 4. 📦 Krea2 BBOX Export でJSONプロンプトに変換する
 5. ✨ Krea2 BBOX Prompt Effect で写真効果や画風効果を追加する
-6. CLIP Text Encode に接続して生成する
+6. 必要に応じて 🖼️ Krea2 BBOX Background Effect で背景プリセットを追加する
+7. CLIP Text Encode に接続して生成する
 ```
 
 ---
@@ -3505,7 +3522,8 @@ BBOX JSONを渡しても、Krea2が常に厳密に守るとは限りません。
 3. Object promptは短いラベルではなく説明文にする
 4. `auto_position_hint` をONにする
 5. Prompt Effectは任意（ON / OFF）で写真・画風を整える
-6. 生成結果を確認しながら、必要に応じてBBOXのサイズや位置、descを調整して画像生成を繰り返す
+6. Background Effectは任意で、背景プリセットを重ねるときだけ使う
+7. 生成結果を確認しながら、必要に応じてBBOXのサイズや位置、descを調整して画像生成を繰り返す
 
 ---
 
@@ -3520,3 +3538,4 @@ BBOX JSONを渡しても、Krea2が常に厳密に守るとは限りません。
 ```text
 https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 ```
+

@@ -1,0 +1,1016 @@
+{
+  "id": "c7149c69-b1c6-45de-9f79-bdc0bfd7499f",
+  "revision": 0,
+  "last_node_id": 159,
+  "last_link_id": 324,
+  "nodes": [
+    {
+      "id": 149,
+      "type": "KSampler",
+      "pos": [
+        1630,
+        270
+      ],
+      "size": [
+        230,
+        510
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 308
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 309
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 310
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 311
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            314
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        114283499618114,
+        "randomize",
+        10,
+        1,
+        "er_sde",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 150,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1280,
+        460
+      ],
+      "size": [
+        310,
+        110
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 323
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 324
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            311
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        888,
+        1184,
+        1
+      ]
+    },
+    {
+      "id": 151,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1280,
+        640
+      ],
+      "size": [
+        310,
+        160
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 312
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 316
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            309,
+            313
+          ]
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 152,
+      "type": "VAELoader",
+      "pos": [
+        1280,
+        300
+      ],
+      "size": [
+        310,
+        70
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            315
+          ]
+        }
+      ],
+      "title": "VAE Loader",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "qwen_image_vae.safetensors"
+      ]
+    },
+    {
+      "id": 154,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        1630,
+        130
+      ],
+      "size": [
+        230,
+        50
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 313
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            310
+          ]
+        }
+      ],
+      "title": "Negative (Zero Out)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 156,
+      "type": "VAEDecode",
+      "pos": [
+        1630,
+        -70
+      ],
+      "size": [
+        230,
+        50
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 314
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 315
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            317
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 157,
+      "type": "SaveAnimatedWEBP",
+      "pos": [
+        1910,
+        -150
+      ],
+      "size": [
+        750,
+        960
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 317
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "SaveAnimatedWEBP"
+      },
+      "widgets_values": [
+        "krea2",
+        1,
+        false,
+        80,
+        "default"
+      ]
+    },
+    {
+      "id": 140,
+      "type": "Krea2BBOXPromptEffect",
+      "pos": [
+        550,
+        -160
+      ],
+      "size": [
+        670,
+        1170
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt_in",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt_in"
+          },
+          "link": 307
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt_out",
+          "type": "STRING",
+          "links": [
+            316
+          ]
+        },
+        {
+          "name": "effect_text",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2BBOXPromptEffect",
+        "k2cfEffectState": {
+          "version": "v15",
+          "widgets_values": [
+            "",
+            true,
+            "All",
+            "Realistic Photo",
+            "Preset",
+            "",
+            ""
+          ],
+          "saved_at": 1783602221620
+        }
+      },
+      "widgets_values": [
+        "",
+        true,
+        "All",
+        "Realistic Photo",
+        "Preset",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 145,
+      "type": "Krea2ElementFramingV1Prompt",
+      "pos": [
+        -1230,
+        -160
+      ],
+      "size": [
+        540,
+        990
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "prompt_ui_data",
+          "type": "KREA2_ELEMENT_PROMPT_DATA",
+          "links": [
+            321
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2ElementFramingV1Prompt",
+        "k2cfPromptState": {
+          "version": "v15",
+          "widgets_values": [
+            "",
+            "",
+            "A young woman in a floral summer dress",
+            "",
+            "",
+            "",
+            "",
+            "obj",
+            "obj",
+            "obj",
+            "obj",
+            "obj",
+            "{\"version\":\"prompt_ui_element_v1\",\"heightCaptureMode\":\"resize_grip_v31\",\"textHeights\":{\"red_prompt\":125,\"blue_prompt\":125,\"yellow_prompt\":125,\"green_prompt\":125,\"magenta_prompt\":125},\"textHeightManual\":{},\"slotOpen\":{\"red\":true,\"blue\":true,\"yellow\":false,\"green\":false,\"magenta\":false},\"scenePreset\":\"\",\"slotPreset\":{},\"slotValues\":{\"red\":{\"type\":\"obj\",\"framing\":\"Cowboy shot\",\"angle\":\"Auto\"},\"blue\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"yellow\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"green\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"magenta\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"}},\"saved_at\":1783600258026}",
+            "Cowboy shot",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto",
+            "Auto"
+          ],
+          "saved_at": 1783602221621
+        },
+        "k2cfPromptUiState": {
+          "version": "prompt_ui_element_v1",
+          "heightCaptureMode": "resize_grip_v31",
+          "textHeights": {
+            "red_prompt": 125,
+            "blue_prompt": 125,
+            "yellow_prompt": 125,
+            "green_prompt": 125,
+            "magenta_prompt": 125
+          },
+          "textHeightManual": {},
+          "slotOpen": {
+            "red": true,
+            "blue": true,
+            "yellow": false,
+            "green": false,
+            "magenta": false
+          },
+          "scenePreset": "",
+          "slotPreset": {},
+          "slotValues": {
+            "red": {
+              "type": "obj",
+              "framing": "Cowboy shot",
+              "angle": "Auto"
+            },
+            "blue": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            },
+            "yellow": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            },
+            "green": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            },
+            "magenta": {
+              "type": "obj",
+              "framing": "Auto",
+              "angle": "Auto"
+            }
+          },
+          "saved_at": 1783600258026
+        }
+      },
+      "widgets_values": [
+        "",
+        "",
+        "A young woman in a floral summer dress",
+        "",
+        "",
+        "",
+        "",
+        "obj",
+        "obj",
+        "obj",
+        "obj",
+        "obj",
+        "{\"version\":\"prompt_ui_element_v1\",\"heightCaptureMode\":\"resize_grip_v31\",\"textHeights\":{\"red_prompt\":125,\"blue_prompt\":125,\"yellow_prompt\":125,\"green_prompt\":125,\"magenta_prompt\":125},\"textHeightManual\":{},\"slotOpen\":{\"red\":true,\"blue\":true,\"yellow\":false,\"green\":false,\"magenta\":false},\"scenePreset\":\"\",\"slotPreset\":{},\"slotValues\":{\"red\":{\"type\":\"obj\",\"framing\":\"Cowboy shot\",\"angle\":\"Auto\"},\"blue\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"yellow\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"green\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"},\"magenta\":{\"type\":\"obj\",\"framing\":\"Auto\",\"angle\":\"Auto\"}},\"saved_at\":1783600258026}",
+        "Cowboy shot",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto",
+        "Auto"
+      ]
+    },
+    {
+      "id": 132,
+      "type": "Krea2ElementFramingV1Canvas",
+      "pos": [
+        -2070,
+        -160
+      ],
+      "size": [
+        830,
+        980
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "framing_data",
+          "type": "KREA2_ELEMENT_FRAMING_DATA",
+          "links": [
+            301
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2ElementFramingV1Canvas",
+        "k2cfCanvasState": {
+          "version": "v15",
+          "widgets_values": [
+            1024,
+            1024,
+            "1024 x 1024",
+            "{\"boxes\":[{\"id\":\"box_1783600146591\",\"slot\":\"red\",\"x1\":178.55627703497308,\"y1\":28,\"x2\":862.2103098744939,\"y2\":996,\"nx1\":0.1743713642919659,\"ny1\":0.02734375,\"nx2\":0.8420022557368104,\"ny2\":0.97265625,\"bbox\":[179,28,862,996],\"position_hint\":\"middle-center area, centered around 51% from the left and 50% from the top\",\"z\":0}],\"activeSlot\":\"red\",\"hideBoxes\":false,\"drawMode\":false}",
+            "{\"iso\":\"\",\"shutter\":\"\",\"aperture\":\"\",\"focal_length\":\"\"}",
+            "Thirds",
+            "Auto",
+            "{\"sets\":[],\"selected\":\"\"}",
+            "{\"sets\":[],\"selected\":\"\"}"
+          ],
+          "saved_at": 1783602221621
+        }
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        "1024 x 1024",
+        "{\"boxes\":[{\"id\":\"box_1783600146591\",\"slot\":\"red\",\"x1\":178.55627703497308,\"y1\":28,\"x2\":862.2103098744939,\"y2\":996,\"nx1\":0.1743713642919659,\"ny1\":0.02734375,\"nx2\":0.8420022557368104,\"ny2\":0.97265625,\"bbox\":[179,28,862,996],\"position_hint\":\"middle-center area, centered around 51% from the left and 50% from the top\",\"z\":0}],\"activeSlot\":\"red\",\"hideBoxes\":false,\"drawMode\":false}",
+        "{\"iso\":\"\",\"shutter\":\"\",\"aperture\":\"\",\"focal_length\":\"\"}",
+        "Thirds",
+        "Auto",
+        "{\"sets\":[],\"selected\":\"\"}",
+        "{\"sets\":[],\"selected\":\"\"}"
+      ]
+    },
+    {
+      "id": 153,
+      "type": "CLIPLoader",
+      "pos": [
+        1280,
+        110
+      ],
+      "size": [
+        310,
+        110
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            312
+          ]
+        }
+      ],
+      "title": "CLIP Loader - Krea2",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_4b_fp8_scaled.safetensors",
+        "krea2",
+        "default"
+      ]
+    },
+    {
+      "id": 155,
+      "type": "UNETLoader",
+      "pos": [
+        1280,
+        -90
+      ],
+      "size": [
+        310,
+        110
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            308
+          ]
+        }
+      ],
+      "title": "UNET Loader - Krea2 Turbo FP8",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.26.0",
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "krea2\\krea2_turbo_fp8_scaled.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 146,
+      "type": "Krea2BackgroundEffect",
+      "pos": [
+        -300,
+        -160
+      ],
+      "size": [
+        830,
+        1160
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt_in",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt_in"
+          },
+          "link": 306
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt_out",
+          "type": "STRING",
+          "links": [
+            307
+          ]
+        },
+        {
+          "name": "background_text",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2BackgroundEffect",
+        "k2cfEffectState": {
+          "version": "v15",
+          "widgets_values": [
+            "",
+            true,
+            "Background",
+            "Tree Portrait Background",
+            "Preset",
+            "Tree Portrait Background background. Realistic scene with clear foreground objects and usable composition, no main person, no readable text or logos.",
+            ""
+          ],
+          "saved_at": 1783602221623
+        }
+      },
+      "widgets_values": [
+        "",
+        true,
+        "Background",
+        "Tree Portrait Background",
+        "Preset",
+        "Tree Portrait Background background. Realistic scene with clear foreground objects and usable composition, no main person, no readable text or logos.",
+        ""
+      ]
+    },
+    {
+      "id": 134,
+      "type": "Krea2ElementJSONExportV1",
+      "pos": [
+        -680,
+        630
+      ],
+      "size": [
+        370,
+        200
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "framing_data",
+          "type": "KREA2_ELEMENT_FRAMING_DATA",
+          "link": 301
+        },
+        {
+          "name": "prompt_ui_data",
+          "type": "KREA2_ELEMENT_PROMPT_DATA",
+          "link": 322
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt_text",
+          "type": "STRING",
+          "links": [
+            306
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            323
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            324
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2ElementJSONExportV1"
+      },
+      "widgets_values": [
+        "normalized_1000",
+        "compact",
+        "json_with_safety_hint",
+        true,
+        true
+      ]
+    },
+    {
+      "id": 159,
+      "type": "Krea2BBOXPoseGestureInjectorV1",
+      "pos": [
+        -680,
+        -160
+      ],
+      "size": [
+        360,
+        660
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt_ui_data",
+          "type": "KREA2_ELEMENT_PROMPT_DATA",
+          "link": 321
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt_ui_data",
+          "type": "KREA2_ELEMENT_PROMPT_DATA",
+          "links": [
+            322
+          ]
+        },
+        {
+          "name": "pose_text",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "debug_text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Krea2BBOXPoseGestureInjectorV1",
+        "k2pg_prompt_preview_height": 76
+      },
+      "widgets_values": [
+        true,
+        "RED slot",
+        "Female",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "None / なし",
+        "Natural",
+        "None / なし",
+        "Comma",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      301,
+      132,
+      0,
+      134,
+      0,
+      "KREA2_ELEMENT_FRAMING_DATA"
+    ],
+    [
+      306,
+      134,
+      0,
+      146,
+      0,
+      "STRING"
+    ],
+    [
+      307,
+      146,
+      0,
+      140,
+      0,
+      "STRING"
+    ],
+    [
+      308,
+      155,
+      0,
+      149,
+      0,
+      "MODEL"
+    ],
+    [
+      309,
+      151,
+      0,
+      149,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      310,
+      154,
+      0,
+      149,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      311,
+      150,
+      0,
+      149,
+      3,
+      "LATENT"
+    ],
+    [
+      312,
+      153,
+      0,
+      151,
+      0,
+      "CLIP"
+    ],
+    [
+      313,
+      151,
+      0,
+      154,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      314,
+      149,
+      0,
+      156,
+      0,
+      "LATENT"
+    ],
+    [
+      315,
+      152,
+      0,
+      156,
+      1,
+      "VAE"
+    ],
+    [
+      316,
+      140,
+      0,
+      151,
+      1,
+      "STRING"
+    ],
+    [
+      317,
+      156,
+      0,
+      157,
+      0,
+      "IMAGE"
+    ],
+    [
+      321,
+      145,
+      0,
+      159,
+      0,
+      "KREA2_ELEMENT_PROMPT_DATA"
+    ],
+    [
+      322,
+      159,
+      0,
+      134,
+      1,
+      "KREA2_ELEMENT_PROMPT_DATA"
+    ],
+    [
+      323,
+      134,
+      1,
+      150,
+      0,
+      "INT"
+    ],
+    [
+      324,
+      134,
+      2,
+      150,
+      1,
+      "INT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "Image Generation",
+      "bounding": [
+        1250,
+        -180,
+        630,
+        1010
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.506070287539959,
+      "offset": [
+        2468.403503251123,
+        694.276436187321
+      ]
+    },
+    "workflow_notes": "Native ComfyUI 0.25.0+ Krea2 workflow. Uses official CLIPLoader/UNETLoader nodes. Requires 3 model files (see Note node).",
+    "frontendVersion": "1.45.20",
+    "k2cf_state_id": "k2cf_1782395516386_1ufts1mp18p",
+    "krea2_note": "Canvas -> Prompter -> Pose Visual Picker -> Pose Output Controls -> Export -> Background Effect -> Prompt Effect. Connect Prompt Effect prompt_out to your Krea2 image generation positive text input."
+  },
+  "version": 0.4
+}
