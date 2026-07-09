@@ -3879,7 +3879,7 @@ const EFFECT_THUMBNAIL_BASE_CANDIDATES = k2fxUniqueList([
   "/extensions/Krea2-BBOX-Prompter/thumbnails/",
   "/extensions/Krea2-BBOX-Prompter-Suite/thumbnails/"
   ]);
-const EFFECT_THUMBNAIL_CACHE_VERSION = "20260708_backgrounds_new";
+const EFFECT_THUMBNAIL_CACHE_VERSION = "20260709_backgrounds_extra";
 function k2fxPresetSlug(name) {
   return String(name || "").toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "") || "preset";
 }
