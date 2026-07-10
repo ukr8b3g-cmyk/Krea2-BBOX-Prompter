@@ -1,5 +1,5 @@
 {
-  "version": "2026-07-09",
+  "version": "2026-07-10",
   "description": "Single source for Krea2 Background Effect presets. Add WebP files under web/thumbnails/ and add matching entries here.",
   "presets": [
     {
@@ -2199,6 +2199,713 @@
       "tone": "background",
       "thumbnail": "recording_studio_vocal_booth.webp",
       "text": "﻿photorealistic recording studio vocal booth background, condenser microphone with pop filter, acoustic foam panels, soundproof booth interior, warm studio light, no main human subject"
+    },
+    {
+      "name": "100 Yen Shop Aisle Register Counter",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "100_yen_shop_aisle_register_counter.webp",
+      "text": "100 yen shop aisle and register counter background, product shelves, small goods displays, checkout counter, basket stand, discount shop interior"
+    },
+    {
+      "name": "1990S Hua Lamphong Station Platform",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "1990s_hua_lamphong_station_platform.webp",
+      "text": "1990s Hua Lamphong railway station platform background, old train platform, vintage Thai rail cars, arched station roof, platform signs, worn concrete floor, Bangkok railway terminal"
+    },
+    {
+      "name": "Abandoned Subway Platform",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "abandoned_subway_platform.webp",
+      "text": "abandoned subway platform background, cracked platform floor, dark tunnel entrance, broken signs, old benches, decayed underground station"
+    },
+    {
+      "name": "Akha Hill Tribe House Entrance",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "akha_hill_tribe_house_entrance.webp",
+      "text": "Akha hill tribe house entrance background, wooden stilt house doorway, bamboo wall texture, small steps, packed earth yard, nearby village houses, northern Thailand mountain village"
+    },
+    {
+      "name": "Alien Marketplace",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "alien_marketplace.webp",
+      "text": "alien marketplace background, strange market stalls, unfamiliar goods, organic architecture, glowing signs, otherworldly bazaar"
+    },
+    {
+      "name": "Ancient Underground Temple",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ancient_underground_temple.webp",
+      "text": "ancient underground temple background, stone pillars, carved walls, stairway, altar platform, buried temple interior"
+    },
+    {
+      "name": "Apartment Garbage Station",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "apartment_garbage_station.webp",
+      "text": "apartment garbage station background, sorted trash bins, recycling crates, garbage collection signs, concrete floor, apartment waste room"
+    },
+    {
+      "name": "Apartment Mailbox Area",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "apartment_mailbox_area.webp",
+      "text": "apartment mailbox area background, wall of mailboxes, parcel boxes, nameplate slots, bulletin board, apartment entrance hall"
+    },
+    {
+      "name": "Bag Shop Display Shelf",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bag_shop_display_shelf.webp",
+      "text": "bag shop display shelf background, handbags on shelves, display tables, wall racks, price tags, fashion retail interior"
+    },
+    {
+      "name": "Bakery Tray Station",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bakery_tray_station.webp",
+      "text": "bakery tray station background, bread tray stack, tongs, tray shelf, bakery entrance area, bread display shelves"
+    },
+    {
+      "name": "Balcony Laundry Area",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "balcony_laundry_area.webp",
+      "text": "balcony laundry area background, clothes drying pole, hanging laundry, washing items, balcony railing, apartment balcony"
+    },
+    {
+      "name": "Barbershop Shampoo Station",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "barbershop_shampoo_station.webp",
+      "text": "barbershop shampoo station background, reclining shampoo chair, wash basin, mirror, towel shelf, barbershop interior"
+    },
+    {
+      "name": "Bathroom Vanity Sink",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bathroom_vanity_sink.webp",
+      "text": "bathroom vanity sink background, washbasin, mirror cabinet, toothbrush cup, towel rack, home washroom interior"
+    },
+    {
+      "name": "Batting Cage Booth",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "batting_cage_booth.webp",
+      "text": "batting cage booth background, batting mat, protective net walls, home plate area, ball feeder, pitching machine lane, indoor batting center"
+    },
+    {
+      "name": "Bicycle Parking Lot",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bicycle_parking_lot.webp",
+      "text": "bicycle parking lot background, rows of parked bicycles, metal bicycle racks, station-side parking area, pavement markings"
+    },
+    {
+      "name": "Boy Child Bedroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "boy_child_bedroom.webp",
+      "text": "boy child bedroom background, single bed, study desk, toy shelves, school bag, posters, compact child room interior"
+    },
+    {
+      "name": "Budget Khaosan Guesthouse Lobby",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "budget_khaosan_guesthouse_lobby.webp",
+      "text": "budget Khaosan guesthouse lobby background, cheap reception desk, travel posters, old sofa, backpack storage corner, fan, simple Thai guesthouse interior"
+    },
+    {
+      "name": "Car Wash Bay",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "car_wash_bay.webp",
+      "text": "automatic car wash machine background, drive-through car wash bay, rotating brush rollers, overhead sprayer arch, guide rails, wet concrete floor, car wash tunnel equipment"
+    },
+    {
+      "name": "Chinatown Dim Sum Shop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "chinatown_dim_sum_shop.webp",
+      "text": "Chinatown dim sum shop background, bamboo steamers, dim sum trays, glass display case, tiled wall, small Chinese food shop counter"
+    },
+    {
+      "name": "Chinatown Herbal Medicine Shop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "chinatown_herbal_medicine_shop.webp",
+      "text": "Chinatown herbal medicine shop background, wooden drawers, glass jars, dried herbs, scale, old shop counter"
+    },
+    {
+      "name": "Clothing Store Mirror Area",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "clothing_store_mirror_area.webp",
+      "text": "clothing store mirror area background, full-length mirror, clothing racks, fitting area, display shelves, apparel shop interior"
+    },
+    {
+      "name": "Coin Parking Lot",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "coin_parking_lot.webp",
+      "text": "coin parking lot background, parking spaces, wheel lock devices, payment machine, lane markings, compact urban parking lot"
+    },
+    {
+      "name": "Comiket Table Booth",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "comiket_table_booth.webp",
+      "text": "Comiket table booth background, folding tables, stacked doujinshi books, display stands, tablecloths, large convention hall"
+    },
+    {
+      "name": "Convenience Store Microwave Corner",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "convenience_store_microwave_corner.webp",
+      "text": "convenience store microwave corner background, public microwave ovens, small counter, trash bin, packaged food heating area, convenience store interior"
+    },
+    {
+      "name": "Cosplay Photo Event Venue",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "cosplay_photo_event_venue.webp",
+      "text": "cosplay photo event venue background, backdrop stands, costume racks, changing area partitions, lighting stands, indoor photo event space"
+    },
+    {
+      "name": "Cryogenic Sleep Chamber",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "cryogenic_sleep_chamber.webp",
+      "text": "cryogenic sleep chamber background, cryo pods, glass capsules, medical monitors, metal floor, cold science facility interior"
+    },
+    {
+      "name": "Cyberpunk Backroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "cyberpunk_backroom.webp",
+      "text": "cyberpunk backroom background, cables, server boxes, neon panels, cluttered workbench, hidden tech room"
+    },
+    {
+      "name": "Delivery Parcel Locker",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "delivery_parcel_locker.webp",
+      "text": "delivery parcel locker background, parcel locker wall, numbered locker doors, touch panel, pickup area, apartment or station parcel corner"
+    },
+    {
+      "name": "Dense Apartment Laundry Balcony",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "dense_apartment_laundry_balcony.webp",
+      "text": "dense apartment laundry balcony background, crowded residential balconies, hanging laundry, air conditioner units, narrow gaps between buildings, Hong Kong style housing block"
+    },
+    {
+      "name": "Department Store Shoe Floor",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "department_store_shoe_floor.webp",
+      "text": "department store shoe floor background, shoe display tables, wall shelves, fitting benches, polished retail floor, department store interior"
+    },
+    {
+      "name": "Dreamlike Endless Hallway",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "dreamlike_endless_hallway.webp",
+      "text": "dreamlike endless hallway background, repeating doors, long corridor, soft distorted perspective, patterned floor, surreal interior"
+    },
+    {
+      "name": "Electronics Store Phone Display",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "electronics_store_phone_display.webp",
+      "text": "electronics store phone display background, smartphone display tables, demo phones, accessory shelves, carrier counter, electronics retail floor"
+    },
+    {
+      "name": "Family Restaurant Drink Bar",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "family_restaurant_drink_bar.webp",
+      "text": "family restaurant drink bar background, self-service drink machines, cup dispenser, ice machine, counter shelf, family restaurant interior"
+    },
+    {
+      "name": "Family Restaurant Table Seat Order Tablet",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "family_restaurant_table_seat_order_tablet.webp",
+      "text": "family restaurant table seat background, booth sofa seats, table surface, tabletop ordering tablet, condiment set, casual family restaurant interior"
+    },
+    {
+      "name": "Floating Island Shrine",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "floating_island_shrine.webp",
+      "text": "floating island shrine background, small shrine on floating island, stone path, torii gate, clouds below, fantasy sky setting"
+    },
+    {
+      "name": "Flower Shop Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "flower_shop_interior.webp",
+      "text": "flower shop interior background, flower buckets, bouquet display, plant shelves, wrapping counter, florist shop interior"
+    },
+    {
+      "name": "Gas Station Self Service Pump",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "gas_station_self_service_pump.webp",
+      "text": "gas station self service pump background, self service fuel pump, nozzle holders, payment screen, safety bollards, gas station forecourt"
+    },
+    {
+      "name": "Giant Clock Tower Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "giant_clock_tower_interior.webp",
+      "text": "giant clock tower interior background, massive gears, clock face machinery, wooden beams, spiral stairs, mechanical tower room"
+    },
+    {
+      "name": "Girl Child Bedroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "girl_child_bedroom.webp",
+      "text": "girl child bedroom background, single bed, study desk, plush toys, clothing rack, small bookshelf, compact child room interior"
+    },
+    {
+      "name": "Glasses Shop Fitting Counter",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "glasses_shop_fitting_counter.webp",
+      "text": "glasses shop fitting counter background, eyeglass display racks, fitting mirror, consultation table, lens tools, optical shop interior"
+    },
+    {
+      "name": "Golf Course",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "golf_course.webp",
+      "text": "golf course background, fairway, putting green, flag pin, sand bunker, tee marker, trees, open course layout"
+    },
+    {
+      "name": "Hat Shop Display Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "hat_shop_display_wall.webp",
+      "text": "hat shop display wall background, rows of hats, wall hooks, display shelves, fitting mirror, fashion accessory shop"
+    },
+    {
+      "name": "Home Center Tool Aisle",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "home_center_tool_aisle.webp",
+      "text": "home center tool aisle background, tool shelves, hardware hooks, power tool display, work gloves, home improvement store aisle"
+    },
+    {
+      "name": "Home Entrance Genkan",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "home_entrance_genkan.webp",
+      "text": "home entrance genkan background, front door interior, shoe removal area, shoe cabinet, doormat, small entryway"
+    },
+    {
+      "name": "Home Front Door Exterior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "home_front_door_exterior.webp",
+      "text": "front door exterior of a home background, entrance door, porch light, doorbell, mailbox slot, small doorstep"
+    },
+    {
+      "name": "Hot Dog Food Truck",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "hot_dog_food_truck.webp",
+      "text": "hot dog food truck background, small van food truck, serving window, hot dog menu board, condiment bottles, roadside mobile food stand"
+    },
+    {
+      "name": "Indoor Golf Simulator Booth",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "indoor_golf_simulator_booth.webp",
+      "text": "indoor golf simulator booth background, hitting mat, large projection screen, golf clubs, ball tray, private simulator room"
+    },
+    {
+      "name": "Japanese Commuter Train Platform",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "japanese_commuter_train_platform.webp",
+      "text": "Japanese commuter train platform background, train doors at platform, boarding queue marks, platform edge line, station signs, partial commuter train body"
+    },
+    {
+      "name": "Japanese Crab Fishing Vessel Deck",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "japanese_crab_fishing_vessel_deck.webp",
+      "text": "Japanese crab fishing vessel deck background, stacked crab pots, ropes and winches, wet metal deck, working lights, rough Sea of Japan waves, rugged fishing boat equipment"
+    },
+    {
+      "name": "Jewelry Shop Display Counter",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "jewelry_shop_display_counter.webp",
+      "text": "jewelry shop display counter background, glass showcase, ring trays, necklace stands, small mirrors, luxury retail counter"
+    },
+    {
+      "name": "Kimono Rental Dressing Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "kimono_rental_dressing_room.webp",
+      "text": "kimono rental dressing room background, kimono racks, obi belts, dressing mirror, tatami mat area, traditional fitting room"
+    },
+    {
+      "name": "Liminal Pool Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "liminal_pool_room.webp",
+      "text": "liminal pool room background, tiled indoor pool, shallow water, columns, empty walkways, strange quiet pool facility"
+    },
+    {
+      "name": "Loy Krathong Lantern Riverside",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "loy_krathong_lantern_riverside.webp",
+      "text": "Loy Krathong lantern riverside background, floating krathong baskets, river steps, lantern decorations, temple riverbank"
+    },
+    {
+      "name": "Medieval European Farm Field",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "medieval_european_farm_field.webp",
+      "text": "medieval European farm field background, plowed dirt field, wooden fence, hand tools, hay bundles, distant village houses, rural medieval countryside"
+    },
+    {
+      "name": "Medieval European Peasant House",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "medieval_european_peasant_house.webp",
+      "text": "medieval European peasant house background, thatched roof cottage, timber walls, small doorway, dirt yard, firewood stack, rural village setting"
+    },
+    {
+      "name": "Medieval European Village Church",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "medieval_european_village_church.webp",
+      "text": "medieval European village church background, small rough stone church, wooden door, simple cross, dirt path, grave markers, rural village square"
+    },
+    {
+      "name": "Mirror Maze Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "mirror_maze_room.webp",
+      "text": "mirror maze room background, mirrored walls, reflective floor, repeated reflections, narrow passages, maze-like interior"
+    },
+    {
+      "name": "Model Train Hobby Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "model_train_hobby_room.webp",
+      "text": "model train hobby room background, large model railway layout, miniature tracks, station platforms, tunnels, bridges, shelves of model trains, hobby workbench"
+    },
+    {
+      "name": "Movie Theater Concession Counter",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "movie_theater_concession_counter.webp",
+      "text": "movie theater concession counter background, popcorn machine, drink dispenser, snack display case, menu boards, cinema lobby counter"
+    },
+    {
+      "name": "Muay Thai Training Gym",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "muay_thai_training_gym.webp",
+      "text": "Muay Thai training gym background, boxing ring, heavy bags, training pads, wooden floor, traditional Thai boxing gym"
+    },
+    {
+      "name": "Nail Salon Table",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "nail_salon_table.webp",
+      "text": "nail salon table background, manicure table, hand rest cushion, nail polish bottles, desk lamp, compact salon interior"
+    },
+    {
+      "name": "Old Chiang Mai Temple",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "old_chiang_mai_temple.webp",
+      "text": "old Chiang Mai temple background, ancient brick chedi, weathered stone steps, partial golden decorations, Thai temple courtyard, historic northern Thailand shrine"
+    },
+    {
+      "name": "Old Public Bath Changing Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "old_public_bath_changing_room.webp",
+      "text": "old public bath changing room background, wooden lockers, wicker clothing baskets, long wooden benches, vintage weighing scale, wall mirrors, bathing area entrance, aged sento interior"
+    },
+    {
+      "name": "Parking Payment Machine Corner",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "parking_payment_machine_corner.webp",
+      "text": "parking payment machine corner background, parking payment machine, ticket slot, fare display panel, bollards, parking lot entrance corner"
+    },
+    {
+      "name": "Pet Shop Aquarium Aisle",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "pet_shop_aquarium_aisle.webp",
+      "text": "pet shop aquarium aisle background, aquarium tanks, fish display shelves, water filters, pet supplies, pet shop interior"
+    },
+    {
+      "name": "Photo Id Booth Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "photo_id_booth_interior.webp",
+      "text": "photo ID booth interior background, small stool, curtain, camera unit, flash panel, instruction screen, compact photo booth space"
+    },
+    {
+      "name": "Post Apocalyptic Convenience Store",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "post_apocalyptic_convenience_store.webp",
+      "text": "post apocalyptic convenience store background, broken shelves, scattered products, damaged counter, cracked windows, abandoned store interior"
+    },
+    {
+      "name": "Pre Handover Kowloon Walled City Barbershop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "pre_handover_kowloon_walled_city_barbershop.webp",
+      "text": "pre-handover Kowloon Walled City barbershop background, tiny barbershop stall, old barber chair, wall mirror, fluorescent light, cramped concrete interior"
+    },
+    {
+      "name": "Pre Handover Kowloon Walled City Corridor",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "pre_handover_kowloon_walled_city_corridor.webp",
+      "text": "pre-handover Kowloon Walled City corridor background, narrow concrete passage, exposed pipes, tangled wires, dripping walls, stacked signs, dense interior alley"
+    },
+    {
+      "name": "Pre Handover Kowloon Walled City Food Workshop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "pre_handover_kowloon_walled_city_food_workshop.webp",
+      "text": "pre-handover Kowloon Walled City food workshop background, steaming cooking pots, metal prep tables, stacked trays, hanging utensils, cramped food production room"
+    },
+    {
+      "name": "Pre Handover Kowloon Walled City Textile Workshop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "pre_handover_kowloon_walled_city_textile_workshop.webp",
+      "text": "pre-handover Kowloon Walled City textile workshop background, fabric rolls, dye buckets, sewing machines, hanging cloth, cramped industrial room"
+    },
+    {
+      "name": "Professional Wrestling Ring",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "professional_wrestling_ring.webp",
+      "text": "professional wrestling ring background, wrestling ring ropes, corner posts, entrance ramp, arena barricades, event venue interior"
+    },
+    {
+      "name": "Public Phone Corner",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "public_phone_corner.webp",
+      "text": "public phone corner background, public telephone booth, payphone unit, small shelf, phone directory area, station or street corner"
+    },
+    {
+      "name": "Ramen Shop Ticket Machine",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ramen_shop_ticket_machine.webp",
+      "text": "ramen shop ticket machine background, meal ticket vending machine, button panel, cash slot, small ramen shop entrance, counter seating area"
+    },
+    {
+      "name": "Rental Video Shop Aisle",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rental_video_shop_aisle.webp",
+      "text": "rental video shop aisle background, shelves of movie tapes and DVDs, narrow aisle, category signs, checkout counter in distance, retro video store interior"
+    },
+    {
+      "name": "Ritual Chamber",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ritual_chamber.webp",
+      "text": "ritual chamber background, circular altar, stone floor markings, candles, hanging cloth, ancient ceremonial room"
+    },
+    {
+      "name": "Rural Northeast Thai Village",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rural_northeast_thai_village.webp",
+      "text": "rural northeast Thai village background, unpaved road, small rough roadside shops, wooden houses, farm tools, simple local village street"
+    },
+    {
+      "name": "Self Checkout Area",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "self_checkout_area.webp",
+      "text": "self checkout area background, supermarket self checkout machines, barcode scanner, payment terminal, bagging area, grocery store interior"
+    },
+    {
+      "name": "Showa Cheap 1Ldk Apartment Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_cheap_1ldk_apartment_room.webp",
+      "text": "Showa era cheap 1LDK apartment room background, tatami room, low table, old kitchenette, sliding door, compact retro apartment interior"
+    },
+    {
+      "name": "Showa Kamishibai Bicycle Cart",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_kamishibai_bicycle_cart.webp",
+      "text": "Showa era kamishibai bicycle cart background, bicycle with wooden story theater box, paper slide frame, candy drawer, small street corner, nostalgic Japanese street performance setup"
+    },
+    {
+      "name": "Shrine Fortune Slip Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "shrine_fortune_slip_wall.webp",
+      "text": "Japanese shrine fortune slip wall background, tied paper fortunes, wooden rack, shrine fence, ema plaques, shrine grounds"
+    },
+    {
+      "name": "Small Clinic Examination Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "small_clinic_examination_room.webp",
+      "text": "small clinic examination room background, examination bed, doctor desk, medical chair, simple cabinet, town clinic interior"
+    },
+    {
+      "name": "Songkran Water Festival Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "songkran_water_festival_street.webp",
+      "text": "Songkran water festival street background, water buckets, splash marks, roadside stalls, wet pavement, Thai festival street"
+    },
+    {
+      "name": "Songthaew Pickup Truck Stop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "songthaew_pickup_truck_stop.webp",
+      "text": "songthaew pickup truck stop background, red pickup taxi truck, bench seating in back, roadside stop, small shelter, local Thai town street"
+    },
+    {
+      "name": "Streetwear Shop Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "streetwear_shop_interior.webp",
+      "text": "streetwear shop interior background, graphic apparel racks, sneaker display, cap shelves, bold wall decor, urban fashion store"
+    },
+    {
+      "name": "Supermarket Cart Return Area",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "supermarket_cart_return_area.webp",
+      "text": "supermarket cart return area background, nested shopping carts, cart rail, store entrance area, floor markings, grocery store interior"
+    },
+    {
+      "name": "Thai Banana Leaf Food Stall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "thai_banana_leaf_food_stall.webp",
+      "text": "Thai banana leaf food stall background, banana leaf wrapped food, woven trays, street stall table, Thai market food stand"
+    },
+    {
+      "name": "Thai Monk Alms Bowl Area",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "thai_monk_alms_bowl_area.webp",
+      "text": "Thai monk alms bowl area background, rows of alms bowls, offering table, temple wall, folded saffron robes, Buddhist temple corner"
+    },
+    {
+      "name": "Thai Plastic Chair Street Restaurant",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "thai_plastic_chair_street_restaurant.webp",
+      "text": "Thai plastic chair street restaurant background, metal tables with vinyl covers, plastic chairs, condiment jars, noodle bowls, open storefront, casual roadside eatery"
+    },
+    {
+      "name": "Thai Temple Ordination Hall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "thai_temple_ordination_hall.webp",
+      "text": "Thai temple ordination hall background, ornate gable roof, golden trim, carved doors, temple courtyard, Buddhist shrine architecture"
+    },
+    {
+      "name": "Thai Tom Yum Street Food Stall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "thai_tom_yum_street_food_stall.webp",
+      "text": "Thai tom yum street food stall background, large metal soup pot, ladle, cheap vinyl-covered table, chili vinegar jars, Thai seasoning bottles, plastic stools, roadside food cart"
+    },
+    {
+      "name": "Thai Traditional Massage Shop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "thai_traditional_massage_shop.webp",
+      "text": "Thai traditional massage shop background, floor mats, low massage beds, curtain partitions, herbal compress baskets, simple massage parlor interior"
+    },
+    {
+      "name": "Toy Store Aisle",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "toy_store_aisle.webp",
+      "text": "toy store aisle background, toy shelves, boxed toys, character goods display, colorful product racks, retail store interior"
+    },
+    {
+      "name": "Traditional Thai Dance Stage",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "traditional_thai_dance_stage.webp",
+      "text": "traditional Thai dance stage background, gold patterned backdrop, stage platform, ornate props, Thai classical performance setting"
+    },
+    {
+      "name": "Traditional Thai Wooden House",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "traditional_thai_wooden_house.webp",
+      "text": "traditional Thai wooden house background, raised wooden floor, carved railings, steep roof, shaded veranda, tropical garden"
+    },
+    {
+      "name": "Tropical Fruit Street Stall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "tropical_fruit_street_stall.webp",
+      "text": "tropical fruit street stall background, mangoes, mangosteen, lychee, bananas, plastic crates, simple roadside fruit stand, Southeast Asian market street"
+    },
+    {
+      "name": "Tuk Tuk Waiting Area",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "tuk_tuk_waiting_area.webp",
+      "text": "tuk tuk waiting area background, parked tuk tuks, roadside curb, small signboard, plastic chairs, street vendor corner, Thai urban street"
+    },
+    {
+      "name": "Underground Bicycle Parking",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "underground_bicycle_parking.webp",
+      "text": "underground bicycle parking background, dense bicycle racks, concrete pillars, ramp entrance, numbered parking slots, basement parking facility"
+    },
+    {
+      "name": "Upside Down Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "upside_down_room.webp",
+      "text": "upside down room background, furniture attached to ceiling, inverted living room layout, floor above, surreal room interior"
+    },
+    {
+      "name": "Wedding Dress Fitting Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "wedding_dress_fitting_room.webp",
+      "text": "wedding dress fitting room background, full-length mirrors, raised fitting platform, curtain partition, racks of wedding dresses, fitting bench, bridal boutique interior"
+    },
+    {
+      "name": "Mountain Cable Car Station",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "mountain_cable_car_station.webp",
+      "text": "mountain cable car station background, cable car platform, steel support structure, mountain valley visible beyond, ticket counter, weathered station building, transport terminal interior"
     }
   ]
 }
