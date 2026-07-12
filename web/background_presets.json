@@ -1,5 +1,5 @@
 {
-  "version": "2026-07-10",
+  "version": "2026-07-12",
   "description": "Single source for Krea2 Background Effect presets. Add WebP files under web/thumbnails/ and add matching entries here.",
   "presets": [
     {
@@ -2906,6 +2906,545 @@
       "tone": "background",
       "thumbnail": "mountain_cable_car_station.webp",
       "text": "mountain cable car station background, cable car platform, steel support structure, mountain valley visible beyond, ticket counter, weathered station building, transport terminal interior"
+    },
+    {
+      "name": "Ancient Roman Forum Colonnade",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ancient_roman_forum_colonnade.webp",
+      "text": "Ancient Roman forum colonnade background, marble columns, stone paving, civic buildings and statues in the distance, open forum plaza, classical Roman architecture"
+    },
+    {
+      "name": "Attic Bedroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "attic_bedroom.webp",
+      "text": "Attic bedroom background, slanted wooden ceiling, skylight window, low bed, storage trunks, small desk, cozy private attic room"
+    },
+    {
+      "name": "Basement Tool Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "basement_tool_room.webp",
+      "text": "Basement tool room background, concrete basement, workbench, pegboard with hand tools, tool chest, shelves of hardware, small utility workshop"
+    },
+    {
+      "name": "Bay Window Reading Nook",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bay_window_reading_nook.webp",
+      "text": "Bay window reading nook background, deep window seat, cushions, books, small side table, quiet home interior"
+    },
+    {
+      "name": "Bridge Pylon Inspection Platform",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bridge_pylon_inspection_platform.webp",
+      "text": "Bridge pylon inspection platform background, high bridge tower maintenance deck, cables, safety railings, river far below"
+    },
+    {
+      "name": "Bungee Jump Platform Edge",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bungee_jump_platform_edge.webp",
+      "text": "Bungee jump platform edge background, secured jump platform, steel railings, safety anchor points, deep valley below"
+    },
+    {
+      "name": "Cafe Window Counter",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "cafe_window_counter.webp",
+      "text": "Cafe window counter background, wood counter facing tall cafe windows, stools, street view, compact coffee shop interior"
+    },
+    {
+      "name": "Cave Tour Walkway",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "cave_tour_walkway.webp",
+      "text": "Cave tour walkway background, illuminated natural limestone cave, metal handrails, wooden walkway, rock formations, visitor path"
+    },
+    {
+      "name": "Classic Sports Car Garage",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "classic_sports_car_garage.webp",
+      "text": "Classic sports car garage background, polished vintage sports car, tool cabinet, concrete garage floor"
+    },
+    {
+      "name": "Compact Launch Crew Cabin",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "compact_launch_crew_cabin.webp",
+      "text": "Compact launch spacecraft crew cabin background, extremely narrow two-person capsule, contoured seats, dense control panels, harnesses, small round window, realistic modern spaceflight interior"
+    },
+    {
+      "name": "Crane Operator Cabin",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "crane_operator_cabin.webp",
+      "text": "Crane operator cabin background, construction crane cab, control levers, panoramic high-rise view"
+    },
+    {
+      "name": "Dance Practice Mirror Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "dance_practice_mirror_room.webp",
+      "text": "Dance practice mirror room background, wide wall mirrors, wooden floor, ballet barre, compact dance studio, open floor space"
+    },
+    {
+      "name": "Desert Caravan Rest Courtyard",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "desert_caravan_rest_courtyard.webp",
+      "text": "Ancient desert caravan rest courtyard background, mud-brick inn courtyard, tethered camels, woven shade canopies, water jars, trade bundles"
+    },
+    {
+      "name": "Edo Period Castle Grand Hall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_period_castle_grand_hall.webp",
+      "text": "Edo period castle grand hall background, polished wooden floor, tatami room, raised ceremonial platform, ornate fusuma screens, wooden pillars, traditional castle interior"
+    },
+    {
+      "name": "Emergency Shelter Gym",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "emergency_shelter_gym.webp",
+      "text": "Emergency shelter gym background, school gymnasium converted into a temporary evacuation shelter, rows of folding mattresses and blankets, cardboard partitions, supply boxes, basketball hoops, wooden gym floor"
+    },
+    {
+      "name": "Everest Ice Wall Climbing Scene",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "everest_ice_wall_climbing_scene.webp",
+      "text": "Everest ice wall climbing scene background, towering blue ice wall, snow ridge, fixed climbing ropes, ice anchors, crampon tracks, expedition equipment, distant climbers on the route"
+    },
+    {
+      "name": "Ferris Wheel Cabin",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ferris_wheel_cabin.webp",
+      "text": "Ferris wheel cabin interior background, compact glass gondola, facing bench seats, city view far below, metal frame, sightseeing ride interior"
+    },
+    {
+      "name": "Ferry Vehicle Deck",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ferry_vehicle_deck.webp",
+      "text": "Ferry vehicle deck background, steel car deck with parked passenger cars, painted lane markings, vehicle ramps, ceiling beams, safety railings, domestic ferry interior"
+    },
+    {
+      "name": "Front Basket Bicycle Street Corner",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "front_basket_bicycle_street_corner.webp",
+      "text": "Front basket bicycle street corner background, city bicycle with woven front basket, small sidewalk, storefront corner, bike parking rail"
+    },
+    {
+      "name": "Futuristic Greenhouse Lounge",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "futuristic_greenhouse_lounge.webp",
+      "text": "Futuristic greenhouse lounge background, indoor garden with tall trees and planted walls, curved glass ceiling, clean modern seating, integrated planters, serene high-tech residential common room"
+    },
+    {
+      "name": "Hellenistic Bathhouse Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "hellenistic_bathhouse_interior.webp",
+      "text": "Hellenistic public bathhouse interior background, stone bathing pool, marble columns, mosaic floor, bronze water basins, steam haze"
+    },
+    {
+      "name": "Horse Carriage Passenger Seat",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "horse_carriage_passenger_seat.webp",
+      "text": "Horse carriage passenger seat background, upholstered carriage cabin, brass fittings, carriage window, classic travel interior"
+    },
+    {
+      "name": "Hospital Night Duty Tatami Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "hospital_night_duty_tatami_room.webp",
+      "text": "Hospital night duty tatami room background, compact staff rest room with tatami floor, folded futons, low table, tea set, staff lockers, small desk"
+    },
+    {
+      "name": "Hot Air Balloon Basket",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "hot_air_balloon_basket.webp",
+      "text": "Hot air balloon basket background, woven wicker gondola, burner frame overhead, ropes and sandbags, wide landscape far below"
+    },
+    {
+      "name": "Hot Spring Ryokan Lobby",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "hot_spring_ryokan_lobby.webp",
+      "text": "Japanese hot spring ryokan lobby background, low sofas, wooden reception counter, indoor garden, noren curtains, warm traditional inn interior"
+    },
+    {
+      "name": "Hotel Room Panoramic Window",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "hotel_room_panoramic_window.webp",
+      "text": "Hotel room panoramic window background, modern hotel suite, large floor-to-ceiling window, city view, sofa, open floor area"
+    },
+    {
+      "name": "Indoor Shooting Range",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "indoor_shooting_range.webp",
+      "text": "indoor shooting range background, multiple shooting lanes, partition walls, target rails, sound-absorbing panels, safety barrier, equipment counter, utilitarian range interior"
+    },
+    {
+      "name": "Industrial Laundry Workroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "industrial_laundry_workroom.webp",
+      "text": "Industrial laundry workroom background, large commercial washing machines, rolling laundry carts, folding tables, hanging pressed linens, industrial ironing equipment, practical factory interior"
+    },
+    {
+      "name": "Japanese Goldfish Scooping Stall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "japanese_goldfish_scooping_stall.webp",
+      "text": "Japanese night festival goldfish scooping stall background, shallow water tubs filled with goldfish, paper scoops, colorful festival lanterns, plastic bowls, small yatai stall, summer festival decorations"
+    },
+    {
+      "name": "Lighthouse Lantern Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "lighthouse_lantern_room.webp",
+      "text": "Lighthouse lantern room background, glass lantern enclosure, beacon lens, circular railing, coastal sea view"
+    },
+    {
+      "name": "Lunar Base Private Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "lunar_base_private_room.webp",
+      "text": "Lunar base private room background, compact pressurized living room, curved habitat walls, bunk bed, storage lockers, small desk, lunar surface visible through a round window"
+    },
+    {
+      "name": "Lunar Lander Cockpit",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "lunar_lander_cockpit.webp",
+      "text": "Lunar lander cockpit background, compact angular control cabin, pilot seats, forward windows looking at lunar surface, instrument panels, realistic moon landing spacecraft interior"
+    },
+    {
+      "name": "Motorcycle Sidecar Passenger Seat",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "motorcycle_sidecar_passenger_seat.webp",
+      "text": "Classic motorcycle sidecar passenger seat background, leather sidecar seat, vintage motorcycle beside an open coastal road, passenger-side portrait space"
+    },
+    {
+      "name": "Mountain Cable Car Cabin Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "mountain_cable_car_cabin_interior.webp",
+      "text": "mountain cable car cabin interior background, large windows, simple bench seats, metal handrails, suspended cabin structure, mountain valley visible through the windows, compact transport cabin"
+    },
+    {
+      "name": "Ocean View Window",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ocean_view_window.webp",
+      "text": "Ocean view window background, large window overlooking ocean horizon, modern room, open floor area, coastal retreat interior"
+    },
+    {
+      "name": "Old Neon Sign Rooftop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "old_neon_sign_rooftop.webp",
+      "text": "Old neon sign rooftop background, large vintage neon sign structure, rooftop maintenance catwalk, city blocks below"
+    },
+    {
+      "name": "Old Photo Studio Backdrop Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "old_photo_studio_backdrop_room.webp",
+      "text": "Old photo studio backdrop room background, vintage portrait photography studio, painted canvas backdrops on rollers, wooden posing platform, umbrella lights, antique camera stand, prop chairs"
+    },
+    {
+      "name": "Orbital Hotel Suite",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "orbital_hotel_suite.webp",
+      "text": "Orbital hotel suite background, refined private room in a realistic space hotel, large curved window overlooking Earth, compact bed, built-in furnishings, soft modern materials"
+    },
+    {
+      "name": "Orbital Spacecraft Exterior Repair",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "orbital_spacecraft_exterior_repair.webp",
+      "text": "Orbital spacecraft exterior repair background, spacecraft hull panels, handrails, foot restraints, exposed maintenance bay, Earth visible beyond, realistic EVA work site"
+    },
+    {
+      "name": "Osaka Dotonbori Ebisu Bridge",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "osaka_dotonbori_ebisu_bridge.webp",
+      "text": "Osaka Dotonbori Ebisu Bridge background, canal-side promenade, illuminated running-man confectionery billboard landmark, dense neon shop signs, bridge railings, river reflections, urban entertainment district"
+    },
+    {
+      "name": "Osaka Shinsekai Tsutenkaku",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "osaka_shinsekai_tsutenkaku.webp",
+      "text": "Osaka Shinsekai street background, Tsutenkaku Tower visible at the end of the shopping street, retro restaurant facades, colorful vertical signs, covered arcade, narrow urban street, landmark-centered cityscape"
+    },
+    {
+      "name": "Pizzeria Kitchen",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "pizzeria_kitchen.webp",
+      "text": "Pizzeria kitchen background, large pizza oven, flour-dusted preparation counter, dough trays, pizza peels, stacked ingredient containers, compact restaurant kitchen"
+    },
+    {
+      "name": "Private Propeller Plane Cabin",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "private_propeller_plane_cabin.webp",
+      "text": "Private propeller plane cabin background, compact two-seat aircraft interior, cream leather seats, oval windows, cockpit door"
+    },
+    {
+      "name": "Professional Manga Artist Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "professional_manga_artist_room.webp",
+      "text": "Professional manga artist room background, large drawing desk, pen holders, liquid crystal drawing tablet, secondary monitor, manuscript pages, reference books, shelves of art supplies, task lamp, compact apartment studio"
+    },
+    {
+      "name": "Ptolemaic Palace Garden Colonnade",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ptolemaic_palace_garden_colonnade.webp",
+      "text": "Ptolemaic palace garden colonnade background, white stone columns, painted Egyptian motifs, shaded colonnade, reflecting pool, date palms, Greek-Egyptian royal architecture"
+    },
+    {
+      "name": "Public Bath Boiler Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "public_bath_boiler_room.webp",
+      "text": "public bath boiler room background, old sento boiler, large hot-water tanks, exposed pipes, pressure gauges, valves, tiled floor, damp utility room"
+    },
+    {
+      "name": "Qing Dynasty Palace Courtyard",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "qing_dynasty_palace_courtyard.webp",
+      "text": "Qing dynasty palace courtyard background, red palace walls, tiled roof, stone paving, carved ceremonial gate, guardian lion statues, imperial Chinese courtyard architecture"
+    },
+    {
+      "name": "Radio Tower Maintenance Deck",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "radio_tower_maintenance_deck.webp",
+      "text": "Radio tower maintenance deck background, high communications tower platform, antenna structures, safety railings, city horizon"
+    },
+    {
+      "name": "Rainy Window Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rainy_window_interior.webp",
+      "text": "Rainy window interior background, rain droplets on large window, soft indoor seating, reflective window glass, quiet room"
+    },
+    {
+      "name": "Ramen Shop Kitchen",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ramen_shop_kitchen.webp",
+      "text": "Japanese ramen shop kitchen background, stainless steel counter, steaming noodle boiler, ramen cook in the background draining boiled noodles with a wire strainer, stacked bowls, condiment containers, compact restaurant kitchen"
+    },
+    {
+      "name": "Record Store Listening Booth",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "record_store_listening_booth.webp",
+      "text": "Record store listening booth background, narrow aisles of vinyl record shelves, record bins, headphone listening station, turntable counter, music shop interior"
+    },
+    {
+      "name": "Rotating Space Habitat Ring",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rotating_space_habitat_ring.webp",
+      "text": "Rotating space habitat ring interior background, sleek white curved corridor, panoramic windows, geometric lighting, retro-futurist realistic science fiction, large circular living ring"
+    },
+    {
+      "name": "Royal Scribe Archive Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "royal_scribe_archive_room.webp",
+      "text": "Ptolemaic royal scribe archive room background, papyrus scroll shelves, clay seal jars, low writing tables, reed pens, stone walls, Greek-Egyptian administrative chamber"
+    },
+    {
+      "name": "School Gym Equipment Storage",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "school_gym_equipment_storage.webp",
+      "text": "School gym equipment storage background, stacked gym mats, ball carts, folded bleachers, vaulting boxes, metal shelves, wooden equipment room interior"
+    },
+    {
+      "name": "School Science Preparation Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "school_science_preparation_room.webp",
+      "text": "Japanese school science preparation room background, laboratory benches, glass specimen jars, shelves of beakers and flasks, sink, storage cabinets, science classroom equipment"
+    },
+    {
+      "name": "Shaolin Temple Training Courtyard",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "shaolin_temple_training_courtyard.webp",
+      "text": "Shaolin temple training courtyard background, stone-paved yard, wooden training dummies, temple walls, weapon racks, ancient martial arts setting"
+    },
+    {
+      "name": "Shaolin Wooden Dummy Hall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "shaolin_wooden_dummy_hall.webp",
+      "text": "Shaolin wooden dummy hall background, rows of wooden training dummies, old wooden floor, red pillars, martial arts practice room"
+    },
+    {
+      "name": "Shared Shower Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "shared_shower_room.webp",
+      "text": "Shared shower room background, tiled communal shower area, shower partitions, benches, lockers, drain floor, practical changing facility"
+    },
+    {
+      "name": "Ski Jump Start Gate",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ski_jump_start_gate.webp",
+      "text": "Ski jump start gate background, steep ski ramp entry, metal rails, mountain landscape below"
+    },
+    {
+      "name": "Ski Resort Lodge Entrance",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ski_resort_lodge_entrance.webp",
+      "text": "Ski resort lodge entrance background, timber lodge facade, ski racks, stone steps, lodge doors, mountain resort arrival area"
+    },
+    {
+      "name": "Skyscraper Window Cleaning Cradle",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "skyscraper_window_cleaning_cradle.webp",
+      "text": "Skyscraper window cleaning cradle background, suspended exterior maintenance platform, glass facade, city far below"
+    },
+    {
+      "name": "Small Fishing Boat Wheelhouse",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "small_fishing_boat_wheelhouse.webp",
+      "text": "Small fishing boat wheelhouse background, compact wheelhouse, steering wheel, navigation equipment, windows looking over harbor water"
+    },
+    {
+      "name": "Small Sailboat Cockpit",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "small_sailboat_cockpit.webp",
+      "text": "Small sailboat cockpit background, wooden helm, winches, folded sail, open deck, calm sea beyond"
+    },
+    {
+      "name": "Snorkeling Boat Deck",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "snorkeling_boat_deck.webp",
+      "text": "Snorkeling boat deck background, compact excursion boat deck, dive tanks, life jackets, equipment racks, open sea beyond railing, practical tour boat interior"
+    },
+    {
+      "name": "Space Station Airlock Vestibule",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "space_station_airlock_vestibule.webp",
+      "text": "Space station airlock vestibule background, circular hatch, pressure door, handrails, equipment lockers, EVA suit rack, realistic orbital station interior"
+    },
+    {
+      "name": "Spice And Perfume Market",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "spice_and_perfume_market.webp",
+      "text": "Ptolemaic spice and perfume market background, ceramic amphorae, oil jars, woven baskets of spices, wooden market stalls, Greek-Egyptian stone market arcade"
+    },
+    {
+      "name": "Taisho Era Cafe Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "taisho_era_cafe_interior.webp",
+      "text": "Taisho era Japanese cafe interior background, dark wooden tables, bentwood chairs, stained glass, brass lamps, small counter, early twentieth-century Japanese coffeehouse"
+    },
+    {
+      "name": "Tokyo Asakusa Kaminarimon",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "tokyo_asakusa_kaminarimon.webp",
+      "text": "Tokyo Asakusa Kaminarimon background, large traditional red gate, giant lantern, Nakamise shopping street, temple approach, traditional storefronts, landmark-centered Japanese cityscape"
+    },
+    {
+      "name": "Tokyo Shibuya Crossing",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "tokyo_shibuya_crossing.webp",
+      "text": "Tokyo Shibuya crossing background, broad scramble intersection, diagonal crosswalk stripes, surrounding high-rise storefronts, large digital billboards, pedestrian plaza, urban landmark cityscape"
+    },
+    {
+      "name": "Tokyo Tower Street View",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "tokyo_tower_street_view.webp",
+      "text": "Tokyo Tower street view background, Tokyo Tower rising above a neighborhood street, low-rise buildings, utility poles, narrow sidewalk, urban foreground, landmark-centered cityscape"
+    },
+    {
+      "name": "Two Person Radio Recording Booth",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "two_person_radio_recording_booth.webp",
+      "text": "Two-person radio recording booth background, narrow soundproof studio, two microphones on a shared desk, two chairs facing each other, headphones, acoustic foam panels, compact radio broadcast setup"
+    },
+    {
+      "name": "Underwater Habitat Living Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "underwater_habitat_living_room.webp",
+      "text": "Underwater habitat living room background, realistic submerged residence, panoramic windows looking into blue ocean water, built-in sofa, compact modern furnishings, visible fish and reef outside"
+    },
+    {
+      "name": "University Izakaya Get Together",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "university_izakaya_get_together.webp",
+      "text": "Japanese izakaya dining booth background, lively university student get-together with several clearly adult Japanese students as small background figures, low table with shared dishes, casual restaurant seating, warm lantern lighting"
+    },
+    {
+      "name": "Victorian Drawing Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "victorian_drawing_room.webp",
+      "text": "Victorian drawing room background, ornate fireplace, velvet armchairs, floral wallpaper, framed paintings, heavy curtains, antique side table, refined nineteenth-century European parlor"
+    },
+    {
+      "name": "Vintage Camper Van Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "vintage_camper_van_interior.webp",
+      "text": "Vintage camper van interior background, compact wood-paneled cabin, bench seat, small kitchenette, travel gear"
+    },
+    {
+      "name": "Vintage Taxi Back Seat",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "vintage_taxi_back_seat.webp",
+      "text": "Vintage taxi back seat background, worn leather rear bench, old taxi interior, city street visible through the side window"
+    },
+    {
+      "name": "Wind Turbine Nacelle Roof",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "wind_turbine_nacelle_roof.webp",
+      "text": "Wind turbine nacelle roof background, wind turbine service platform, safety rails, expansive landscape far below"
     }
   ]
 }

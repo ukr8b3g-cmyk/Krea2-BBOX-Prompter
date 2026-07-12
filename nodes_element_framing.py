@@ -538,7 +538,6 @@ EFFECT_CATEGORIES = (
     'Light',
     'Weather',
     'Background',
-    'Mood',
     'Color Theme',
     'Finish',
     'Custom',
@@ -1200,11 +1199,11 @@ EFFECT_PRESET_CATEGORY = {
     "Comic": "Art",
     "Pixelate": "Art",
     "Concept Art": "Art",
-    "Dreamy": "Mood",
-    "Dark Fantasy": "Mood",
-    "High Detail": "Mood",
-    "Minimal Clean": "Mood",
-    "Retro Pop": "Mood",
+    "Dreamy": "Art",
+    "Dark Fantasy": "Art",
+    "High Detail": "Finish",
+    "Minimal Clean": "Finish",
+    "Retro Pop": "Art",
     "Paper Print": "Finish",
     "Matte Print": "Finish",
     "Glossy Print": "Finish",
@@ -1586,10 +1585,11 @@ class Krea2BackgroundEffect:
         preset = _clean(preset)
         background = ""
         if enable_effect:
-            if mode in ("Custom", "Custom Preset") or preset == "Custom Preset":
-                background = _clean(custom_preset)
-            elif preset and preset not in ("None", "(None)") and preset in BACKGROUND_PRESET_NAMES:
-                background = _clean(BACKGROUND_PRESET_TEXT.get(preset) or EFFECT_PRESET_TEXT.get(preset, ""))
+            background = _clean(custom_preset)
+            if not background and (mode in ("Custom", "Custom Preset") or preset == "Custom Preset"):
+                background = ""
+            elif not background and preset and preset not in ("None", "(None)"):
+                background = _clean(BACKGROUND_PRESET_TEXT.get(preset, ""))
         if prompt_in and background:
             out = f"{prompt_in}\n{background}"
         else:

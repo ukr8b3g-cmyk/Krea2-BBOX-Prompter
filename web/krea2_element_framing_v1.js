@@ -5187,7 +5187,7 @@ function ensureStyle() {
     .k2cf-type{width:92px;max-width:92px;height:28px;background:#202020;color:#ddd;border:1px solid #555;border-radius:5px;padding:3px 6px;font-size:12px;box-sizing:border-box}.k2cf-framing{width:170px;max-width:170px;height:28px;background:#202020;color:#ddd;border:1px solid #555;border-radius:5px;padding:3px 6px;font-size:12px;box-sizing:border-box}
     .k2cf-iconbtn{background:#242424;color:#ddd;border:1px solid #555;border-radius:5px;width:26px;height:24px;cursor:pointer}.k2cf-iconbtn:hover{border-color:#aaa}
     .k2fx-wrap{display:flex;flex-direction:column;gap:9px;color:#ddd;font:12px sans-serif;height:100%;min-height:0;overflow:auto;background:#111;border:1px solid #333;border-radius:8px;padding:9px;box-sizing:border-box}.k2fx-io{display:flex;align-items:center;gap:7px;background:#161616;border:1px solid #333;border-radius:6px;padding:4px 7px;color:#bfeeea;font-size:11px;font-weight:700}.k2fx-io .dot{width:9px;height:9px;border-radius:50%;background:#4cff68;box-shadow:0 0 0 1px #193 inset}.k2fx-io .name{color:#ddd;font-weight:600}
-    .k2fx-top{display:grid;grid-template-columns:auto 1fr auto;gap:7px;align-items:center}.k2fx-title{font-weight:700;color:#35d0c8;white-space:nowrap}.k2fx-search{min-width:0;background:#202020;color:#eee;border:1px solid #555;border-radius:6px;padding:5px 7px;box-sizing:border-box}.k2fx-switch-label{gap:6px}.k2fx-switch-label input{display:none}.k2fx-switch{width:34px;height:18px;border-radius:99px;background:#444;border:1px solid #666;position:relative;display:inline-block;vertical-align:middle;box-sizing:border-box}.k2fx-switch::after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;left:1px;top:1px;background:#bbb;transition:left .12s ease,background .12s ease}.k2fx-switch-label input:checked + .k2fx-switch{background:#138f8b;border-color:#35d0c8}.k2fx-switch-label input:checked + .k2fx-switch::after{left:17px;background:#fff}.k2fx-toggle{display:flex;align-items:center;gap:5px;color:#bbb;font-size:11px;white-space:nowrap}
+    .k2fx-enable-header{height:30px;min-height:30px;max-height:30px;display:flex;align-items:center;justify-content:flex-end;padding:0 9px;box-sizing:border-box;color:#ddd;font:12px sans-serif;background:transparent}.k2fx-top{display:grid;grid-template-columns:auto 1fr;gap:7px;align-items:center}.k2fx-title{font-weight:700;color:#35d0c8;white-space:nowrap}.k2fx-search{min-width:0;background:#202020;color:#eee;border:1px solid #555;border-radius:6px;padding:5px 7px;box-sizing:border-box}.k2fx-switch-label{gap:6px}.k2fx-switch-label input{display:none}.k2fx-switch{width:34px;height:18px;border-radius:99px;background:#444;border:1px solid #666;position:relative;display:inline-block;vertical-align:middle;box-sizing:border-box}.k2fx-switch::after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;left:1px;top:1px;background:#bbb;transition:left .12s ease,background .12s ease}.k2fx-switch-label input:checked + .k2fx-switch{background:#138f8b;border-color:#35d0c8}.k2fx-switch-label input:checked + .k2fx-switch::after{left:17px;background:#fff}.k2fx-toggle{display:flex;align-items:center;gap:5px;color:#ddd;font-size:11px;white-space:nowrap}
     ${effectSizeCss}
     ${effectStyleBoostCss}
     .k2fx-tabs{display:flex;gap:5px;flex-wrap:wrap}.k2fx-tab{background:#242424;color:#ddd;border:1px solid #444;border-radius:999px;padding:4px 9px;cursor:pointer;font-size:11px}.k2fx-tab.active{border-color:#35d0c8;color:#fff;background:#12606a}
@@ -5405,7 +5405,10 @@ function setupEffectNode(node, options = {}) {
   const switchText = document.createElement("span");
   switchText.textContent = "Enable";
   toggleLabel.append(enabled, switchUi, switchText);
-  top.append(title, search, toggleLabel);
+  const enableHeader = document.createElement("div");
+  enableHeader.className = "k2fx-enable-header";
+  enableHeader.appendChild(toggleLabel);
+  top.append(title, search);
   const thumbSizeMin = 80;
   const thumbSizeMax = 240;
   const thumbSizeDefault = 180;
@@ -5876,6 +5879,12 @@ function setupEffectNode(node, options = {}) {
   footer.append(customBox, customPresetBar);
   wrap.appendChild(footer);
 
+  node.addDOMWidget("krea2_effect_enable_header", "Krea2EffectEnableHeader", enableHeader, {
+    serialize:false,
+    hideOnZoom:false,
+    getMinHeight:()=>30,
+    getMaxHeight:()=>30,
+  });
   node.addDOMWidget("krea2_prompt_effect_ui", "Krea2PromptEffectUI", wrap, {
     serialize:false,
     hideOnZoom:false,
