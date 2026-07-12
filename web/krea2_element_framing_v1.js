@@ -671,35 +671,35 @@ window.KREA2_BBOX_EFFECT_PRESETS_RESTORED = [
   },
   {
     "name": "Dreamy",
-    "category": "Mood",
+    "category": "Art",
     "chip": "Dream",
     "tone": "mood",
     "text": "dreamy photographic atmosphere, soft glow, gentle contrast, subtle haze, delicate highlights, calm realistic emotional mood"
   },
   {
     "name": "Dark Fantasy",
-    "category": "Mood",
+    "category": "Art",
     "chip": "Dark",
     "tone": "mood",
     "text": "dark fantasy atmosphere, cinematic realistic shadows, mysterious lighting, ornate real-world texture, moody photographic composition"
   },
   {
     "name": "High Detail",
-    "category": "Mood",
+    "category": "Finish",
     "chip": "Detail",
     "tone": "mood",
     "text": "highly detailed realistic image, crisp textures, sharp subject definition, refined materials, clean photographic lighting, intricate visual detail"
   },
   {
     "name": "Minimal Clean",
-    "category": "Mood",
+    "category": "Finish",
     "chip": "Minimal",
     "tone": "mood",
     "text": "minimal clean photographic style, simple composition, uncluttered background, balanced spacing, refined modern real-world presentation"
   },
   {
     "name": "Retro Pop",
-    "category": "Mood",
+    "category": "Art",
     "chip": "Retro",
     "tone": "mood",
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
@@ -2082,35 +2082,35 @@ const EFFECT_PRESETS = [
   },
   {
     "name": "Dreamy",
-    "category": "Mood",
+    "category": "Art",
     "chip": "Dream",
     "tone": "mood",
     "text": "dreamy photographic atmosphere, soft glow, gentle contrast, subtle haze, delicate highlights, calm realistic emotional mood"
   },
   {
     "name": "Dark Fantasy",
-    "category": "Mood",
+    "category": "Art",
     "chip": "Dark",
     "tone": "mood",
     "text": "dark fantasy atmosphere, cinematic realistic shadows, mysterious lighting, ornate real-world texture, moody photographic composition"
   },
   {
     "name": "High Detail",
-    "category": "Mood",
+    "category": "Finish",
     "chip": "Detail",
     "tone": "mood",
     "text": "highly detailed realistic image, crisp textures, sharp subject definition, refined materials, clean photographic lighting, intricate visual detail"
   },
   {
     "name": "Minimal Clean",
-    "category": "Mood",
+    "category": "Finish",
     "chip": "Minimal",
     "tone": "mood",
     "text": "minimal clean photographic style, simple composition, uncluttered background, balanced spacing, refined modern real-world presentation"
   },
   {
     "name": "Retro Pop",
-    "category": "Mood",
+    "category": "Art",
     "chip": "Retro",
     "tone": "mood",
     "text": "retro pop style, bold color palette, graphic shapes, playful composition, clean vintage-inspired visual design"
@@ -3842,8 +3842,8 @@ const EFFECT_PRESETS = [
     "text": "Bright pop 1950s American diner interior background, Chrome counter, red and turquoise vinyl stools, colorful booths, jukebox, checker floor, cheerful retro atmosphere"
   }
   ];
-const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Background", "Mood", "Color Theme", "Finish", "Custom"];
-const EFFECT_MAIN_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Mood", "Color Theme", "Finish", "Custom"];
+const EFFECT_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Background", "Color Theme", "Finish", "Custom"];
+const EFFECT_MAIN_CATEGORIES = ["All", "Photo", "Camera FX", "Art", "Light", "Weather", "Color Theme", "Finish", "Custom"];
 const EFFECT_BACKGROUND_CATEGORIES = ["Background", "Custom"];
 const EFFECT_PRESET_ALIASES = {"Black White":"B&W Strong","Realistic":"Realistic Photo","Cinematic":"Cinematic Photo","Base Style":"Photo","Photo Look":"Photo","Portrait":"Photo","Commercial":"Photo","Lighting":"Light","Illustration":"Art","Custom Preset":"Custom"};
 function k2fxUniqueList(values) {
@@ -4388,10 +4388,6 @@ function k2cfElementPixelHeight(el) {
     const computed = Math.round(parseFloat(window.getComputedStyle(el).height || "0") || 0);
     if (computed > 0) candidates.push(computed);
   } catch (_) {}
-  try {
-    const rect = Math.round(el.getBoundingClientRect().height || 0);
-    if (rect > 0) candidates.push(rect);
-  } catch (_) {}
   return candidates.length ? Math.max(...candidates) : 0;
 }
 
@@ -4405,10 +4401,6 @@ function k2cfElementPixelWidth(el) {
   try {
     const computed = Math.round(parseFloat(window.getComputedStyle(el).width || "0") || 0);
     if (computed > 0) candidates.push(computed);
-  } catch (_) {}
-  try {
-    const rect = Math.round(el.getBoundingClientRect().width || 0);
-    if (rect > 0) candidates.push(rect);
   } catch (_) {}
   return candidates.length ? Math.max(...candidates) : 0;
 }
@@ -5553,7 +5545,7 @@ function setupEffectNode(node, options = {}) {
   const saveEffectTextHeight = (key, el, markDirty = true) => {
     const rect = el.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
-    const h = validEffectTextHeight(key, rect.height || el.offsetHeight || parseFloat(el.style.height || "0"));
+    const h = validEffectTextHeight(key, el.offsetHeight || parseFloat(el.style.height || "0"));
     if (!h) return;
     if (Math.abs(Number(effectTextHeights[key] || 0) - h) <= 2) {
       if (markDirty) writeEffectState(true);
@@ -5578,7 +5570,8 @@ function setupEffectNode(node, options = {}) {
       ev.preventDefault();
       ev.stopPropagation();
       const [min, max] = effectTextHeightBounds[key] || [42, 360];
-      const next = Math.max(min, Math.min(max, drag.height + ev.clientY - drag.y));
+      const graphScale = Math.max(0.05, Number(app?.canvas?.ds?.scale) || 1);
+      const next = Math.max(min, Math.min(max, drag.height + (ev.clientY - drag.y) / graphScale));
       el.style.height = `${Math.round(next)}px`;
       saveEffectTextHeight(key, el, false);
     };
@@ -5587,7 +5580,7 @@ function setupEffectNode(node, options = {}) {
       if (!gripEl && !isEffectTextResizePoint(el, ev)) return;
       ev.preventDefault();
       ev.stopPropagation();
-      drag = { y: ev.clientY, height: el.getBoundingClientRect().height };
+      drag = { y: ev.clientY, height: el.offsetHeight || parseFloat(el.style.height || "0") || 0 };
       try { downTarget.setPointerCapture?.(ev.pointerId); } catch (_) {}
       document.addEventListener("pointermove", moveDrag, true);
       document.addEventListener("pointerup", stopDrag, true);
@@ -5689,7 +5682,7 @@ function setupEffectNode(node, options = {}) {
     setWidgetValue("enable_effect", Boolean(enabled.checked));
     setWidgetValue("category", activeCategory || defaultCategory);
     if (!isCustomMode()) setWidgetValue("preset", selectedPreset());
-    setWidgetValue("custom_preset", custom.value || "");
+    setWidgetValue("custom_preset", isBackgroundNode && !isCustomMode() ? currentEffectText() : custom.value || "");
     setWidgetValue("style_boost", isBackgroundNode ? "" : activeStyleBoost || "");
     writeEffectState(false);
     custom.classList.toggle("show", isCustomMode());
@@ -6473,6 +6466,36 @@ function setupCanvasNode(node) {
     screen.style.height = `${Math.round(h * scale)}px`;
     for (const canvas of [bg, overlay]) { canvas.style.width = screen.style.width; canvas.style.height = screen.style.height; }
   }
+  let canvasRefreshFrame = 0;
+  const canvasRefreshTimers = new Set();
+  function refreshCanvasDisplay() {
+    if (!wrap.isConnected || monitor.clientWidth < 4 || monitor.clientHeight < 4) return false;
+    const [w, h] = currentSize();
+    if (bg.width !== w || bg.height !== h || overlay.width !== w || overlay.height !== h) {
+      resizeCanvases();
+    } else {
+      makeBg();
+      fit();
+      drawOverlay();
+    }
+    updateGuide();
+    return true;
+  }
+  function scheduleCanvasRefresh(withRetries = false) {
+    if (canvasRefreshFrame) cancelAnimationFrame(canvasRefreshFrame);
+    canvasRefreshFrame = requestAnimationFrame(() => {
+      canvasRefreshFrame = 0;
+      refreshCanvasDisplay();
+    });
+    if (!withRetries) return;
+    for (const delay of [80, 250, 700]) {
+      const timer = setTimeout(() => {
+        canvasRefreshTimers.delete(timer);
+        refreshCanvasDisplay();
+      }, delay);
+      canvasRefreshTimers.add(timer);
+    }
+  }
   function updateGuide() {
     guide.className = "k2cf-guide";
     const v = controls.grid?.value || "Thirds";
@@ -6677,7 +6700,34 @@ function setupCanvasNode(node) {
   k2cfInstallNodeSizePersistence(node, "canvas", K2CF_CANVAS_DEFAULT_SIZE);
   k2cfMaybeInitializeNodeSize(node, "canvas", K2CF_CANVAS_DEFAULT_SIZE);
   k2cfScheduleNodeSizeRestore(node, "canvas", K2CF_CANVAS_DEFAULT_SIZE);
-  const oldResize=node.onResize; node.onResize=function(){ const r = oldResize?.apply(this,arguments); requestAnimationFrame(fit); return r; };
+  const canvasResizeObserver = typeof ResizeObserver === "function"
+    ? new ResizeObserver(() => scheduleCanvasRefresh(false))
+    : null;
+  canvasResizeObserver?.observe(monitor);
+  const refreshAfterVisibility = () => {
+    if (!document.hidden) scheduleCanvasRefresh(true);
+  };
+  const refreshAfterFocus = () => scheduleCanvasRefresh(true);
+  document.addEventListener("visibilitychange", refreshAfterVisibility);
+  window.addEventListener("focus", refreshAfterFocus);
+  window.addEventListener("pageshow", refreshAfterFocus);
+  bg.addEventListener("contextrestored", refreshAfterFocus);
+  overlay.addEventListener("contextrestored", refreshAfterFocus);
+  scheduleCanvasRefresh(true);
+
+  const oldResize=node.onResize; node.onResize=function(){ const r = oldResize?.apply(this,arguments); scheduleCanvasRefresh(false); return r; };
+  const oldRemoved=node.onRemoved; node.onRemoved=function(){
+    canvasResizeObserver?.disconnect();
+    document.removeEventListener("visibilitychange", refreshAfterVisibility);
+    window.removeEventListener("focus", refreshAfterFocus);
+    window.removeEventListener("pageshow", refreshAfterFocus);
+    bg.removeEventListener("contextrestored", refreshAfterFocus);
+    overlay.removeEventListener("contextrestored", refreshAfterFocus);
+    if (canvasRefreshFrame) cancelAnimationFrame(canvasRefreshFrame);
+    for (const timer of canvasRefreshTimers) clearTimeout(timer);
+    canvasRefreshTimers.clear();
+    return oldRemoved?.apply(this,arguments);
+  };
 }
 
 function setupPromptNode(node) {
