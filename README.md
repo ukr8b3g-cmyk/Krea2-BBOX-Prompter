@@ -14,6 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
+- 2026-07-12: Improved Canvas redraw recovery after startup, tab changes, window focus, and graphics-context restoration. Textarea sizing is also more stable when the ComfyUI graph zoom changes.
 - 2026-07-10: Added 101 Background Effect presets with local WebP thumbnails. The new set covers Japanese everyday locations and retail spaces, residential areas, Thai and Asian locations, sports and hobby spaces, plus historical, fantasy, and science-fiction scenes.
 - 2026-07-09: Added more Background Effect presets from local WebP assets, including travel streets, transport interiors, arcades, capsule hotel, pachinko/slot interiors, sauna, vending machine corner, data center, showroom, planetarium, skate park, recording booth, and desert highway. Background thumbnails now use the updated cache version. Replaced the recommended test workflow with `workflow/Krea2-BBOX-Node-Test.json`.
 - 2026-07-08: Added an expanded Background preset set with local WebP thumbnails, and kept Style Boost optional so it adds no prompt text when off.
@@ -1397,6 +1398,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
+- 2026-07-12：起動直後、タブ切り替え、ウィンドウ復帰、描画コンテキスト復旧時のCanvas再描画を安定化しました。ComfyUI画面のズーム変更時も、テキスト欄のサイズが不自然に変化しにくいよう修正しています。
 - 2026-07-10：Background EffectにローカルWebPサムネイル付きの背景プリセット101件を追加しました。日本の日常施設・店舗、住宅周辺、タイ／アジア系ロケーション、スポーツ／趣味空間、歴史・ファンタジー・SF系の背景を追加しています。
 - 2026-07-09：Background EffectにローカルWebP素材から追加背景を登録しました。旅行系ストリート、交通機関内、アーケード、カプセルホテル、パチンコ/スロット店内、サウナ、自販機コーナー、データセンター、ショールーム、プラネタリウム、スケートパーク、録音ブース、砂漠道路などを追加し、背景サムネイルのキャッシュ版も更新しました。 推奨テストワークフローを `workflow/Krea2-BBOX-Node-Test.json` に差し替えました。
 - 2026-07-08：Backgroundカテゴリを大幅に追加し、ローカルWebPサムネイルと最新プリセット一覧を更新しました。Style BoostはOFF時に追加プロンプトを一切出力しない仕様です。
@@ -1461,7 +1463,7 @@ Ctrl + F5
 - `Canvas`: BBOXのおおまかな位置を描きます。まずはObjectのBBOXを1つだけで試すのがおすすめです。
 - `Prompter`: 各色スロットに、そこへ出したい内容を書きます。
 - `Export`: CanvasとPrompterの情報をKrea2向けJSONプロンプトへ変換します。多くの場合、設定は初期値のままで問題ありません。
-- `Prompt Effect`: Export????????????????????????????????????????????
+- `Prompt Effect`: Exportの後ろに写真、光、天候、色、仕上げなどの効果プロンプトを追加します。
 
 BBOXは厳密なマスクではなく、配置のヒントです。2つ使う場合は、強く重ねず、役割を分ける方が安定します。
 
