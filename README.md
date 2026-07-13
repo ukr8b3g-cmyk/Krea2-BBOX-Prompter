@@ -14,6 +14,7 @@ BBOX regions are layout guidance for Krea2. They are not strict masks. Final pla
 
 ## Update Notes
 
+- 2026-07-13: Added the latest Background Effect presets and refreshed the README list from `web/background_presets.json` (592 presets total).
 - 2026-07-12: Improved Canvas redraw recovery after startup, tab changes, window focus, and graphics-context restoration. Textarea sizing is also more stable when the ComfyUI graph zoom changes.
 - 2026-07-09: Added more Background Effect presets from local WebP assets, including travel streets, transport interiors, arcades, capsule hotel, pachinko/slot interiors, sauna, vending machine corner, data center, showroom, planetarium, skate park, recording booth, and desert highway. Background thumbnails now use the updated cache version.
 - 2026-07-08: Added an expanded Background preset set with local WebP thumbnails, and kept Style Boost optional so it adds no prompt text when off.
@@ -831,38 +832,149 @@ Heat Haze
 
 ## Background
 
+Background presets are managed from `web/background_presets.json`; thumbnails are stored under `web/thumbnails/`. The README list below is generated from that JSON so the UI, prompt data, and documentation stay aligned.
+
 ```text
-Capsule Hotel Pod Row
-Capsule Toy Shop
-Coin Locker Room
-Fortune Teller Booth
+Tree Portrait Background
+Apartment Balcony
+Hotel Room Window
+Bookstore Aisle
+Art Museum Gallery
+Flower Shop
+Florist Shop
+Ramen Shop Counter
+Ramen Shop Interior
+Ramen Yatai
+Izakaya Private Room
+Yakiniku Table
+Sushi Customer Counter
+Sushi Chef Side
+Wine Bar Counter
+Pet Shop
+Electronics Store
+Fitting Room
+Old School Hallway
+School Entrance Shoe Locker
+School Staff Room
+Company Cafeteria
+University Lecture Hall
+Music Practice Room
+Recording Studio
+Pottery Classroom
+Calligraphy Classroom
+Temple Main Hall
+Ryokan Banquet Hall
+Yakatabune Tatami Room
+Edo Farmhouse Irori
+Farmhouse Doma
+Showa Kitchen
+Showa Dagashi Shop
+Showa Snack Bar
+Showa Snack Bar Entrance
+Showa Station Waiting Room
+Showa Public Phone Booth
+Showa Sento Bandai
+Sento Bath Area
+Onsen Ryokan Bath Entrance
+Train Compartment
+Train Platform
+Subway Platform
+Rural Unmanned Station
+Station Coin Locker
+Taxi Interior
+Ferry Deck
+Harbor Wharf
+Mountain Cabin
+Highrise Observation Floor
+Pedestrian Overpass
+Railway Track Path
+Under Elevated Railway
+Bowling Alley
+Billiards Hall
+Indoor Bouldering
+Tennis Court
+Small Live Bar Stage
+DJ Booth
+Disco
+Theater Backstage Wing
+Live Merch Handshake
+Batting Center
+Horse Racing Grandstand
+Ski Resort Lift
+Sumo Stable Practice Room
+Aquarium Large Tank
+Pool Inside Water
+Undersea
+Underwater
+Underground Parking
+Underground Parking Garage
+Underground Shopping Passage
+Airport Security Checkpoint
+Aircraft Hangar
+Propeller Airplane Cabin
+Ferry Passenger Cabin
+Lighthouse Observation Deck
+Island Harbor Waiting Room
+Fishing Port Morning Market
+Fishing Pond
 Highway Service Area
-Japanese Pachinko Parlor Interior
-Japanese Pachinko Slot Machine Area
-Late Night Diner Counter
-Love Hotel Entrance Room Panels
-Plush Crane Game Arcade Corner
-Private Sauna Room
-Retro Racing Arcade Game Row
-Small Indoor Smoking Room
-Train Driver Cabin
+Highway Toll Booth
+Gas Station
+Crosswalk
 Vending Machine Corner
-Paris Cafe Street
-London Bus Street
-Modern City Street
-Roman Ruins
-Venice Canal
-Greek Island Alley
-Middle Eastern Bazaar
-Indian Palace Courtyard
-Japanese Train Interior
-Subway Car Interior
-Data Center Server Room
-Car Dealership Showroom
-Planetarium Dome
-Indoor Skate Park
-Recording Studio Vocal Booth
-Desert Highway
+Bank ATM Corner
+Elevator Lobby
+Hotel Corridor
+Locker Room
+Manga Cafe Booth
+Mahjong Parlor
+Retro Smoking Lounge
+Showa Apartment Entrance
+Showa Cabaret Stage
+Showa Tobacco Shop
+Danchi Stair Landing
+Declining Shopping Street
+Wedding Aisle
+Church Altar
+Carousel
+Coffee Cup Ride
+Ferris Wheel Entrance
+Childrens Playroom
+Kindergarten Classroom
+Auto Repair Garage
+Construction Site
+Research Cleanroom
+Museum Display Case
+Mountain Summit Rest Stop
+Beach House
+Ibiza White House Balcony
+Stone Age Cave Home
+Traditional African Hut
+Arabian Palace Courtyard
+Arabian Palace Interior
+Adventurer Guild Reception
+Dungeon Entrance
+Dungeon Interior
+Spaceship Cargo Hold
+Submarine Control Room
+WW2 Cockpit
+CRT Tower Art
+World Tourist Landmark Plaza
+World Tourist Pyramid Desert
+Yoshiwara Corridor Storefront
+Yoshiwara Tatami Room
+Jail Cell Block
+Detention Visitation Room
+Crime Scene
+Hospital Nurse Station
+Operating Room
+Ambulance Interior
+Circus Tent
+Courtroom Witness Stand
+Game Streaming Room
+Kendo Dojo
+Kyudo Dojo
+Supermarket Meat Section
 Classroom
 Train Interior
 Bus Interior
@@ -1007,6 +1119,314 @@ Command Room
 Gyudon Counter
 Hamburger Shop
 Pop Diner
+Baby Crib Bedroom
+Capsule Hotel Pod Row
+Capsule Toy Shop
+Coin Locker Room
+Fortune Teller Booth
+Japanese Pachinko Parlor Interior
+Japanese Pachinko Slot Machine Area
+Late Night Diner Counter
+Love Hotel Entrance Room Panels
+Plush Crane Game Arcade Corner
+Private Sauna Room
+Retro Racing Arcade Game Row
+Small Indoor Smoking Room
+Train Driver Cabin
+Paris Cafe Street
+London Bus Street
+Modern City Street
+Roman Ruins
+Venice Canal
+Greek Island Alley
+Middle Eastern Bazaar
+Indian Palace Courtyard
+Japanese Train Interior
+Subway Car Interior
+Car Dealership Showroom
+Data Center Server Room
+Desert Highway
+Indoor Skate Park
+Planetarium Dome
+Recording Studio Vocal Booth
+100 Yen Shop Aisle Register Counter
+1990S Hua Lamphong Station Platform
+Abandoned Subway Platform
+Akha Hill Tribe House Entrance
+Alien Marketplace
+Ancient Underground Temple
+Apartment Garbage Station
+Apartment Mailbox Area
+Bag Shop Display Shelf
+Bakery Tray Station
+Balcony Laundry Area
+Barbershop Shampoo Station
+Bathroom Vanity Sink
+Batting Cage Booth
+Bicycle Parking Lot
+Boy Child Bedroom
+Budget Khaosan Guesthouse Lobby
+Car Wash Bay
+Chinatown Dim Sum Shop
+Chinatown Herbal Medicine Shop
+Clothing Store Mirror Area
+Coin Parking Lot
+Comiket Table Booth
+Convenience Store Microwave Corner
+Cosplay Photo Event Venue
+Cryogenic Sleep Chamber
+Cyberpunk Backroom
+Delivery Parcel Locker
+Dense Apartment Laundry Balcony
+Department Store Shoe Floor
+Dreamlike Endless Hallway
+Electronics Store Phone Display
+Family Restaurant Drink Bar
+Family Restaurant Table Seat Order Tablet
+Floating Island Shrine
+Flower Shop Interior
+Gas Station Self Service Pump
+Giant Clock Tower Interior
+Girl Child Bedroom
+Glasses Shop Fitting Counter
+Golf Course
+Hat Shop Display Wall
+Home Center Tool Aisle
+Home Entrance Genkan
+Home Front Door Exterior
+Hot Dog Food Truck
+Indoor Golf Simulator Booth
+Japanese Commuter Train Platform
+Japanese Crab Fishing Vessel Deck
+Jewelry Shop Display Counter
+Kimono Rental Dressing Room
+Liminal Pool Room
+Loy Krathong Lantern Riverside
+Medieval European Farm Field
+Medieval European Peasant House
+Medieval European Village Church
+Mirror Maze Room
+Model Train Hobby Room
+Movie Theater Concession Counter
+Muay Thai Training Gym
+Nail Salon Table
+Old Chiang Mai Temple
+Old Public Bath Changing Room
+Parking Payment Machine Corner
+Pet Shop Aquarium Aisle
+Photo Id Booth Interior
+Post Apocalyptic Convenience Store
+Pre Handover Kowloon Walled City Barbershop
+Pre Handover Kowloon Walled City Corridor
+Pre Handover Kowloon Walled City Food Workshop
+Pre Handover Kowloon Walled City Textile Workshop
+Professional Wrestling Ring
+Public Phone Corner
+Ramen Shop Ticket Machine
+Rental Video Shop Aisle
+Ritual Chamber
+Rural Northeast Thai Village
+Self Checkout Area
+Showa Cheap 1Ldk Apartment Room
+Showa Kamishibai Bicycle Cart
+Shrine Fortune Slip Wall
+Small Clinic Examination Room
+Songkran Water Festival Street
+Songthaew Pickup Truck Stop
+Streetwear Shop Interior
+Supermarket Cart Return Area
+Thai Banana Leaf Food Stall
+Thai Monk Alms Bowl Area
+Thai Plastic Chair Street Restaurant
+Thai Temple Ordination Hall
+Thai Tom Yum Street Food Stall
+Thai Traditional Massage Shop
+Toy Store Aisle
+Traditional Thai Dance Stage
+Traditional Thai Wooden House
+Tropical Fruit Street Stall
+Tuk Tuk Waiting Area
+Underground Bicycle Parking
+Upside Down Room
+Wedding Dress Fitting Room
+Mountain Cable Car Station
+Ancient Roman Forum Colonnade
+Attic Bedroom
+Basement Tool Room
+Bay Window Reading Nook
+Bridge Pylon Inspection Platform
+Bungee Jump Platform Edge
+Cafe Window Counter
+Cave Tour Walkway
+Classic Sports Car Garage
+Compact Launch Crew Cabin
+Crane Operator Cabin
+Dance Practice Mirror Room
+Desert Caravan Rest Courtyard
+Edo Period Castle Grand Hall
+Emergency Shelter Gym
+Everest Ice Wall Climbing Scene
+Ferris Wheel Cabin
+Ferry Vehicle Deck
+Front Basket Bicycle Street Corner
+Futuristic Greenhouse Lounge
+Hellenistic Bathhouse Interior
+Horse Carriage Passenger Seat
+Hospital Night Duty Tatami Room
+Hot Air Balloon Basket
+Hot Spring Ryokan Lobby
+Hotel Room Panoramic Window
+Indoor Shooting Range
+Industrial Laundry Workroom
+Japanese Goldfish Scooping Stall
+Lighthouse Lantern Room
+Lunar Base Private Room
+Lunar Lander Cockpit
+Motorcycle Sidecar Passenger Seat
+Mountain Cable Car Cabin Interior
+Ocean View Window
+Old Neon Sign Rooftop
+Old Photo Studio Backdrop Room
+Orbital Hotel Suite
+Orbital Spacecraft Exterior Repair
+Osaka Dotonbori Ebisu Bridge
+Osaka Shinsekai Tsutenkaku
+Pizzeria Kitchen
+Private Propeller Plane Cabin
+Professional Manga Artist Room
+Ptolemaic Palace Garden Colonnade
+Public Bath Boiler Room
+Qing Dynasty Palace Courtyard
+Radio Tower Maintenance Deck
+Rainy Window Interior
+Ramen Shop Kitchen
+Record Store Listening Booth
+Rotating Space Habitat Ring
+Royal Scribe Archive Room
+School Gym Equipment Storage
+School Science Preparation Room
+Shaolin Temple Training Courtyard
+Shaolin Wooden Dummy Hall
+Shared Shower Room
+Ski Jump Start Gate
+Ski Resort Lodge Entrance
+Skyscraper Window Cleaning Cradle
+Small Fishing Boat Wheelhouse
+Small Sailboat Cockpit
+Snorkeling Boat Deck
+Space Station Airlock Vestibule
+Spice And Perfume Market
+Taisho Era Cafe Interior
+Tokyo Asakusa Kaminarimon
+Tokyo Shibuya Crossing
+Tokyo Tower Street View
+Two Person Radio Recording Booth
+Underwater Habitat Living Room
+University Izakaya Get Together
+Victorian Drawing Room
+Vintage Camper Van Interior
+Vintage Taxi Back Seat
+Wind Turbine Nacelle Roof
+Ajanta Cave Mural Wall
+Ajanta Cave Mural Wall Prime
+Akihabara Cosplay Shop Interior
+Akihabara Maid Cafe Street
+Amusement Park Long Queue
+Ancient Egypt Tomb Relief Wall
+Ancient Egypt Tomb Relief Wall Prime
+Ancient Roman Mosaic Wall
+Ancient Roman Mosaic Wall Prime
+Ariake Exhibition Building Exterior
+Bubble Appliance Showroom
+Bubble Christmas Downtown Street
+Bubble Club Entrance
+Bubble Department Store Cosmetics Counter
+Bubble Disco Dance Floor
+Bubble Disco Fan Dance Stage
+Bubble Disco VIP Room
+Bubble High End Hotel Lobby
+Bubble Hotel Car Dropoff
+Bubble Karaoke Box
+Bubble Luxury Apartment Entrance
+Bubble Ski Resort Hotel Entrance
+Bubble Sports Car Interior Driver View
+Byzantine Gold Mosaic Wall
+Byzantine Gold Mosaic Wall Prime
+City Marathon Spectators
+Comic Market Ariake Hall Crowd
+Convenience Store Youth Gathering
+Crowded Subway Escalator
+Edo Bathhouse Entrance Changing Room
+Edo Bathhouse Late Period Interior
+Edo Bathhouse Mixed Interior
+Edo Commoner Street
+Edo Craftsman Workshop
+Edo Day Laborers Cargo Work
+Edo Machibugyo Courtroom Upper Dais
+Edo Machibugyo Shirasu Gravel Court
+Edo Rice Paddy Farm Work
+Edo Soba Shop Interior
+Ellora Cave Temple Relief Wall
+Ellora Cave Temple Relief Wall Prime
+Fantasy Adventurer Guild Reception
+Fantasy Beastfolk Tavern
+Fantasy Quest Board Square
+Festival Float Workshop
+Fire Station Garage
+Fireworks Riverside Crowd
+Fish Hatchery Tank Room
+Flooded Basement Knee Deep
+Harajuku Colorful Accessory Shop
+Harajuku Punk Rock Clothing Store
+Harajuku Sticker Shop
+Harajuku Takeshita Street Youth Culture
+Harajuku Vintage Clothing Store
+Hot Spring Footbath Plaza
+Idol Handshake Event
+Inca Fitted Stone Wall
+Inca Fitted Stone Wall Prime
+Islamic Geometric Tile Wall
+Islamic Geometric Tile Wall Prime
+Japanese Kura White Plaster Wall
+Korean War Uso Entertainment Stage
+Maya Stucco Relief Wall
+Maya Stucco Relief Wall Prime
+Mongolian Ger Grassland Exterior
+Mongolian Ger Interior
+Moroccan Tadelakt Courtyard Wall
+Moroccan Tadelakt Courtyard Wall Prime
+Old Sento Fujisan Mural Wall
+Ottoman Iznik Tile Wall
+Ottoman Iznik Tile Wall Prime
+Packed Commuter Train Platform
+Packed Small Boat Deck
+Packed Small Elevator
+Ptolemaic Egypt Relief Wall
+Ptolemaic Egypt Relief Wall Prime
+Purikura Game Center Floor
+Purikura Specialty Shop Interior
+Ramen Shop Long Queue
+Rice Paddy Irrigation Path
+River Embankment Bicycle Path
+Rooftop Water Tank Platform
+Rural Bus Shelter
+Rural Japanese Main Street
+Rural Post Office Exterior
+Rural Shrine Rear Compound
+Sake Brewery Steaming Room
+Sauna Cold Plunge Area
+Showa Danchi Balance Bathroom
+Showa Danchi Narrow Kitchen
+Showa Danchi Tatami Living Room
+Showa High Growth City Bus
+Showa High Growth Commuter Train
+Showa High Growth Office
+Showa High Growth Street
+Showa Terraced Rice Fields
+Small Town Bus Turnaround
+Victorian Aristocratic Salon
+Visual Kei Live House Entrance
+Youth Fashion Magazine Street Snap
 ```
 
 ## Mood
@@ -1387,6 +1807,7 @@ https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter
 
 ## 更新情報
 
+- 2026-07-13：最新のBackground Effectプリセットを追加し、`web/background_presets.json` を元にREADMEの背景一覧を再更新しました（全592 件）。
 - 2026-07-12：起動直後、タブ切り替え、ウィンドウ復帰、描画コンテキスト復旧時のCanvas再描画を安定化しました。ComfyUI画面のズーム変更時も、テキスト欄のサイズが不自然に変化しにくいよう修正しています。
 - 2026-07-09：Background EffectにローカルWebP素材から追加背景を登録しました。旅行系ストリート、交通機関内、アーケード、カプセルホテル、パチンコ/スロット店内、サウナ、自販機コーナー、データセンター、ショールーム、プラネタリウム、スケートパーク、録音ブース、砂漠道路などを追加し、背景サムネイルのキャッシュ版も更新しました。
 - 2026-07-08：Backgroundカテゴリを大幅に追加し、ローカルWebPサムネイルと最新プリセット一覧を更新しました。Style BoostはOFF時に追加プロンプトを一切出力しない仕様です。
@@ -2227,7 +2648,149 @@ Heat Haze
 
 ## Background系
 
+Backgroundプリセットは `web/background_presets.json` で一元管理し、サムネイルは `web/thumbnails/` に保存します。以下の一覧はJSONから再生成しているため、UI・出力プロンプト・READMEのズレを減らせます。
+
 ```text
+Tree Portrait Background
+Apartment Balcony
+Hotel Room Window
+Bookstore Aisle
+Art Museum Gallery
+Flower Shop
+Florist Shop
+Ramen Shop Counter
+Ramen Shop Interior
+Ramen Yatai
+Izakaya Private Room
+Yakiniku Table
+Sushi Customer Counter
+Sushi Chef Side
+Wine Bar Counter
+Pet Shop
+Electronics Store
+Fitting Room
+Old School Hallway
+School Entrance Shoe Locker
+School Staff Room
+Company Cafeteria
+University Lecture Hall
+Music Practice Room
+Recording Studio
+Pottery Classroom
+Calligraphy Classroom
+Temple Main Hall
+Ryokan Banquet Hall
+Yakatabune Tatami Room
+Edo Farmhouse Irori
+Farmhouse Doma
+Showa Kitchen
+Showa Dagashi Shop
+Showa Snack Bar
+Showa Snack Bar Entrance
+Showa Station Waiting Room
+Showa Public Phone Booth
+Showa Sento Bandai
+Sento Bath Area
+Onsen Ryokan Bath Entrance
+Train Compartment
+Train Platform
+Subway Platform
+Rural Unmanned Station
+Station Coin Locker
+Taxi Interior
+Ferry Deck
+Harbor Wharf
+Mountain Cabin
+Highrise Observation Floor
+Pedestrian Overpass
+Railway Track Path
+Under Elevated Railway
+Bowling Alley
+Billiards Hall
+Indoor Bouldering
+Tennis Court
+Small Live Bar Stage
+DJ Booth
+Disco
+Theater Backstage Wing
+Live Merch Handshake
+Batting Center
+Horse Racing Grandstand
+Ski Resort Lift
+Sumo Stable Practice Room
+Aquarium Large Tank
+Pool Inside Water
+Undersea
+Underwater
+Underground Parking
+Underground Parking Garage
+Underground Shopping Passage
+Airport Security Checkpoint
+Aircraft Hangar
+Propeller Airplane Cabin
+Ferry Passenger Cabin
+Lighthouse Observation Deck
+Island Harbor Waiting Room
+Fishing Port Morning Market
+Fishing Pond
+Highway Service Area
+Highway Toll Booth
+Gas Station
+Crosswalk
+Vending Machine Corner
+Bank ATM Corner
+Elevator Lobby
+Hotel Corridor
+Locker Room
+Manga Cafe Booth
+Mahjong Parlor
+Retro Smoking Lounge
+Showa Apartment Entrance
+Showa Cabaret Stage
+Showa Tobacco Shop
+Danchi Stair Landing
+Declining Shopping Street
+Wedding Aisle
+Church Altar
+Carousel
+Coffee Cup Ride
+Ferris Wheel Entrance
+Childrens Playroom
+Kindergarten Classroom
+Auto Repair Garage
+Construction Site
+Research Cleanroom
+Museum Display Case
+Mountain Summit Rest Stop
+Beach House
+Ibiza White House Balcony
+Stone Age Cave Home
+Traditional African Hut
+Arabian Palace Courtyard
+Arabian Palace Interior
+Adventurer Guild Reception
+Dungeon Entrance
+Dungeon Interior
+Spaceship Cargo Hold
+Submarine Control Room
+WW2 Cockpit
+CRT Tower Art
+World Tourist Landmark Plaza
+World Tourist Pyramid Desert
+Yoshiwara Corridor Storefront
+Yoshiwara Tatami Room
+Jail Cell Block
+Detention Visitation Room
+Crime Scene
+Hospital Nurse Station
+Operating Room
+Ambulance Interior
+Circus Tent
+Courtroom Witness Stand
+Game Streaming Room
+Kendo Dojo
+Kyudo Dojo
+Supermarket Meat Section
 Classroom
 Train Interior
 Bus Interior
@@ -2372,6 +2935,314 @@ Command Room
 Gyudon Counter
 Hamburger Shop
 Pop Diner
+Baby Crib Bedroom
+Capsule Hotel Pod Row
+Capsule Toy Shop
+Coin Locker Room
+Fortune Teller Booth
+Japanese Pachinko Parlor Interior
+Japanese Pachinko Slot Machine Area
+Late Night Diner Counter
+Love Hotel Entrance Room Panels
+Plush Crane Game Arcade Corner
+Private Sauna Room
+Retro Racing Arcade Game Row
+Small Indoor Smoking Room
+Train Driver Cabin
+Paris Cafe Street
+London Bus Street
+Modern City Street
+Roman Ruins
+Venice Canal
+Greek Island Alley
+Middle Eastern Bazaar
+Indian Palace Courtyard
+Japanese Train Interior
+Subway Car Interior
+Car Dealership Showroom
+Data Center Server Room
+Desert Highway
+Indoor Skate Park
+Planetarium Dome
+Recording Studio Vocal Booth
+100 Yen Shop Aisle Register Counter
+1990S Hua Lamphong Station Platform
+Abandoned Subway Platform
+Akha Hill Tribe House Entrance
+Alien Marketplace
+Ancient Underground Temple
+Apartment Garbage Station
+Apartment Mailbox Area
+Bag Shop Display Shelf
+Bakery Tray Station
+Balcony Laundry Area
+Barbershop Shampoo Station
+Bathroom Vanity Sink
+Batting Cage Booth
+Bicycle Parking Lot
+Boy Child Bedroom
+Budget Khaosan Guesthouse Lobby
+Car Wash Bay
+Chinatown Dim Sum Shop
+Chinatown Herbal Medicine Shop
+Clothing Store Mirror Area
+Coin Parking Lot
+Comiket Table Booth
+Convenience Store Microwave Corner
+Cosplay Photo Event Venue
+Cryogenic Sleep Chamber
+Cyberpunk Backroom
+Delivery Parcel Locker
+Dense Apartment Laundry Balcony
+Department Store Shoe Floor
+Dreamlike Endless Hallway
+Electronics Store Phone Display
+Family Restaurant Drink Bar
+Family Restaurant Table Seat Order Tablet
+Floating Island Shrine
+Flower Shop Interior
+Gas Station Self Service Pump
+Giant Clock Tower Interior
+Girl Child Bedroom
+Glasses Shop Fitting Counter
+Golf Course
+Hat Shop Display Wall
+Home Center Tool Aisle
+Home Entrance Genkan
+Home Front Door Exterior
+Hot Dog Food Truck
+Indoor Golf Simulator Booth
+Japanese Commuter Train Platform
+Japanese Crab Fishing Vessel Deck
+Jewelry Shop Display Counter
+Kimono Rental Dressing Room
+Liminal Pool Room
+Loy Krathong Lantern Riverside
+Medieval European Farm Field
+Medieval European Peasant House
+Medieval European Village Church
+Mirror Maze Room
+Model Train Hobby Room
+Movie Theater Concession Counter
+Muay Thai Training Gym
+Nail Salon Table
+Old Chiang Mai Temple
+Old Public Bath Changing Room
+Parking Payment Machine Corner
+Pet Shop Aquarium Aisle
+Photo Id Booth Interior
+Post Apocalyptic Convenience Store
+Pre Handover Kowloon Walled City Barbershop
+Pre Handover Kowloon Walled City Corridor
+Pre Handover Kowloon Walled City Food Workshop
+Pre Handover Kowloon Walled City Textile Workshop
+Professional Wrestling Ring
+Public Phone Corner
+Ramen Shop Ticket Machine
+Rental Video Shop Aisle
+Ritual Chamber
+Rural Northeast Thai Village
+Self Checkout Area
+Showa Cheap 1Ldk Apartment Room
+Showa Kamishibai Bicycle Cart
+Shrine Fortune Slip Wall
+Small Clinic Examination Room
+Songkran Water Festival Street
+Songthaew Pickup Truck Stop
+Streetwear Shop Interior
+Supermarket Cart Return Area
+Thai Banana Leaf Food Stall
+Thai Monk Alms Bowl Area
+Thai Plastic Chair Street Restaurant
+Thai Temple Ordination Hall
+Thai Tom Yum Street Food Stall
+Thai Traditional Massage Shop
+Toy Store Aisle
+Traditional Thai Dance Stage
+Traditional Thai Wooden House
+Tropical Fruit Street Stall
+Tuk Tuk Waiting Area
+Underground Bicycle Parking
+Upside Down Room
+Wedding Dress Fitting Room
+Mountain Cable Car Station
+Ancient Roman Forum Colonnade
+Attic Bedroom
+Basement Tool Room
+Bay Window Reading Nook
+Bridge Pylon Inspection Platform
+Bungee Jump Platform Edge
+Cafe Window Counter
+Cave Tour Walkway
+Classic Sports Car Garage
+Compact Launch Crew Cabin
+Crane Operator Cabin
+Dance Practice Mirror Room
+Desert Caravan Rest Courtyard
+Edo Period Castle Grand Hall
+Emergency Shelter Gym
+Everest Ice Wall Climbing Scene
+Ferris Wheel Cabin
+Ferry Vehicle Deck
+Front Basket Bicycle Street Corner
+Futuristic Greenhouse Lounge
+Hellenistic Bathhouse Interior
+Horse Carriage Passenger Seat
+Hospital Night Duty Tatami Room
+Hot Air Balloon Basket
+Hot Spring Ryokan Lobby
+Hotel Room Panoramic Window
+Indoor Shooting Range
+Industrial Laundry Workroom
+Japanese Goldfish Scooping Stall
+Lighthouse Lantern Room
+Lunar Base Private Room
+Lunar Lander Cockpit
+Motorcycle Sidecar Passenger Seat
+Mountain Cable Car Cabin Interior
+Ocean View Window
+Old Neon Sign Rooftop
+Old Photo Studio Backdrop Room
+Orbital Hotel Suite
+Orbital Spacecraft Exterior Repair
+Osaka Dotonbori Ebisu Bridge
+Osaka Shinsekai Tsutenkaku
+Pizzeria Kitchen
+Private Propeller Plane Cabin
+Professional Manga Artist Room
+Ptolemaic Palace Garden Colonnade
+Public Bath Boiler Room
+Qing Dynasty Palace Courtyard
+Radio Tower Maintenance Deck
+Rainy Window Interior
+Ramen Shop Kitchen
+Record Store Listening Booth
+Rotating Space Habitat Ring
+Royal Scribe Archive Room
+School Gym Equipment Storage
+School Science Preparation Room
+Shaolin Temple Training Courtyard
+Shaolin Wooden Dummy Hall
+Shared Shower Room
+Ski Jump Start Gate
+Ski Resort Lodge Entrance
+Skyscraper Window Cleaning Cradle
+Small Fishing Boat Wheelhouse
+Small Sailboat Cockpit
+Snorkeling Boat Deck
+Space Station Airlock Vestibule
+Spice And Perfume Market
+Taisho Era Cafe Interior
+Tokyo Asakusa Kaminarimon
+Tokyo Shibuya Crossing
+Tokyo Tower Street View
+Two Person Radio Recording Booth
+Underwater Habitat Living Room
+University Izakaya Get Together
+Victorian Drawing Room
+Vintage Camper Van Interior
+Vintage Taxi Back Seat
+Wind Turbine Nacelle Roof
+Ajanta Cave Mural Wall
+Ajanta Cave Mural Wall Prime
+Akihabara Cosplay Shop Interior
+Akihabara Maid Cafe Street
+Amusement Park Long Queue
+Ancient Egypt Tomb Relief Wall
+Ancient Egypt Tomb Relief Wall Prime
+Ancient Roman Mosaic Wall
+Ancient Roman Mosaic Wall Prime
+Ariake Exhibition Building Exterior
+Bubble Appliance Showroom
+Bubble Christmas Downtown Street
+Bubble Club Entrance
+Bubble Department Store Cosmetics Counter
+Bubble Disco Dance Floor
+Bubble Disco Fan Dance Stage
+Bubble Disco VIP Room
+Bubble High End Hotel Lobby
+Bubble Hotel Car Dropoff
+Bubble Karaoke Box
+Bubble Luxury Apartment Entrance
+Bubble Ski Resort Hotel Entrance
+Bubble Sports Car Interior Driver View
+Byzantine Gold Mosaic Wall
+Byzantine Gold Mosaic Wall Prime
+City Marathon Spectators
+Comic Market Ariake Hall Crowd
+Convenience Store Youth Gathering
+Crowded Subway Escalator
+Edo Bathhouse Entrance Changing Room
+Edo Bathhouse Late Period Interior
+Edo Bathhouse Mixed Interior
+Edo Commoner Street
+Edo Craftsman Workshop
+Edo Day Laborers Cargo Work
+Edo Machibugyo Courtroom Upper Dais
+Edo Machibugyo Shirasu Gravel Court
+Edo Rice Paddy Farm Work
+Edo Soba Shop Interior
+Ellora Cave Temple Relief Wall
+Ellora Cave Temple Relief Wall Prime
+Fantasy Adventurer Guild Reception
+Fantasy Beastfolk Tavern
+Fantasy Quest Board Square
+Festival Float Workshop
+Fire Station Garage
+Fireworks Riverside Crowd
+Fish Hatchery Tank Room
+Flooded Basement Knee Deep
+Harajuku Colorful Accessory Shop
+Harajuku Punk Rock Clothing Store
+Harajuku Sticker Shop
+Harajuku Takeshita Street Youth Culture
+Harajuku Vintage Clothing Store
+Hot Spring Footbath Plaza
+Idol Handshake Event
+Inca Fitted Stone Wall
+Inca Fitted Stone Wall Prime
+Islamic Geometric Tile Wall
+Islamic Geometric Tile Wall Prime
+Japanese Kura White Plaster Wall
+Korean War Uso Entertainment Stage
+Maya Stucco Relief Wall
+Maya Stucco Relief Wall Prime
+Mongolian Ger Grassland Exterior
+Mongolian Ger Interior
+Moroccan Tadelakt Courtyard Wall
+Moroccan Tadelakt Courtyard Wall Prime
+Old Sento Fujisan Mural Wall
+Ottoman Iznik Tile Wall
+Ottoman Iznik Tile Wall Prime
+Packed Commuter Train Platform
+Packed Small Boat Deck
+Packed Small Elevator
+Ptolemaic Egypt Relief Wall
+Ptolemaic Egypt Relief Wall Prime
+Purikura Game Center Floor
+Purikura Specialty Shop Interior
+Ramen Shop Long Queue
+Rice Paddy Irrigation Path
+River Embankment Bicycle Path
+Rooftop Water Tank Platform
+Rural Bus Shelter
+Rural Japanese Main Street
+Rural Post Office Exterior
+Rural Shrine Rear Compound
+Sake Brewery Steaming Room
+Sauna Cold Plunge Area
+Showa Danchi Balance Bathroom
+Showa Danchi Narrow Kitchen
+Showa Danchi Tatami Living Room
+Showa High Growth City Bus
+Showa High Growth Commuter Train
+Showa High Growth Office
+Showa High Growth Street
+Showa Terraced Rice Fields
+Small Town Bus Turnaround
+Victorian Aristocratic Salon
+Visual Kei Live House Entrance
+Youth Fashion Magazine Street Snap
 ```
 
 ## Mood系
