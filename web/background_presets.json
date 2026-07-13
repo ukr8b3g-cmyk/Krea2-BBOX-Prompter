@@ -1,5 +1,5 @@
 {
-  "version": "2026-07-12",
+  "version": "2026-07-13",
   "description": "Single source for Krea2 Background Effect presets. Add WebP files under web/thumbnails/ and add matching entries here.",
   "presets": [
     {
@@ -455,7 +455,7 @@
       "category": "Background",
       "tone": "background",
       "thumbnail": "horse_racing_grandstand.webp",
-      "text": "Horse Racing Grandstand background. Realistic scene with clear foreground objects and usable composition, no main person, no readable text or logos."
+      "text": "horse racing grandstand background, view from the middle rows of spectator seats, slightly downward view over the rail toward the track, packed audience, large race screen, several racehorses running below, foreground seat edge"
     },
     {
       "name": "Ski Resort Lift",
@@ -3445,6 +3445,706 @@
       "tone": "background",
       "thumbnail": "wind_turbine_nacelle_roof.webp",
       "text": "Wind turbine nacelle roof background, wind turbine service platform, safety rails, expansive landscape far below"
+    },
+    {
+      "name": "Ajanta Cave Mural Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ajanta_cave_mural_wall.webp",
+      "text": "Ajanta cave interior background, aged painted mural wall with Indian religious scenes and ornamental borders, rough rock ceiling, carved stone edge, open floor foreground"
+    },
+    {
+      "name": "Ajanta Cave Mural Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ajanta_cave_mural_wall_prime.webp",
+      "text": "Ajanta cave temple in its active historical period background, newly painted mural wall, vivid Indian religious scenes and ornamental borders, intact carved pillars and finished stone floor, open foreground"
+    },
+    {
+      "name": "Akihabara Cosplay Shop Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "akihabara_cosplay_shop_interior.webp",
+      "text": "Early-2000s to early-2010s narrow Akihabara cosplay shop background, costume racks, wigs, colored contact lens displays, props, changing-room curtains, young shoppers"
+    },
+    {
+      "name": "Akihabara Maid Cafe Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "akihabara_maid_cafe_street.webp",
+      "text": "Early-2000s to early-2010s Akihabara side street background, maid cafe entrances, colorful signboards, electric-town shopfronts, young visitors and costumed staff"
+    },
+    {
+      "name": "Amusement Park Long Queue",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "amusement_park_long_queue.webp",
+      "text": "amusement park long queue background, winding metal barriers, ride structure, many indistinct visitors, open foreground"
+    },
+    {
+      "name": "Ancient Egypt Tomb Relief Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ancient_egypt_tomb_relief_wall.webp",
+      "text": "ancient Egyptian tomb chamber wall background, richly painted bas-reliefs, hieroglyphic motifs, ochre and turquoise pigments, carved stone edge, open floor foreground"
+    },
+    {
+      "name": "Ancient Egypt Tomb Relief Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ancient_egypt_tomb_relief_wall_prime.webp",
+      "text": "Ancient Egyptian tomb chamber in its active historical period background, brilliantly painted relief wall, fresh ochre blue green and red pigments, crisp hieroglyphic motifs, intact stone floor and doorway, open foreground"
+    },
+    {
+      "name": "Ancient Roman Mosaic Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ancient_roman_mosaic_wall.webp",
+      "text": "ancient Roman courtyard wall background, large geometric mosaic panels, weathered marble fragments, plaster surface, stone paving and column remains, open foreground"
+    },
+    {
+      "name": "Ancient Roman Mosaic Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ancient_roman_mosaic_wall_prime.webp",
+      "text": "Ancient Roman courtyard wall in its active historical period background, pristine geometric mosaic panels, fresh plaster, intact marble columns and clean stone paving, open foreground"
+    },
+    {
+      "name": "Ariake Exhibition Building Exterior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ariake_exhibition_building_exterior.webp",
+      "text": "Ariake convention complex exterior background, view from the last position of an extremely long convention queue, nearest attendee large in the foreground, queue receding toward the exhibition entrance, people becoming smaller with distance, metal barriers, modern exhibition building, open walkway"
+    },
+    {
+      "name": "Bubble Appliance Showroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_appliance_showroom.webp",
+      "text": "Late-1980s to early-1990s Japanese electronics showroom background, CRT televisions, stereo systems, VCRs, telephones, kitchen appliances, shoppers and sales staff, period retail lighting"
+    },
+    {
+      "name": "Bubble Christmas Downtown Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_christmas_downtown_street.webp",
+      "text": "Late-1980s to early-1990s Japanese downtown Christmas street background, elaborate illuminations, department-store windows, period taxis and cars, young adults in period coats and suits"
+    },
+    {
+      "name": "Bubble Club Entrance",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_club_entrance.webp",
+      "text": "Japanese bubble-era upscale nightclub entrance background, glossy facade, velvet rope, coat-check area, generic adult patrons in body-conscious dresses and shoulder-padded suits"
+    },
+    {
+      "name": "Bubble Department Store Cosmetics Counter",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_department_store_cosmetics_counter.webp",
+      "text": "Late-1980s to early-1990s Japanese department store cosmetics floor background, glossy counters, mirrored displays, perfume bottles, makeup testers, clerks and shoppers in period fashion"
+    },
+    {
+      "name": "Bubble Disco Dance Floor",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_disco_dance_floor.webp",
+      "text": "Japanese bubble-era large disco dance floor background, mirrored columns, glowing geometric floor, generic adult patrons in body-conscious dresses and shoulder-padded suits, late 1980s to early 1990s"
+    },
+    {
+      "name": "Bubble Disco Fan Dance Stage",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_disco_fan_dance_stage.webp",
+      "text": "Japanese bubble-era disco floor facing a low stage background, colorful feather fans, mirrored panels, spotlights, generic adult patrons in period fashion, late 1980s to early 1990s"
+    },
+    {
+      "name": "Bubble Disco VIP Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_disco_vip_room.webp",
+      "text": "Japanese bubble-era disco VIP room background, low vinyl sofas, laminated tables, cheap whiskey bottles, tumblers, ashtrays, mirrored panels, dim colored lighting"
+    },
+    {
+      "name": "Bubble High End Hotel Lobby",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_high_end_hotel_lobby.webp",
+      "text": "Late-1980s to early-1990s Japanese high-end hotel lobby background, polished stone atrium, brass details, floral arrangement, deep sofas, uniformed staff and well-dressed guests"
+    },
+    {
+      "name": "Bubble Hotel Car Dropoff",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_hotel_car_dropoff.webp",
+      "text": "Japanese bubble-era luxury hotel vehicle drop-off background, covered porte-cochere, polished stone entrance, period luxury sedans, uniformed attendants and adult guests"
+    },
+    {
+      "name": "Bubble Karaoke Box",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_karaoke_box.webp",
+      "text": "Japanese bubble-era karaoke box room background, patterned sofa benches, low table, bulky CRT television, wired microphones, cassette or laserdisc karaoke equipment"
+    },
+    {
+      "name": "Bubble Luxury Apartment Entrance",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_luxury_apartment_entrance.webp",
+      "text": "Late-1980s to early-1990s Japanese upscale condominium entrance background, polished stone, brass mailboxes, dark wood, mirrored elevator doors, potted plants, period residents"
+    },
+    {
+      "name": "Bubble Ski Resort Hotel Entrance",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_ski_resort_hotel_entrance.webp",
+      "text": "Late-1980s to early-1990s Japanese ski resort hotel entrance background, snowy lodge, rental skis and boots, colorful period ski clothing, young visitors, period cars"
+    },
+    {
+      "name": "Bubble Sports Car Interior Driver View",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "bubble_sports_car_interior_driver_view.webp",
+      "text": "Late-1980s to early-1990s sports car interior background, view from the driver seat toward the empty passenger seat, analog dashboard, period steering wheel, bucket seats, city lights outside"
+    },
+    {
+      "name": "Byzantine Gold Mosaic Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "byzantine_gold_mosaic_wall.webp",
+      "text": "Byzantine interior wall background, shimmering gold tessera mosaic, deep blue and red ornamental details, aged stone floor, soft architectural arch, open foreground"
+    },
+    {
+      "name": "Byzantine Gold Mosaic Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "byzantine_gold_mosaic_wall_prime.webp",
+      "text": "Byzantine interior wall in its active historical period background, brilliant intact gold tessera mosaic, deep blue and red ornament, polished marble floor, complete arch and columns, open foreground"
+    },
+    {
+      "name": "City Marathon Spectators",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "city_marathon_spectators.webp",
+      "text": "city marathon street background, runners kept in the middle and far distance, spectators and barriers along both sides, support tables and urban buildings, large clear running lane in the foreground, no close runner"
+    },
+    {
+      "name": "Comic Market Ariake Hall Crowd",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "comic_market_ariake_hall_crowd.webp",
+      "text": "Ariake comics convention hall background, huge exhibition hall filled across most of the frame with many rows of simple folding tables and numerous small vendor booths, white tablecloths, display boards and printed art, dense orderly aisles, many attendees browsing, typical busy doujin market atmosphere, central aisle"
+    },
+    {
+      "name": "Convenience Store Youth Gathering",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "convenience_store_youth_gathering.webp",
+      "text": "convenience store exterior background, adult young men loitering near the entrance, several crouching in a low squat posture, intimidating quiet atmosphere, generic faces, no weapons or violence, open foreground space"
+    },
+    {
+      "name": "Crowded Subway Escalator",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "crowded_subway_escalator.webp",
+      "text": "crowded subway escalator background, many indistinct commuters filling the steps and landing, tiled station walls, stainless handrails, dense flow of people, open lower foreground"
+    },
+    {
+      "name": "Edo Bathhouse Entrance Changing Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_bathhouse_entrance_changing_room.webp",
+      "text": "Edo-period bathhouse entrance and changing room background, wooden bandai counter, wicker baskets, hanging towels, simple wooden lockers, low bench, adult male viewed from behind with bare upper back and a modest waist cloth partly concealed by the counter, other adults in simple yukata, broad clear foreground, respectful historical documentary atmosphere"
+    },
+    {
+      "name": "Edo Bathhouse Late Period Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_bathhouse_late_period_interior.webp",
+      "text": "late Edo-period urban bathhouse interior background, wooden bathing tubs, privacy screens, adult male bathers with bare upper backs and shoulders viewed from behind, traditional waist cloths and waterline, simple washing area, wooden buckets, attendants in the background, broad clear foreground, respectful historical documentary atmosphere"
+    },
+    {
+      "name": "Edo Bathhouse Mixed Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_bathhouse_mixed_interior.webp",
+      "text": "Edo-period shared public bathhouse interior background, central wooden bathing pool, rising steam, adult male bathers showing upper backs and shoulders, traditional waist cloths at the waterline, wooden buckets, low stools, attendants in simple yukata, broad clear foreground, respectful historical documentary atmosphere"
+    },
+    {
+      "name": "Edo Commoner Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_commoner_street.webp",
+      "text": "Edo-period commoner street background, narrow wooden street, modest row houses and small shops, simple noren and brush-written flags, pedestrians, vendor and craftsman, lived-in but maintained townscape"
+    },
+    {
+      "name": "Edo Craftsman Workshop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_craftsman_workshop.webp",
+      "text": "Edo-period carpenter and craftsman workshop background, adult male workers shaping timber with hand tools, one worker with bare upper back and shoulders viewed from behind, lower body concealed by the workbench, wood shavings, unfinished beams, open front facing a narrow town street, natural labor scene"
+    },
+    {
+      "name": "Edo Day Laborers Cargo Work",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_day_laborers_cargo_work.webp",
+      "text": "Edo-period riverside cargo landing background, adult male day laborers carrying sacks and timber, one worker with bare upper back and shoulders viewed from behind, lower body concealed by a handcart and cargo, wooden carts, crates, simple warehouses, natural work activity"
+    },
+    {
+      "name": "Edo Machibugyo Courtroom Upper Dais",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_machibugyo_courtroom_upper_dais.webp",
+      "text": "Edo-period town magistrate office courtroom background, empty raised official dais, folding screen, white gravel court beyond the veranda, side officials and scribes, open central floor"
+    },
+    {
+      "name": "Edo Machibugyo Shirasu Gravel Court",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_machibugyo_shirasu_gravel_court.webp",
+      "text": "Edo-period town magistrate office shirasu background, pale gravel court foreground, wooden veranda and raised courtroom, side officials and scribes, empty central gravel area"
+    },
+    {
+      "name": "Edo Rice Paddy Farm Work",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_rice_paddy_farm_work.webp",
+      "text": "Edo-period rural rice paddy background, farmers working in shallow flooded fields, one adult male with bare upper back and shoulders viewed from behind, lower body concealed by rice plants and the earthen bank, narrow footpath, simple tools, straw hats, modest farmhouse and storage shed, ordinary maintained countryside"
+    },
+    {
+      "name": "Edo Soba Shop Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "edo_soba_shop_interior.webp",
+      "text": "Edo-period soba shop interior background, modest wooden counter and dining room, soba kettle, brazier, wooden bowls, bamboo baskets, simple noren, proprietor and customers in the background, well-used but maintained"
+    },
+    {
+      "name": "Ellora Cave Temple Relief Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ellora_cave_temple_relief_wall.webp",
+      "text": "Ellora cave temple interior background, dark basalt rock wall covered with carved reliefs and sculpted figures, stone pillars at the side, worn cave floor, open foreground"
+    },
+    {
+      "name": "Ellora Cave Temple Relief Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ellora_cave_temple_relief_wall_prime.webp",
+      "text": "Ellora cave temple in its active historical period background, freshly completed dark basalt relief wall, crisp carved sculptures, clean stone pillars, intact polished cave floor, open foreground"
+    },
+    {
+      "name": "Fantasy Adventurer Guild Reception",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "fantasy_adventurer_guild_reception.webp",
+      "text": "fantasy adventurer guild reception background, sturdy wooden front counter, carved guild emblem, shelves of maps and equipment, staircase, timber beams, open floor space"
+    },
+    {
+      "name": "Fantasy Beastfolk Tavern",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "fantasy_beastfolk_tavern.webp",
+      "text": "fantasy medieval tavern interior background, wooden counter, tables, mugs, hanging lanterns, generic wolf cat and reptilian beastfolk patrons, clear foreground space"
+    },
+    {
+      "name": "Fantasy Quest Board Square",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "fantasy_quest_board_square.webp",
+      "text": "fantasy adventurer guild hall interior background, large wooden quest board mounted on the back wall, parchment notices and maps, timber beams, stone walls, guild banners, broad uncluttered floor space in front"
+    },
+    {
+      "name": "Festival Float Workshop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "festival_float_workshop.webp",
+      "text": "festival float workshop background, partially assembled wooden Japanese parade float, carved panels, ropes, wheels, timber beams, hand tools, small indistinct adult workers, open floor"
+    },
+    {
+      "name": "Fire Station Garage",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "fire_station_garage.webp",
+      "text": "fire station garage background, red fire engine, open equipment lockers, hoses, helmets, ladders and maintenance tools, firefighters working in the background, clear open floor space"
+    },
+    {
+      "name": "Fireworks Riverside Crowd",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "fireworks_riverside_crowd.webp",
+      "text": "fireworks festival riverside background, crowded riverbank viewing area, many indistinct spectators, folding chairs, picnic sheets, temporary barriers, open foreground space"
+    },
+    {
+      "name": "Fish Hatchery Tank Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "fish_hatchery_tank_room.webp",
+      "text": "fish hatchery tank room background, rows of large round water tanks, clear water, aeration pipes, small fish below the surface, wet concrete floor, hoses and practical equipment, open walkway foreground"
+    },
+    {
+      "name": "Flooded Basement Knee Deep",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "flooded_basement_knee_deep.webp",
+      "text": "old flooded basement background, water above knee height, concrete walls, submerged storage boxes, metal shelves, exposed pipes, stairway leading upward, reflective murky water surface, open central space"
+    },
+    {
+      "name": "Harajuku Colorful Accessory Shop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "harajuku_colorful_accessory_shop.webp",
+      "text": "Early-2000s narrow Harajuku accessory shop background, colorful hair clips, plastic jewelry, charms, ribbons, badges, playful display racks, young shoppers in decora fashion"
+    },
+    {
+      "name": "Harajuku Punk Rock Clothing Store",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "harajuku_punk_rock_clothing_store.webp",
+      "text": "Early-2000s compact Harajuku punk and rock clothing store background, black and red garments, studded accessories, boots, chains, distressed wooden fixtures, full-length mirror"
+    },
+    {
+      "name": "Harajuku Sticker Shop",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "harajuku_sticker_shop.webp",
+      "text": "Early-2000s colorful Harajuku sticker and stationery shop background, walls covered with playful stickers, sticker sheets, badges, phone charms, bright display racks"
+    },
+    {
+      "name": "Harajuku Takeshita Street Youth Culture",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "harajuku_takeshita_street_youth_culture.webp",
+      "text": "Early-2000s Harajuku Takeshita Street background, colorful youth fashion, decora accessories, layered skirts, hair clips, small fashion stores, crepe stand, natural pedestrian flow"
+    },
+    {
+      "name": "Harajuku Vintage Clothing Store",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "harajuku_vintage_clothing_store.webp",
+      "text": "Early-2000s small Harajuku vintage clothing shop background, tightly packed secondhand racks, plaid shirts, graphic tops, wooden fixtures, full-length mirror, narrow aisle"
+    },
+    {
+      "name": "Hot Spring Footbath Plaza",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "hot_spring_footbath_plaza.webp",
+      "text": "Japanese hot spring town footbath plaza background, long stone footbath basin with warm water, wooden benches, towel baskets, low traditional buildings, simple landscaped garden, open foreground beside the bath"
+    },
+    {
+      "name": "Idol Handshake Event",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "idol_handshake_event.webp",
+      "text": "idol handshake event background, long queue of many indistinct fans, simple handshake tables and staff lanes, generic performer and staff in the background, event hall crowd, open foreground space"
+    },
+    {
+      "name": "Inca Fitted Stone Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "inca_fitted_stone_wall.webp",
+      "text": "Inca fitted stone wall background, precisely interlocked polygonal stones, narrow mountain settlement path, rough stone base, muted Andean textures, open foreground"
+    },
+    {
+      "name": "Inca Fitted Stone Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "inca_fitted_stone_wall_prime.webp",
+      "text": "Inca imperial settlement in its active historical period background, newly completed precisely interlocked stone wall, clean fitted blocks, finished mountain pathway, intact ceremonial architecture, open foreground"
+    },
+    {
+      "name": "Islamic Geometric Tile Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "islamic_geometric_tile_wall.webp",
+      "text": "Islamic architectural courtyard wall background, intricate geometric mosaic tiles, repeating star patterns, carved stone border, shallow arched niche, open tiled foreground"
+    },
+    {
+      "name": "Islamic Geometric Tile Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "islamic_geometric_tile_wall_prime.webp",
+      "text": "Islamic architectural courtyard wall in its active historical period background, pristine geometric mosaic tilework, vivid repeating star patterns, carved stone borders, intact arched niche and polished tiled floor, open foreground"
+    },
+    {
+      "name": "Japanese Kura White Plaster Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "japanese_kura_white_plaster_wall.webp",
+      "text": "traditional Japanese kura storehouse white plaster wall background, dark wooden beams, tiled roof eave, weathered plaster texture, quiet lane and gravel foreground"
+    },
+    {
+      "name": "Korean War Uso Entertainment Stage",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "korean_war_uso_entertainment_stage.webp",
+      "text": "1950s Korean War-era troop entertainment stage background, temporary canvas stage, microphone stand, small band equipment, uniformed soldiers seen mainly from behind, generic 1950s singer kept small and distant on stage, documentary military camp atmosphere"
+    },
+    {
+      "name": "Maya Stucco Relief Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "maya_stucco_relief_wall.webp",
+      "text": "ancient Maya architectural wall background, weathered limestone stucco relief, geometric ceremonial motifs, carved stone steps, muted earth colors, open plaza foreground"
+    },
+    {
+      "name": "Maya Stucco Relief Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "maya_stucco_relief_wall_prime.webp",
+      "text": "Ancient Maya ceremonial complex in its active historical period background, newly finished limestone stucco relief wall, crisp ceremonial motifs, bright painted surfaces, intact carved steps and clean plaza paving, open foreground"
+    },
+    {
+      "name": "Mongolian Ger Grassland Exterior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "mongolian_ger_grassland_exterior.webp",
+      "text": "traditional Mongolian ger on open grassland background, white round felt tent, wooden doorway, horses and distant herder, expansive steppe and low hills, clear foreground"
+    },
+    {
+      "name": "Mongolian Ger Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "mongolian_ger_interior.webp",
+      "text": "traditional Mongolian ger interior background, circular felt walls, painted wooden lattice, central stove, low beds and chests, patterned rugs, family preparing tea in the background, clear center space"
+    },
+    {
+      "name": "Moroccan Tadelakt Courtyard Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "moroccan_tadelakt_courtyard_wall.webp",
+      "text": "Moroccan riad courtyard wall background, warm tadelakt plaster, shallow horseshoe arch, carved wooden door, simple fountain, tiled floor, planted courtyard, open foreground"
+    },
+    {
+      "name": "Moroccan Tadelakt Courtyard Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "moroccan_tadelakt_courtyard_wall_prime.webp",
+      "text": "Moroccan riad courtyard in its active historical period background, pristine warm tadelakt plaster walls, clean horseshoe arch, carved wooden door, working fountain, bright zellige tile floor, open foreground"
+    },
+    {
+      "name": "Old Sento Fujisan Mural Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "old_sento_fujisan_mural_wall.webp",
+      "text": "traditional old Japanese sento interior background, large Mount Fuji mural, tiled bathing area, rectangular bath with warm water, rows of washing stools, faucets and mirrors, open foreground"
+    },
+    {
+      "name": "Ottoman Iznik Tile Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ottoman_iznik_tile_wall.webp",
+      "text": "Ottoman palace interior wall background, blue and white Iznik ceramic tiles, red tulip and floral motifs, carved stone base, arched edge, open polished floor foreground"
+    },
+    {
+      "name": "Ottoman Iznik Tile Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ottoman_iznik_tile_wall_prime.webp",
+      "text": "Ottoman palace interior in its active historical period background, pristine blue and white Iznik tile wall, vivid red tulip and floral motifs, polished stone floor, complete arched architecture, open foreground"
+    },
+    {
+      "name": "Packed Commuter Train Platform",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "packed_commuter_train_platform.webp",
+      "text": "packed commuter train platform background, open train doors, passengers filling the doorway and platform, dense boarding crowd, small indistinct people, clear platform foreground"
+    },
+    {
+      "name": "Packed Small Boat Deck",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "packed_small_boat_deck.webp",
+      "text": "packed small passenger boat deck background, crowded benches and railings, many indistinct passengers, compact ferry details, open foreground"
+    },
+    {
+      "name": "Packed Small Elevator",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "packed_small_elevator.webp",
+      "text": "packed small elevator interior background, many indistinct adult passengers standing shoulder to shoulder, crowded handrails, coats and bags, compact elevator space"
+    },
+    {
+      "name": "Ptolemaic Egypt Relief Wall",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ptolemaic_egypt_relief_wall.webp",
+      "text": "Ptolemaic Egyptian palace wall background, painted limestone relief panels with Egyptian and Greek motifs, warm sandstone surface, open courtyard foreground"
+    },
+    {
+      "name": "Ptolemaic Egypt Relief Wall Prime",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ptolemaic_egypt_relief_wall_prime.webp",
+      "text": "Ptolemaic Egyptian palace wall in its active historical period background, pristine painted limestone relief panels, vivid pigments, intact columns and sandstone courtyard, open foreground"
+    },
+    {
+      "name": "Purikura Game Center Floor",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "purikura_game_center_floor.webp",
+      "text": "Early-2000s Japanese game center background, many purikura machines, glowing booth entrances, decorated mirrors, coin lockers, waiting benches, young people"
+    },
+    {
+      "name": "Purikura Specialty Shop Interior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "purikura_specialty_shop_interior.webp",
+      "text": "Early-2000s Japanese purikura specialty shop background, rows of decorated photo sticker booths, colorful curtains, makeup mirrors, benches, accessory baskets, young customers"
+    },
+    {
+      "name": "Ramen Shop Long Queue",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "ramen_shop_long_queue.webp",
+      "text": "Japanese ramen shop exterior background, long sidewalk queue, far end and last position of the line visible, many indistinct customers, open foreground near the last place"
+    },
+    {
+      "name": "Rice Paddy Irrigation Path",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rice_paddy_irrigation_path.webp",
+      "text": "rice paddy irrigation path background, narrow earthen path along a shallow flowing canal, small sluice gate, grassy field bank, rice paddies extending into the distance, rural houses and hills beyond, clear path foreground"
+    },
+    {
+      "name": "River Embankment Bicycle Path",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "river_embankment_bicycle_path.webp",
+      "text": "river embankment bicycle path background, broad levee, concrete slope, tall grasses, bicycle railing, distant bridge and apartment blocks, small indistinct cyclists, open path"
+    },
+    {
+      "name": "Rooftop Water Tank Platform",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rooftop_water_tank_platform.webp",
+      "text": "rooftop water tank platform background, large old cylindrical water tanks, weathered pipes, metal railings, maintenance ladder, dense low-rise city rooftops, open platform"
+    },
+    {
+      "name": "Rural Bus Shelter",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rural_bus_shelter.webp",
+      "text": "rural bus shelter background, weathered concrete shelter, simple bench, timetable case, countryside road, fields and low hills, distant waiting traveler, open foreground"
+    },
+    {
+      "name": "Rural Japanese Main Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rural_japanese_main_street.webp",
+      "text": "short Japanese rural town main street background, modest two-lane road, low-rise independent rental video store, small bookstore, minor local family restaurant, small parking lots, utility poles, aging storefronts, distant fields and low hills, open sidewalk foreground"
+    },
+    {
+      "name": "Rural Post Office Exterior",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rural_post_office_exterior.webp",
+      "text": "rural post office exterior background, modest low building, red mailbox, bicycle parking, narrow road, utility poles, flower pots, small indistinct postal worker, open entrance area"
+    },
+    {
+      "name": "Rural Shrine Rear Compound",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "rural_shrine_rear_compound.webp",
+      "text": "small rural Japanese shrine building side wall background, broad traditional wooden and plaster wall beneath a deep tiled eave, person-sized blank wall surface, gravel path along the wall, shaded trees, mossy stones, quiet shrine grounds, open foreground space"
+    },
+    {
+      "name": "Sake Brewery Steaming Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "sake_brewery_steaming_room.webp",
+      "text": "traditional Japanese sake brewery steaming room background, large wooden steaming vat covered with cloth, baskets of rice, rising steam, cedar beams, dark wood floor, brewery tools and storage shelves, open working space"
+    },
+    {
+      "name": "Sauna Cold Plunge Area",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "sauna_cold_plunge_area.webp",
+      "text": "sauna facility cold plunge area background, compact tiled cold-water pool beside a wooden sauna deck, cedar benches, water buckets, folded towels, practical spa details, open foreground space"
+    },
+    {
+      "name": "Showa Danchi Balance Bathroom",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_danchi_balance_bathroom.webp",
+      "text": "1960s to early 1970s Japanese danchi bathroom background, compact square bathtub, balance-type gas bath heater with period vent pipe, muted beige green and blue tiles, small ventilation window, narrow practical layout"
+    },
+    {
+      "name": "Showa Danchi Narrow Kitchen",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_danchi_narrow_kitchen.webp",
+      "text": "Showa high-growth era danchi narrow kitchenette background, small sink, compact gas stove, enamel pots, floral kettle, shallow cabinets, tatami room beyond fusuma, modest period housing"
+    },
+    {
+      "name": "Showa Danchi Tatami Living Room",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_danchi_tatami_living_room.webp",
+      "text": "Showa high-growth era danchi 1LDK tatami living room background, square reversible red and green low table for mahjong, floral enamel kettle and patterned thermos, fusuma closet, large sliding glass balcony door, modest middle-income home"
+    },
+    {
+      "name": "Showa High Growth City Bus",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_high_growth_city_bus.webp",
+      "text": "Showa high-growth era Japanese city bus interior background, rounded period windows, metal handrails, vinyl seats, analog fare box, period route board, young passengers, color"
+    },
+    {
+      "name": "Showa High Growth Commuter Train",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_high_growth_commuter_train.webp",
+      "text": "Showa high-growth era Japanese commuter train interior background, period carriage, hanging straps, vinyl seats, young commuters in period clothing, newspapers and leather bags, no modern displays"
+    },
+    {
+      "name": "Showa High Growth Office",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_high_growth_office.webp",
+      "text": "Showa high-growth era Japanese office background, metal desks, paper folders, black file binders, rotary dial telephones, document trays, ashtrays, young clerks, smoky period office, no computers"
+    },
+    {
+      "name": "Showa High Growth Street",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_high_growth_street.webp",
+      "text": "Showa high-growth era Japanese commercial street background, late 1950s to early 1970s, young pedestrians in period clothing, modest shops, bicycles, scooters, period cars, utility poles, lived-in depth, color"
+    },
+    {
+      "name": "Showa Terraced Rice Fields",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "showa_terraced_rice_fields.webp",
+      "text": "Showa-era rural Japan terraced rice fields background, mountain village, narrow earthen embankments, irrigation channels, winding path, distant farmers in period work clothes"
+    },
+    {
+      "name": "Small Town Bus Turnaround",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "small_town_bus_turnaround.webp",
+      "text": "small town bus turnaround background, modest bus shelter, local bus, timetable case, low shops, utility poles, small indistinct waiting passengers, open paved area"
+    },
+    {
+      "name": "Victorian Aristocratic Salon",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "victorian_aristocratic_salon.webp",
+      "text": "Victorian aristocratic drawing room salon background, period chairs and sofas, dark wood, rich wallpaper, framed classical paintings, books and tea table, writers painters and philosophers conversing in the background"
+    },
+    {
+      "name": "Visual Kei Live House Entrance",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "visual_kei_live_house_entrance.webp",
+      "text": "Early-2000s Japanese small live house entrance background, visual-kei youth culture, black facade, ticket counter, poster-covered walls, young fans in dark alternative fashion"
+    },
+    {
+      "name": "Youth Fashion Magazine Street Snap",
+      "category": "Background",
+      "tone": "background",
+      "thumbnail": "youth_fashion_magazine_street_snap.webp",
+      "text": "Early-2000s Japanese youth fashion magazine street-snap background in Harajuku, photographer, assistant with reflector, young models, colorful streetwear and decora details"
     }
   ]
 }
