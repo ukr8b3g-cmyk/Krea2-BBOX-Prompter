@@ -4080,25 +4080,8 @@ const I18N = {
   }
 };
 
-function getComfyUILocale() {
-  const appObj = window.comfyAPI?.app?.app || app;
-  const candidates = [];
-  try { candidates.push(appObj?.ui?.settings?.getSettingValue?.("Comfy.Locale")); } catch (_) {}
-  try { candidates.push(appObj?.ui?.settings?.getSettingValue?.("Comfy.Language")); } catch (_) {}
-  try { candidates.push(appObj?.ui?.settings?.getSettingValue?.("locale")); } catch (_) {}
-  try { candidates.push(appObj?.ui?.settings?.getSettingValue?.("language")); } catch (_) {}
-  try { candidates.push(appObj?.ui?.settings?.settings?.Comfy?.Locale?.value); } catch (_) {}
-  try { candidates.push(appObj?.ui?.settings?.settings?.Comfy?.Language?.value); } catch (_) {}
-  try { candidates.push(appObj?.ui?.locale); } catch (_) {}
-  try { candidates.push(appObj?.locale); } catch (_) {}
-  const found = candidates.find((v) => typeof v === "string" && v.trim());
-  return (found || navigator.language || "en").toLowerCase();
-}
 function resolveLang(value) {
-  if (value === "Japanese 日本語") return "ja";
-  if (value === "English") return "en";
-  const lang = getComfyUILocale();
-  return lang.startsWith("ja") ? "ja" : "en";
+  return value === "Japanese" ? "ja" : "en";
 }
 function tr(lang, key) {
   return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key;
@@ -6098,8 +6081,8 @@ function setupCanvasNode(node) {
   tools.prepend(showBtn, drawBtn, resetCanvasBtn);
   const langSelect = document.createElement("select");
   langSelect.className = "k2cf-select";
-  langSelect.title = "Choose Canvas UI language. Auto follows the node setting.";
-  for (const v of ["Auto", "English", "Japanese 日本語"]) langSelect.appendChild(option(v, v));
+  langSelect.title = "Choose Canvas UI language. Auto keeps English until a language is selected.";
+  for (const v of ["Auto", "English", "Japanese"]) langSelect.appendChild(option(v, v));
   langSelect.value = widgets.ui_language?.value || "Auto";
   controls.ui_language = langSelect;
   const gridTop = document.createElement("select");
@@ -7056,7 +7039,7 @@ function setupPromptNode(node) {
   const promptLangLabel = document.createElement("span");
   const promptLangSelect = document.createElement("select");
   promptLangSelect.className = "k2cf-select k2cf-language-select";
-  for (const v of ["Auto", "English", "Japanese 日本語"]) promptLangSelect.appendChild(option(v, v));
+  for (const v of ["Auto", "English", "Japanese"]) promptLangSelect.appendChild(option(v, v));
   try {
     promptLangSelect.value = localStorage.getItem(PROMPT_LANGUAGE_KEY) || "Auto";
   } catch (_) {

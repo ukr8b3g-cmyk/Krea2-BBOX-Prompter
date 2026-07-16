@@ -363,7 +363,7 @@ class Krea2ElementFramingV1Canvas:
                 "layout_data": _hidden_text(EMPTY_LAYOUT_DATA),
                 "camera_data": _hidden_text(EMPTY_CAMERA_DATA),
                 "grid_mode": (["Off", "Thirds", "Center Cross"], {"default": "Thirds"}),
-                "ui_language": (["Auto", "English", "Japanese 日本語"], {"default": "Auto"}),
+                "ui_language": (["Auto", "English", "Japanese"], {"default": "Auto"}),
                 "camera_set_data": _hidden_text(EMPTY_SET_DATA),
                 "canvas_preset_data": _hidden_text(EMPTY_SET_DATA),
             }
