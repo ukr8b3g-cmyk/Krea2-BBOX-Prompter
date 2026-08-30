@@ -129,10 +129,18 @@ def _safe_json_loads(data, fallback):
         return fallback
 
 
-def _resolve_size(preset, width, height):
+def _resolve_size(preset, width, height, width_override=None, height_override=None):
     if preset in PRESET_SIZES:
-        return PRESET_SIZES[preset]
-    return (int(width), int(height))
+        resolved_width, resolved_height = PRESET_SIZES[preset]
+    else:
+        resolved_width, resolved_height = int(width), int(height)
+
+    if width_override is not None:
+        resolved_width = int(width_override)
+    if height_override is not None:
+        resolved_height = int(height_override)
+
+    return resolved_width, resolved_height
 
 
 def _aspect_ratio(width, height):
@@ -366,6 +374,30 @@ class Krea2ElementFramingV1Canvas:
                 "ui_language": (["Auto", "English", "Japanese"], {"default": "Auto"}),
                 "camera_set_data": _hidden_text(EMPTY_SET_DATA),
                 "canvas_preset_data": _hidden_text(EMPTY_SET_DATA),
+            },
+            "optional": {
+                "width_override": (
+                    "INT",
+                    {
+                        "forceInput": True,
+                        "min": 1,
+                        "max": MAX_RESOLUTION,
+                        "step": 1,
+                        "display_name": "width",
+                        "tooltip": "Overrides the Canvas width when connected.",
+                    },
+                ),
+                "height_override": (
+                    "INT",
+                    {
+                        "forceInput": True,
+                        "min": 1,
+                        "max": MAX_RESOLUTION,
+                        "step": 1,
+                        "display_name": "height",
+                        "tooltip": "Overrides the Canvas height when connected.",
+                    },
+                ),
             }
         }
 
@@ -374,8 +406,27 @@ class Krea2ElementFramingV1Canvas:
     FUNCTION = "execute"
     CATEGORY = "Krea2/BBOX Prompter Suite"
 
-    def execute(self, width, height, preset, layout_data, camera_data, grid_mode, ui_language='Auto', camera_set_data='', canvas_preset_data=''):
-        width, height = _resolve_size(preset, width, height)
+    def execute(
+        self,
+        width,
+        height,
+        preset,
+        layout_data,
+        camera_data,
+        grid_mode,
+        ui_language='Auto',
+        camera_set_data='',
+        canvas_preset_data='',
+        width_override=None,
+        height_override=None,
+    ):
+        width, height = _resolve_size(
+            preset,
+            width,
+            height,
+            width_override=width_override,
+            height_override=height_override,
+        )
         layout = _safe_json_loads(layout_data, {"boxes": []})
         camera = _safe_json_loads(camera_data, {})
         data = {

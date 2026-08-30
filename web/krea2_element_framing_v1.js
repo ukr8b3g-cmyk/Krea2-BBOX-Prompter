@@ -5098,6 +5098,7 @@ function ensureStyle() {
   const effectStyleBoostCss = `/* k2fx-styleboost-toggle-v2 */.k2fx-styleboost{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-top:-2px;color:#aaa;font-size:10.5px}.k2fx-styleboost-label{color:#35d0c8;font-weight:700;margin-right:2px}.k2fx-boost-toggle{display:flex;align-items:center;gap:5px;color:#bbb;font-size:11px;white-space:nowrap;cursor:pointer}.k2fx-boost-toggle input{display:none}.k2fx-boost-switch{width:32px;height:17px;border-radius:99px;background:#444;border:1px solid #666;position:relative;display:inline-block;box-sizing:border-box}.k2fx-boost-switch::after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;left:1px;top:1px;background:#bbb;transition:left .12s ease,background .12s ease}.k2fx-boost-toggle input:checked + .k2fx-boost-switch{background:#138f8b;border-color:#35d0c8}.k2fx-boost-toggle input:checked + .k2fx-boost-switch::after{left:16px;background:#fff}.k2fx-boost-toggle.active{color:#fff}`;
   const effectTextareaResizeCss = `/* k2fx-textarea-resize-v3 */.k2fx-textarea-box{position:relative;display:block;min-width:0}.k2fx-textarea-box textarea{display:block;width:100%;resize:none!important;max-height:360px}.k2fx-preview,.k2fx-custom{max-height:360px}.k2fx-preview{min-height:42px}.k2fx-custom{min-height:70px}.k2fx-resize-grip{position:absolute;right:4px;bottom:4px;width:16px;height:16px;cursor:nwse-resize;z-index:3;border-radius:3px}.k2fx-resize-grip::before{content:"";position:absolute;right:3px;bottom:3px;width:8px;height:8px;border-right:2px solid #777;border-bottom:2px solid #777}.k2fx-resize-grip:hover::before{border-color:#35d0c8}`;
   const panCursorCss = `.k2cf-scene,.k2cf-slot-card,.k2cf-slot-body,.k2cf-slot-side,.k2cf-panel,.k2cf-panels{cursor:grab}.k2cf-scene textarea,.k2cf-slot-card textarea,.k2cf-slot-card select,.k2cf-slot-card button,.k2cf-panel input,.k2cf-panel select,.k2cf-panel button,.k2cf-slot-head{cursor:auto}`;
+  const externalSizeCss = `/* k2cf-external-size-v1 */.k2cf-size-label{display:flex;align-items:center;gap:6px}.k2cf-external-badge{padding:1px 5px;border:1px solid #35d0c8;border-radius:999px;color:#35d0c8;font-size:9px;font-weight:700;text-transform:uppercase}.k2cf-external-badge[hidden],.k2cf-override-status[hidden]{display:none}.k2cf-num.external-size{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.25)}.k2cf-override-status{margin-top:5px;color:#35d0c8;font-size:10.5px;line-height:1.35}.k2cf-override-note{color:#aaa}`;
   if (existingStyle) {
     existingStyle.textContent = existingStyle.textContent
       .replace(/\.k2cf-wrap,\.k2cf-prompt-wrap(?:,[^{]+)?\{pointer-events:none\}/g, "")
@@ -5106,6 +5107,7 @@ function ensureStyle() {
     if (!existingStyle.textContent.includes("k2fx-styleboost-toggle-v2")) existingStyle.textContent += effectStyleBoostCss;
     if (!existingStyle.textContent.includes("k2fx-textarea-resize-v3")) existingStyle.textContent += effectTextareaResizeCss;
     if (!existingStyle.textContent.includes("k2cf-slot-body,.k2cf-slot-side,.k2cf-panel")) existingStyle.textContent += panCursorCss;
+    if (!existingStyle.textContent.includes(".k2cf-size-label")) existingStyle.textContent += externalSizeCss;
     if (!existingStyle.textContent.includes("--k2fx-thumb-w")) {
       existingStyle.textContent += `.k2fx-grid{grid-template-columns:repeat(auto-fill,minmax(calc(var(--k2fx-thumb-w, 110px) + 12px),1fr))}.k2fx-thumb{width:var(--k2fx-thumb-w, 110px);height:calc(var(--k2fx-thumb-w, 110px) * .6667);max-width:100%}`;
     }
@@ -5146,6 +5148,7 @@ function ensureStyle() {
     .k2cf-num{width:68px;background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px;text-align:right;box-sizing:border-box}
     .k2cf-select,.k2cf-combo{background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px;box-sizing:border-box;max-width:100%}.k2cf-combo{width:82px}.k2cf-select.user-preset{color:${USER_PRESET_COLOR};border-color:${USER_PRESET_COLOR}}
     .k2cf-input{background:#202020;color:#eee;border:1px solid #555;border-radius:5px;padding:3px 5px;box-sizing:border-box;width:88px;min-width:72px;max-width:92px}
+    .k2cf-size-label{display:flex;align-items:center;gap:6px}.k2cf-external-badge{padding:1px 5px;border:1px solid #35d0c8;border-radius:999px;color:#35d0c8;font-size:9px;font-weight:700;text-transform:uppercase}.k2cf-external-badge[hidden],.k2cf-override-status[hidden]{display:none}.k2cf-num.external-size{border-color:#35d0c8;box-shadow:0 0 0 1px rgba(53,208,200,.25)}.k2cf-override-status{margin-top:5px;color:#35d0c8;font-size:10.5px;line-height:1.35}.k2cf-override-note{color:#aaa}
     .k2cf-help{display:none;color:#aaa;font-size:10.5px;margin-top:3px}
     .k2cf-panel select{max-width:100%}.k2cf-help .user{color:${USER_PRESET_COLOR}}
     .k2cf-prompt-wrap{display:flex;flex-direction:column;gap:8px;min-height:0;overflow:auto}
@@ -5919,6 +5922,7 @@ function setupCanvasNode(node) {
   if (savedCanvasState) applyConfiguredValuesToWidgets(node, CANVAS_WIDGETS, savedCanvasState.widgets_values);
 
   const state = { activeSlot: "red", boxes: [], selectedId: null, drawing: null, moving: null, resizing: null, hideBoxes: false, drawMode: false };
+  const externalPreviewSize = { width: null, height: null };
   const controls = {};
   try { controls.cameraSetData = JSON.parse(widgets.camera_set_data?.value || localStorage.getItem(CAMERA_SET_KEY) || '{"sets":[],"selected":""}'); } catch (_) { controls.cameraSetData = {sets:[], selected:""}; }
   if (!Array.isArray(controls.cameraSetData.sets)) controls.cameraSetData.sets = [];
@@ -5952,8 +5956,8 @@ function setupCanvasNode(node) {
     const previous = k2cfBestSavedState(node, "canvas");
     node.__k2cfSkipLocalCanvasState = false;
     node.__k2cfAllowDefaultOverwrite = allowDefaultOverwrite;
-    if (controls.width) setWidget("width", Math.max(1, Number(controls.width.value) || 1));
-    if (controls.height) setWidget("height", Math.max(1, Number(controls.height.value) || 1));
+    if (controls.width && externalPreviewSize.width == null) setWidget("width", Math.max(1, Number(controls.width.value) || 1));
+    if (controls.height && externalPreviewSize.height == null) setWidget("height", Math.max(1, Number(controls.height.value) || 1));
     if (controls.preset) setWidget("preset", controls.preset.value || "Custom");
     if (controls.grid) setWidget("grid_mode", controls.grid.value || "Thirds");
     if (controls.ui_language) setWidget("ui_language", controls.ui_language.value || "Auto");
@@ -6176,14 +6180,17 @@ function setupCanvasNode(node) {
   width.value = String(widgets.width?.value || DEFAULT_WIDTH);
   height.value = String(widgets.height?.value || DEFAULT_HEIGHT);
   function setSize(w, h, presetValue = "Custom") {
-    const oldW = Math.max(1, Number(width.value) || 1);
-    const oldH = Math.max(1, Number(height.value) || 1);
+    const [oldW, oldH] = currentSize();
     w = Math.max(1, Number(w) || 1);
     h = Math.max(1, Number(h) || 1);
-    if (oldW && oldH && (oldW !== w || oldH !== h)) {
+    const effectiveW = externalPreviewSize.width ?? w;
+    const effectiveH = externalPreviewSize.height ?? h;
+    if (oldW && oldH && (oldW !== effectiveW || oldH !== effectiveH)) {
       ensureNormalizedBoxes();
     }
-    width.value = String(w); height.value = String(h); preset.value = presetValue; updatePresetStyle();
+    setWidget("width", w);
+    setWidget("height", h);
+    width.value = String(effectiveW); height.value = String(effectiveH); preset.value = presetValue; updatePresetStyle();
     remapBoxesForCurrentCanvas();
     resizeCanvases(); writeBoxes();
   }
@@ -6238,19 +6245,123 @@ function setupCanvasNode(node) {
   const presetLabel = document.createElement("div");
   presetLabel.textContent = tr(resolveLang(controls.ui_language?.value || "Auto"), "preset");
   const customLabel = document.createElement("div");
+  customLabel.className = "k2cf-size-label";
   customLabel.textContent = "Custom Size";
+  const externalBadge = document.createElement("span");
+  externalBadge.className = "k2cf-external-badge";
+  externalBadge.textContent = "External";
+  externalBadge.hidden = true;
+  customLabel.appendChild(externalBadge);
   const widthLabel = document.createElement("span");
   widthLabel.textContent = "W";
   const heightLabel = document.createElement("span");
   heightLabel.textContent = "H";
+  const customSizeRow = row([widthLabel, width, document.createTextNode("×"), heightLabel, height]);
+  const overrideStatus = document.createElement("div");
+  overrideStatus.className = "k2cf-override-status";
+  overrideStatus.hidden = true;
+  const overrideStatusLine = document.createElement("div");
+  const overrideNote = document.createElement("div");
+  overrideNote.className = "k2cf-override-note";
+  overrideNote.textContent = "Connected preview values are shown above. Local values return when disconnected.";
+  overrideStatus.append(overrideStatusLine, overrideNote);
+  function linkedInputInfo(name) {
+    const input = node.inputs?.find((item) => item?.name === name);
+    if (input?.link === null || input?.link === undefined) return null;
+    const graph = node.graph || app.graph;
+    const links = graph?.links;
+    const link = links?.get?.(input.link) || links?.[input.link];
+    if (!link) return { input, source: null, originSlot: null };
+    const originId = link.origin_id ?? link[1];
+    const originSlot = link.origin_slot ?? link[2];
+    const source = graph?.getNodeById?.(originId) || graph?._nodes_by_id?.get?.(originId) || graph?._nodes_by_id?.[originId] || null;
+    return { input, source, originSlot: Number(originSlot) };
+  }
+  function pythonStyleRound(value) {
+    const lower = Math.floor(value);
+    const fraction = value - lower;
+    if (Math.abs(fraction - 0.5) < 1e-10) return lower % 2 === 0 ? lower : lower + 1;
+    return Math.round(value);
+  }
+  function resolutionSelectorSize(source) {
+    const type = source?.comfyClass || source?.type || "";
+    if (type !== "ResolutionSelector") return null;
+    const sourceWidget = (name) => source.widgets?.find((item) => item?.name === name)?.value;
+    const ratioMatch = String(sourceWidget("aspect_ratio") || "").match(/^\s*(\d+)\s*:\s*(\d+)/);
+    const megapixels = Number(sourceWidget("megapixels"));
+    const multiple = Math.max(1, Number(sourceWidget("multiple")) || 8);
+    if (!ratioMatch || !Number.isFinite(megapixels) || megapixels <= 0) return null;
+    const widthRatio = Number(ratioMatch[1]);
+    const heightRatio = Number(ratioMatch[2]);
+    const scale = Math.sqrt((megapixels * 1024 * 1024) / (widthRatio * heightRatio));
+    return {
+      width: Math.max(1, pythonStyleRound((widthRatio * scale) / multiple) * multiple),
+      height: Math.max(1, pythonStyleRound((heightRatio * scale) / multiple) * multiple),
+    };
+  }
+  function connectedPreviewValue(info) {
+    if (!info?.source || !Number.isInteger(info.originSlot)) return null;
+    const selectorSize = resolutionSelectorSize(info.source);
+    if (selectorSize) {
+      if (info.originSlot === 0) return selectorSize.width;
+      if (info.originSlot === 1) return selectorSize.height;
+    }
+    const outputName = String(info.source.outputs?.[info.originSlot]?.name || "").toLowerCase();
+    const matchingWidget = info.source.widgets?.find((item) => String(item?.name || "").toLowerCase() === outputName);
+    const value = Number(matchingWidget?.value);
+    return Number.isFinite(value) && value > 0 ? Math.round(value) : null;
+  }
+  function updateExternalSizeStatus() {
+    const widthInfo = linkedInputInfo("width_override");
+    const heightInfo = linkedInputInfo("height_override");
+    const widthConnected = !!widthInfo;
+    const heightConnected = !!heightInfo;
+    const hasOverride = widthConnected || heightConnected;
+    const nextWidth = connectedPreviewValue(widthInfo);
+    const nextHeight = connectedPreviewValue(heightInfo);
+    const previewChanged = externalPreviewSize.width !== nextWidth || externalPreviewSize.height !== nextHeight;
+    if (previewChanged) ensureNormalizedBoxes();
+    externalPreviewSize.width = nextWidth;
+    externalPreviewSize.height = nextHeight;
+    if (nextWidth != null) width.value = String(nextWidth);
+    else if (widthConnected) width.value = String(widgets.width?.value || DEFAULT_WIDTH);
+    else if (previewChanged) width.value = String(widgets.width?.value || DEFAULT_WIDTH);
+    if (nextHeight != null) height.value = String(nextHeight);
+    else if (heightConnected) height.value = String(widgets.height?.value || DEFAULT_HEIGHT);
+    else if (previewChanged) height.value = String(widgets.height?.value || DEFAULT_HEIGHT);
+    width.classList.toggle("external-size", widthConnected);
+    height.classList.toggle("external-size", heightConnected);
+    externalBadge.hidden = !hasOverride;
+    overrideStatus.hidden = !hasOverride;
+    const [previewWidth, previewHeight] = currentSize();
+    overrideStatusLine.textContent = `External size override: W ${widthConnected ? "connected" : "not connected"} / H ${heightConnected ? "connected" : "not connected"} · Preview ${previewWidth} × ${previewHeight}`;
+    const followsPreview = nextWidth != null || nextHeight != null;
+    overrideNote.textContent = followsPreview
+      ? "Connected preview values are shown above. Local values return when disconnected."
+      : "Connected values are applied at execution. Preview keeps the current local size.";
+    if (previewChanged) {
+      remapBoxesForCurrentCanvas();
+      resizeCanvases();
+      writeBoxes();
+    }
+  }
   sizePanel.append(
     presetLabel,
     row([preset]),
     customLabel,
-    row([widthLabel, width, document.createTextNode("×"), heightLabel, height]),
+    customSizeRow,
+    overrideStatus,
     row([saveCustom, deleteCustom]),
     help(`User presets use <span class="user">${USER_PRESET_COLOR}</span> and are stored locally.`)
   );
+  requestAnimationFrame(updateExternalSizeStatus);
+  const externalPreviewTimer = setInterval(updateExternalSizeStatus, 250);
+  const oldConnectionsChange = node.onConnectionsChange;
+  node.onConnectionsChange = function() {
+    const result = oldConnectionsChange?.apply(this, arguments);
+    requestAnimationFrame(updateExternalSizeStatus);
+    return result;
+  };
   const canvasPresetLabel = document.createElement("div");
   canvasPresetLabel.textContent = tr(resolveLang(controls.ui_language?.value || "Auto"), "canvasPreset");
   const canvasPresetSelect = document.createElement("select");
@@ -6437,7 +6548,12 @@ function setupCanvasNode(node) {
   wrap.append(panels);
 
   const bgCtx = bg.getContext("2d"), overlayCtx = overlay.getContext("2d");
-  function currentSize() { return [Math.max(1, Number(width.value) || DEFAULT_WIDTH), Math.max(1, Number(height.value) || DEFAULT_HEIGHT)]; }
+  function currentSize() {
+    return [
+      Math.max(1, Number(externalPreviewSize.width ?? width.value) || DEFAULT_WIDTH),
+      Math.max(1, Number(externalPreviewSize.height ?? height.value) || DEFAULT_HEIGHT),
+    ];
+  }
   function makeBg() {
     const [w, h] = currentSize();
     bgCtx.fillStyle = "#242828"; bgCtx.fillRect(0, 0, w, h);
@@ -6671,6 +6787,7 @@ function setupCanvasNode(node) {
       drawOverlay();
     } finally {
       isHydrating = false;
+      requestAnimationFrame(updateExternalSizeStatus);
     }
   }
 
@@ -6709,6 +6826,7 @@ function setupCanvasNode(node) {
 
   const oldResize=node.onResize; node.onResize=function(){ const r = oldResize?.apply(this,arguments); scheduleCanvasRefresh(false); return r; };
   const oldRemoved=node.onRemoved; node.onRemoved=function(){
+    clearInterval(externalPreviewTimer);
     canvasResizeObserver?.disconnect();
     document.removeEventListener("visibilitychange", refreshAfterVisibility);
     window.removeEventListener("focus", refreshAfterFocus);

@@ -10,6 +10,12 @@ Draw the layout, write a prompt for each color slot, export the result, and opti
 
 > BBOX regions are layout guidance, not strict masks. Final placement still depends on the model, prompt wording, and scene context.
 
+## Latest update
+
+- Krea2 BBOX Canvas now accepts optional `width` and `height` inputs.
+- Connected values override the Preset/Custom Size at execution. ComfyUI's built-in Resolution Selector also updates the displayed size and Canvas aspect ratio live.
+- Existing workflows keep their original behavior when the new inputs are not connected.
+
 ## At a glance
 
 | Node | Purpose | Main output |
@@ -63,6 +69,12 @@ If you install from a ZIP, extract it once and make sure the Python files are di
 5. Send Export.prompt_text to Krea2 BBOX Prompt Effect or CLIP Text Encode.
 6. Connect Export.width and Export.height to EmptyLatentImage.
 7. Optionally use Krea2 Background Effect when a preset background should be appended.
+
+### Dynamic Canvas size
+
+Krea2 BBOX Canvas provides optional `width` and `height` input sockets for dynamic sizing. Connected values override the corresponding Preset or Custom Size dimension at execution. Each socket is independent, so connecting only one dimension keeps the other dimension from the current Preset or Custom Size.
+
+When the connected source exposes predictable frontend values, including ComfyUI's built-in Resolution Selector, the Custom Size fields and Canvas preview follow those values live without disabling the fields. BBOX positions are remapped proportionally as the aspect ratio changes. The saved local Preset and Custom Size values return when the sockets are disconnected. Other sources that cannot be evaluated in the frontend still apply at execution.
 
 Recommended Export defaults:
 
@@ -263,6 +275,12 @@ Canvasで構図を作り、色スロットごとにプロンプトを書き、Ex
 5. Export.prompt_textをPrompt EffectまたはCLIP Text Encodeへ接続します。
 6. Export.width / heightをEmptyLatentImageへ接続します。
 7. 必要ならBackground Effectで背景プリセットを追加します。
+
+### Canvasサイズの動的入力
+
+Krea2 BBOX Canvasには、動的サイズ指定用のOptional `width` / `height`入力ソケットがあります。接続した値は実行時に、対応するPresetまたはCustom Sizeの寸法を上書きします。片方だけ接続した場合、未接続側には現在のPresetまたはCustom Sizeの値が使われます。
+
+ComfyUI標準のResolution Selectorなど、Frontendで値を事前計算できる接続元では、入力欄を無効化せずにCustom Sizeの表示値とCanvasプレビューがリアルタイムで追従します。アスペクト比が変わるとBBOXも相対位置を維持して再配置されます。ソケットを切断すると、保存済みのローカルPreset／Custom Sizeへ戻ります。Frontendで値を解決できない接続元は、従来どおり実行時に適用されます。
 
 推奨初期値：
 
