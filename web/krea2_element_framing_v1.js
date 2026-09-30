@@ -4753,8 +4753,40 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
     return values;
   };
 
-  const applySnapshotToSerializedData = (data) => {
-    const values = snapshot();
+  // Serialization must be read-only. ComfyUI's ChangeTracker captures the live
+  // graph before saving; mutating node.properties (especially saved_at) while
+  // serialize() is running makes the live canvas immediately newer than the
+  // captured snapshot and causes the workflow save guard to refuse the write.
+  const serializedValues = () => {
+    const propName = kind === "prompt"
+      ? "k2cfPromptState"
+      : (kind === "effect" ? "k2cfEffectState" : "k2cfCanvasState");
+    const configuredState = kind === "prompt"
+      ? node.__k2cfConfiguredPromptState
+      : (kind === "effect" ? node.__k2cfConfiguredEffectState : node.__k2cfConfiguredCanvasState);
+    const savedState = node?.properties?.[propName];
+    const previousValues = Array.isArray(savedState?.widgets_values)
+      ? savedState.widgets_values.slice()
+      : (Array.isArray(configuredState?.widgets_values) ? configuredState.widgets_values.slice() : null);
+    const currentValues = k2cfWidgetValues(node, widgetNames);
+
+    if (kind === "prompt") {
+      return node.__k2cfAllowDefaultOverwrite
+        ? k2cfSanitizePromptValues(currentValues)
+        : k2cfSanitizePromptValues(k2cfMergeWithPrevious(widgetNames, currentValues, previousValues));
+    }
+    if (kind === "effect") {
+      return node.__k2cfAllowDefaultOverwrite
+        ? currentValues
+        : k2cfMergeEffectWithPrevious(widgetNames, currentValues, previousValues);
+    }
+    return node.__k2cfAllowDefaultOverwrite
+      ? currentValues
+      : k2cfMergeWithPrevious(widgetNames, currentValues, previousValues);
+  };
+
+  const applyCurrentStateToSerializedData = (data) => {
+    const values = serializedValues();
     if (data) {
       data.widgets_values = values;
       data.properties = Object.assign({}, data.properties || {}, node.properties || {});
@@ -4767,19 +4799,9 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
   const oldOnSerialize = node.onSerialize;
   node.onSerialize = function (data) {
     const result = oldOnSerialize?.apply(this, arguments);
-    if (data) applySnapshotToSerializedData(data);
+    if (data) applyCurrentStateToSerializedData(data);
     return result;
   };
-
-  const oldSerialize = node.serialize;
-  if (oldSerialize && !node[`__${tag}SerializePatched`]) {
-    node.serialize = function () {
-      const data = oldSerialize.apply(this, arguments);
-      if (data) applySnapshotToSerializedData(data);
-      return data;
-    };
-    node[`__${tag}SerializePatched`] = true;
-  }
 
   const appObj = window.comfyAPI?.app?.app || app;
   const snapshotGraphNodes = () => {
