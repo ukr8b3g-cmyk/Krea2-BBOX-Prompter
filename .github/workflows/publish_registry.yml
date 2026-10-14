@@ -1,0 +1,111 @@
+name: Publish verified Krea2 1.0.0 to Comfy Registry
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-comfy-registry-krea2-bbox-prompter-1.0.0
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'ukr8b3g-cmyk/Krea2-BBOX-Prompter' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out audited release source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: 89a30a5bee724e5393f8881a8586c429f364696d
+          persist-credentials: false
+          clean: true
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Verify source identity and clean checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = 89a30a5bee724e5393f8881a8586c429f364696d
+          test -z "$(git status --porcelain --untracked-files=all --ignored)"
+          python - <<'PY'
+          import pathlib, tomllib
+          config = tomllib.loads(pathlib.Path('pyproject.toml').read_text())
+          assert config['project']['name'] == 'krea2-bbox-prompter'
+          assert config['project']['version'] == '1.0.0'
+          assert config['tool']['comfy']['PublisherId'] == 'ukr8b3g-cmyk'
+          assert config['tool']['comfy']['includes'] == ['web']
+          assert config['project']['urls']['Repository'] == 'https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter'
+          PY
+      - name: Install official publishing CLI
+        run: python -m pip install --disable-pip-version-check comfy-cli==1.22.0
+      - name: Pack clean release
+        shell: bash
+        run: |
+          set -euo pipefail
+          comfy --skip-prompt --no-enable-telemetry env
+          test -z "$(git status --porcelain --untracked-files=all --ignored)"
+          comfy node pack
+      - name: Verify every archive path, size and SHA256
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json, pathlib, zipfile
+          # Canonical digest of the independently audited 824-file manifest:
+          # JSON sorted (path, uncompressed byte count, SHA256) tuples,
+          # ensure_ascii=True, separators=(',', ':'), UTF-8, no trailing newline.
+          expected = '56da3e03ffce687ea3a469e82106fc2129e83ef2a7331bae58fca52a3043b056'
+          with zipfile.ZipFile('node.zip') as archive:
+              assert archive.testzip() is None, 'ZIP CRC failure'
+              entries = archive.infolist()
+              assert len(entries) == 824, 'Unexpected entry count'
+              assert len({e.filename for e in entries}) == 824, 'Duplicate ZIP entry'
+              rows = []
+              for entry in entries:
+                  path = pathlib.PurePosixPath(entry.filename)
+                  assert not entry.is_dir() and not path.is_absolute() and '..' not in path.parts
+                  data = archive.read(entry)
+                  assert data == pathlib.Path(entry.filename).read_bytes(), entry.filename
+                  rows.append((entry.filename, len(data), hashlib.sha256(data).hexdigest()))
+              canonical = json.dumps(sorted(rows), ensure_ascii=True, separators=(',', ':')).encode()
+              assert hashlib.sha256(canonical).hexdigest() == expected, 'Archive differs from audited manifest'
+          print('Verified exact 824-file set, sizes and SHA256 hashes.')
+          PY
+          # The CLI publishes by repacking. Keep the verified ZIP outside the
+          # checkout, and require a pristine source tree immediately before it.
+          mv node.zip "$RUNNER_TEMP/krea2-1.0.0-audited.zip"
+          test -z "$(git status --porcelain --untracked-files=all --ignored)"
+      - name: Require an unregistered node and absent version
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, urllib.error, urllib.request
+          # This workflow is exclusively for the initial release. Stop for any
+          # existing node/version, including a partially completed earlier run.
+          for endpoint in ('/nodes/krea2-bbox-prompter', '/nodes/krea2-bbox-prompter/versions/1.0.0'):
+              request = urllib.request.Request('https://api.comfy.org' + endpoint, headers={'Accept': 'application/json'})
+              try:
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      raise SystemExit('Registry entry already exists; inspect it before any further publish: ' + endpoint)
+              except urllib.error.HTTPError as error:
+                  if error.code != 404:
+                      raise SystemExit('Registry preflight failed (HTTP %s); publication stopped.' % error.code)
+                  json.load(error)  # Reject non-JSON proxy/error pages.
+          print('Node and version both absent; initial publication may proceed.')
+          PY
+      - name: Publish once with existing Registry secret
+        env:
+          REGISTRY_ACCESS_TOKEN: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$REGISTRY_ACCESS_TOKEN"
+          test -z "$(git status --porcelain --untracked-files=all --ignored)"
+          # Do not retry automatically: the API reserves a version before upload.
+          comfy node publish --token "$REGISTRY_ACCESS_TOKEN"
+          cmp node.zip "$RUNNER_TEMP/krea2-1.0.0-audited.zip"
