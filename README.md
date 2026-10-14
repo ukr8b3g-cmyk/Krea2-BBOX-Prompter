@@ -10,11 +10,13 @@ Draw the layout, write a prompt for each color slot, export the result, and opti
 
 > BBOX regions are layout guidance, not strict masks. Final placement still depends on the model, prompt wording, and scene context.
 
-## Latest update
+## Latest update — v1.0.1
 
-- Krea2 BBOX Canvas now accepts optional `width` and `height` inputs.
-- Connected values override the Preset/Custom Size at execution. ComfyUI's built-in Resolution Selector also updates the displayed size and Canvas aspect ratio live.
-- Existing workflows keep their original behavior when the new inputs are not connected.
+- Restore saved node positions/sizes, BBOX regions and prompt settings when loading a workflow from a generated image.
+- Keep serialized frontend state cloneable and serialization free of live-state changes, avoiding DataCloneError and workflow save-guard failures.
+- Optional Canvas `width` / `height` inputs and the existing node IDs remain compatible.
+
+After updating, reload the ComfyUI browser with Ctrl + F5.
 
 ## At a glance
 
@@ -190,6 +192,12 @@ Background Effect can receive a prompt string through prompt_in and returns prom
 - After updating the front-end JavaScript, restart ComfyUI and press Ctrl + F5.
 - Optional autocomplete is used only when ComfyUI-Custom-Scripts is already installed; it is not required.
 
+### Missing media warnings in older workflows
+
+Prompt Effect and Background Effect thumbnails are local, display-only previews; these nodes process text and have no image input. If the Issues panel names `Load Image - image`, inspect that Load Image node. An unused, disconnected loader can reference a missing file and show a warning even though generation succeeds. Remove the loader if it is no longer needed.
+
+Updating this extension does not remove nodes from existing workflow JSON or rewrite workflows embedded in older images. Save a cleaned workflow separately; editing an image's embedded workflow requires a separate metadata update.
+
 ## Technical reference
 
 ### Node IDs
@@ -242,6 +250,8 @@ Thumbnails are loaded locally. The extension does not depend on GitHub raw URLs,
 
     python -c "compile(open('nodes_element_framing.py', encoding='utf-8').read(), 'nodes_element_framing.py', 'exec')"
     node --check web/krea2_element_framing_v1.js
+    python -B -m unittest discover -s tests -v
+    node --test tests/test_frontend_cloneable_state.mjs
 
 ---
 
@@ -252,6 +262,14 @@ Krea2 BBOX Prompter Suiteは、ComfyUI上でBBOXを手動配置し、Krea2向け
 Canvasで構図を作り、色スロットごとにプロンプトを書き、ExportでJSON化します。必要に応じて、Prompt Effectや592件のBackground Effectを追加できます。
 
 > BBOXは厳密なマスクではなく、Krea2へのレイアウト補助です。最終結果はモデル・プロンプト・シーン全体の解釈に依存します。
+
+## 最新の更新 — v1.0.1
+
+- 生成画像からワークフローを読み込む際の、ノード配置・サイズ、BBOX、プロンプト設定の復元を修正しました。
+- 保存データを複製可能な状態に保ち、シリアライズ時に実行中の状態を変更しないことで、DataCloneErrorやワークフロー保存拒否を防ぎます。
+- CanvasのOptional `width` / `height`入力と既存ノードIDの互換性を維持します。
+
+更新後はComfyUIのブラウザーでCtrl + F5を押してください。
 
 ## できること
 
@@ -333,6 +351,12 @@ ComfyUIを再起動し、古いUIが残る場合はブラウザーでCtrl + F5�
 - 日本語翻訳、LLMによるプロンプト拡張、画像解析、OCR、自動BBOX検出は行いません。
 - フロントエンド更新後はComfyUI再起動とCtrl + F5が必要です。
 
+### 古いワークフローのメディア不足警告
+
+Prompt EffectとBackground Effectの見本画像は表示専用のローカル画像です。両ノードは文字列を処理し、画像入力を持ちません。問題一覧が「画像を読み込む（Load Image）- image」を指している場合は、そのLoad Imageノードを確認してください。未接続の不要なノードでも、存在しない画像ファイルを指定していれば、生成は成功する一方で警告が出る場合があります。不要であれば、そのLoad Imageノードを削除します。
+
+この拡張の更新だけでは、既存のワークフローJSONや過去画像に埋め込まれたワークフローは書き換わりません。不要ノードを除いたワークフローを別途保存してください。元画像からも読み込めるようにする場合は、埋め込みメタデータの更新が別途必要です。
+
 ## 技術仕様
 
 ### ノードID
@@ -365,7 +389,7 @@ normalized_1000はCanvas座標を0～1000へ正規化します。pixelは元の�
 
 ## Registry metadata and distribution
 
-`pyproject.toml` prepares this repository for Comfy Registry with node ID `krea2-bbox-prompter`, initial package version `1.0.0`, and PublisherId `ukr8b3g-cmyk`. Metadata alone does not publish a Registry version; use the GitHub installation instructions above until a Registry release is available.
+`pyproject.toml` prepares this repository for Comfy Registry with node ID `krea2-bbox-prompter`, package version `1.0.1`, and PublisherId `ukr8b3g-cmyk`. Metadata alone does not publish a Registry version; use the GitHub installation instructions above until a Registry release is available.
 
 The suite runs inside an existing ComfyUI environment. Its Python node logic uses the standard library; the custom-preset routes use ComfyUI's `PromptServer` and its `aiohttp` dependency. No extra Python packages, `torch` reinstall, or model download is required by this suite. Pose Gesture V1 and ComfyUI-Custom-Scripts are separate extensions and are not bundled.
 
@@ -373,7 +397,7 @@ The suite runs inside an existing ComfyUI environment. Its Python node logic use
 
 ### Registry・配布設定
 
-`pyproject.toml`はRegistry登録の準備用です。ノードIDは`krea2-bbox-prompter`、初期パッケージ版は`1.0.0`、PublisherIdは`ukr8b3g-cmyk`です。このファイルの追加だけではRegistryへ公開されません。Registry版が提供されるまでは、上記のGitHubからの導入方法を使用してください。
+`pyproject.toml`はRegistry登録の準備用です。ノードIDは`krea2-bbox-prompter`、パッケージ版は`1.0.1`、PublisherIdは`ukr8b3g-cmyk`です。このファイルの追加だけではRegistryへ公開されません。Registry版が提供されるまでは、上記のGitHubからの導入方法を使用してください。
 
 既存のComfyUI環境で動作し、カスタムプリセット用ルートはComfyUIの`PromptServer`と`aiohttp`を使います。このSuiteのために追加パッケージや`torch`を再インストールする必要はありません。Pose Gesture V1とComfyUI-Custom-Scriptsは別拡張で、同梱しません。
 

@@ -1,6 +1,6 @@
 [project]
 name = "krea2-bbox-prompter"
-version = "1.0.0"
+version = "1.0.1"
 description = "Manual BBOX layout and JSON prompt tools for Krea2 in ComfyUI."
 readme = "README.md"
 license = { file = "LICENSE" }
