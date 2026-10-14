@@ -1,0 +1,18 @@
+# User-created presets must never be part of the Registry archive.
+/user_presets/
+
+# Development files and local caches.
+/tests/
+/docs/
+/CODEX_PUSH_MANUAL.md
+/THUMBNAIL_SPEC.md
+/workflow/*.zip
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Keep Python sources, web/, workflow JSON examples, README, and LICENSE.

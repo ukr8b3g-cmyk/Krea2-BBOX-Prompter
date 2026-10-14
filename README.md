@@ -363,9 +363,29 @@ normalized_1000はCanvas座標を0～1000へ正規化します。pixelは元の�
 
 この拡張自体はモデルをダウンロードしません。ComfyUIとKrea2を使う環境が別途必要です。ComfyUI-Custom-Scriptsのオートコンプリートは任意です。
 
+## Registry metadata and distribution
+
+`pyproject.toml` prepares this repository for Comfy Registry with node ID `krea2-bbox-prompter`, initial package version `1.0.0`, and PublisherId `ukr8b3g-cmyk`. Metadata alone does not publish a Registry version; use the GitHub installation instructions above until a Registry release is available.
+
+The suite runs inside an existing ComfyUI environment. Its Python node logic uses the standard library; the custom-preset routes use ComfyUI's `PromptServer` and its `aiohttp` dependency. No extra Python packages, `torch` reinstall, or model download is required by this suite. Pose Gesture V1 and ComfyUI-Custom-Scripts are separate extensions and are not bundled.
+
+`.comfyignore` excludes user-created `user_presets/`, caches, tests, development documentation, and duplicate workflow ZIPs from the Registry archive. Runtime Python files, all of `web/` (JavaScript, preset JSON, manifest, and thumbnails), and workflow JSON examples remain included. Back up your local `user_presets/` before replacing or removing an installation folder.
+
+### Registry・配布設定
+
+`pyproject.toml`はRegistry登録の準備用です。ノードIDは`krea2-bbox-prompter`、初期パッケージ版は`1.0.0`、PublisherIdは`ukr8b3g-cmyk`です。このファイルの追加だけではRegistryへ公開されません。Registry版が提供されるまでは、上記のGitHubからの導入方法を使用してください。
+
+既存のComfyUI環境で動作し、カスタムプリセット用ルートはComfyUIの`PromptServer`と`aiohttp`を使います。このSuiteのために追加パッケージや`torch`を再インストールする必要はありません。Pose Gesture V1とComfyUI-Custom-Scriptsは別拡張で、同梱しません。
+
+`user_presets/`はユーザー作成データのため配布対象外です。インストールフォルダを置換・削除する前にバックアップしてください。実行に必要なPython、`web/`以下のJS・JSON・画像は配布対象に残します。
+
 ## License
 
-See the repository license and distribution terms.
+Original code and documentation by ukr8b3g-cmyk are available under the [MIT License](LICENSE).
+
+Third-party software, models, assets, and separately installed extensions retain their own licenses and terms; this repository does not relicense them under MIT. In particular, ComfyUI and the optional ComfyUI-Custom-Scripts autocomplete integration are external components. Krea2 model/service terms are separate from this extension's license.
+
+ukr8b3g-cmykによる自作コード・ドキュメントは[MIT License](LICENSE)です。第三者のソフトウェア・モデル・素材・別途導入する拡張には、それぞれのライセンス・利用条件が適用されます。本リポジトリのMIT表記でそれらを再許諾するものではありません。
 
 ## Repository
 

@@ -1,0 +1,18 @@
+[project]
+name = "krea2-bbox-prompter"
+version = "1.0.0"
+description = "Manual BBOX layout and JSON prompt tools for Krea2 in ComfyUI."
+readme = "README.md"
+license = { file = "LICENSE" }
+# Uses the existing ComfyUI environment; no extra packages or models to install.
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter"
+Documentation = "https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter#readme"
+"Bug Tracker" = "https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter/issues"
+
+[tool.comfy]
+PublisherId = "ukr8b3g-cmyk"
+DisplayName = "Krea2 BBOX Prompter Suite"
+includes = ["web"]
