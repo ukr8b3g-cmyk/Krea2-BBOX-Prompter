@@ -4789,7 +4789,7 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
     const values = serializedValues();
     if (data) {
       data.widgets_values = values;
-      data.properties = Object.assign({}, data.properties || {}, node.properties || {});
+      // Keep the properties already cloned by ComfyUI; live nested state may be reactive.
       const size = k2cfNormalizeNodeSize(node.size);
       if (size) data.size = size.slice();
     }
@@ -5318,7 +5318,9 @@ app.registerExtension({
       const result = oldConfigure?.apply(this, arguments);
       if (this.__k2cfApplyConfiguredValues) this.__k2cfApplyConfiguredValues(this.__k2cfConfiguredWidgetValues);
       if (this.__k2cfHydrateFromWidgets) {
-        requestAnimationFrame(() => this.__k2cfHydrateFromWidgets?.());
+        // Restore boxes before linked-size preview callbacks can write the empty initial state.
+        if (nodeData.name === CANVAS_NODE) this.__k2cfHydrateFromWidgets();
+        else requestAnimationFrame(() => this.__k2cfHydrateFromWidgets?.());
       }
       if (this.__k2cfNodeSizeKind) {
         const kind = this.__k2cfNodeSizeKind;
