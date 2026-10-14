@@ -1,6 +1,7 @@
 name: Release Krea2 BBOX Prompter v1.0.1
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths: [.github/workflows/release.yml]
