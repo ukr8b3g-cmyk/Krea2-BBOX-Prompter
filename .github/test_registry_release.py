@@ -71,7 +71,7 @@ class APIAndReleaseTests(unittest.TestCase):
     def test_stable_tag_validation(self):
         self.assertEqual(release.stable_version("v1.2.3"), "1.2.3")
         self.assertEqual(release.stable_version("1.2.3"), "1.2.3")
-        for tag in ["main", "v1.2.3-rc1", "v1.2.3\nBAD=x", "v1.2.3/other", "--help", ""]:
+        for tag in ["main", "v1.2.3-rc1", "v1.2.3\nBAD=x", "v1.2.3/other", "--help", "", "v01.2.3", "v1.02.3"]:
             with self.subTest(tag=tag), self.assertRaises(ValueError):
                 release.stable_version(tag)
 
@@ -107,6 +107,32 @@ class APIAndReleaseTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     release.resolve_release(POLICY, "v1.2.3")
 
+    def test_required_source_ci_must_succeed(self):
+        policy = {**POLICY, "required_workflows": ["Bridge validation"]}
+        prefix = [{"tag_name": "v1.2.3", "draft": False, "prerelease": False},
+                  {"object": {"type": "commit", "sha": "b" * 40}},
+                  {"encoding": "base64", "content": base64.b64encode(TOML.encode()).decode()}]
+        for status, conclusion in [("in_progress", None), ("completed", "failure"), ("completed", "success")]:
+            run = {"name": "Bridge validation", "head_sha": "b" * 40,
+                   "head_repository": {"full_name": "owner/repo"}, "event": "push",
+                   "status": status, "conclusion": conclusion}
+            with self.subTest(status=status, conclusion=conclusion), patch.dict(os.environ, {"GITHUB_REPOSITORY": "owner/repo"}), patch.object(release, "get_json", side_effect=prefix + [{"workflow_runs": [run]}]):
+                if conclusion == "success":
+                    self.assertEqual(release.resolve_release(policy, "v1.2.3")["sha"], "b" * 40)
+                else:
+                    with self.assertRaisesRegex(ValueError, "Required source CI"):
+                        release.resolve_release(policy, "v1.2.3")
+
+    def test_missing_source_ci_is_rejected(self):
+        policy = {**POLICY, "required_workflows": ["Bridge validation"]}
+        responses = [{"tag_name": "v1.2.3", "draft": False, "prerelease": False},
+                     {"object": {"type": "commit", "sha": "b" * 40}},
+                     {"encoding": "base64", "content": base64.b64encode(TOML.encode()).decode()},
+                     {"workflow_runs": []}]
+        with patch.dict(os.environ, {"GITHUB_REPOSITORY": "owner/repo"}), patch.object(release, "get_json", side_effect=responses):
+            with self.assertRaisesRegex(ValueError, "Required source CI"):
+                release.resolve_release(policy, "v1.2.3")
+
     def test_wrong_release_tag_is_rejected(self):
         with patch.dict(os.environ, {"GITHUB_REPOSITORY": "owner/repo"}), patch.object(release, "get_json", return_value={"tag_name": "v9.9.9", "draft": False, "prerelease": False}):
             with self.assertRaises(ValueError):
@@ -121,12 +147,24 @@ class APIAndReleaseTests(unittest.TestCase):
         with patch.object(release, "get_json", side_effect=[None, None]):
             self.assertTrue(release.registry_preflight(POLICY, "1.2.3"))
 
-    def test_every_existing_version_is_skipped_including_flagged(self):
+    def test_existing_versions_require_inspection_and_never_republish(self):
         node = {"id": POLICY["node"], "publisher": {"id": "owner"}, "repository": POLICY["repository"]}
-        for status in ["NodeVersionStatusPending", "NodeVersionStatusActive", "NodeVersionStatusFlagged"]:
+        for status in ["NodeVersionStatusPending", "NodeVersionStatusActive", "NodeVersionStatusFlagged", "FutureUnknownStatus"]:
             version = {"node_id": POLICY["node"], "version": "1.2.3", "status": status}
             with self.subTest(status=status), patch.object(release, "get_json", side_effect=[node, version]):
-                self.assertFalse(release.registry_preflight(POLICY, "1.2.3"))
+                with self.assertRaisesRegex(ValueError, "no republish"):
+                    release.registry_preflight(POLICY, "1.2.3")
+
+    def test_pending_existing_version_writes_warning_and_summary(self):
+        node = {"id": POLICY["node"], "publisher": {"id": "owner"}, "repository": POLICY["repository"]}
+        version = {"node_id": POLICY["node"], "version": "1.2.3", "status": "NodeVersionStatusPending"}
+        with tempfile.TemporaryDirectory() as directory:
+            summary = Path(directory) / "summary.md"
+            with patch.dict(os.environ, {"GITHUB_STEP_SUMMARY": str(summary)}), patch.object(release, "get_json", side_effect=[node, version]), patch("builtins.print") as printed:
+                with self.assertRaises(ValueError):
+                    release.registry_preflight(POLICY, "1.2.3")
+                self.assertTrue(any("::warning::" in str(call) for call in printed.call_args_list))
+            self.assertIn("No publication attempted", summary.read_text(encoding="utf-8"))
 
     def test_foreign_publisher_is_rejected(self):
         node = {"id": POLICY["node"], "publisher": {"id": "other"}, "repository": POLICY["repository"]}
@@ -210,7 +248,9 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn("!github.event.release.draft", text)
         self.assertIn("  workflow_call:", text)
         self.assertIn("      release_tag:", text)
-        self.assertIn("group: comfy-registry-${{ github.repository }}", text)
+        self.assertIn("group: comfy-registry-${{ github.repository }}-${{ needs.resolve.outputs.version }}", text)
+        self.assertIn("needs: resolve", text)
+        self.assertNotIn("\nconcurrency:", text)
         self.assertIn("contents: read", text)
         self.assertNotIn("contents: write", text)
         self.assertNotIn("secrets: inherit", text)

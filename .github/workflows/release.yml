@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: github-release-${{ github.repository }}
+  group: github-release-${{ github.repository }}-${{ inputs.release_tag }}
   cancel-in-progress: false
 
 jobs:

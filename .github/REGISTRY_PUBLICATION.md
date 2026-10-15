@@ -13,10 +13,13 @@ triggering another workflow. Normal configuration pushes run offline checks
 only; they never create a Release or publish a Registry package.
 
 For an already published stable Release, select the publisher workflow on
-main and enter its exact release_tag to resume manually. An existing Registry
-version is reported and skipped, including pending or flagged versions.
+main and enter its exact release_tag to resume manually. Every existing Registry
+version stops publication for inspection. Pending emits a warning and summary;
+Flagged and unknown statuses fail. An existing Active version is not treated as
+verified success without inspecting its package. No existing version is republished.
 HTTP/authentication/network errors stop publication. All publication routes
-share one concurrency group. The CLI publish command is attempted once only.
+share a job concurrency group for the normalized version, so different versions
+do not replace each other's pending jobs. The CLI publish command is attempted once only.
 If it fails, inspect the Registry first: a version may already be reserved.
 
 The existing REGISTRY_ACCESS_TOKEN repository secret is used only for the

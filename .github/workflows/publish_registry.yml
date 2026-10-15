@@ -21,16 +21,15 @@ on:
 permissions:
   contents: read
 
-# Serialize every route (including v-prefixed and bare tags) in this repo.
-concurrency:
-  group: comfy-registry-${{ github.repository }}
-  cancel-in-progress: false
-
 jobs:
-  publish:
+  resolve:
     if: github.repository == 'ukr8b3g-cmyk/Krea2-BBOX-Prompter' && ((github.event_name == 'release' && !github.event.release.draft && !github.event.release.prerelease) || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'))
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 5
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+      version: ${{ steps.release.outputs.version }}
+      sha: ${{ steps.release.outputs.sha }}
     env:
       RELEASE_TAG: ${{ inputs.release_tag || github.event.release.tag_name }}
       PYTHONDONTWRITEBYTECODE: '1'
@@ -50,14 +49,38 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python -B control/.github/registry_release.py resolve --policy control/.github/registry-policy.json --tag "$RELEASE_TAG"
-      - name: Skip an existing version; fail closed on API errors
+
+  publish:
+    needs: resolve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    # Different versions never replace each other's pending publication.
+    # v1.2.3 and 1.2.3 resolve to the same version and share this job lock.
+    concurrency:
+      group: comfy-registry-${{ github.repository }}-${{ needs.resolve.outputs.version }}
+      cancel-in-progress: false
+    env:
+      RELEASE_TAG: ${{ needs.resolve.outputs.tag }}
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Check out publication tooling
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.workflow_sha }}
+          path: control
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Stop for existing versions or API errors without republishing
         id: preflight
         run: python -B control/.github/registry_release.py preflight --policy control/.github/registry-policy.json --tag "$RELEASE_TAG"
       - name: Check out exact release source
         if: steps.preflight.outputs.publish == 'true'
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          ref: ${{ steps.release.outputs.sha }}
+          ref: ${{ needs.resolve.outputs.sha }}
           path: source
           persist-credentials: false
           clean: true
@@ -67,7 +90,7 @@ jobs:
       - name: Record clean release package manifest
         if: steps.preflight.outputs.publish == 'true'
         env:
-          SOURCE_SHA: ${{ steps.release.outputs.sha }}
+          SOURCE_SHA: ${{ needs.resolve.outputs.sha }}
         run: python -B control/.github/registry_release.py manifest --policy control/.github/registry-policy.json --tag "$RELEASE_TAG"
       - name: Pack release without importing product code
         if: steps.preflight.outputs.publish == 'true'
@@ -89,7 +112,7 @@ jobs:
         if: steps.final.outputs.publish == 'true'
         env:
           REGISTRY_ACCESS_TOKEN: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
-          SOURCE_SHA: ${{ steps.release.outputs.sha }}
+          SOURCE_SHA: ${{ needs.resolve.outputs.sha }}
         shell: bash
         run: |
           set -euo pipefail
