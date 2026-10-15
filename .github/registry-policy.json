@@ -1,0 +1,11 @@
+{
+  "node": "krea2-bbox-prompter",
+  "publisher": "ukr8b3g-cmyk",
+  "repository": "https://github.com/ukr8b3g-cmyk/Krea2-BBOX-Prompter",
+  "includes": [
+    "web"
+  ],
+  "license": {
+    "file": "LICENSE"
+  }
+}

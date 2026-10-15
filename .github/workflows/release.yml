@@ -1,84 +1,80 @@
-name: Release Krea2 BBOX Prompter v1.0.1
+name: Create a stable GitHub Release
 
+# Configuration pushes must never create or republish an old release.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [.github/workflows/release.yml]
+    inputs:
+      release_tag:
+        description: 'Existing stable Git tag to release, e.g. v1.2.3'
+        required: true
+        type: string
 
 permissions:
   contents: read
 
 concurrency:
-  group: release-krea2-bbox-prompter-1.0.1
+  group: github-release-${{ github.repository }}
   cancel-in-progress: false
 
 jobs:
   release:
-    if: github.repository == 'ukr8b3g-cmyk/Krea2-BBOX-Prompter'
+    if: github.repository == 'ukr8b3g-cmyk/Krea2-BBOX-Prompter' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: write
+    outputs:
+      release_tag: ${{ steps.source.outputs.tag }}
     env:
-      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      PYTHONDONTWRITEBYTECODE: '1'
     steps:
-      - name: Check out the release commit
+      - name: Check out release tooling
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          ref: ${{ github.sha }}
+          ref: ${{ github.workflow_sha }}
+          path: control
           persist-credentials: false
       - name: Set up Python
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.12'
+      - name: Verify existing tag and package version
+        id: source
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -B control/.github/registry_release.py release-source --policy control/.github/registry-policy.json --tag "$RELEASE_TAG"
+      - name: Check out release source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ steps.source.outputs.sha }}
+          path: source
+          persist-credentials: false
+      - name: Python regression tests
+        working-directory: source
+        run: python -B -m unittest discover -s tests -v
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
-      - name: Verify the one-time release source
-        id: source
-        shell: bash
-        run: |
-          python - <<'PY'
-          import hashlib, json, os, pathlib, tomllib, urllib.error, urllib.request
-          repo = os.environ['GITHUB_REPOSITORY']
-          def read(path):
-              request = urllib.request.Request('https://api.github.com/repos/' + repo + path,
-                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
-              try:
-                  with urllib.request.urlopen(request, timeout=30) as response:
-                      return json.load(response)
-              except urllib.error.HTTPError as error:
-                  if error.code == 404:
-                      return None
-                  raise
-          config = tomllib.loads(pathlib.Path('pyproject.toml').read_text())
-          assert config['project']['version'] == '1.0.1'
-          expected = {'README.md': '2a9da669e4d08fbb3dc794ba074f3965a0a945538b9439a91d2214e832584219', 'pyproject.toml': '89f5fe3442dea7a22c19454593b3a8c722f97929ce2af8151d38b86999654a53', '__init__.py': 'd7a2199bd016fc05d62a65ed18f24497f383fc5e9507cb7b828de5e420432244', 'nodes_element_framing.py': '2d53c928d41f37279d8d759465ecbc6c85927c7106eea4e034e831b0126646db', 'web/krea2_element_framing_v1.js': '361ea585c0f8bf67842ce38e4ee17b0e707430925777a8c184e8dbf40765d1ba', 'tests/test_canvas_size_overrides.py': 'd1b5d4c77c4f3ee700a4cd1a36004131219c50d4b9570a8f4c63268852d43ae6', 'tests/test_frontend_persistence_contract.py': 'fb90a3e5d5e261537acba35229882a89cc72b3c4eca3cbeed13091beb6d472e9', 'tests/test_frontend_cloneable_state.mjs': '7f9ed0108c52ff8b8e7a0b607272c233af34086bbc3fdad700cfb8999a72b199'}
-          for path, digest in expected.items():
-              assert hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest() == digest, path
-          sha = os.environ['GITHUB_SHA']
-          assert read('/git/ref/heads/main')['object']['sha'] == sha, 'main advanced'
-          tag = read('/git/ref/tags/v1.0.1')
-          assert tag is None or tag['object']['sha'] == sha, 'Existing tag differs'
-          existing = read('/releases/tags/v1.0.1')
-          if existing is not None:
-              assert tag is not None and not existing['draft'], 'Inspect existing release'
-              print('v1.0.1 is already published from this commit.')
-              raise SystemExit(0)
-          pathlib.Path(os.environ['RUNNER_TEMP'], 'release-notes.md').write_text('ワークフロー復元と保存処理の修正をまとめたGitHubリリースです。\n\n- 生成画像から読み込む際のノード配置・サイズ、BBOX、プロンプト設定を保持。\n- シリアライズ済みデータへリアクティブ状態を混入させず、DataCloneErrorを防止。\n- シリアライズ時の実行中状態の変更を避け、ワークフロー保存処理を維持。\n- READMEに、未使用Load Imageによるメディア不足警告と過去画像の扱いを追加。\n- Python 10件、JavaScript 4件の回帰テストを実行。\n\n更新後はブラウザーでCtrl + F5を押してください。この更新は過去画像に埋め込まれたワークフローを自動変更しません。不要なLoad Imageはワークフロー側で削除してください。\n\n### English\nPreserve saved node layout, BBOX regions and prompt settings on image workflow reload. Keep serialized state cloneable and serialization free of live-state changes. Includes regression tests and documentation for missing-media warnings from unused Load Image nodes. Refresh the browser after updating. Existing image metadata is not rewritten automatically.\n\nThis is a GitHub release; it does not publish a Comfy Registry version.\n', encoding='utf-8')
-          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
-              output.write('publish=true\n')
-          PY
-      - name: Python regression tests
-        run: python -B -m unittest discover -s tests -v
       - name: JavaScript syntax and regression tests
+        working-directory: source
         run: |
           node --check web/krea2_element_framing_v1.js
           node --test tests/test_frontend_cloneable_state.mjs
-      - name: Publish the validated release
-        if: steps.source.outputs.publish == 'true'
-        shell: bash
-        run: |
-          gh release create v1.0.1 --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "v1.0.1 — Workflow restoration" --notes-file "$RUNNER_TEMP/release-notes.md" --latest
+      - name: Create the stable Release for the existing validated tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --verify-tag --title "$RELEASE_TAG" --generate-notes --latest
+
+  registry:
+    needs: release
+    permissions:
+      contents: read
+    # GITHUB_TOKEN-created releases do not trigger a separate release workflow.
+    # Call the same guarded publisher directly after successful Release creation.
+    uses: ./.github/workflows/publish_registry.yml
+    with:
+      release_tag: ${{ needs.release.outputs.release_tag }}
+    secrets:
+      REGISTRY_ACCESS_TOKEN: ${{ secrets.REGISTRY_ACCESS_TOKEN }}

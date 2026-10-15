@@ -16,3 +16,6 @@ Thumbs.db
 *.bak
 
 # Keep Python sources, web/, workflow JSON examples, README, and LICENSE.
+
+# Release automation is development tooling, not part of the node package.
+/.github/
