@@ -61,7 +61,7 @@ jobs:
         working-directory: source
         run: |
           node --check web/krea2_element_framing_v1.js
-          node --test tests/test_frontend_cloneable_state.mjs
+          node --test tests/*.mjs
       - name: Create the stable Release for the existing validated tag
         env:
           GH_TOKEN: ${{ github.token }}

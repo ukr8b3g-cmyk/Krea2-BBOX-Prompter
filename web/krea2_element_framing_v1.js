@@ -4094,7 +4094,7 @@ function k2cfCreateWorkflowStorageId() {
 function k2cfSetWorkflowStorageId(graph, value = null) {
   if (!graph) return "default_graph";
   graph.extra = graph.extra || {};
-  const nextValue = value || graph.extra.k2cf_state_id || graph.__k2cfStateId || k2cfCreateWorkflowStorageId();
+  const nextValue = value || graph.extra.k2cf_state_id || k2cfCreateWorkflowStorageId();
   graph.extra.k2cf_state_id = String(nextValue);
   Object.defineProperty(graph, "__k2cfStateId", {
     value: String(nextValue),
@@ -4108,7 +4108,7 @@ function k2cfSetWorkflowStorageId(graph, value = null) {
 function k2cfWorkflowStorageId(node) {
   const graph = node?.graph || app?.graph;
   if (graph) {
-    if (!graph.__k2cfStateId) k2cfSetWorkflowStorageId(graph);
+    if (!graph.__k2cfStateId || graph.__k2cfStateId !== graph.extra?.k2cf_state_id) k2cfSetWorkflowStorageId(graph);
     return String(graph.__k2cfStateId);
   }
   return "default_graph";
@@ -4119,10 +4119,9 @@ function k2cfNodeStorageKey(node, kind) {
   return `krea2_element_framing_v1_${kind}_${k2cfWorkflowStorageId(node)}_${nodeId}`;
 }
 
-function k2cfNodeFallbackStorageKey(node, kind) {
-  const nodeId = node?.id ?? "unknown";
-  const nodeType = node?.type || node?.comfyClass || "node";
-  return `krea2_element_framing_v1_${kind}_${nodeType}_${nodeId}`;
+function k2cfIsWorkflowLoading() {
+  const appObj = window.comfyAPI?.app?.app || app;
+  return Number(appObj?.__k2cfWorkflowLoadDepth || 0) > 0;
 }
 
 function k2cfReadStorageJson(storage, key) {
@@ -4155,17 +4154,16 @@ function k2cfHasEffectTextHeights(state) {
 }
 
 function k2cfLocalStateKeys(node, kind) {
-  const keys = [k2cfNodeStorageKey(node, kind)];
-  if (kind === "prompt_ui" || kind === "effect" || kind.endsWith("_node_size")) keys.push(k2cfNodeFallbackStorageKey(node, kind));
-  return keys;
+  // Node IDs are reused across workflows; never read the old type + node ID fallback.
+  return [k2cfNodeStorageKey(node, kind)];
 }
 
 function k2cfReadLocalState(node, kind) {
   // Prompt/canvas widget values must come only from workflow node/widget state.
   // Browser local/session fallback can resurrect stale prompt text or stale latent sizes
   // (for example 1024 x 1536) when ComfyUI rebuilds a tab.
-  // Effect uses session-only fallback for UI state such as selected effect and text box heights.
   if (kind === "prompt" || kind === "canvas") return null;
+  if (k2cfIsWorkflowLoading() || node?.__k2cfWorkflowConfigured || !node?.graph || node.id == null || node.id === -1) return null;
   const states = [];
   for (const key of k2cfLocalStateKeys(node, kind)) {
     states.push(k2cfReadSessionJson(key));
@@ -4178,6 +4176,7 @@ function k2cfWriteLocalState(node, kind, data) {
   // Do not persist prompt/canvas widget values outside the workflow. This prevents stale
   // browser storage from overriding freshly typed prompts or current latent size after tab switches.
   if (kind === "prompt" || kind === "canvas") return;
+  if (k2cfIsWorkflowLoading() || !node?.graph || node.id == null || node.id === -1) return;
   const value = JSON.stringify(data);
   for (const key of k2cfLocalStateKeys(node, kind)) {
     try { sessionStorage.setItem(key, value); } catch (_) {}
@@ -4196,17 +4195,6 @@ function k2cfBestSavedState(node, kind) {
     k2cfHasMeaningfulState(state.widgets_values) ||
     (kind === "effect" && k2cfHasEffectTextHeights(state))
   ));
-  if (kind === "effect") {
-    const localState = k2cfReadLocalState(node, kind);
-    const effectCandidates = workflowCandidates.slice();
-    if (Array.isArray(localState?.widgets_values) && (
-      k2cfHasMeaningfulState(localState.widgets_values) ||
-      k2cfHasEffectTextHeights(localState)
-    )) {
-      effectCandidates.push(localState);
-    }
-    return k2cfPickLatestState(effectCandidates);
-  }
   if (workflowCandidates.length) {
     workflowCandidates.sort((a, b) => Number(b.saved_at || 0) - Number(a.saved_at || 0));
     const picked = workflowCandidates[0];
@@ -4408,6 +4396,7 @@ function k2cfIsLegacyBugNodeSize(kind, size) {
 }
 
 function k2cfMaybeUpgradeLegacyBugNodeSize(node, kind, defaultSize = null) {
+  if (k2cfIsWorkflowLoading() || node?.__k2cfWorkflowConfigured) return;
   const desired = k2cfNormalizeNodeSize(defaultSize);
   if (!node || !desired || !k2cfIsLegacyBugNodeSize(kind, node.__k2cfConfiguredSize || node.size)) return;
   const explicitSizeState = k2cfReadNodeSizeState(node, kind);
@@ -4426,9 +4415,10 @@ function k2cfNodeSizeProp(kind) {
 function k2cfReadNodeSizeState(node, kind) {
   const prop = node?.properties?.[k2cfNodeSizeProp(kind)];
   const configuredProp = kind === "prompt" ? node?.__k2cfConfiguredPromptNodeSize : node?.__k2cfConfiguredCanvasNodeSize;
+  const states = [prop, configuredProp].filter((state) => k2cfNormalizeNodeSize(state?.size));
+  if (states.length) return k2cfPickLatestState(states);
   const local = k2cfReadLocalState(node, `${kind}_node_size`);
-  const states = [prop, configuredProp, local].filter((state) => k2cfNormalizeNodeSize(state?.size));
-  return k2cfPickLatestState(states);
+  return k2cfNormalizeNodeSize(local?.size) ? local : null;
 }
 
 function k2cfSavedOrConfiguredNodeSize(node, kind) {
@@ -4445,6 +4435,7 @@ function k2cfPreferredNodeSize(node, kind, defaultSize = null) {
 }
 
 function k2cfMaybeInitializeNodeSize(node, kind, defaultSize = null) {
+  if (k2cfIsWorkflowLoading() || node?.__k2cfWorkflowConfigured) return;
   const desired = k2cfNormalizeNodeSize(defaultSize);
   if (!node || !desired || k2cfSavedOrConfiguredNodeSize(node, kind) || node.__k2cfInitialSizeApplied) return;
   const current = k2cfNormalizeNodeSize(node.size);
@@ -4493,7 +4484,7 @@ function k2cfCommitNodeSizeState(node, kind, size, savedAt = Date.now()) {
 
 function k2cfSaveNodeSize(node, kind, markDirty = false, force = false) {
   const size = k2cfNormalizeNodeSize(node?.size);
-  if (!node || !size || node.__k2cfRestoringNodeSize) return;
+  if (!node || !size || node.__k2cfRestoringNodeSize || k2cfIsWorkflowLoading()) return;
   // ComfyUI 0.26 workflow-tab restore can auto-fit DOM widgets shortly after the node is rebuilt.
   // Do not let that transient auto-size overwrite the user's last manual size.
   if (!force && k2cfNodeAutoSizeGuarded(node) && !k2cfLikelyManualNodeResize(node)) return;
@@ -4531,11 +4522,14 @@ function k2cfRestoreNodeSize(node, kind, defaultSize = null) {
 
 function k2cfScheduleNodeSizeRestore(node, kind, defaultSize = null) {
   if (!node) return;
+  const generation = node.__k2cfSizeRestoreGeneration = (node.__k2cfSizeRestoreGeneration || 0) + 1;
+  if (k2cfIsWorkflowLoading()) return;
   const desired = k2cfNormalizeNodeSize(node.__k2cfPreferredNodeSize) || k2cfSavedOrConfiguredNodeSize(node, kind);
   if (!desired) return;
   node.__k2cfPreferredNodeSize = desired.slice();
   k2cfGuardNodeAutoSize(node, 2200);
   const restore = () => {
+    if (generation !== node.__k2cfSizeRestoreGeneration || k2cfIsWorkflowLoading()) return;
     if (!node.graph && !app?.graph?._nodes?.includes?.(node)) return;
     const current = k2cfNormalizeNodeSize(node.size);
     const preferred = k2cfNormalizeNodeSize(node.__k2cfPreferredNodeSize) || k2cfSavedOrConfiguredNodeSize(node, kind) || desired;
@@ -4545,8 +4539,6 @@ function k2cfScheduleNodeSizeRestore(node, kind, defaultSize = null) {
     }
   };
   try { requestAnimationFrame(() => restore()); } catch (_) { setTimeout(restore, 0); }
-  try { requestAnimationFrame(() => requestAnimationFrame(restore)); } catch (_) {}
-  for (const ms of [0, 60, 180, 420, 900, 1600, 2400]) setTimeout(restore, ms);
 }
 
 function k2cfInstallNodeSizePersistence(node, kind, defaultSize = null) {
@@ -4693,7 +4685,19 @@ function k2cfPersistWidgetSnapshot(node, kind, widgetNames, version = "v15") {
   k2cfWriteLocalState(node, kind, state);
 }
 
+function k2cfNormalizeEffectValues(values) {
+  // Older converted-input workflows omitted prompt_in and included empty DOM widget values.
+  if (Array.isArray(values) && values.length === 11 && typeof values[0] === "boolean" &&
+      typeof values[1] === "string" && typeof values[2] === "string" &&
+      ["Preset", "Custom", "Custom Preset"].includes(values[3]) &&
+      values.slice(6).every((value) => value == null || value === "")) {
+    return ["", ...values.slice(0, 6).map((value) => value ?? "")];
+  }
+  return values;
+}
+
 function applyConfiguredValuesToWidgets(node, widgetNames, values) {
+  if (widgetNames[0] === "prompt_in" && widgetNames[1] === "enable_effect") values = k2cfNormalizeEffectValues(values);
   if (!Array.isArray(values)) return;
   widgetNames.forEach((name, i) => {
     const w = widget(node, name);
@@ -4872,8 +4876,32 @@ function k2cfInstallWorkflowLoadHook() {
     const original = appObj[name];
     if (typeof original !== "function" || original.__k2cfPatched) continue;
     appObj[name] = function () {
-      try { k2cfSetWorkflowStorageId(this.graph || app?.graph); } catch (_) {}
-      return original.apply(this, arguments);
+      const outermost = !appObj.__k2cfWorkflowLoadDepth;
+      appObj.__k2cfWorkflowLoadDepth = Number(appObj.__k2cfWorkflowLoadDepth || 0) + 1;
+      if (outermost) {
+        const graph = appObj.rootGraph || appObj.graph;
+        if (graph) delete graph.__k2cfStateId;
+        for (const node of graph?._nodes || []) {
+          if (node.__k2cfNodeSizeKind) node.__k2cfSizeRestoreGeneration = (node.__k2cfSizeRestoreGeneration || 0) + 1;
+        }
+      }
+      const finish = () => {
+        appObj.__k2cfWorkflowLoadDepth -= 1;
+        if (appObj.__k2cfWorkflowLoadDepth) return;
+        const graph = appObj.rootGraph || appObj.graph;
+        try { k2cfSetWorkflowStorageId(graph); } catch (_) {}
+        for (const node of graph?._nodes || []) {
+          if (node.__k2cfNodeSizeKind) {
+            k2cfScheduleNodeSizeRestore(node, node.__k2cfNodeSizeKind, node.__k2cfNodeSizeDefault);
+          }
+        }
+      };
+      let result;
+      try { result = original.apply(this, arguments); }
+      catch (error) { finish(); throw error; }
+      if (result && typeof result.then === "function") return Promise.resolve(result).finally(finish);
+      finish();
+      return result;
     };
     appObj[name].__k2cfPatched = true;
   }
@@ -5301,14 +5329,26 @@ app.registerExtension({
 
     const oldConfigure = nodeType.prototype.onConfigure;
     nodeType.prototype.onConfigure = function (info) {
+      this.__k2cfWorkflowConfigured = true;
+      this.__k2cfSizeRestoreGeneration = (this.__k2cfSizeRestoreGeneration || 0) + 1;
       this.__k2cfConfiguredWidgetValues = Array.isArray(info?.widgets_values) ? info.widgets_values.slice() : null;
       this.__k2cfConfiguredSize = k2cfNormalizeNodeSize(info?.size);
+      this.__k2cfPreferredNodeSize = this.__k2cfConfiguredSize?.slice() || null;
+      this.__k2cfLastSavedNodeSize = this.__k2cfConfiguredSize?.slice() || null;
       this.__k2cfConfiguredCanvasState = info?.properties?.k2cfCanvasState || null;
       this.__k2cfConfiguredEffectState = info?.properties?.k2cfEffectState || null;
       this.__k2cfConfiguredPromptState = info?.properties?.k2cfPromptState || null;
       this.__k2cfConfiguredPromptUiState = info?.properties?.k2cfPromptUiState || null;
       this.__k2cfConfiguredCanvasNodeSize = info?.properties?.k2cfCanvasNodeSize || null;
       this.__k2cfConfiguredPromptNodeSize = info?.properties?.k2cfPromptNodeSize || null;
+      if (!this.__k2cfConfiguredWidgetValues) {
+        const state = nodeData.name === CANVAS_NODE ? this.__k2cfConfiguredCanvasState
+          : (nodeData.name === PROMPT_NODE ? this.__k2cfConfiguredPromptState : this.__k2cfConfiguredEffectState);
+        this.__k2cfConfiguredWidgetValues = Array.isArray(state?.widgets_values) ? state.widgets_values.slice() : null;
+      }
+      if (nodeData.name !== CANVAS_NODE && nodeData.name !== PROMPT_NODE) {
+        this.__k2cfConfiguredWidgetValues = k2cfNormalizeEffectValues(this.__k2cfConfiguredWidgetValues);
+      }
       this.__k2cfSkipLocalCanvasState =
         !k2cfHasMeaningfulState(this.__k2cfConfiguredWidgetValues) &&
         !k2cfHasMeaningfulState(this.__k2cfConfiguredCanvasState?.widgets_values);
@@ -5368,7 +5408,16 @@ function setupEffectNode(node, options = {}) {
   let hydrateEffectUiFromWidgets = null;
   node.__k2cfApplyConfiguredValues = (values) => {
     applyConfiguredValuesToWidgets(node, EFFECT_WIDGETS, values);
+    // Replace the creation-time snapshot, including heights captured from an older workflow.
+    for (const key of Object.keys(effectTextHeights)) delete effectTextHeights[key];
+    Object.assign(effectTextHeights, node.__k2cfConfiguredEffectState?.text_heights || {});
+    for (const [key, el] of [["preview", preview], ["custom", custom]]) {
+      el.style.height = "";
+      delete el.dataset.k2fxAppliedHeight;
+      applyEffectTextHeight(key, el);
+    }
     hydrateEffectUiFromWidgets?.();
+    writeEffectState(false);
   };
   applyConfiguredValuesToWidgets(node, EFFECT_WIDGETS, configuredValues);
   const savedEffectState = k2cfBestSavedState(node, "effect");
@@ -5892,12 +5941,14 @@ function setupEffectNode(node, options = {}) {
   node.addDOMWidget("krea2_effect_enable_header", "Krea2EffectEnableHeader", enableHeader, {
     serialize:false,
     hideOnZoom:false,
+    hideInPanel:true,
     getMinHeight:()=>30,
     getMaxHeight:()=>30,
   });
   node.addDOMWidget("krea2_prompt_effect_ui", "Krea2PromptEffectUI", wrap, {
     serialize:false,
     hideOnZoom:false,
+    hideInPanel:true,
     getMinHeight:()=>260,
   });
 
@@ -6829,7 +6880,7 @@ function setupCanvasNode(node) {
   }
   k2cfPersistWidgetSnapshot(node, "canvas", CANVAS_WIDGETS, "v15");
   installNodePersistenceHooks(node, sync, CANVAS_WIDGETS, "k2cfCanvas");
-  node.addDOMWidget("krea2_canvas_ui", "Krea2CanvasUI", wrap, { serialize:false, hideOnZoom:false, getMinHeight:()=>260 });
+  node.addDOMWidget("krea2_canvas_ui", "Krea2CanvasUI", wrap, { serialize:false, hideOnZoom:false, hideInPanel:true, getMinHeight:()=>260 });
   k2cfInstallNodeSizePersistence(node, "canvas", K2CF_CANVAS_DEFAULT_SIZE);
   k2cfMaybeInitializeNodeSize(node, "canvas", K2CF_CANVAS_DEFAULT_SIZE);
   k2cfScheduleNodeSizeRestore(node, "canvas", K2CF_CANVAS_DEFAULT_SIZE);
@@ -6937,8 +6988,8 @@ function setupPromptNode(node) {
     promptUiWidgetState
   ].filter((state) => k2cfPromptUiHasMeaningfulState(state));
   const localPromptUiState = k2cfReadLocalState(node, "prompt_ui");
-  const promptUiCandidates = workflowPromptUiCandidates
-    .concat([localPromptUiState].filter((state) => k2cfPromptUiHasMeaningfulState(state)));
+  const promptUiCandidates = workflowPromptUiCandidates.length ? workflowPromptUiCandidates
+    : [localPromptUiState].filter((state) => k2cfPromptUiHasMeaningfulState(state));
   const storedPromptUiState = k2cfPickLatestState(promptUiCandidates) || {};
   const promptUiState = defaultPromptUiState();
   Object.assign(promptUiState, storedPromptUiState);
@@ -7019,9 +7070,12 @@ function setupPromptNode(node) {
     const states = [
       node.properties?.k2cfPromptUiState,
       node.__k2cfConfiguredPromptUiState,
-      k2cfReadJsonObject(widgets.prompt_ui_data?.value),
-      k2cfReadLocalState(node, "prompt_ui")
-  ].filter((state) => k2cfPromptUiHasMeaningfulState(state));
+      k2cfReadJsonObject(widgets.prompt_ui_data?.value)
+    ].filter((state) => k2cfPromptUiHasMeaningfulState(state));
+    if (!states.length) {
+      const local = k2cfReadLocalState(node, "prompt_ui");
+      if (k2cfPromptUiHasMeaningfulState(local)) states.push(local);
+    }
     if (!states.length) return;
     states.sort((a, b) => Number(a.saved_at || 0) - Number(b.saved_at || 0));
     for (const state of states) mergePromptUiState(state);
@@ -7553,6 +7607,7 @@ function setupPromptNode(node) {
   node.addDOMWidget("krea2_prompt_ui", "Krea2PromptUI", wrap, {
     serialize:false,
     hideOnZoom:false,
+    hideInPanel:true,
     getMinHeight:()=>160,
     afterResize:()=>{ captureCurrentTextHeights(false, false); scheduleApplyAllSavedTextHeights(); },
   });

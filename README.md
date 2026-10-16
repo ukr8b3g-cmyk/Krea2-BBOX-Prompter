@@ -10,11 +10,13 @@ Draw the layout, write a prompt for each color slot, export the result, and opti
 
 > BBOX regions are layout guidance, not strict masks. Final placement still depends on the model, prompt wording, and scene context.
 
-## Latest update — v1.0.1
+## Latest update — v1.0.2
 
-- Restore saved node positions/sizes, BBOX regions and prompt settings when loading a workflow from a generated image.
-- Keep serialized frontend state cloneable and serialization free of live-state changes, avoiding DataCloneError and workflow save-guard failures.
-- Optional Canvas `width` / `height` inputs and the existing node IDs remain compatible.
+- Prefer workflow Effect, prompt UI and node-size state over browser caches, including caches with newer timestamps.
+- Reset workflow cache identity after loading and cancel obsolete delayed size restoration, preserving the configured size and later manual resizing.
+- Restore the reported legacy 11-value Effect format without shifting prompt text and boolean inputs.
+- Keep custom node displays out of the Workflow Overview parameter editor, which can overwrite their canvas width.
+- Preserve the cloneable, read-only serialization fixes from v1.0.1 and existing node IDs.
 
 After updating, reload the ComfyUI browser with Ctrl + F5.
 
@@ -263,11 +265,13 @@ Canvasで構図を作り、色スロットごとにプロンプトを書き、Ex
 
 > BBOXは厳密なマスクではなく、Krea2へのレイアウト補助です。最終結果はモデル・プロンプト・シーン全体の解釈に依存します。
 
-## 最新の更新 — v1.0.1
+## 最新の更新 — v1.0.2
 
-- 生成画像からワークフローを読み込む際の、ノード配置・サイズ、BBOX、プロンプト設定の復元を修正しました。
-- 保存データを複製可能な状態に保ち、シリアライズ時に実行中の状態を変更しないことで、DataCloneErrorやワークフロー保存拒否を防ぎます。
-- CanvasのOptional `width` / `height`入力と既存ノードIDの互換性を維持します。
+- Effect・プロンプトUI・ノードサイズは、ブラウザー保存値の日時が新しくてもWorkflow内の状態を優先します。
+- 読み込み後にWorkflowの保存先IDを同期し、古い遅延サイズ復元を無効化します。保存サイズと、その後の手動リサイズを維持します。
+- 報告された旧11値形式のEffectを読み替え、プロンプトと有効／無効の値がずれる問題に対応しました。
+- Workflow Overviewのパラメータ編集がキャンバス上の表示幅を上書きしないよう、カスタム表示をその編集対象から外しました。
+- v1.0.1の複製可能・読み取り専用の保存処理と、既存ノードIDを維持します。
 
 更新後はComfyUIのブラウザーでCtrl + F5を押してください。
 
@@ -389,7 +393,7 @@ normalized_1000はCanvas座標を0～1000へ正規化します。pixelは元の�
 
 ## Registry metadata and distribution
 
-`pyproject.toml` prepares this repository for Comfy Registry with node ID `krea2-bbox-prompter`, package version `1.0.1`, and PublisherId `ukr8b3g-cmyk`. Metadata alone does not publish a Registry version; use the GitHub installation instructions above until a Registry release is available.
+`pyproject.toml` identifies the Comfy Registry package as `krea2-bbox-prompter`, version `1.0.2`, with PublisherId `ukr8b3g-cmyk`. Stable GitHub Releases trigger the guarded Registry publication workflow. Package upload and Registry moderation are separate; check the version's Registry status before assuming it is Active.
 
 The suite runs inside an existing ComfyUI environment. Its Python node logic uses the standard library; the custom-preset routes use ComfyUI's `PromptServer` and its `aiohttp` dependency. No extra Python packages, `torch` reinstall, or model download is required by this suite. Pose Gesture V1 and ComfyUI-Custom-Scripts are separate extensions and are not bundled.
 
@@ -397,7 +401,7 @@ The suite runs inside an existing ComfyUI environment. Its Python node logic use
 
 ### Registry・配布設定
 
-`pyproject.toml`はRegistry登録の準備用です。ノードIDは`krea2-bbox-prompter`、パッケージ版は`1.0.1`、PublisherIdは`ukr8b3g-cmyk`です。このファイルの追加だけではRegistryへ公開されません。Registry版が提供されるまでは、上記のGitHubからの導入方法を使用してください。
+RegistryのノードIDは`krea2-bbox-prompter`、パッケージ版は`1.0.2`、PublisherIdは`ukr8b3g-cmyk`です。正式なGitHub Releaseの公開後に、重複公開を防ぐ検証付きのRegistry公開処理が動きます。アップロードとRegistry審査は別の状態なので、ActiveかどうかはRegistryの当該バージョンで確認してください。
 
 既存のComfyUI環境で動作し、カスタムプリセット用ルートはComfyUIの`PromptServer`と`aiohttp`を使います。このSuiteのために追加パッケージや`torch`を再インストールする必要はありません。Pose Gesture V1とComfyUI-Custom-Scriptsは別拡張で、同梱しません。
 
