@@ -2,7 +2,7 @@ import json
 import hashlib
 import re
 from pathlib import Path
-from math import gcd
+from math import gcd, isfinite
 
 MAX_RESOLUTION = 16384
 REGIONS = ("red", "blue", "yellow", "green", "magenta")
@@ -420,6 +420,7 @@ class Krea2ElementFramingV1Canvas:
         width_override=None,
         height_override=None,
     ):
+        source_width, source_height = _resolve_size(preset, width, height)
         width, height = _resolve_size(
             preset,
             width,
@@ -428,6 +429,24 @@ class Krea2ElementFramingV1Canvas:
             height_override=height_override,
         )
         layout = _safe_json_loads(layout_data, {"boxes": []})
+        source_width = layout.get("width") or source_width
+        source_height = layout.get("height") or source_height
+        for box in _layout_boxes(layout):
+            normalized = [box.get(key) for key in ("nx1", "ny1", "nx2", "ny2")]
+            if all(isinstance(v, (int, float)) and not isinstance(v, bool) and isfinite(v) for v in normalized):
+                x1, y1, x2, y2 = normalized
+                coords = [x1 * width, y1 * height, x2 * width, y2 * height]
+            elif (width, height) != (source_width, source_height):
+                coords = _bbox_px(box, source_width, source_height)
+                if coords is None:
+                    continue
+                coords = [coords[0] * width / source_width, coords[1] * height / source_height,
+                          coords[2] * width / source_width, coords[3] * height / source_height]
+            else:
+                continue
+            box.update(zip(("x1", "y1", "x2", "y2"), coords))
+            box["bbox"] = coords
+        layout["width"], layout["height"] = width, height
         camera = _safe_json_loads(camera_data, {})
         data = {
             "version": "krea2_element_framing_v1",

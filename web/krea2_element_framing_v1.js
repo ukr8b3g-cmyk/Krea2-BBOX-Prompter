@@ -4699,6 +4699,15 @@ function k2cfNormalizeEffectValues(values) {
 function applyConfiguredValuesToWidgets(node, widgetNames, values) {
   if (widgetNames[0] === "prompt_in" && widgetNames[1] === "enable_effect") values = k2cfNormalizeEffectValues(values);
   if (!Array.isArray(values)) return;
+  if (widgetNames[0] === "width" && widgetNames[2] === "preset" && /^User:\d+x\d+$/.test(values[2])) {
+    values = values.slice();
+    try {
+      const layout = JSON.parse(values[3] || "{}");
+      layout.sizePreset = values[2];
+      values[3] = JSON.stringify(layout);
+    } catch (_) {}
+    values[2] = "Custom";
+  }
   widgetNames.forEach((name, i) => {
     const w = widget(node, name);
     if (w && values[i] !== undefined && values[i] !== null) {
@@ -5962,6 +5971,31 @@ function setupEffectNode(node, options = {}) {
   installNodePersistenceHooks(node, sync, EFFECT_WIDGETS, "k2cfEffect");
 }
 
+function k2cfInstallCanvasDeleteHandler(node, overlay, wrap, removeSelected) {
+  overlay.tabIndex = 0;
+  const focusCanvas = () => overlay.focus({ preventScroll: true });
+  const leaveCanvas = (ev) => {
+    if (!wrap.contains(ev.target) && document.activeElement === overlay) overlay.blur();
+  };
+  const deleteBox = (ev) => {
+    if (ev.key !== "Delete" && ev.key !== "Backspace") return;
+    if (ev.defaultPrevented || ev.isComposing || ev.ctrlKey || ev.metaKey || ev.altKey) return;
+    if (ev.target !== overlay || document.activeElement !== overlay || app.graph !== node.graph) return;
+    if (!removeSelected()) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+  };
+  overlay.addEventListener("pointerdown", focusCanvas, true);
+  overlay.addEventListener("keydown", deleteBox);
+  document.addEventListener("pointerdown", leaveCanvas, true);
+  return () => {
+    overlay.removeEventListener("pointerdown", focusCanvas, true);
+    overlay.removeEventListener("keydown", deleteBox);
+    document.removeEventListener("pointerdown", leaveCanvas, true);
+    if (document.activeElement === overlay) overlay.blur();
+  };
+}
+
 function setupCanvasNode(node) {
   node.resizable = true;
   node.serialize_widgets = true;
@@ -6033,7 +6067,7 @@ function setupCanvasNode(node) {
     node.__k2cfAllowDefaultOverwrite = allowDefaultOverwrite;
     if (controls.width && externalPreviewSize.width == null) setWidget("width", Math.max(1, Number(controls.width.value) || 1));
     if (controls.height && externalPreviewSize.height == null) setWidget("height", Math.max(1, Number(controls.height.value) || 1));
-    if (controls.preset) setWidget("preset", controls.preset.value || "Custom");
+    if (controls.preset) setWidget("preset", controls.preset.value.startsWith("User:") ? "Custom" : (controls.preset.value || "Custom"));
     if (controls.grid) setWidget("grid_mode", controls.grid.value || "Thirds");
     if (controls.ui_language) setWidget("ui_language", controls.ui_language.value || "Auto");
     try {
@@ -6050,6 +6084,9 @@ function setupCanvasNode(node) {
     };
     setWidget("camera_data", JSON.stringify(camera));
     setWidget("layout_data", JSON.stringify({
+      width: currentSize()[0],
+      height: currentSize()[1],
+      sizePreset: controls.preset?.value || "Custom",
       boxes: state.boxes,
       activeSlot: state.activeSlot,
       hideBoxes: state.hideBoxes,
@@ -6240,6 +6277,13 @@ function setupCanvasNode(node) {
     preset.appendChild(option("Custom", "Custom"));
     for (const p of getUserPresets()) preset.appendChild(option(`User:${p.width}x${p.height}`, `User: ${p.width} x ${p.height}`, true));
     selected = selected || widgets.preset?.value || DEFAULT_PRESET;
+    if (selected === "Custom") {
+      try {
+        const saved = JSON.parse(widgets.layout_data?.value || "{}").sizePreset;
+        const match = String(saved).match(/^User:(\d+)x(\d+)$/);
+        if (match && Number(match[1]) === Number(widgets.width?.value) && Number(match[2]) === Number(widgets.height?.value)) selected = saved;
+      } catch (_) {}
+    }
     if (selected && !Array.from(preset.options).some((opt) => opt.value === selected)) {
       const m = String(selected).match(/^User:(\d+)x(\d+)$/);
       if (m) preset.appendChild(option(selected, `User: ${m[1]} x ${m[2]}`, true));
@@ -6799,12 +6843,13 @@ function setupCanvasNode(node) {
     if(state.drawing){ const [x1,y1,x2,y2]=normBox(state.drawing); if(Math.abs(x2-x1)>8&&Math.abs(y2-y1)>8){ state.drawing.x1=x1;state.drawing.y1=y1;state.drawing.x2=x2;state.drawing.y2=y2;state.selectedId=state.drawing.id;state.boxes.push(state.drawing); state.drawMode=false; drawBtn.classList.remove("primary"); } state.drawing=null; writeBoxes(); }
     if(state.moving||state.resizing){ state.moving=null;state.resizing=null;writeBoxes(); }
   });
-  document.addEventListener("keydown", (ev)=>{
-    if(ev.key!=="Delete"&&ev.key!=="Backspace")return;
-    const tag=ev.target?.tagName?.toLowerCase();
-    if(tag==="input"||tag==="textarea"||ev.target?.isContentEditable)return;
-    if(state.selectedId){ state.boxes=state.boxes.filter((b)=>b.id!==state.selectedId); state.selectedId=null; writeBoxes(); ev.preventDefault(); ev.stopPropagation(); }
-  }, true);
+  const removeCanvasDeleteHandler = k2cfInstallCanvasDeleteHandler(node, overlay, wrap, () => {
+    if (!state.selectedId) return false;
+    state.boxes = state.boxes.filter((b) => b.id !== state.selectedId);
+    state.selectedId = null;
+    writeBoxes();
+    return true;
+  });
 
   function hydrateCanvasFromWidgets() {
     isHydrating = true;
@@ -6901,6 +6946,7 @@ function setupCanvasNode(node) {
 
   const oldResize=node.onResize; node.onResize=function(){ const r = oldResize?.apply(this,arguments); scheduleCanvasRefresh(false); return r; };
   const oldRemoved=node.onRemoved; node.onRemoved=function(){
+    removeCanvasDeleteHandler();
     clearInterval(externalPreviewTimer);
     canvasResizeObserver?.disconnect();
     document.removeEventListener("visibilitychange", refreshAfterVisibility);
@@ -7255,6 +7301,8 @@ function setupPromptNode(node) {
   k2cfAttachPyssssAutocomplete(sceneText);
 
   const backgroundText = document.createElement("textarea");
+  const backgroundLabel = document.createElement("label");
+  backgroundLabel.textContent = tr(resolveLang(promptLangSelect.value), "background");
   backgroundText.className = "k2cf-text";
   backgroundText.placeholder = tr(resolveLang(promptLangSelect.value), "backgroundPlaceholder");
   backgroundText.value = widgets.background?.value || "";
@@ -7269,6 +7317,7 @@ function setupPromptNode(node) {
   sceneText.addEventListener("blur", sync);
   sceneText.addEventListener("compositionend", sync);
   bindTextHeight("scene", sceneText);
+  bindTextHeight("background", backgroundText);
   const scenePresetBar = document.createElement("div");
   scenePresetBar.className = "k2cf-presetbar";
   const scenePresetLabel = document.createElement("label");
@@ -7283,7 +7332,7 @@ function setupPromptNode(node) {
   scenePresetBar.append(scenePresetLabel, scenePresetSelect, sceneSave, sceneLoad, sceneDelete);
   promptLangBar.append(promptLangGroup, scenePresetBar);
   wrap.appendChild(promptLangBar);
-  scene.append(sceneLabel, sceneText);
+  scene.append(sceneLabel, sceneText, backgroundLabel, backgroundText);
   wrap.appendChild(scene);
   const promptCards = [];
   const promptPresetSelects = [];
@@ -7581,6 +7630,7 @@ function setupPromptNode(node) {
     if (savedState) applyConfiguredValuesToWidgets(node, PROMPT_WIDGETS, savedState.widgets_values);
     try {
       sceneText.value = widgets.scene?.value || "";
+      backgroundText.value = widgets.background?.value || "";
       for (const [slot, label, color, promptName, typeName, framingName, angleName] of SLOTS) {
         const stored = promptUiState.slotValues?.[slot] || {};
         if (controls[promptName]) controls[promptName].value = widgets[promptName]?.value || "";

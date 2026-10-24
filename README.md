@@ -10,7 +10,17 @@ Draw the layout, write a prompt for each color slot, export the result, and opti
 
 > BBOX regions are layout guidance, not strict masks. Final placement still depends on the model, prompt wording, and scene context.
 
-## Latest update — v1.0.2
+## Latest update — v1.0.3
+
+- Display and restore the Background field; editing Scene or color-slot prompts no longer clears a saved background.
+- Restrict Delete/Backspace to the focused Canvas and remove its event handlers when the node is removed.
+- Keep User size presets in the UI while sending the supported `Custom` value and saved dimensions to the backend. Old User selections migrate on load.
+- Preserve relative BBOX placement for runtime size overrides, including sources that cannot be previewed, without scaling frontend-remapped boxes twice.
+- Regression checks: 63 tests passed. The ComfyUI_test UI was checked by the user; no new GPU generation test was performed.
+
+Restart ComfyUI after updating, then hard-refresh the browser with Ctrl + F5.
+
+### Previous update — v1.0.2
 
 - Prefer workflow Effect, prompt UI and node-size state over browser caches, including caches with newer timestamps.
 - Reset workflow cache identity after loading and cancel obsolete delayed size restoration, preserving the configured size and later manual resizing.
@@ -265,7 +275,17 @@ Canvasで構図を作り、色スロットごとにプロンプトを書き、Ex
 
 > BBOXは厳密なマスクではなく、Krea2へのレイアウト補助です。最終結果はモデル・プロンプト・シーン全体の解釈に依存します。
 
-## 最新の更新 — v1.0.2
+## 最新の更新 — v1.0.3
+
+- Background入力欄を表示・復元し、Sceneや色スロットの編集で保存済みの背景が消える問題を修正しました。
+- Delete／Backspaceの対象をフォーカス中のCanvasに限定し、ノード削除時にイベント処理を解除します。
+- Userサイズプリセットの表示を保持し、バックエンドには対応済みの`Custom`と保存寸法を渡します。旧User選択も読み込み時に移行します。
+- 実行時だけ解決できるサイズoverrideでもBBOXの相対配置を保持し、Frontendで変換済みの座標は二重変換しません。
+- 回帰テスト63件が成功しました。ComfyUI_testの実画面はユーザー確認済みです。新たなGPU生成テストは実施していません。
+
+更新後はComfyUIを再起動し、ブラウザーでCtrl + F5を押してください。
+
+### 前回の更新 — v1.0.2
 
 - Effect・プロンプトUI・ノードサイズは、ブラウザー保存値の日時が新しくてもWorkflow内の状態を優先します。
 - 読み込み後にWorkflowの保存先IDを同期し、古い遅延サイズ復元を無効化します。保存サイズと、その後の手動リサイズを維持します。

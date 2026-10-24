@@ -1,0 +1,62 @@
+name: Publish verified v1.0.3
+
+# One explicit publication request; ordinary main pushes never publish.
+on: create
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-v1.0.3
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.repository == 'ukr8b3g-cmyk/Krea2-BBOX-Prompter' && github.event.ref_type == 'branch' && github.event.ref == 'release/v1.0.3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Require current main and matching release metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq '.object.sha')" = "$GITHUB_SHA"
+          python -B -c 'import json, pathlib, runpy, tomllib; r=runpy.run_path(".github/registry_release.py"); r["check_metadata"](tomllib.loads(pathlib.Path("pyproject.toml").read_text()), json.loads(pathlib.Path(".github/registry-policy.json").read_text()), "v1.0.3")'
+      - name: Run regression tests
+        run: |
+          python -B -m unittest discover -s tests -v
+          python -B -m unittest discover -s .github -p test_registry_release.py -v
+          node --check web/krea2_element_framing_v1.js
+          node --test tests/*.mjs
+      - name: Create exact tag and stable GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/git/refs" --method POST -f ref=refs/tags/v1.0.3 -f sha="$GITHUB_SHA"
+          gh release create v1.0.3 --repo "$GITHUB_REPOSITORY" --verify-tag --title 'v1.0.3 — Background, Canvas and size fixes' --notes-file .github/release-notes/v1.0.3.md --latest
+
+  registry:
+    needs: release
+    permissions:
+      contents: read
+    uses: ./.github/workflows/publish_registry.yml
+    with:
+      release_tag: v1.0.3
+    secrets:
+      REGISTRY_ACCESS_TOKEN: ${{ secrets.REGISTRY_ACCESS_TOKEN }}

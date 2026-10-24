@@ -23,7 +23,7 @@ permissions:
 
 jobs:
   resolve:
-    if: github.repository == 'ukr8b3g-cmyk/Krea2-BBOX-Prompter' && ((github.event_name == 'release' && !github.event.release.draft && !github.event.release.prerelease) || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'))
+    if: github.repository == 'ukr8b3g-cmyk/Krea2-BBOX-Prompter' && ((github.event_name == 'release' && !github.event.release.draft && !github.event.release.prerelease) || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') || (github.event_name == 'create' && github.event.ref_type == 'branch' && github.event.ref == 'release/v1.0.3'))
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:
