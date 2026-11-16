@@ -10,7 +10,12 @@ Draw the layout, write a prompt for each color slot, export the result, and opti
 
 > BBOX regions are layout guidance, not strict masks. Final placement still depends on the model, prompt wording, and scene context.
 
-## Latest update — v1.0.3
+## Latest update — v1.0.4
+
+- Restrict input, generation and workflow load hooks to Krea2 nodes, preventing interference with MOSS BBOX Prompter.
+- Verified save, reload and Krea2 GPU generation in ComfyUI with Krea2 alone and with both extensions enabled.
+
+### v1.0.3
 
 - Display and restore the Background field; editing Scene or color-slot prompts no longer clears a saved background.
 - Restrict Delete/Backspace to the focused Canvas and remove its event handlers when the node is removed.
@@ -275,7 +280,12 @@ Canvasで構図を作り、色スロットごとにプロンプトを書き、Ex
 
 > BBOXは厳密なマスクではなく、Krea2へのレイアウト補助です。最終結果はモデル・プロンプト・シーン全体の解釈に依存します。
 
-## 最新の更新 — v1.0.3
+## 最新の更新 — v1.0.4
+
+- 入力・生成前・ワークフロー読込時の処理をKrea2のノードだけに限定し、MOSS BBOX Prompterとの併用時の干渉を解消。
+- Krea2単独とMOSS併用で、保存・再読込とKrea2のGPU生成を確認。
+
+### v1.0.3
 
 - Background入力欄を表示・復元し、Sceneや色スロットの編集で保存済みの背景が消える問題を修正しました。
 - Delete／Backspaceの対象をフォーカス中のCanvasに限定し、ノード削除時にイベント処理を解除します。
