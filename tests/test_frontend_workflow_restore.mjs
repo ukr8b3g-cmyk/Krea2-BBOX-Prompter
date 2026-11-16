@@ -24,6 +24,7 @@ const helpers = [
   "k2cfSavedOrConfiguredNodeSize", "k2cfPreferredNodeSize", "k2cfGuardNodeAutoSize", "k2cfNodeAutoSizeGuarded",
   "k2cfLikelyManualNodeResize", "k2cfCommitNodeSizeState", "k2cfSaveNodeSize", "k2cfApplyNodeSize",
   "k2cfScheduleNodeSizeRestore", "k2cfInstallNodeSizePersistence", "k2cfInstallWorkflowLoadHook",
+  "k2cfIsNodeType", "installNodePersistenceHooks", "k2cfSnapshotAllPromptUi",
   "widget", "k2cfNormalizeEffectValues", "applyConfiguredValuesToWidgets", "k2cfWidgetValues", "k2cfPersistWidgetSnapshot",
   "k2cfIsEffectDefaultValue", "k2cfMergeEffectWithPrevious",
 ];
@@ -35,7 +36,7 @@ function harness(extra = {}) {
     app, window: {}, localStorage: storage(), sessionStorage: storage(), console,
     requestAnimationFrame: (fn) => frames.push(fn), setTimeout: (fn) => timers.push(fn),
     setInterval() {}, clearInterval() {},
-    CANVAS_NODE: "Canvas", PROMPT_NODE: "Prompt", DEFAULT_PRESET: "1024 x 1024", K2CF_CANVAS_DEFAULT_SIZE: [830, 980], K2CF_PROMPT_DEFAULT_SIZE: [540, 990],
+    CANVAS_NODE: "Canvas", PROMPT_NODE: "Prompt", EFFECT_NODE: "Effect", EFFECT_NODE_BBOX: "BboxEffect", EFFECT_NODE_BACKGROUND: "BackgroundEffect", DEFAULT_PRESET: "1024 x 1024", K2CF_CANVAS_DEFAULT_SIZE: [830, 980], K2CF_PROMPT_DEFAULT_SIZE: [540, 990],
     ...extra,
   });
   vm.runInContext(helpers.filter((name) => source.includes(`function ${name}(`)).map(extract).join("\n"), context);
@@ -91,6 +92,7 @@ test("type + node ID cache is ignored and unattached/default configuration canno
 test("async workflow load isolates storage until the new graph identity is available", async () => {
   const { context: c } = harness();
   const graph = c.app.graph;
+  graph._nodes.push({ type: "Canvas" });
   c.k2cfSetWorkflowStorageId(graph);
   let complete;
   c.app.loadGraphData = () => new Promise((resolve) => { complete = resolve; });
@@ -111,6 +113,7 @@ test("async workflow load isolates storage until the new graph identity is avail
 
 test("nested synchronous loads preserve return values and failed loads release the storage guard", async () => {
   const { context: c } = harness();
+  c.app.graph._nodes.push({ type: "Canvas" });
   c.app.loadGraph = function () { this.graph.extra = { k2cf_state_id: "workflow-B" }; return 42; };
   c.app.loadGraphData = function () { return this.loadGraph(); };
   c.app.loadWorkflow = () => Promise.reject(new Error("invalid workflow"));
@@ -119,6 +122,42 @@ test("nested synchronous loads preserve return values and failed loads release t
   assert.equal(c.app.graph.__k2cfStateId, "workflow-B");
   await assert.rejects(c.app.loadWorkflow(), /invalid workflow/);
   assert.equal(c.app.__k2cfWorkflowLoadDepth, 0);
+});
+
+test("global snapshots and both generation hooks touch only Krea2 nodes", () => {
+  const { context: c } = harness();
+  const calls = [];
+  const node = (type) => ({ type, __k2cfNodeSizeSnapshot() { calls.push(type); } });
+  const own = node("Canvas");
+  const effect = node("BackgroundEffect");
+  const foreign = { ...node("Canvas"), comfyClass: "MOSSSharedCanvas" };
+  c.app.graph._nodes = [own, effect, foreign, node("MOSSSharedPrompter")];
+  c.app.queuePrompt = () => "queued";
+  c.app.graphToPrompt = () => "encoded";
+  c.installNodePersistenceHooks(own, () => {}, [], "k2cfCanvas");
+  for (const invoke of [c.k2cfSnapshotAllPromptUi, c.app.queuePrompt, c.app.graphToPrompt]) {
+    calls.length = 0;
+    invoke();
+    assert.deepEqual(calls, ["Canvas", "BackgroundEffect"]);
+  }
+});
+
+test("workflow loads restore only Krea2 sizes and ignore foreign graph metadata", () => {
+  const { context: c } = harness();
+  const restored = [];
+  c.k2cfScheduleNodeSizeRestore = (node) => restored.push(node.type);
+  const own = { type: "Canvas", __k2cfNodeSizeKind: "canvas" };
+  const foreign = { type: "MOSSSharedCanvas", __k2cfNodeSizeKind: "canvas", __k2cfSizeRestoreGeneration: 7 };
+  c.app.graph._nodes = [own, foreign];
+  c.app.loadGraphData = () => "loaded";
+  c.k2cfInstallWorkflowLoadHook();
+  assert.equal(c.app.loadGraphData(), "loaded");
+  assert.deepEqual(restored, ["Canvas"]);
+  assert.equal(foreign.__k2cfSizeRestoreGeneration, 7);
+  c.app.graph = { _nodes: [foreign] };
+  c.app.loadGraphData();
+  assert.deepEqual(restored, ["Canvas"]);
+  assert.equal(c.app.graph.extra, undefined);
 });
 
 for (const cachedAt of [50, 999]) {

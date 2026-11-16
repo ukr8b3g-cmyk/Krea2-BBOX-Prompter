@@ -4719,6 +4719,11 @@ function applyConfiguredValuesToWidgets(node, widgetNames, values) {
   });
 }
 
+function k2cfIsNodeType(type) {
+  return type === CANVAS_NODE || type === PROMPT_NODE || type === EFFECT_NODE ||
+    type === EFFECT_NODE_BBOX || type === EFFECT_NODE_BACKGROUND;
+}
+
 function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
   if (!node || node[`__${tag}PersistenceInstalled`]) return;
   node[`__${tag}PersistenceInstalled`] = true;
@@ -4820,6 +4825,7 @@ function installNodePersistenceHooks(node, syncFn, widgetNames, tag) {
   const snapshotGraphNodes = () => {
     try {
       for (const n of appObj?.graph?._nodes || app?.graph?._nodes || []) {
+        if (!k2cfIsNodeType(n.comfyClass || n.type)) continue;
         n.__k2cfPromptUiSnapshot?.(false, false);
         n.__k2cfNodeSizeSnapshot?.(false);
         n.__k2cfCanvasSync?.(false);
@@ -4853,6 +4859,7 @@ function k2cfSnapshotAllPromptUi(markDirty = false, allowShrink = false) {
   const appObj = window.comfyAPI?.app?.app || app;
   const nodes = appObj?.graph?._nodes || app?.graph?._nodes || [];
   for (const n of nodes) {
+    if (!k2cfIsNodeType(n.comfyClass || n.type)) continue;
     try { n.__k2cfPromptUiSnapshot?.(markDirty, allowShrink); } catch (_) {}
     try { n.__k2cfNodeSizeSnapshot?.(markDirty); } catch (_) {}
     try { n.__k2cfCanvasSync?.(false); } catch (_) {}
@@ -4891,15 +4898,17 @@ function k2cfInstallWorkflowLoadHook() {
         const graph = appObj.rootGraph || appObj.graph;
         if (graph) delete graph.__k2cfStateId;
         for (const node of graph?._nodes || []) {
-          if (node.__k2cfNodeSizeKind) node.__k2cfSizeRestoreGeneration = (node.__k2cfSizeRestoreGeneration || 0) + 1;
+          if (k2cfIsNodeType(node.comfyClass || node.type) && node.__k2cfNodeSizeKind) node.__k2cfSizeRestoreGeneration = (node.__k2cfSizeRestoreGeneration || 0) + 1;
         }
       }
       const finish = () => {
         appObj.__k2cfWorkflowLoadDepth -= 1;
         if (appObj.__k2cfWorkflowLoadDepth) return;
         const graph = appObj.rootGraph || appObj.graph;
+        const nodes = (graph?._nodes || []).filter((node) => k2cfIsNodeType(node.comfyClass || node.type));
+        if (!nodes.length) return;
         try { k2cfSetWorkflowStorageId(graph); } catch (_) {}
-        for (const node of graph?._nodes || []) {
+        for (const node of nodes) {
           if (node.__k2cfNodeSizeKind) {
             k2cfScheduleNodeSizeRestore(node, node.__k2cfNodeSizeKind, node.__k2cfNodeSizeDefault);
           }
@@ -5331,7 +5340,7 @@ function k2cfInstallDebugHelpers() {
 app.registerExtension({
   name: "krea2.element.framing.v1",
   beforeRegisterNodeDef(nodeType, nodeData) {
-    if (nodeData.name !== CANVAS_NODE && nodeData.name !== PROMPT_NODE && nodeData.name !== EFFECT_NODE && nodeData.name !== EFFECT_NODE_BBOX && nodeData.name !== EFFECT_NODE_BACKGROUND) return;
+    if (!k2cfIsNodeType(nodeData.name)) return;
     k2cfInstallWorkflowLoadHook();
     k2cfInstallPromptUiLifecycleHooks();
     k2cfInstallDebugHelpers();
